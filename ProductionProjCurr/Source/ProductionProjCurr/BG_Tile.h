@@ -34,19 +34,7 @@ public:	//functions
 public://variables
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UInstancedStaticMeshComponent* staticMesh;
+	UStaticMeshComponent* staticMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	float tileWidth;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	int32 numberOfColumns;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	int32 numberOfRows;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-
-	float xSpawnOffset;
 
 };

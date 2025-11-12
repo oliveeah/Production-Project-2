@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ProductionProjCurr",
+			"Path": "..\\Source\\ProductionProjCurr.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ProductionProjCurrEditor",
+			"Path": "..\\Source\\ProductionProjCurrEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
