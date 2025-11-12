@@ -36,5 +36,9 @@ public://variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* staticMesh;
 
+	enum clearingType { clearing1, clearing2, clearing3, clearing4 };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TArray<UMaterialInterface*> MAT_Array;
 
 };
