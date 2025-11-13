@@ -28,11 +28,10 @@ ABG_Tile::ABG_Tile()
 		UE_LOG(LogTemp, Warning, TEXT("Failed to load tile mesh!"));
 	}
 
-
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_One(TEXT("/Game/boardGame/assets/tile_MAT.tile_MAT"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Two(TEXT("/Game/boardGame/assets/tile_MAT1.tile_MAT1"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Three(TEXT("/Game/boardGame/assets/tile_MAT2.tile_MAT2"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Four(TEXT("/Game/boardGame/assets/tile_MAT3.tile_MAT3"));
+	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_One(TEXT("/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs.MI_vd3lecfs"));
+	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Two(TEXT("/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx.MI_tgmjffbqx"));
+	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Three(TEXT("/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20.MI_oilpt20"));
+	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Four(TEXT("/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock.Mat_026_Weathered_Rock"));
 
 	if (MAT_One.Succeeded())  MAT_Array.Add(MAT_One.Object);
 	if (MAT_Two.Succeeded())  MAT_Array.Add(MAT_Two.Object);

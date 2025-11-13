@@ -2158,3 +2158,1010 @@ FPackageName: Skipped package /Game/_assets/fonts/COMIC_Font has a valid, mounte
 [2025.11.13-13.25.06:892][984]UATHelper: Packaging (Windows): AutomationTool exiting with ExitCode=0 (Success)
 [2025.11.13-13.25.06:983][989]LogStreaming: Display: FlushAsyncLoading(356): 1 QueuedPackages, 0 AsyncPackages
 [2025.11.13-13.25.24:430][474]LogDerivedDataCache: C:/Users/linda/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.11.13-13.28.32:750][ 74]LogSlate: Took 0.000296 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.11.13-13.28.32:830][ 79]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_1
+[2025.11.13-13.28.32:899][ 80]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_2
+[2025.11.13-13.28.52:078][253]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 321.953796
+[2025.11.13-13.28.53:079][256]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.11.13-13.28.53:080][256]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 322.625183, Update Interval: 311.056244
+[2025.11.13-13.29.10:667][431]LogFab: Display: Logging in using persist
+[2025.11.13-13.29.10:846][431]LogWebBrowser: Loaded CEF3 version 90.6.7.2358 from C:/Program Files/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/CEF3/Win64/
+[2025.11.13-13.29.10:869][431]LogCEFBrowser: CEF GPU acceleration enabled
+[2025.11.13-13.29.11:429][440]LogEOSSDK: LogEOSAuth: UpdateUserAuthToken: User ClientId: xyz...459 AccountId: 4fd...944 Access[Expires: 2025.11.13-15.29.12 Remaining: 7200.18] Refresh[Expires: 2026-05-12T13:29:12.182Z Remaining: 15552000.18] State: Valid
+[2025.11.13-13.29.11:446][441]LogEOSSDK: LogEOSAuth: UserAuthGenerated: Received FUserAuthToken
+[2025.11.13-13.29.11:630][452]LogEOSSDK: LogEOSAuth: UserAuthGenerated: Login complete: EOS_Success
+[2025.11.13-13.29.11:630][452]LogFab: Display: User logged in
+[2025.11.13-13.29.11:630][452]LogFab: Display: User client id: xyza7891REBVsEqSJRRNXmlS7EQHM459
+[2025.11.13-13.29.12:014][475]LogEOSSDK: Warning: LogEOS: Error response received from backend. ServiceName=[Friend], OperationName=[GetBlockList], Url=[<Redacted>], HttpStatus=[403], ErrorCode=[errors.com.epicgames.common.insufficient_scopes], NumericErrorCode=[1056], ErrorMessage=[Insufficient access scopes. Expected: [friends_list]], CorrId=[EOS-ZxlRgy2uU0CeiM-S7EGAWg-8DwXbB6I6Uist_OHiHJzLw]
+[2025.11.13-13.29.32:555][707]LogFab: Display: Asset Type = gltf
+[2025.11.13-13.29.32:555][707]LogFab: Display: Is Quixel = 1
+[2025.11.13-13.29.34:234][788]LogStreaming: Display: FlushAsyncLoading(357): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.29.34:599][788]LogInterchangeEngine: Display: Interchange import: Using stack [OverridePipeline] to import.
+[2025.11.13-13.29.34:600][788]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/linda/AppData/Local/Temp/FabLibrary/69f0e5f2-0fce-43f5-b737-b3d18de2eb62/uncut_grass_oilpt20_2k_ue_mid_extracted/oilpt20_tier_2.gltf]
+[2025.11.13-13.29.34:698][790]LogStreaming: Display: FlushAsyncLoading(400): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.29.34:853][800]LogStreaming: Display: FlushAsyncLoading(403): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.29.34:941][800]LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.10.dll
+[2025.11.13-13.29.34:945][800]LogTexture: Display: Building textures: /Fab/Textures/Standard/T_DefaultMasks.T_DefaultMasks (TFO_AutoDXT, 32x32 x1x1x1) (Required Memory Estimate: 1.16142 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.34:945][800]LogTexture: Display: Building textures: /Fab/Textures/Standard/T_DefaultColor.T_DefaultColor (TFO_AutoDXT, 32x32 x1x1x1) (Required Memory Estimate: 1.16142 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.34:945][800]LogTexture: Display: Building textures: /Fab/Textures/Standard/T_DefaultNormal.T_DefaultNormal (TFO_BC5, 32x32 x1x1x1) (Required Memory Estimate: 1.288993 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.34:945][800]LogTexture: Display: Building textures: /Fab/Textures/Standard/T_DefaultDisplacement.T_DefaultDisplacement (TFO_BC4, 32x32 x1x1x1) (Required Memory Estimate: 1.16988 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.35:038][803]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM.T_oilpt20_2K_ORM (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 280.999983 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.35:038][803]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N.T_oilpt20_2K_N (TFO_BC5, 2048x2048 x1x1x1) (Required Memory Estimate: 382.499988 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.35:044][803]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B.T_oilpt20_2K_B (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 280.999983 MB), EncodeSpeed: Fast
+[2025.11.13-13.29.35:456][827]LogInterchangeEngine: Display: Interchange import completed [C:/Users/linda/AppDa..._2k_ue_mid_extracted/oilpt20_tier_2.gltf]
+[2025.11.13-13.30.26:772][897]LogFab: Display: Asset Type = gltf
+[2025.11.13-13.30.26:772][897]LogFab: Display: Is Quixel = 1
+[2025.11.13-13.30.29:400][ 33]LogStreaming: Display: FlushAsyncLoading(405): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.29:402][ 33]LogInterchangeEngine: Display: Interchange import: Using stack [OverridePipeline] to import.
+[2025.11.13-13.30.29:402][ 33]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/linda/AppData/Local/Temp/FabLibrary/a6bcc789-dd82-4b9a-861f-01bbe3f1a1fe/rippled_sand_vd3lecfs_2k_ue_mid_extracted/vd3lecfs_tier_2.gltf]
+[2025.11.13-13.30.29:469][ 35]LogStreaming: Display: FlushAsyncLoading(406): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.29:625][ 40]LogStreaming: Display: FlushAsyncLoading(409): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.29:724][ 42]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N.T_vd3lecfs_2K_N (TFO_BC5, 2048x2048 x1x1x1) (Required Memory Estimate: 382.499988 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.29:725][ 42]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B.T_vd3lecfs_2K_B (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 280.999983 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.29:725][ 42]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM.T_vd3lecfs_2K_ORM (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 280.999983 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.30:129][ 62]LogInterchangeEngine: Display: Interchange import completed [C:/Users/linda/AppDa..._2k_ue_mid_extracted/vd3lecfs_tier_2.gltf]
+[2025.11.13-13.30.47:398][ 89]LogFab: Display: Asset Type = glb
+[2025.11.13-13.30.47:398][ 89]LogFab: Display: Is Quixel = 0
+[2025.11.13-13.30.47:439][ 90]LogSlate: Took 0.001806 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2025.11.13-13.30.48:330][119]LogStreaming: Display: FlushAsyncLoading(410): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.48:331][119]LogInterchangeEngine: Display: Interchange import: Using stack [OverridePipeline] to import.
+[2025.11.13-13.30.48:332][119]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/linda/AppData/Local/Temp/FabLibrary/7acae792-f67b-449a-a685-956467effc92/1024_mat_026_weathered_rock_extracted/1024_Mat_026_Weathered Rock/GLB/Mat_026_Weathered_Rock.glb]
+[2025.11.13-13.30.48:389][122]LogStreaming: Display: FlushAsyncLoading(411): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.48:456][126]LogStreaming: Display: FlushAsyncLoading(415): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.48:490][128]LogStreaming: Display: FlushAsyncLoading(416): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.30.48:539][129]LogTexture: Display: Building textures: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness.Mat_026_Weathered_Rock_MetallicRoughness (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 122.708323 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.48:540][129]LogTexture: Display: Building textures: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_basecolor_1k.026_basecolor_1k (TFO_AutoDXT, 1536x1024 x1x1x1) (Required Memory Estimate: 165.750 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.48:540][129]LogTexture: Display: Building textures: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_normal_1k.026_normal_1k (TFO_BC5, 1536x1024 x1x1x1) (Required Memory Estimate: 242.500 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.48:540][129]LogTexture: Display: Building textures: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_ao_1k.026_ao_1k (TFO_AutoDXT, 1536x1024 x1x1x1) (Required Memory Estimate: 165.750 MB), EncodeSpeed: Fast
+[2025.11.13-13.30.48:552][130]LogStaticMesh: Display: Building static mesh Mat_026_Weathered_Rock (Required Memory Estimate: 6.318262 MB)...
+[2025.11.13-13.30.48:619][134]LogStaticMesh: Built static mesh [0.07s] /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock.Mat_026_Weathered_Rock
+[2025.11.13-13.30.49:269][139]LogInterchangeEngine: Display: Interchange import completed [C:/Users/linda/AppDa...6_Weathered Rock/GLB/Mat_026_Weathered_Rock.glb]
+[2025.11.13-13.30.51:356][238]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_3
+[2025.11.13-13.33.36:059][279]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2025.11.13-13.33.36:063][279]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPerson/Lvl_ThirdPerson' took 0.029
+[2025.11.13-13.33.36:067][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N] ([1] browsable assets)...
+[2025.11.13-13.33.36:074][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N.T_oilpt20_2K_N]
+[2025.11.13-13.33.36:074][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N]
+[2025.11.13-13.33.36:104][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N_Auto1
+[2025.11.13-13.33.36:104][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_oilpt20_2K_N_Auto182E41CB345D28E43235D4DB4C3DEAA88.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N_Auto1.uasset'
+[2025.11.13-13.33.36:106][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM] ([1] browsable assets)...
+[2025.11.13-13.33.36:110][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM.T_oilpt20_2K_ORM]
+[2025.11.13-13.33.36:110][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM]
+[2025.11.13-13.33.36:130][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM_Auto1
+[2025.11.13-13.33.36:131][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_oilpt20_2K_ORM_Auto1D95421564CB50642AD9777AEE3496DFD.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM_Auto1.uasset'
+[2025.11.13-13.33.36:132][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B] ([1] browsable assets)...
+[2025.11.13-13.33.36:136][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B.T_oilpt20_2K_B]
+[2025.11.13-13.33.36:136][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B]
+[2025.11.13-13.33.36:156][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B_Auto1
+[2025.11.13-13.33.36:156][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_oilpt20_2K_B_Auto1E45E149D473E21BF3A760AB3715879DC.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B_Auto1.uasset'
+[2025.11.13-13.33.36:159][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20] ([1] browsable assets)...
+[2025.11.13-13.33.36:258][279]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20.MI_oilpt20]
+[2025.11.13-13.33.36:258][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20]
+[2025.11.13-13.33.36:276][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20_Auto1
+[2025.11.13-13.33.36:276][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/MI_oilpt20_Auto10898E5E8456DA0E571C32FB47B111CEB.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20_Auto1.uasset'
+[2025.11.13-13.33.36:279][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N] ([1] browsable assets)...
+[2025.11.13-13.33.36:282][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N.T_vd3lecfs_2K_N]
+[2025.11.13-13.33.36:282][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N]
+[2025.11.13-13.33.36:308][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N_Auto1
+[2025.11.13-13.33.36:308][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_vd3lecfs_2K_N_Auto13E439C9B43AE5BBB9E5D07BA47082F56.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N_Auto1.uasset'
+[2025.11.13-13.33.36:310][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM] ([1] browsable assets)...
+[2025.11.13-13.33.36:313][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM.T_vd3lecfs_2K_ORM]
+[2025.11.13-13.33.36:313][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM]
+[2025.11.13-13.33.36:338][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM_Auto1
+[2025.11.13-13.33.36:338][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_vd3lecfs_2K_ORM_Auto1504DF812492B6E397BFA098B51EDF1A2.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM_Auto1.uasset'
+[2025.11.13-13.33.36:339][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B] ([1] browsable assets)...
+[2025.11.13-13.33.36:342][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B.T_vd3lecfs_2K_B]
+[2025.11.13-13.33.36:342][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B]
+[2025.11.13-13.33.36:365][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B_Auto1
+[2025.11.13-13.33.36:365][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_vd3lecfs_2K_B_Auto1CF51E83547585313C74C0E9AA3DFB42A.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B_Auto1.uasset'
+[2025.11.13-13.33.36:368][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs] ([1] browsable assets)...
+[2025.11.13-13.33.36:383][279]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs.MI_vd3lecfs]
+[2025.11.13-13.33.36:383][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs]
+[2025.11.13-13.33.36:401][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs_Auto1
+[2025.11.13-13.33.36:401][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/MI_vd3lecfs_Auto1D30C44AE439D2145447CC686B0E75A1D.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs_Auto1.uasset'
+[2025.11.13-13.33.36:404][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_basecolor_1k] ([1] browsable assets)...
+[2025.11.13-13.33.36:407][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_basecolor_1k.026_basecolor_1k]
+[2025.11.13-13.33.36:407][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_basecolor_1k]
+[2025.11.13-13.33.36:426][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_basecolor_1k_Auto1
+[2025.11.13-13.33.36:426][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_basecolor_1k_Auto10AFCD76D4948E5701079B28D47A5B423.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_basecolor_1k_Auto1.uasset'
+[2025.11.13-13.33.36:427][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness] ([1] browsable assets)...
+[2025.11.13-13.33.36:429][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness.Mat_026_Weathered_Rock_MetallicRoughness]
+[2025.11.13-13.33.36:430][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness]
+[2025.11.13-13.33.36:446][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness_Auto1
+[2025.11.13-13.33.36:446][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock_MetallicR204BE05D44C91CA422CABD80121F9291.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness_Auto1.uasset'
+[2025.11.13-13.33.36:448][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_normal_1k] ([1] browsable assets)...
+[2025.11.13-13.33.36:450][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_normal_1k.026_normal_1k]
+[2025.11.13-13.33.36:450][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_normal_1k]
+[2025.11.13-13.33.36:469][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_normal_1k_Auto1
+[2025.11.13-13.33.36:469][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_normal_1k_Auto1C94F57A440DBE97576103484B46E2C11.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_normal_1k_Auto1.uasset'
+[2025.11.13-13.33.36:473][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_ao_1k] ([1] browsable assets)...
+[2025.11.13-13.33.36:478][279]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_ao_1k.026_ao_1k]
+[2025.11.13-13.33.36:478][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_ao_1k]
+[2025.11.13-13.33.36:498][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_ao_1k_Auto1
+[2025.11.13-13.33.36:498][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_ao_1k_Auto1CCB885F040FA0F7000ADCDBD6DE609BB.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Textures/026_ao_1k_Auto1.uasset'
+[2025.11.13-13.33.36:501][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock] ([1] browsable assets)...
+[2025.11.13-13.33.36:531][279]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock.Mat_026_Weathered_Rock]
+[2025.11.13-13.33.36:531][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock]
+[2025.11.13-13.33.36:551][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock_Auto1
+[2025.11.13-13.33.36:551][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock_Auto1BF19E2DD41D83D4689C8D680DB9DD5D2.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock_Auto1.uasset'
+[2025.11.13-13.33.36:553][279]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock] ([1] browsable assets)...
+[2025.11.13-13.33.36:570][279]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock.Mat_026_Weathered_Rock]
+[2025.11.13-13.33.36:570][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock]
+[2025.11.13-13.33.36:601][279]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock_Auto1
+[2025.11.13-13.33.36:601][279]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock_Auto15AD4D11C4102424E1725E98C98134046.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Autosaves/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint】/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock_Auto1.uasset'
+[2025.11.13-13.33.36:603][279]LogFileHelpers: Auto-saving content packages took 0.539
+[2025.11.13-13.33.51:738][182]LogFab: Display: Asset Type = gltf
+[2025.11.13-13.33.51:738][182]LogFab: Display: Is Quixel = 1
+[2025.11.13-13.33.52:343][198]LogStreaming: Display: FlushAsyncLoading(417): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.33.52:344][198]LogInterchangeEngine: Display: Interchange import: Using stack [OverridePipeline] to import.
+[2025.11.13-13.33.52:345][198]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/linda/AppData/Local/Temp/FabLibrary/2a492fae-856e-4a43-958b-62b768be287b/swamp_water_tgmjffbqx_2k_ue_mid_extracted/tgmjffbqx_tier_2.gltf]
+[2025.11.13-13.33.52:403][200]LogStreaming: Display: FlushAsyncLoading(418): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.33.52:553][205]LogStreaming: Display: FlushAsyncLoading(421): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.33.52:635][207]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N.T_tgmjffbqx_2K_N (TFO_BC5, 2048x2048 x1x1x1) (Required Memory Estimate: 382.499988 MB), EncodeSpeed: Fast
+[2025.11.13-13.33.52:635][207]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM.T_tgmjffbqx_2K_ORM (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 280.999983 MB), EncodeSpeed: Fast
+[2025.11.13-13.33.52:635][207]LogTexture: Display: Building textures: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B.T_tgmjffbqx_2K_B (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 280.999983 MB), EncodeSpeed: Fast
+[2025.11.13-13.33.52:990][223]LogInterchangeEngine: Display: Interchange import completed [C:/Users/linda/AppDa..._2k_ue_mid_extracted/tgmjffbqx_tier_2.gltf]
+[2025.11.13-13.34.07:276][ 42]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 637.152954
+[2025.11.13-13.34.07:477][ 54]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.11.13-13.34.07:477][ 54]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 637.337097, Update Interval: 321.251862
+[2025.11.13-13.35.36:835][346]LogShaderCompilers: Display: ================================================
+[2025.11.13-13.35.36:835][346]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.11.13-13.35.36:835][346]LogShaderCompilers: Display: Total job queries 393, among them cache hits 32 (8.14%), DDC hits 288 (73.28%), Duplicates 64 (16.28%)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Tracking 297 distinct input hashes that result in 214 distinct outputs (72.05%)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: RAM used: 2.88 MiB of 1.60 GiB budget. Usage: 0.18%
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Shaders Compiled: 9
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Jobs assigned 9, completed 9 (100%)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Average time worker was idle: 0.00 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Time job spent in pending queue: average 0.07 s, longest 0.44 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Job execution time: average 1.02 s, max 1.43 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Job life time (pending + execution): average 1.09 s, max 1.87
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Shader code size: total 79.832 KiB, numShaders 10, average 7.982 KiB, min 5.59 KiB, max 12.52 KiB
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 2.23 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.01%
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Jobs were issued in 9 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Average processing rate: 4.03 jobs/sec
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Total thread time: 6.609 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Total thread preprocess time: 8.761 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Percentage time preprocessing: 132.55%
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Effective parallelization: 2.96 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.370207
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                                FAnisotropyPS (compiled    1 times, average 1.02 sec, max 1.02 sec, min 1.02 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    2 times, average 0.86 sec, max 0.91 sec, min 0.81 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                                 FLumenCardPS (compiled    2 times, average 0.65 sec, max 0.72 sec, min 0.58 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    2 times, average 0.57 sec, max 0.60 sec, min 0.55 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                                 FLumenCardVS (compiled    2 times, average 0.53 sec, max 0.55 sec, min 0.52 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 26.05% of total time (compiled    2 times, average 0.86 sec, max 0.91 sec, min 0.81 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                                 FLumenCardPS - 19.73% of total time (compiled    2 times, average 0.65 sec, max 0.72 sec, min 0.58 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 17.38% of total time (compiled    2 times, average 0.57 sec, max 0.60 sec, min 0.55 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                                 FLumenCardVS - 16.14% of total time (compiled    2 times, average 0.53 sec, max 0.55 sec, min 0.52 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display:                                                FAnisotropyPS - 15.37% of total time (compiled    1 times, average 1.02 sec, max 1.02 sec, min 1.02 sec)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: === Material stats ===
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Materials Translated:    180
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Material Total Translate Time: 0.27 s
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Material Translation Only: 0.11 s (43%)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: Material Cache Hits: 35 (19%)
+[2025.11.13-13.35.36:836][346]LogShaderCompilers: Display: ================================================
+[2025.11.13-13.36.29:000][318]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2025.11.13-13.36.29:004][318]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2025.11.13-13.36.29:101][318]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-13.36.29:101][318]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k] ([1] browsable assets)...
+[2025.11.13-13.36.29:101][318]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k]
+[2025.11.13-13.36.29:148][318]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k
+[2025.11.13-13.36.29:149][318]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_basecolor_1k9969F7B94A3144C4180DAEB684EA3261.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k.uasset'
+[2025.11.13-13.36.29:151][318]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness] ([1] browsable assets)...
+[2025.11.13-13.36.29:151][318]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness]
+[2025.11.13-13.36.29:177][318]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness
+[2025.11.13-13.36.29:177][318]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock_MetallicR4300EA5A40C7F5CAB71917B27B9CA754.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness.uasset'
+[2025.11.13-13.36.29:178][318]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k] ([1] browsable assets)...
+[2025.11.13-13.36.29:178][318]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k]
+[2025.11.13-13.36.29:213][318]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k
+[2025.11.13-13.36.29:213][318]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_normal_1k75DFA8484FF1F9D180E838A3C33B823B.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k.uasset'
+[2025.11.13-13.36.29:219][318]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k] ([1] browsable assets)...
+[2025.11.13-13.36.29:219][318]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k]
+[2025.11.13-13.36.29:251][318]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k
+[2025.11.13-13.36.29:251][318]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_ao_1kE96150114730DD94FA94BCBE71FA7765.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k.uasset'
+[2025.11.13-13.36.29:253][318]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock] ([1] browsable assets)...
+[2025.11.13-13.36.29:253][318]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock]
+[2025.11.13-13.36.29:264][318]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock
+[2025.11.13-13.36.29:264][318]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock5FFB67FB470F5B60E2AA04957C0A5B32.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock.uasset'
+[2025.11.13-13.36.29:266][318]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock] ([1] browsable assets)...
+[2025.11.13-13.36.29:266][318]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock]
+[2025.11.13-13.36.29:281][318]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock
+[2025.11.13-13.36.29:281][318]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock54E1935A4322AC3F9DE894AFD968C685.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock.uasset'
+[2025.11.13-13.36.29:282][318]LogFileHelpers: InternalPromptForCheckoutAndSave took 181.807 ms
+[2025.11.13-13.36.29:377][318]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2025.11.13-13.36.29:405][318]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.11.13-13.36.29:429][318]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.11.13-13.36.29:431][318]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2025.11.13-13.36.29:480][318]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/SourceControl/UncontrolledChangelists.json
+[2025.11.13-13.36.29:557][319]LogContentValidation: Display: Starting to validate 6 assets
+[2025.11.13-13.36.29:557][319]LogContentValidation: Enabled validators:
+[2025.11.13-13.36.29:557][319]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-13.36.29:557][319]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-13.36.29:557][319]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-13.36.29:557][319]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-13.36.29:557][319]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-13.36.29:557][319]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-13.36.29:557][319]AssetCheck: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k Validating asset
+[2025.11.13-13.36.29:557][319]AssetCheck: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness Validating asset
+[2025.11.13-13.36.29:557][319]AssetCheck: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k Validating asset
+[2025.11.13-13.36.29:557][319]AssetCheck: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k Validating asset
+[2025.11.13-13.36.29:557][319]AssetCheck: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock Validating asset
+[2025.11.13-13.36.29:557][319]AssetCheck: /Game/Fab/026_Weathered_Rock【Material___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock Validating asset
+[2025.11.13-13.36.38:938][863]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-13.36.38:939][863]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k] ([1] browsable assets)...
+[2025.11.13-13.36.38:939][863]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k]
+[2025.11.13-13.36.38:972][863]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k
+[2025.11.13-13.36.38:972][863]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_basecolor_1k38C7E44F454F6DA375D9CA88D5FC7CA7.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k.uasset'
+[2025.11.13-13.36.38:974][863]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness] ([1] browsable assets)...
+[2025.11.13-13.36.38:974][863]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness]
+[2025.11.13-13.36.38:998][863]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness
+[2025.11.13-13.36.38:998][863]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock_MetallicR743B5D654ED5E02B4670B99D973EE903.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness.uasset'
+[2025.11.13-13.36.39:000][863]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k] ([1] browsable assets)...
+[2025.11.13-13.36.39:000][863]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k]
+[2025.11.13-13.36.39:034][863]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k
+[2025.11.13-13.36.39:034][863]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_normal_1k0A3EA6EA4E29DA61C83A35AAB100DB4E.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k.uasset'
+[2025.11.13-13.36.39:036][863]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k] ([1] browsable assets)...
+[2025.11.13-13.36.39:036][863]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k]
+[2025.11.13-13.36.39:066][863]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k
+[2025.11.13-13.36.39:066][863]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/026_ao_1k794A85DD4AB6E4C02314FB906ED93383.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k.uasset'
+[2025.11.13-13.36.39:070][863]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock] ([1] browsable assets)...
+[2025.11.13-13.36.39:070][863]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock]
+[2025.11.13-13.36.39:081][863]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock
+[2025.11.13-13.36.39:081][863]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock0C576AA14ADC18015EF4D1BB52B46731.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock.uasset'
+[2025.11.13-13.36.39:083][863]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock] ([1] browsable assets)...
+[2025.11.13-13.36.39:083][863]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock]
+[2025.11.13-13.36.39:097][863]LogSavePackage: Moving output files for package: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock
+[2025.11.13-13.36.39:097][863]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Mat_026_Weathered_Rock2F5F16D749053054346D22923F6AE699.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock.uasset'
+[2025.11.13-13.36.39:099][863]LogFileHelpers: InternalPromptForCheckoutAndSave took 160.534 ms (total: 342.342 ms)
+[2025.11.13-13.36.39:189][863]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2025.11.13-13.36.39:211][863]LogUObjectHash: Compacting FUObjectHashTables data took   0.56ms
+[2025.11.13-13.36.39:233][863]LogUObjectHash: Compacting FUObjectHashTables data took   0.32ms
+[2025.11.13-13.36.39:350][863]LogContentValidation: Display: Starting to validate 6 assets
+[2025.11.13-13.36.39:350][863]LogContentValidation: Enabled validators:
+[2025.11.13-13.36.39:350][863]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-13.36.39:350][863]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-13.36.39:350][863]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-13.36.39:350][863]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-13.36.39:350][863]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-13.36.39:350][863]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-13.36.39:350][863]AssetCheck: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_basecolor_1k Validating asset
+[2025.11.13-13.36.39:350][863]AssetCheck: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/Mat_026_Weathered_Rock_MetallicRoughness Validating asset
+[2025.11.13-13.36.39:350][863]AssetCheck: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_normal_1k Validating asset
+[2025.11.13-13.36.39:350][863]AssetCheck: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Textures/026_ao_1k Validating asset
+[2025.11.13-13.36.39:350][863]AssetCheck: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock Validating asset
+[2025.11.13-13.36.39:351][863]AssetCheck: /Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/StaticMeshes/Mat_026_Weathered_Rock Validating asset
+[2025.11.13-13.36.39:388][863]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/SourceControl/UncontrolledChangelists.json
+[2025.11.13-13.36.55:094][221]LogLiveCoding: Display: Starting Live Coding compile.
+[2025.11.13-13.37.17:452][640]LogLiveCoding: Display: UbaCli v5.7.0-Uba_v1.0.0-43528563 (Rootdir: "C:\ProgramData\Epic\UbaCli", StoreCapacity: 0Gb)
+
+---- Starting trace: Debugc5f524db-d827-42a9-96e1-c10f6d44c304 ----
+Running C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64\link.exe @C:\Users\linda\AppData\Local\Temp\6321.tmp
+   Creating library C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_0.lib and object C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_0.exp
+Detoured run took 1.1s
+[2025.11.13-13.37.17:976][640]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.11.13-13.37.18:080][641]Display: Reload/Re-instancing Complete: 1 package changed, 10 classes unchanged, 8 functions remapped
+[2025.11.13-13.37.18:080][641]LogLiveCoding: Display: Live coding succeeded
+[2025.11.13-13.37.20:416][753]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2025.11.13-13.37.20:430][753]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.13-13.37.20:430][753]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.13-13.37.20:430][753]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 875 us
+[2025.11.13-13.37.20:434][753]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.13-13.37.20:452][753]LogOnline: OSS: Created online subsystem instance for: NULL
+[2025.11.13-13.37.20:453][753]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2025.11.13-13.37.20:454][753]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-13.37.20:461][753]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.13-13.37.20:462][753]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 957 us
+[2025.11.13-13.37.20:463][753]LogPlayLevel: PIE: StaticDuplicateObject took: (0.008491s)
+[2025.11.13-13.37.20:463][753]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.008711s)
+[2025.11.13-13.37.20:486][753]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.11.13-13.37.20:489][753]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.13-13.37.20:493][753]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.13-13.37.20:493][753]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.13-13.37.20:493][753]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.13-13.37.20:493][753]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.13-13.37.20:495][753]LogWorldPartition: Display: WorldPartition initialize took 2.280 ms (total: 193.220 ms)
+[2025.11.13-13.37.20:495][753]LogPlayLevel: PIE: World Init took: (0.006136s)
+[2025.11.13-13.37.20:497][753]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.13-13.37.20:497][753]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.13-13.37.20:497][753]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.13-13.37.20:497][753]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.13-13.37.20:497][753]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.13-13.37.20:497][753]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.13-13.37.20:501][753]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.13-13.37.20:573][753]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.13-13.37.20:574][753]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.13-13.37.20:574][753]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.13-13.37.20:574][753]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.13-13.37.20:574][753]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2025.11.13-13.37.20:574][753]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2025.11.13-13.37.20:578][753]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2025.11.13-13.37.20:578][753]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2025.11.13-13.37.20:579][753]LogInit: FAudioDevice initialized with ID 2.
+[2025.11.13-13.37.20:579][753]LogAudio: Display: Audio Device (ID: 2) registered with world 'Lvl_ThirdPerson'.
+[2025.11.13-13.37.20:579][753]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2025.11.13-13.37.20:628][753]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-13.37.20:630][753]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.13-13.37.20:634][753]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.13-13.37.20
+[2025.11.13-13.37.20:637][753]LogWorld: Bringing up level for play took: 0.004959
+[2025.11.13-13.37.20:640][753]LogOnline: OSS: Created online subsystem instance for: :Context_5
+[2025.11.13-13.37.20:672][753]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.13-13.37.20:698][753]PIE: Server logged in
+[2025.11.13-13.37.20:703][753]PIE: Play in editor total start time 0.276 seconds.
+[2025.11.13-13.37.20:798][754]LogCsvProfiler: Display: Metadata set : systemresolution.resx="1912"
+[2025.11.13-13.37.20:798][754]LogCsvProfiler: Display: Metadata set : systemresolution.resy="970"
+[2025.11.13-13.37.21:601][786]LogTemp: Display: click callback called
+[2025.11.13-13.37.21:610][787]LogTemp: Display: click callback called
+[2025.11.13-13.37.21:627][788]LogTemp: Display: click callback called
+[2025.11.13-13.37.21:643][789]LogTemp: Display: click callback called
+[2025.11.13-13.37.21:659][790]LogTemp: Display: click callback called
+[2025.11.13-13.37.21:993][810]LogTemp: Input Vector: X=0.350000, Y=0.700000
+[2025.11.13-13.37.22:010][811]LogTemp: Input Vector: X=0.630000, Y=0.840000
+[2025.11.13-13.37.22:026][812]LogTemp: Input Vector: X=0.560000, Y=0.910000
+[2025.11.13-13.37.22:043][813]LogTemp: Input Vector: X=0.420000, Y=0.770000
+[2025.11.13-13.37.22:060][814]LogTemp: Input Vector: X=0.700000, Y=1.190000
+[2025.11.13-13.37.22:077][815]LogTemp: Input Vector: X=0.490000, Y=0.700000
+[2025.11.13-13.37.22:095][816]LogTemp: Input Vector: X=0.490000, Y=0.770000
+[2025.11.13-13.37.22:111][817]LogTemp: Input Vector: X=0.560000, Y=1.050000
+[2025.11.13-13.37.22:127][818]LogTemp: Input Vector: X=0.280000, Y=0.490000
+[2025.11.13-13.37.22:143][819]LogTemp: Input Vector: X=0.280000, Y=0.560000
+[2025.11.13-13.37.22:160][820]LogTemp: Input Vector: X=0.280000, Y=0.490000
+[2025.11.13-13.37.22:177][821]LogTemp: Input Vector: X=0.280000, Y=0.770000
+[2025.11.13-13.37.22:194][822]LogTemp: Input Vector: X=0.140000, Y=0.490000
+[2025.11.13-13.37.22:210][823]LogTemp: Input Vector: X=0.140000, Y=0.420000
+[2025.11.13-13.37.22:227][824]LogTemp: Input Vector: X=0.140000, Y=0.350000
+[2025.11.13-13.37.22:243][825]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:260][826]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.37.22:277][827]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:293][828]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.37.22:310][829]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:327][830]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.37.22:344][831]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.37.22:359][832]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:377][833]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:393][834]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.37.22:410][835]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.37.22:426][836]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:443][837]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:460][838]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-13.37.22:477][839]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.37.22:493][840]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.37.22:527][842]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.37.22:576][845]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.37.22:593][846]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.22:643][849]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.22:676][851]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.22:693][852]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.22:710][853]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.22:727][854]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.22:743][855]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.37.22:760][856]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.22:776][857]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.37.22:793][858]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.22:810][859]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.22:827][860]LogTemp: Input Vector: X=-0.560000, Y=-0.140000
+[2025.11.13-13.37.22:844][861]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.37.22:860][862]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.13-13.37.22:877][863]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.37.22:893][864]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-13.37.22:910][865]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.22:927][866]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-13.37.22:943][867]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.13-13.37.22:960][868]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.13-13.37.22:976][869]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.13-13.37.22:993][870]LogTemp: Input Vector: X=-0.420000, Y=-0.210000
+[2025.11.13-13.37.23:010][871]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-13.37.23:027][872]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-13.37.23:044][873]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.37.23:060][874]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.13-13.37.23:076][875]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-13.37.23:094][876]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-13.37.23:110][877]LogTemp: Input Vector: X=-0.420000, Y=-0.210000
+[2025.11.13-13.37.23:126][878]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-13.37.23:143][879]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.13-13.37.23:160][880]LogTemp: Input Vector: X=-0.280000, Y=-0.350000
+[2025.11.13-13.37.23:177][881]LogTemp: Input Vector: X=-0.560000, Y=-0.420000
+[2025.11.13-13.37.23:193][882]LogTemp: Input Vector: X=-0.280000, Y=-0.350000
+[2025.11.13-13.37.23:210][883]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.13-13.37.23:226][884]LogTemp: Input Vector: X=-0.280000, Y=-0.210000
+[2025.11.13-13.37.23:243][885]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-13.37.23:260][886]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-13.37.23:277][887]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.37.23:293][888]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-13.37.23:310][889]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.37.23:326][890]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.37.23:345][891]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-13.37.23:360][892]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.37.23:377][893]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.37.23:393][894]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.37.23:410][895]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.37.23:443][897]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.37.23:460][898]LogTemp: Input Vector: X=0.000000, Y=-0.280000
+[2025.11.13-13.37.23:476][899]LogTemp: Input Vector: X=0.000000, Y=-0.350000
+[2025.11.13-13.37.23:493][900]LogTemp: Input Vector: X=0.070000, Y=-0.350000
+[2025.11.13-13.37.23:510][901]LogTemp: Input Vector: X=0.070000, Y=-0.420000
+[2025.11.13-13.37.23:527][902]LogTemp: Input Vector: X=0.280000, Y=-0.490000
+[2025.11.13-13.37.23:544][903]LogTemp: Input Vector: X=0.210000, Y=-0.350000
+[2025.11.13-13.37.23:560][904]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.13-13.37.23:576][905]LogTemp: Input Vector: X=0.420000, Y=-0.140000
+[2025.11.13-13.37.23:593][906]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-13.37.23:610][907]LogTemp: Input Vector: X=0.350000, Y=-0.070000
+[2025.11.13-13.37.23:626][908]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-13.37.23:643][909]LogTemp: Input Vector: X=0.490000, Y=-0.000000
+[2025.11.13-13.37.23:660][910]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.37.23:677][911]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.37.23:693][912]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.37.23:777][917]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.23:794][918]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.37.23:810][919]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.37.23:827][920]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-13.37.23:844][921]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.23:860][922]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.23:877][923]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.37.23:910][925]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.23:927][926]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.23:977][929]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.23:993][930]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.24:026][932]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.24:043][933]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.37.24:060][934]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.37.24:333][948]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-13.37.24:333][948]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-13.37.24:334][948]LogSlate: Window 'ProductionProjCurr Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2025.11.13-13.37.24:344][948]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-13.37.24:345][948]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-13.37.24:345][948]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.13-13.37.24:351][948]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.13-13.37.24:355][948]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-13.37.24:384][948]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.11.13-13.37.24:384][948]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2025.11.13-13.37.24:385][948]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2, StreamState=4
+[2025.11.13-13.37.24:388][948]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2, StreamState=2
+[2025.11.13-13.37.24:404][948]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2025.11.13-13.37.24:513][949]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2025.11.13-13.37.31:983][360]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/boardGame/blueprints/BP_BG_Tile.BP_BG_Tile
+[2025.11.13-13.37.31:985][360]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_4
+[2025.11.13-13.37.32:045][360]LogStreaming: Display: FlushAsyncLoading(422): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-13.38.14:353][649]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-13.38.14:420][649]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/boardGame/blueprints/BP_BG_Tile] ([2] browsable assets)...
+[2025.11.13-13.38.14:471][649]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/boardGame/blueprints/BP_BG_Tile.BP_BG_Tile]
+[2025.11.13-13.38.14:471][649]OBJ SavePackage: Finished generating thumbnails for package [/Game/boardGame/blueprints/BP_BG_Tile]
+[2025.11.13-13.38.14:488][649]LogSavePackage: Moving output files for package: /Game/boardGame/blueprints/BP_BG_Tile
+[2025.11.13-13.38.14:489][649]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/BP_BG_Tile94B6983844DDFC57BF2EE29DC1F244C3.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/boardGame/blueprints/BP_BG_Tile.uasset'
+[2025.11.13-13.38.14:502][649]LogFileHelpers: InternalPromptForCheckoutAndSave took 148.630 ms (total: 490.973 ms)
+[2025.11.13-13.38.14:580][649]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.13-13.38.14:580][649]LogContentValidation: Enabled validators:
+[2025.11.13-13.38.14:580][649]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-13.38.14:580][649]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-13.38.14:580][649]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-13.38.14:580][649]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-13.38.14:580][649]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-13.38.14:580][649]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-13.38.14:580][649]AssetCheck: /Game/boardGame/blueprints/BP_BG_Tile Validating asset
+[2025.11.13-13.38.16:774][773]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.11.13-13.38.18:616][879]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2025.11.13-13.38.18:625][879]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.13-13.38.18:625][879]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.13-13.38.18:626][879]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 666 us (total: 1.542 ms)
+[2025.11.13-13.38.18:626][879]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.13-13.38.18:626][879]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-13.38.18:632][879]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.13-13.38.18:633][879]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 885 us (total: 1.843 ms)
+[2025.11.13-13.38.18:633][879]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006239s)
+[2025.11.13-13.38.18:633][879]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.006271s)
+[2025.11.13-13.38.18:655][879]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.11.13-13.38.18:657][879]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.13-13.38.18:660][879]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.13-13.38.18:660][879]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.13-13.38.18:660][879]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.13-13.38.18:660][879]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.13-13.38.18:661][879]LogWorldPartition: Display: WorldPartition initialize took 1.416 ms (total: 194.636 ms)
+[2025.11.13-13.38.18:661][879]LogPlayLevel: PIE: World Init took: (0.003782s)
+[2025.11.13-13.38.18:662][879]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.13-13.38.18:662][879]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.13-13.38.18:662][879]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.13-13.38.18:662][879]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.13-13.38.18:662][879]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.13-13.38.18:662][879]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.13-13.38.18:666][879]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.13-13.38.18:736][879]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.13-13.38.18:736][879]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.13-13.38.18:736][879]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.13-13.38.18:736][879]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.13-13.38.18:736][879]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2025.11.13-13.38.18:736][879]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2025.11.13-13.38.18:741][879]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2025.11.13-13.38.18:741][879]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2025.11.13-13.38.18:741][879]LogInit: FAudioDevice initialized with ID 3.
+[2025.11.13-13.38.18:741][879]LogAudio: Display: Audio Device (ID: 3) registered with world 'Lvl_ThirdPerson'.
+[2025.11.13-13.38.18:741][879]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2025.11.13-13.38.18:781][879]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-13.38.18:782][879]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.13-13.38.18:784][879]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.13-13.38.18
+[2025.11.13-13.38.18:784][879]LogWorld: Bringing up level for play took: 0.002543
+[2025.11.13-13.38.18:788][879]LogOnline: OSS: Created online subsystem instance for: :Context_7
+[2025.11.13-13.38.18:790][879]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.13-13.38.18:805][879]PIE: Server logged in
+[2025.11.13-13.38.18:810][879]PIE: Play in editor total start time 0.184 seconds.
+[2025.11.13-13.38.19:331][900]LogTemp: Display: click callback called
+[2025.11.13-13.38.19:341][901]LogTemp: Display: click callback called
+[2025.11.13-13.38.19:358][902]LogTemp: Display: click callback called
+[2025.11.13-13.38.19:375][903]LogTemp: Display: click callback called
+[2025.11.13-13.38.19:391][904]LogTemp: Display: click callback called
+[2025.11.13-13.38.19:758][926]LogTemp: Input Vector: X=0.070000, Y=0.840000
+[2025.11.13-13.38.19:775][927]LogTemp: Input Vector: X=0.210000, Y=2.380000
+[2025.11.13-13.38.19:791][928]LogTemp: Input Vector: X=0.210000, Y=2.030000
+[2025.11.13-13.38.19:808][929]LogTemp: Input Vector: X=0.280000, Y=1.260000
+[2025.11.13-13.38.19:825][930]LogTemp: Input Vector: X=0.140000, Y=0.840000
+[2025.11.13-13.38.19:842][931]LogTemp: Input Vector: X=0.000000, Y=0.770000
+[2025.11.13-13.38.19:858][932]LogTemp: Input Vector: X=0.000000, Y=0.490000
+[2025.11.13-13.38.19:875][933]LogTemp: Input Vector: X=0.000000, Y=0.350000
+[2025.11.13-13.38.19:891][934]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.38.19:908][935]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-13.38.19:925][936]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.19:942][937]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.19:958][938]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.19:975][939]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.20:275][957]LogTemp: Input Vector: X=-0.070000, Y=0.280000
+[2025.11.13-13.38.20:291][958]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.20:308][959]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.20:326][960]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-13.38.20:342][961]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.20:358][962]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.20:375][963]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-13.38.20:392][964]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.13-13.38.20:408][965]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.20:425][966]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.20:442][967]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-13.38.20:458][968]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.20:475][969]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-13.38.20:491][970]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:508][971]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:524][972]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:541][973]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:558][974]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:574][975]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:591][976]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.20:608][977]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:641][979]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.20:674][981]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.20:691][982]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.20:709][983]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.20:725][984]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-13.38.20:741][985]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.38.20:758][986]LogTemp: Input Vector: X=-0.140000, Y=-0.210000
+[2025.11.13-13.38.20:775][987]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.20:791][988]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.38.20:808][989]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-13.38.20:824][990]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.38.20:842][991]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-13.38.20:859][992]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.38.20:874][993]LogTemp: Input Vector: X=-0.420000, Y=-0.210000
+[2025.11.13-13.38.20:891][994]LogTemp: Input Vector: X=-0.490000, Y=-0.140000
+[2025.11.13-13.38.20:909][995]LogTemp: Input Vector: X=-0.700000, Y=-0.210000
+[2025.11.13-13.38.20:925][996]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-13.38.20:942][997]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.13-13.38.20:958][998]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-13.38.20:975][999]LogTemp: Input Vector: X=-0.560000, Y=-0.210000
+[2025.11.13-13.38.20:991][  0]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-13.38.21:008][  1]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-13.38.21:025][  2]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.38.21:041][  3]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-13.38.21:058][  4]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.38.21:075][  5]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-13.38.21:091][  6]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-13.38.21:108][  7]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.38.21:142][  9]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.21:158][ 10]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.21:174][ 11]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.21:691][ 42]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-13.38.21:709][ 43]LogTemp: Input Vector: X=-0.630000, Y=-0.070000
+[2025.11.13-13.38.21:724][ 44]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.13-13.38.21:741][ 45]LogTemp: Input Vector: X=-0.840000, Y=-0.000000
+[2025.11.13-13.38.21:758][ 46]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.38.21:775][ 47]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.38.21:792][ 48]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-13.38.21:808][ 49]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-13.38.21:825][ 50]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-13.38.21:841][ 51]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.21:858][ 52]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.21:875][ 53]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-13.38.21:891][ 54]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-13.38.21:908][ 55]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.21:925][ 56]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.21:942][ 57]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.25:726][284]LogTemp: Display: Scroll: 1.000000 | TargetFOV: 80.000000
+[2025.11.13-13.38.25:808][289]LogTemp: Display: Scroll: 1.000000 | TargetFOV: 70.000000
+[2025.11.13-13.38.25:875][293]LogTemp: Display: Scroll: 1.000000 | TargetFOV: 60.000000
+[2025.11.13-13.38.26:425][326]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-13.38.26:441][327]LogTemp: Input Vector: X=-1.120000, Y=-0.000000
+[2025.11.13-13.38.26:458][328]LogTemp: Input Vector: X=-1.470000, Y=-0.000000
+[2025.11.13-13.38.26:475][329]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-13.38.26:491][330]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.38.26:508][331]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.26:525][332]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.26:542][333]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.26:558][334]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:574][335]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:592][336]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:674][341]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:725][344]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.26:742][345]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.26:758][346]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-13.38.26:774][347]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-13.38.26:791][348]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:808][349]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:842][351]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.26:858][352]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.26:925][356]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:008][361]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:042][363]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:058][364]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:074][365]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:092][366]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.27:108][367]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:125][368]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:142][369]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:158][370]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.27:175][371]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.27:192][372]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.27:208][373]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:225][374]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.27:241][375]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:258][376]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.27:275][377]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.27:292][378]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:341][381]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:358][382]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:375][383]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:392][384]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:408][385]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:458][388]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.27:474][389]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:491][390]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:509][391]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.27:525][392]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-13.38.27:558][394]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:574][395]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.27:591][396]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:625][398]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:641][399]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:658][400]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:674][401]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:691][402]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.27:708][403]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:742][405]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:758][406]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:775][407]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:808][409]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:842][411]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:891][414]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:925][416]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:942][417]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.27:975][419]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.27:992][420]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:008][421]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:025][422]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:059][424]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:075][425]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:091][426]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:125][428]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:141][429]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:192][432]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.28:258][436]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:291][438]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.28:341][441]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.28:358][442]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.38.28:375][443]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.28:391][444]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.38.28:409][445]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.28:441][447]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.28:458][448]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.28:492][450]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.32:309][679]LogTemp: Input Vector: X=-0.140000, Y=-1.050000
+[2025.11.13-13.38.32:325][680]LogTemp: Input Vector: X=-0.140000, Y=-0.420000
+[2025.11.13-13.38.32:342][681]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.32:359][682]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-13.38.32:375][683]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.32:392][684]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.32:409][685]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.32:425][686]LogTemp: Input Vector: X=0.000000, Y=-0.350000
+[2025.11.13-13.38.32:443][687]LogTemp: Input Vector: X=0.000000, Y=-0.350000
+[2025.11.13-13.38.32:459][688]LogTemp: Input Vector: X=-0.070000, Y=-0.420000
+[2025.11.13-13.38.32:476][689]LogTemp: Input Vector: X=-0.210000, Y=-0.560000
+[2025.11.13-13.38.32:492][690]LogTemp: Input Vector: X=-0.280000, Y=-0.280000
+[2025.11.13-13.38.32:508][691]LogTemp: Input Vector: X=-0.140000, Y=-0.210000
+[2025.11.13-13.38.32:526][692]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.32:542][693]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-13.38.32:559][694]LogTemp: Input Vector: X=-0.280000, Y=0.210000
+[2025.11.13-13.38.32:575][695]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-13.38.32:592][696]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.13-13.38.32:608][697]LogTemp: Input Vector: X=-0.210000, Y=0.210000
+[2025.11.13-13.38.32:625][698]LogTemp: Input Vector: X=-0.140000, Y=0.210000
+[2025.11.13-13.38.32:642][699]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-13.38.32:658][700]LogTemp: Input Vector: X=-0.140000, Y=0.210000
+[2025.11.13-13.38.32:776][707]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-13.38.33:909][775]LogTemp: Input Vector: X=0.070000, Y=0.350000
+[2025.11.13-13.38.33:925][776]LogTemp: Input Vector: X=0.070000, Y=0.490000
+[2025.11.13-13.38.33:941][777]LogTemp: Input Vector: X=0.070000, Y=0.350000
+[2025.11.13-13.38.33:959][778]LogTemp: Input Vector: X=0.000000, Y=0.490000
+[2025.11.13-13.38.33:976][779]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-13.38.33:992][780]LogTemp: Input Vector: X=0.070000, Y=0.280000
+[2025.11.13-13.38.34:009][781]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-13.38.34:025][782]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-13.38.34:042][783]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-13.38.34:059][784]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.38.34:076][785]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-13.38.34:108][787]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.34:126][788]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:159][790]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.34:176][791]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:209][793]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-13.38.34:225][794]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:242][795]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:258][796]LogTemp: Input Vector: X=0.210000, Y=0.140000
+[2025.11.13-13.38.34:275][797]LogTemp: Input Vector: X=0.210000, Y=0.210000
+[2025.11.13-13.38.34:292][798]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-13.38.34:309][799]LogTemp: Input Vector: X=0.210000, Y=0.140000
+[2025.11.13-13.38.34:325][800]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-13.38.34:342][801]LogTemp: Input Vector: X=0.280000, Y=0.070000
+[2025.11.13-13.38.34:359][802]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.34:376][803]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-13.38.34:392][804]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.34:425][806]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.34:442][807]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.34:475][809]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:492][810]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:508][811]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:542][813]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:558][814]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:576][815]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:592][816]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:608][817]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-13.38.34:626][818]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.34:642][819]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-13.38.34:676][821]LogTemp: Input Vector: X=0.210000, Y=0.140000
+[2025.11.13-13.38.34:692][822]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.34:709][823]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-13.38.34:726][824]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-13.38.34:742][825]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:759][826]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:825][830]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:859][832]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:876][833]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:892][834]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.34:909][835]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.34:942][837]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.34:992][840]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:042][843]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:075][845]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:109][847]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:143][849]LogTemp: Input Vector: X=0.070000, Y=-0.140000
+[2025.11.13-13.38.35:175][851]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:259][856]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:292][858]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:326][860]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.35:375][863]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.35:392][864]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.35:425][866]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:443][867]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.35:458][868]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.35:476][869]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:493][870]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:508][871]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:559][874]LogTemp: Input Vector: X=0.070000, Y=-0.140000
+[2025.11.13-13.38.35:592][876]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.35:626][878]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:675][881]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:692][882]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:742][885]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-13.38.35:759][886]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-13.38.35:792][888]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.35:875][893]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-13.38.35:908][895]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.36:009][901]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.36:126][908]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.36:143][909]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.36:159][910]LogTemp: Input Vector: X=0.000000, Y=-0.280000
+[2025.11.13-13.38.36:176][911]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-13.38.36:841][951]LogShaderCompilers: Display: ================================================
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Total job queries 452, among them cache hits 52 (11.50%), DDC hits 324 (71.68%), Duplicates 64 (14.16%)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Tracking 336 distinct input hashes that result in 245 distinct outputs (72.92%)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: RAM used: 3.07 MiB of 1.60 GiB budget. Usage: 0.19%
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Shaders Compiled: 12
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Jobs assigned 12, completed 12 (100%)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Average time worker was idle: 119.56 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Time job spent in pending queue: average 0.06 s, longest 0.44 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Job execution time: average 0.99 s, max 1.43 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Job life time (pending + execution): average 1.05 s, max 1.87
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Shader code size: total 106.738 KiB, numShaders 14, average 7.624 KiB, min 3.777 KiB, max 12.52 KiB
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 4.44 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.01%
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Jobs were issued in 12 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Average processing rate: 2.70 jobs/sec
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Total thread time: 8.849 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Total thread preprocess time: 9.817 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Percentage time preprocessing: 110.94%
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Effective parallelization: 1.99 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.249221
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                                FAnisotropyPS (compiled    1 times, average 1.02 sec, max 1.02 sec, min 1.02 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    1 times, average 0.75 sec, max 0.75 sec, min 0.75 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    4 times, average 0.70 sec, max 0.91 sec, min 0.51 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                                 FLumenCardPS (compiled    2 times, average 0.65 sec, max 0.72 sec, min 0.58 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    2 times, average 0.57 sec, max 0.60 sec, min 0.55 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 31.58% of total time (compiled    4 times, average 0.70 sec, max 0.91 sec, min 0.51 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                                 FLumenCardPS - 14.74% of total time (compiled    2 times, average 0.65 sec, max 0.72 sec, min 0.58 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 12.98% of total time (compiled    2 times, average 0.57 sec, max 0.60 sec, min 0.55 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                                 FLumenCardVS - 12.05% of total time (compiled    2 times, average 0.53 sec, max 0.55 sec, min 0.52 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display:                                                FAnisotropyPS - 11.48% of total time (compiled    1 times, average 1.02 sec, max 1.02 sec, min 1.02 sec)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: === Material stats ===
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Materials Translated:    182
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Material Total Translate Time: 0.28 s
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Material Translation Only: 0.12 s (42%)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: Material Cache Hits: 35 (19%)
+[2025.11.13-13.38.36:842][951]LogShaderCompilers: Display: ================================================
+[2025.11.13-13.38.37:526][992]LogTemp: Input Vector: X=-0.070000, Y=-0.350000
+[2025.11.13-13.38.37:542][993]LogTemp: Input Vector: X=-0.140000, Y=-0.350000
+[2025.11.13-13.38.37:559][994]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-13.38.37:576][995]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.37:593][996]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.37:609][997]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.37:625][998]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.37:642][999]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.37:659][  0]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.37:676][  1]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-13.38.37:692][  2]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-13.38.37:708][  3]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-13.38.37:726][  4]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-13.38.37:742][  5]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-13.38.37:759][  6]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-13.38.37:776][  7]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.37:793][  8]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.37:826][ 10]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.37:859][ 12]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.37:875][ 13]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.37:892][ 14]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.37:910][ 15]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-13.38.37:926][ 16]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.13-13.38.37:943][ 17]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-13.38.37:959][ 18]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-13.38.38:092][ 26]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.38:109][ 27]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-13.38.38:142][ 29]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:159][ 30]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:176][ 31]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:243][ 35]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-13.38.38:276][ 37]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:292][ 38]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:343][ 41]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:359][ 42]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:393][ 44]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:409][ 45]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.38:509][ 51]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-13.38.40:480][167]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-13.38.40:481][167]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-13.38.40:482][167]LogSlate: Window 'ProductionProjCurr Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2025.11.13-13.38.40:497][167]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-13.38.40:498][167]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-13.38.40:498][167]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.13-13.38.40:500][167]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.13-13.38.40:503][167]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-13.38.40:528][167]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2025.11.13-13.38.40:528][167]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3, StreamState=4
+[2025.11.13-13.38.40:533][167]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3, StreamState=2
+[2025.11.13-13.38.40:543][167]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.11.13-13.38.40:639][168]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2025.11.13-13.38.42:323][266]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-13.38.42:396][266]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/boardGame/blueprints/BP_BG_Tile] ([2] browsable assets)...
+[2025.11.13-13.38.42:424][266]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/boardGame/blueprints/BP_BG_Tile.BP_BG_Tile]
+[2025.11.13-13.38.42:424][266]OBJ SavePackage: Finished generating thumbnails for package [/Game/boardGame/blueprints/BP_BG_Tile]
+[2025.11.13-13.38.42:438][266]LogSavePackage: Moving output files for package: /Game/boardGame/blueprints/BP_BG_Tile
+[2025.11.13-13.38.42:440][266]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/BP_BG_Tile297710EE4F13CEE0C87856B5BE41D082.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/boardGame/blueprints/BP_BG_Tile.uasset'
+[2025.11.13-13.38.42:452][266]LogFileHelpers: InternalPromptForCheckoutAndSave took 128.891 ms (total: 619.864 ms)
+[2025.11.13-13.38.42:529][266]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.13-13.38.42:529][266]LogContentValidation: Enabled validators:
+[2025.11.13-13.38.42:529][266]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-13.38.42:529][266]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-13.38.42:529][266]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-13.38.42:529][266]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-13.38.42:529][266]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-13.38.42:529][266]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-13.38.42:529][266]AssetCheck: /Game/boardGame/blueprints/BP_BG_Tile Validating asset
+[2025.11.13-13.38.46:252][476]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.11.13-13.38.46:262][476]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-13.38.46:349][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N] ([1] browsable assets)...
+[2025.11.13-13.38.46:349][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N]
+[2025.11.13-13.38.46:445][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N
+[2025.11.13-13.38.46:445][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_oilpt20_2K_NAD5804E9408A02363134978CE80E08A4.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N.uasset'
+[2025.11.13-13.38.46:453][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM] ([1] browsable assets)...
+[2025.11.13-13.38.46:453][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM]
+[2025.11.13-13.38.46:536][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM
+[2025.11.13-13.38.46:537][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_oilpt20_2K_ORM87831B834DAACEC8827A4A8467EC59A2.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM.uasset'
+[2025.11.13-13.38.46:538][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B] ([1] browsable assets)...
+[2025.11.13-13.38.46:538][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B]
+[2025.11.13-13.38.46:628][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B
+[2025.11.13-13.38.46:628][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_oilpt20_2K_BA1D899784E1DAB89C1D3528D40F2755D.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B.uasset'
+[2025.11.13-13.38.46:631][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20] ([1] browsable assets)...
+[2025.11.13-13.38.46:631][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20]
+[2025.11.13-13.38.46:645][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20
+[2025.11.13-13.38.46:645][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/MI_oilpt20A7AD69FF4977017B3C59D3AF5638122B.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20.uasset'
+[2025.11.13-13.38.46:648][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N] ([1] browsable assets)...
+[2025.11.13-13.38.46:648][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N]
+[2025.11.13-13.38.46:741][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N
+[2025.11.13-13.38.46:741][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_vd3lecfs_2K_ND86033804320C7969C44429CDEA93188.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N.uasset'
+[2025.11.13-13.38.46:744][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM] ([1] browsable assets)...
+[2025.11.13-13.38.46:744][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM]
+[2025.11.13-13.38.46:829][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM
+[2025.11.13-13.38.46:829][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_vd3lecfs_2K_ORM968080364EB72BDFDC4E789D8397374B.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM.uasset'
+[2025.11.13-13.38.46:831][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B] ([1] browsable assets)...
+[2025.11.13-13.38.46:831][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B]
+[2025.11.13-13.38.46:918][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B
+[2025.11.13-13.38.46:918][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_vd3lecfs_2K_BD0CCBCC1489466C3BCF70CBF08BEDB63.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B.uasset'
+[2025.11.13-13.38.46:921][476]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs] ([1] browsable assets)...
+[2025.11.13-13.38.46:921][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs]
+[2025.11.13-13.38.46:934][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs
+[2025.11.13-13.38.46:934][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/MI_vd3lecfs298469E74A3E8A3D1414F8892C3C4E6F.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs.uasset'
+[2025.11.13-13.38.46:936][476]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N] ([1] browsable assets)...
+[2025.11.13-13.38.46:941][476]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N.T_tgmjffbqx_2K_N]
+[2025.11.13-13.38.46:941][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N]
+[2025.11.13-13.38.47:002][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N
+[2025.11.13-13.38.47:002][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_tgmjffbqx_2K_N8D0E6F1946640BFD3613FABD2DD94F06.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N.uasset'
+[2025.11.13-13.38.47:005][476]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM] ([1] browsable assets)...
+[2025.11.13-13.38.47:008][476]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM.T_tgmjffbqx_2K_ORM]
+[2025.11.13-13.38.47:008][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM]
+[2025.11.13-13.38.47:079][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM
+[2025.11.13-13.38.47:079][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_tgmjffbqx_2K_ORMCA6B5BD84FCB5C23DC06369DD6EFB349.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM.uasset'
+[2025.11.13-13.38.47:081][476]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B] ([1] browsable assets)...
+[2025.11.13-13.38.47:084][476]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B.T_tgmjffbqx_2K_B]
+[2025.11.13-13.38.47:084][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B]
+[2025.11.13-13.38.47:173][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B
+[2025.11.13-13.38.47:173][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/T_tgmjffbqx_2K_BB8752F1B41A48E5D57363E893BDB28F8.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B.uasset'
+[2025.11.13-13.38.47:175][476]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx] ([1] browsable assets)...
+[2025.11.13-13.38.47:269][476]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx.MI_tgmjffbqx]
+[2025.11.13-13.38.47:269][476]OBJ SavePackage: Finished generating thumbnails for package [/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx]
+[2025.11.13-13.38.47:282][476]LogSavePackage: Moving output files for package: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx
+[2025.11.13-13.38.47:283][476]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/MI_tgmjffbqx79C4EA1748C7B9DCCF8CB2AA8BC1B088.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx.uasset'
+[2025.11.13-13.38.47:295][476]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.03 sec (total: 1.65 sec)
+[2025.11.13-13.38.47:391][476]LogContentValidation: Display: Starting to validate 12 assets
+[2025.11.13-13.38.47:391][476]LogContentValidation: Enabled validators:
+[2025.11.13-13.38.47:391][476]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-13.38.47:391][476]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-13.38.47:391][476]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-13.38.47:391][476]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-13.38.47:392][476]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-13.38.47:392][476]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_N Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_ORM Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Textures/T_oilpt20_2K_B Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20 Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_N Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_ORM Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Textures/T_vd3lecfs_2K_B Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_N Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_ORM Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Textures/T_tgmjffbqx_2K_B Validating asset
+[2025.11.13-13.38.47:392][476]AssetCheck: /Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx Validating asset
+[2025.11.13-13.38.47:417][476]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/SourceControl/UncontrolledChangelists.json
+[2025.11.13-13.39.01:175][295]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms

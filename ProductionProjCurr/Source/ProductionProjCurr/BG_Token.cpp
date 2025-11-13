@@ -29,6 +29,8 @@ ABG_Token::ABG_Token()
 	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Three(TEXT("/Game/boardGame/assets/tile_MAT2.tile_MAT2"));
 	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Four(TEXT("/Game/boardGame/assets/tile_MAT3.tile_MAT3"));
 
+
+
 	if (MAT_One.Succeeded())  MAT_TokenArray.Add(MAT_One.Object);
 	if (MAT_Two.Succeeded())  MAT_TokenArray.Add(MAT_Two.Object);
 	if (MAT_Three.Succeeded())  MAT_TokenArray.Add(MAT_Three.Object);
