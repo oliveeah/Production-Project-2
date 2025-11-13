@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "BG_Tile.h"
+#include "BG_Token.h"
 #include "BG_TileSpawner.generated.h"
 
 UCLASS()
@@ -26,6 +27,8 @@ public:	//functions
 
 
 public://variables
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	USceneComponent* rootScene;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* staticMesh;
@@ -46,4 +49,10 @@ public://variables
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	TSubclassOf<ABG_Tile> TileClass;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
+	TSubclassOf<ABG_Token> TokenClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	bool shouldSpawnTokens;
 };

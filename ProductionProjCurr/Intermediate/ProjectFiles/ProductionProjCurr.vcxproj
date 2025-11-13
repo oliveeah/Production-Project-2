@@ -270,6 +270,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\BG_TileSpawner.h"/>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_Token.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_Token.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\MyAnimNotifyState.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

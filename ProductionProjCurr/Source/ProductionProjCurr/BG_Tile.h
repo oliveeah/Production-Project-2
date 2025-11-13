@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "BG_Tile.generated.h"
 
+
+
+
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 {
@@ -34,11 +37,13 @@ public:	//functions
 public://variables
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UStaticMeshComponent* staticMesh;
+	UStaticMeshComponent* tileMesh;
 
 	enum clearingType { clearing1, clearing2, clearing3, clearing4 };
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	TArray<UMaterialInterface*> MAT_Array;
+
+	int32 generateRandomNumber();
 
 };

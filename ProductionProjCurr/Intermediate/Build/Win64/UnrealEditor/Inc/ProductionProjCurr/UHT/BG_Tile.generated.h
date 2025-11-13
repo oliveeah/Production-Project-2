@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ABG_Tile *****************************************************************
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile_NoRegister();
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABG_Tile(); \
 	friend struct Z_Construct_UClass_ABG_Tile_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ABG_Tile)
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABG_Tile(ABG_Tile&&) = delete; \
 	ABG_Tile(const ABG_Tile&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ABG_Tile();
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_9_PROLOG
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_12_GENERATED_BODY \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_12_PROLOG
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

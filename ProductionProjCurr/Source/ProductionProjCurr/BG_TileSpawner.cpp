@@ -6,10 +6,15 @@
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-	staticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
-	RootComponent = staticMesh;
+
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+
+	rootScene = CreateDefaultSubobject<USceneComponent>(TEXT("Root Scene"));
+	SetRootComponent(rootScene);
+
+	//staticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
+	//RootComponent = staticMesh;
 }
 
 // Called when the game starts or when spawned
@@ -42,9 +47,19 @@ void ABG_TileSpawner::BeginPlay()
 			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
 			ABG_Tile* NewTile = GetWorld()->SpawnActor<ABG_Tile>(TileClass, instanceTransform);
-			if (NewTile)
+
+			if (shouldSpawnTokens)
 			{
-				NewTile->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
+				FVector tokenSpawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 10.0f);
+				FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
+
+				ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
+				if (NewToken)
+				{
+					NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
+
+				}
+
 			}
 		}
 	}

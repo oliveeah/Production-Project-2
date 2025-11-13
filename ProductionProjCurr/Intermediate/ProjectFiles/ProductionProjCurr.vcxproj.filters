@@ -51,6 +51,12 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\BG_TileSpawner.h">
       <Filter>Source\ProductionProjCurr</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_Token.cpp">
+      <Filter>Source\ProductionProjCurr</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_Token.h">
+      <Filter>Source\ProductionProjCurr</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProductionProjCurr\MyAnimNotifyState.cpp">
       <Filter>Source\ProductionProjCurr</Filter>
     </ClCompile>

@@ -12,20 +12,22 @@ ABG_Tile::ABG_Tile()
 	PrimaryActorTick.bCanEverTick = false;
 
 
-	staticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("static mesh"));
-	SetRootComponent(staticMesh);
+	tileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile mesh"));
+	SetRootComponent(tileMesh);
+
 
 	//rootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root Component"));
 
-	ConstructorHelpers::FObjectFinder<UStaticMesh> MeshAsset(TEXT("/Game/boardGame/assets/tile.tile"));
-	if (MeshAsset.Succeeded())
+	ConstructorHelpers::FObjectFinder<UStaticMesh> clearingMeshAsset(TEXT("/Game/boardGame/assets/tile.tile"));
+	if (clearingMeshAsset.Succeeded())
 	{
-		staticMesh->SetStaticMesh(MeshAsset.Object);
+		tileMesh->SetStaticMesh(clearingMeshAsset.Object);
 	}
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to load tile mesh!"));
 	}
+
 
 	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_One(TEXT("/Game/boardGame/assets/tile_MAT.tile_MAT"));
 	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Two(TEXT("/Game/boardGame/assets/tile_MAT1.tile_MAT1"));
@@ -38,6 +40,7 @@ ABG_Tile::ABG_Tile()
 	if (MAT_Three.Succeeded())  MAT_Array.Add(MAT_Three.Object);
 	if (MAT_Four.Succeeded())  MAT_Array.Add(MAT_Four.Object);
 	
+	tileMesh->SetBoundsScale(1000.0f);
 
 	
 
@@ -48,18 +51,34 @@ void ABG_Tile::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (MAT_Array.Num() > 0 && staticMesh)
+	//set material and clearing type
+	if (MAT_Array.Num() > 0 && tileMesh)
 	{
-		// Generate random index
-		int32 RandomIndex = FMath::RandRange(0, MAT_Array.Num() - 1);
+		int32 randomClearingType = generateRandomNumber();
 
-		staticMesh->SetMaterial(0, MAT_Array[RandomIndex]);
+		clearingType tileClearingType;
 
-		UE_LOG(LogTemp, Display, TEXT("Tile [%s] assigned material %d"), *GetName(), RandomIndex);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("MAT_Array empty or staticMesh missing in tile %s"), *GetName());
+		switch (randomClearingType)
+		{
+		case 0:
+			tileClearingType = clearing1;
+
+			break;
+		case 1:
+			tileClearingType = clearing2;
+
+			break;
+		case 2:
+			tileClearingType = clearing3;
+
+			break;
+		case 3:
+			tileClearingType = clearing4;
+
+			break;
+		}
+		tileMesh->SetMaterial(0, MAT_Array[randomClearingType]);
+
 	}
 
 }
@@ -74,6 +93,11 @@ void ABG_Tile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+int32 ABG_Tile::generateRandomNumber()
+{
+	return FMath::RandRange(0, MAT_Array.Num() - 1);
 }
 
 

@@ -14,10 +14,12 @@ void EmptyLinkFunctionForGeneratedCodeBG_TileSpawner() {}
 // ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
+ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner_NoRegister();
+PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Token_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
 
@@ -61,7 +63,7 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 		{ "IncludePath", "BG_TileSpawner.h" },
 		{ "ModuleRelativePath", "BG_TileSpawner.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_staticMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_rootScene_MetaData[] = {
 		{ "Category", "Components" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//variables\n" },
@@ -71,6 +73,11 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "variables" },
 #endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_staticMesh_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_tileWidth_MetaData[] = {
 		{ "Category", "Components" },
@@ -92,13 +99,25 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 		{ "Category", "Components" },
 		{ "ModuleRelativePath", "BG_TileSpawner.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TokenClass_MetaData[] = {
+		{ "Category", "Components" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_shouldSpawnTokens_MetaData[] = {
+		{ "Category", "Components" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_rootScene;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_staticMesh;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_tileWidth;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_numberOfColumns;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_numberOfRows;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_xSpawnOffset;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_TileClass;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_TokenClass;
+	static void NewProp_shouldSpawnTokens_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_shouldSpawnTokens;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -106,19 +125,29 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_rootScene = { "rootScene", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, rootScene), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_rootScene_MetaData), NewProp_rootScene_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_staticMesh = { "staticMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, staticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_staticMesh_MetaData), NewProp_staticMesh_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_tileWidth = { "tileWidth", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, tileWidth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_tileWidth_MetaData), NewProp_tileWidth_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_numberOfColumns = { "numberOfColumns", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, numberOfColumns), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_numberOfColumns_MetaData), NewProp_numberOfColumns_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_numberOfRows = { "numberOfRows", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, numberOfRows), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_numberOfRows_MetaData), NewProp_numberOfRows_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_xSpawnOffset = { "xSpawnOffset", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, xSpawnOffset), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_xSpawnOffset_MetaData), NewProp_xSpawnOffset_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_TileClass = { "TileClass", nullptr, (EPropertyFlags)0x0014000000010015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, TileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Tile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TileClass_MetaData), NewProp_TileClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_TokenClass = { "TokenClass", nullptr, (EPropertyFlags)0x0014000000010015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, TokenClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Token_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TokenClass_MetaData), NewProp_TokenClass_MetaData) };
+void Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_shouldSpawnTokens_SetBit(void* Obj)
+{
+	((ABG_TileSpawner*)Obj)->shouldSpawnTokens = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_shouldSpawnTokens = { "shouldSpawnTokens", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABG_TileSpawner), &Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_shouldSpawnTokens_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_shouldSpawnTokens_MetaData), NewProp_shouldSpawnTokens_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_TileSpawner_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_rootScene,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_staticMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_tileWidth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_numberOfColumns,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_numberOfRows,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_xSpawnOffset,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_TileClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_TokenClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_shouldSpawnTokens,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_TileSpawner_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_TileSpawner_Statics::DependentSingletons[])() = {
@@ -157,10 +186,10 @@ ABG_TileSpawner::~ABG_TileSpawner() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_TileSpawner, ABG_TileSpawner::StaticClass, TEXT("ABG_TileSpawner"), &Z_Registration_Info_UClass_ABG_TileSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_TileSpawner), 271521115U) },
+		{ Z_Construct_UClass_ABG_TileSpawner, ABG_TileSpawner::StaticClass, TEXT("ABG_TileSpawner"), &Z_Registration_Info_UClass_ABG_TileSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_TileSpawner), 1882640292U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_3174919232(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_76900(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
