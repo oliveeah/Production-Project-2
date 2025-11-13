@@ -46,13 +46,32 @@ public://variables
 
 	float xSpawnOffset;
 
-
+	//tile class 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	TSubclassOf<ABG_Tile> TileClass;
+
+
+	//tile child variants
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TSubclassOf<ABG_Tile> FarmTile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TSubclassOf<ABG_Tile> WaterTile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TSubclassOf<ABG_Tile> MountainTile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TSubclassOf<ABG_Tile> ForestTile;
+
+	//tile child variants
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	TSubclassOf<ABG_Token> TokenClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	bool shouldSpawnTokens;
+
+	int32 generateRandomTileToSpawnNumber();
+
 };

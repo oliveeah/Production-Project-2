@@ -76,7 +76,7 @@ void ABG_Tile::BeginPlay()
 
 			break;
 		}
-		tileMesh->SetMaterial(0, MAT_Array[randomClearingType]);
+		//tileMesh->SetMaterial(0, MAT_Array[randomClearingType]);
 
 	}
 

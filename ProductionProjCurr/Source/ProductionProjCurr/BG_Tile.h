@@ -18,8 +18,8 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 
 	/*UPROPERTY(VisibleAnywhere, Category = "Components")
 	USceneComponent* rootComponent;*/
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ABG_Tile();
 

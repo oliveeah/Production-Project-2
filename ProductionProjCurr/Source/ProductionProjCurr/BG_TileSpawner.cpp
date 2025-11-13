@@ -46,7 +46,33 @@ void ABG_TileSpawner::BeginPlay()
 			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0.0f);
 			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
-			ABG_Tile* NewTile = GetWorld()->SpawnActor<ABG_Tile>(TileClass, instanceTransform);
+			int32 randomNum = generateRandomTileToSpawnNumber();
+
+			ABG_Tile* NewTile = nullptr;
+
+			if (randomNum == 1)
+			{
+				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(FarmTile, instanceTransform);
+
+			}
+			else if (randomNum == 2)
+			{
+				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(WaterTile, instanceTransform);
+
+			}
+			else if (randomNum == 3)
+			{
+				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(MountainTile, instanceTransform);
+
+			}
+			else if (randomNum == 4)
+			{
+				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(ForestTile, instanceTransform);
+
+			}
+
+
+
 
 			if (shouldSpawnTokens)
 			{
@@ -83,5 +109,10 @@ void ABG_TileSpawner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+int32 ABG_TileSpawner::generateRandomTileToSpawnNumber()
+{
+	return FMath::RandRange(1, 4);
 }
 
