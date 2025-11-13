@@ -11573,3 +11573,1399 @@ Detoured run took 1.5s
 [2025.11.13-21.00.40:163][550]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
 [2025.11.13-21.00.40:235][551]LogPlayLevel: Display: Destroying online subsystem :Context_29
 [2025.11.13-21.00.42:605][676]LogUObjectHash: Compacting FUObjectHashTables data took   1.52ms
+[2025.11.13-21.02.02:420][978]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1048.361450
+[2025.11.13-21.02.03:420][981]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.11.13-21.02.03:420][981]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1049.028687, Update Interval: 343.541992
+[2025.11.13-21.02.38:064][417]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.11.13-21.02.38:078][417]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.13-21.02.38:078][417]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.13-21.02.38:079][417]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 943 us (total: 7.525 ms)
+[2025.11.13-21.02.38:079][417]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.13-21.02.38:122][417]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.02.38:129][417]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.13-21.02.38:130][417]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.296 ms (total: 13.431 ms)
+[2025.11.13-21.02.38:130][417]LogPlayLevel: PIE: StaticDuplicateObject took: (0.008027s)
+[2025.11.13-21.02.38:130][417]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.008099s)
+[2025.11.13-21.02.38:168][417]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2025.11.13-21.02.38:170][417]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.13-21.02.38:173][417]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.13-21.02.38:173][417]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.13-21.02.38:173][417]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.13-21.02.38:173][417]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.13-21.02.38:176][417]LogWorldPartition: Display: WorldPartition initialize took 2.369 ms (total: 375.117 ms)
+[2025.11.13-21.02.38:176][417]LogPlayLevel: PIE: World Init took: (0.005519s)
+[2025.11.13-21.02.38:177][417]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.13-21.02.38:177][417]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.13-21.02.38:177][417]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.13-21.02.38:177][417]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.13-21.02.38:177][417]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.13-21.02.38:177][417]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.13-21.02.38:180][417]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.13-21.02.38:253][417]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.13-21.02.38:253][417]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.13-21.02.38:253][417]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.13-21.02.38:253][417]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.13-21.02.38:254][417]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2025.11.13-21.02.38:254][417]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2025.11.13-21.02.38:257][417]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2025.11.13-21.02.38:257][417]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2025.11.13-21.02.38:257][417]LogInit: FAudioDevice initialized with ID 10.
+[2025.11.13-21.02.38:257][417]LogAudio: Display: Audio Device (ID: 10) registered with world 'Lvl_ThirdPerson'.
+[2025.11.13-21.02.38:258][417]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2025.11.13-21.02.38:262][417]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.13-21.02.38:265][417]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.13-21.02.38
+[2025.11.13-21.02.38:266][417]LogWorld: Bringing up level for play took: 0.002942
+[2025.11.13-21.02.38:269][417]LogOnline: OSS: Created online subsystem instance for: :Context_30
+[2025.11.13-21.02.38:270][417]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.13-21.02.38:326][417]PIE: Server logged in
+[2025.11.13-21.02.38:328][417]PIE: Play in editor total start time 0.251 seconds.
+[2025.11.13-21.02.38:789][439]LogTemp: Display: click callback called
+[2025.11.13-21.02.38:803][440]LogTemp: Display: click callback called
+[2025.11.13-21.02.38:819][441]LogTemp: Display: click callback called
+[2025.11.13-21.02.38:837][442]LogTemp: Display: click callback called
+[2025.11.13-21.02.39:276][468]LogTemp: Input Vector: X=0.420000, Y=0.420000
+[2025.11.13-21.02.39:294][469]LogTemp: Input Vector: X=0.770000, Y=0.840000
+[2025.11.13-21.02.39:310][470]LogTemp: Input Vector: X=0.630000, Y=0.560000
+[2025.11.13-21.02.39:326][471]LogTemp: Input Vector: X=1.120000, Y=0.770000
+[2025.11.13-21.02.39:343][472]LogTemp: Input Vector: X=0.630000, Y=0.490000
+[2025.11.13-21.02.39:360][473]LogTemp: Input Vector: X=0.490000, Y=0.350000
+[2025.11.13-21.02.39:377][474]LogTemp: Input Vector: X=0.490000, Y=0.350000
+[2025.11.13-21.02.39:394][475]LogTemp: Input Vector: X=0.490000, Y=0.630000
+[2025.11.13-21.02.39:395][475]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.11.13-21.02.39:410][476]LogTemp: Input Vector: X=0.280000, Y=0.280000
+[2025.11.13-21.02.39:427][477]LogTemp: Input Vector: X=0.210000, Y=0.350000
+[2025.11.13-21.02.39:443][478]LogTemp: Input Vector: X=0.420000, Y=0.420000
+[2025.11.13-21.02.39:460][479]LogTemp: Input Vector: X=0.280000, Y=0.350000
+[2025.11.13-21.02.39:476][480]LogTemp: Input Vector: X=0.350000, Y=0.420000
+[2025.11.13-21.02.39:494][481]LogTemp: Input Vector: X=0.630000, Y=0.980000
+[2025.11.13-21.02.39:509][482]LogTemp: Input Vector: X=1.050000, Y=1.680000
+[2025.11.13-21.02.39:527][483]LogTemp: Input Vector: X=0.630000, Y=1.470000
+[2025.11.13-21.02.39:544][484]LogTemp: Input Vector: X=0.490000, Y=1.260000
+[2025.11.13-21.02.39:559][485]LogTemp: Input Vector: X=0.210000, Y=0.980000
+[2025.11.13-21.02.39:576][486]LogTemp: Input Vector: X=0.140000, Y=0.490000
+[2025.11.13-21.02.39:593][487]LogTemp: Input Vector: X=0.070000, Y=0.280000
+[2025.11.13-21.02.39:610][488]LogTemp: Input Vector: X=0.140000, Y=0.350000
+[2025.11.13-21.02.39:627][489]LogTemp: Input Vector: X=0.070000, Y=0.420000
+[2025.11.13-21.02.39:644][490]LogTemp: Input Vector: X=0.140000, Y=0.350000
+[2025.11.13-21.02.39:659][491]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-21.02.39:676][492]LogTemp: Input Vector: X=0.070000, Y=0.350000
+[2025.11.13-21.02.39:693][493]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.02.39:710][494]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.39:727][495]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.39:744][496]LogTemp: Input Vector: X=0.070000, Y=0.280000
+[2025.11.13-21.02.39:760][497]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.39:777][498]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.39:795][499]LogTemp: Input Vector: X=0.140000, Y=0.560000
+[2025.11.13-21.02.39:811][500]LogTemp: Input Vector: X=0.210000, Y=0.560000
+[2025.11.13-21.02.39:827][501]LogTemp: Input Vector: X=0.140000, Y=0.630000
+[2025.11.13-21.02.39:844][502]LogTemp: Input Vector: X=0.000000, Y=0.560000
+[2025.11.13-21.02.39:860][503]LogTemp: Input Vector: X=0.000000, Y=0.770000
+[2025.11.13-21.02.39:876][504]LogTemp: Input Vector: X=0.000000, Y=0.490000
+[2025.11.13-21.02.39:893][505]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-21.02.39:910][506]LogTemp: Input Vector: X=-0.070000, Y=0.350000
+[2025.11.13-21.02.39:926][507]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.39:943][508]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.39:960][509]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.02.39:976][510]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.39:994][511]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.13-21.02.40:010][512]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.40:027][513]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.13-21.02.40:043][514]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.40:060][515]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.40:078][516]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-21.02.40:093][517]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-21.02.40:110][518]LogTemp: Input Vector: X=-0.210000, Y=0.210000
+[2025.11.13-21.02.40:127][519]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.13-21.02.40:143][520]LogTemp: Input Vector: X=-0.490000, Y=0.420000
+[2025.11.13-21.02.40:160][521]LogTemp: Input Vector: X=-0.420000, Y=0.490000
+[2025.11.13-21.02.40:177][522]LogTemp: Input Vector: X=-0.420000, Y=0.280000
+[2025.11.13-21.02.40:194][523]LogTemp: Input Vector: X=-0.350000, Y=0.350000
+[2025.11.13-21.02.40:210][524]LogTemp: Input Vector: X=-0.490000, Y=0.420000
+[2025.11.13-21.02.40:227][525]LogTemp: Input Vector: X=-0.420000, Y=0.210000
+[2025.11.13-21.02.40:244][526]LogTemp: Input Vector: X=-0.420000, Y=0.280000
+[2025.11.13-21.02.40:260][527]LogTemp: Input Vector: X=-0.700000, Y=0.490000
+[2025.11.13-21.02.40:277][528]LogTemp: Input Vector: X=-0.560000, Y=0.280000
+[2025.11.13-21.02.40:294][529]LogTemp: Input Vector: X=-0.490000, Y=0.350000
+[2025.11.13-21.02.40:310][530]LogTemp: Input Vector: X=-0.420000, Y=0.280000
+[2025.11.13-21.02.40:327][531]LogTemp: Input Vector: X=-0.630000, Y=0.420000
+[2025.11.13-21.02.40:343][532]LogTemp: Input Vector: X=-0.350000, Y=0.140000
+[2025.11.13-21.02.40:360][533]LogTemp: Input Vector: X=-0.280000, Y=0.140000
+[2025.11.13-21.02.40:378][534]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.13-21.02.40:394][535]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.40:410][536]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.40:427][537]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-21.02.40:444][538]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.13-21.02.40:460][539]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.02.40:477][540]LogTemp: Input Vector: X=-0.490000, Y=-0.210000
+[2025.11.13-21.02.40:494][541]LogTemp: Input Vector: X=-0.700000, Y=-0.210000
+[2025.11.13-21.02.40:510][542]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.02.40:527][543]LogTemp: Input Vector: X=-0.490000, Y=-0.140000
+[2025.11.13-21.02.40:543][544]LogTemp: Input Vector: X=-0.280000, Y=-0.280000
+[2025.11.13-21.02.40:560][545]LogTemp: Input Vector: X=-0.490000, Y=-0.280000
+[2025.11.13-21.02.40:577][546]LogTemp: Input Vector: X=-0.280000, Y=-0.210000
+[2025.11.13-21.02.40:594][547]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.02.40:610][548]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-21.02.40:626][549]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:644][550]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:677][552]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:710][554]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:727][555]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.40:743][556]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:760][557]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:778][558]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:793][559]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:810][560]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:827][561]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:860][563]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:876][564]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:894][565]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:910][566]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:927][567]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:943][568]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.40:960][569]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:977][570]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.40:993][571]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.41:011][572]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.41:027][573]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-21.02.41:043][574]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-21.02.41:060][575]LogTemp: Input Vector: X=-0.070000, Y=-0.210000
+[2025.11.13-21.02.41:077][576]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.02.41:095][577]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.02.41:112][578]LogTemp: Input Vector: X=-0.210000, Y=-0.490000
+[2025.11.13-21.02.41:129][579]LogTemp: Input Vector: X=-0.700000, Y=-1.260000
+[2025.11.13-21.02.41:145][580]LogTemp: Input Vector: X=-0.420000, Y=-0.700000
+[2025.11.13-21.02.41:162][581]LogTemp: Input Vector: X=-0.420000, Y=-0.700000
+[2025.11.13-21.02.41:179][582]LogTemp: Input Vector: X=-0.560000, Y=-0.910000
+[2025.11.13-21.02.41:196][583]LogTemp: Input Vector: X=-0.420000, Y=-0.350000
+[2025.11.13-21.02.41:213][584]LogTemp: Input Vector: X=-0.490000, Y=-0.280000
+[2025.11.13-21.02.41:228][585]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.13-21.02.41:245][586]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.02.41:262][587]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.41:279][588]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.41:296][589]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.41:312][590]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.02.41:329][591]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.46:391][894]LogTemp: Input Vector: X=1.190000, Y=-2.590000
+[2025.11.13-21.02.46:408][895]LogTemp: Input Vector: X=1.050000, Y=-2.170000
+[2025.11.13-21.02.46:425][896]LogTemp: Input Vector: X=0.210000, Y=-0.420000
+[2025.11.13-21.02.46:441][897]LogTemp: Input Vector: X=0.140000, Y=-0.140000
+[2025.11.13-21.02.46:457][898]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.13-21.02.46:474][899]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.02.46:491][900]LogTemp: Input Vector: X=0.490000, Y=-0.070000
+[2025.11.13-21.02.46:508][901]LogTemp: Input Vector: X=0.700000, Y=-0.000000
+[2025.11.13-21.02.46:524][902]LogTemp: Input Vector: X=1.470000, Y=-0.000000
+[2025.11.13-21.02.46:541][903]LogTemp: Input Vector: X=1.400000, Y=-0.000000
+[2025.11.13-21.02.46:558][904]LogTemp: Input Vector: X=1.120000, Y=0.140000
+[2025.11.13-21.02.46:574][905]LogTemp: Input Vector: X=1.680000, Y=0.280000
+[2025.11.13-21.02.46:590][906]LogTemp: Input Vector: X=0.840000, Y=0.350000
+[2025.11.13-21.02.46:607][907]LogTemp: Input Vector: X=0.490000, Y=0.280000
+[2025.11.13-21.02.46:624][908]LogTemp: Input Vector: X=0.350000, Y=0.350000
+[2025.11.13-21.02.46:640][909]LogTemp: Input Vector: X=0.280000, Y=0.420000
+[2025.11.13-21.02.46:657][910]LogTemp: Input Vector: X=0.210000, Y=0.280000
+[2025.11.13-21.02.46:674][911]LogTemp: Input Vector: X=0.070000, Y=0.350000
+[2025.11.13-21.02.46:690][912]LogTemp: Input Vector: X=-0.070000, Y=0.980000
+[2025.11.13-21.02.46:708][913]LogTemp: Input Vector: X=-0.280000, Y=0.560000
+[2025.11.13-21.02.46:724][914]LogTemp: Input Vector: X=-0.350000, Y=0.490000
+[2025.11.13-21.02.46:740][915]LogTemp: Input Vector: X=-1.120000, Y=0.630000
+[2025.11.13-21.02.46:758][916]LogTemp: Input Vector: X=-3.150000, Y=0.840000
+[2025.11.13-21.02.46:774][917]LogTemp: Input Vector: X=-2.170000, Y=0.420000
+[2025.11.13-21.02.46:791][918]LogTemp: Input Vector: X=-2.660000, Y=0.070000
+[2025.11.13-21.02.46:808][919]LogTemp: Input Vector: X=-3.710000, Y=-0.210000
+[2025.11.13-21.02.46:824][920]LogTemp: Input Vector: X=-2.100000, Y=-0.280000
+[2025.11.13-21.02.46:841][921]LogTemp: Input Vector: X=-1.680000, Y=-0.350000
+[2025.11.13-21.02.46:857][922]LogTemp: Input Vector: X=-1.470000, Y=-0.350000
+[2025.11.13-21.02.46:874][923]LogTemp: Input Vector: X=-1.890000, Y=-0.490000
+[2025.11.13-21.02.46:890][924]LogTemp: Input Vector: X=-0.910000, Y=-0.140000
+[2025.11.13-21.02.46:907][925]LogTemp: Input Vector: X=-1.050000, Y=-0.140000
+[2025.11.13-21.02.46:924][926]LogTemp: Input Vector: X=-1.330000, Y=-0.070000
+[2025.11.13-21.02.46:940][927]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.13-21.02.46:958][928]LogTemp: Input Vector: X=-0.700000, Y=-0.140000
+[2025.11.13-21.02.46:974][929]LogTemp: Input Vector: X=-0.700000, Y=-0.070000
+[2025.11.13-21.02.46:992][930]LogTemp: Input Vector: X=-0.770000, Y=-0.000000
+[2025.11.13-21.02.47:008][931]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.47:024][932]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.47:041][933]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.47:473][958]LogTemp: Input Vector: X=-1.820000, Y=1.470000
+[2025.11.13-21.02.47:489][959]LogTemp: Input Vector: X=-1.470000, Y=0.910000
+[2025.11.13-21.02.47:506][960]LogTemp: Input Vector: X=-1.120000, Y=0.490000
+[2025.11.13-21.02.47:523][961]LogTemp: Input Vector: X=-1.330000, Y=0.420000
+[2025.11.13-21.02.47:539][962]LogTemp: Input Vector: X=-1.400000, Y=0.350000
+[2025.11.13-21.02.47:556][963]LogTemp: Input Vector: X=-1.120000, Y=0.140000
+[2025.11.13-21.02.47:573][964]LogTemp: Input Vector: X=-0.770000, Y=0.140000
+[2025.11.13-21.02.47:589][965]LogTemp: Input Vector: X=-1.890000, Y=0.420000
+[2025.11.13-21.02.47:606][966]LogTemp: Input Vector: X=-1.050000, Y=0.210000
+[2025.11.13-21.02.47:623][967]LogTemp: Input Vector: X=-0.770000, Y=0.210000
+[2025.11.13-21.02.47:639][968]LogTemp: Input Vector: X=-1.820000, Y=0.350000
+[2025.11.13-21.02.47:655][969]LogTemp: Input Vector: X=-1.330000, Y=0.210000
+[2025.11.13-21.02.47:672][970]LogTemp: Input Vector: X=-1.120000, Y=0.070000
+[2025.11.13-21.02.47:689][971]LogTemp: Input Vector: X=-1.400000, Y=-0.000000
+[2025.11.13-21.02.47:705][972]LogTemp: Input Vector: X=-1.680000, Y=-0.000000
+[2025.11.13-21.02.47:722][973]LogTemp: Input Vector: X=-0.910000, Y=-0.070000
+[2025.11.13-21.02.47:739][974]LogTemp: Input Vector: X=-1.260000, Y=-0.140000
+[2025.11.13-21.02.47:756][975]LogTemp: Input Vector: X=-1.330000, Y=-0.280000
+[2025.11.13-21.02.47:772][976]LogTemp: Input Vector: X=-1.190000, Y=-0.350000
+[2025.11.13-21.02.47:789][977]LogTemp: Input Vector: X=-1.470000, Y=-0.420000
+[2025.11.13-21.02.47:806][978]LogTemp: Input Vector: X=-1.260000, Y=-0.280000
+[2025.11.13-21.02.47:822][979]LogTemp: Input Vector: X=-2.310000, Y=-0.630000
+[2025.11.13-21.02.47:839][980]LogTemp: Input Vector: X=-0.980000, Y=-0.350000
+[2025.11.13-21.02.47:856][981]LogTemp: Input Vector: X=-0.840000, Y=-0.350000
+[2025.11.13-21.02.47:872][982]LogTemp: Input Vector: X=-1.260000, Y=-0.420000
+[2025.11.13-21.02.47:888][983]LogTemp: Input Vector: X=-0.700000, Y=-0.350000
+[2025.11.13-21.02.47:905][984]LogTemp: Input Vector: X=-0.490000, Y=-0.140000
+[2025.11.13-21.02.47:923][985]LogTemp: Input Vector: X=-0.490000, Y=-0.140000
+[2025.11.13-21.02.47:939][986]LogTemp: Input Vector: X=-0.560000, Y=-0.280000
+[2025.11.13-21.02.47:956][987]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.02.47:972][988]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.13-21.02.47:989][989]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.02.48:006][990]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.13-21.02.48:022][991]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.48:039][992]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.02.48:056][993]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.02.48:072][994]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.02.48:089][995]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.48:105][996]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.13-21.02.48:123][997]LogTemp: Input Vector: X=-0.280000, Y=0.070000
+[2025.11.13-21.02.48:139][998]LogTemp: Input Vector: X=-0.350000, Y=0.070000
+[2025.11.13-21.02.48:155][999]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.02.48:172][  0]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.13-21.02.48:189][  1]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.02.48:205][  2]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.02.48:222][  3]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.02.48:239][  4]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.48:256][  5]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.48:271][  6]LogTemp: Input Vector: X=-0.210000, Y=0.070000
+[2025.11.13-21.02.48:289][  7]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.13-21.02.48:305][  8]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.48:322][  9]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.48:339][ 10]LogTemp: Input Vector: X=-0.280000, Y=0.140000
+[2025.11.13-21.02.48:355][ 11]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.48:373][ 12]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-21.02.48:389][ 13]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.48:855][ 41]LogTemp: Input Vector: X=-1.190000, Y=-0.070000
+[2025.11.13-21.02.48:872][ 42]LogTemp: Input Vector: X=-1.330000, Y=-0.140000
+[2025.11.13-21.02.48:889][ 43]LogTemp: Input Vector: X=-1.120000, Y=-0.140000
+[2025.11.13-21.02.48:906][ 44]LogTemp: Input Vector: X=-0.840000, Y=-0.140000
+[2025.11.13-21.02.48:922][ 45]LogTemp: Input Vector: X=-0.770000, Y=-0.210000
+[2025.11.13-21.02.48:939][ 46]LogTemp: Input Vector: X=-0.490000, Y=-0.140000
+[2025.11.13-21.02.48:956][ 47]LogTemp: Input Vector: X=-0.560000, Y=-0.140000
+[2025.11.13-21.02.48:973][ 48]LogTemp: Input Vector: X=-1.260000, Y=-0.210000
+[2025.11.13-21.02.48:989][ 49]LogTemp: Input Vector: X=-0.770000, Y=-0.210000
+[2025.11.13-21.02.49:005][ 50]LogTemp: Input Vector: X=-0.770000, Y=-0.140000
+[2025.11.13-21.02.49:022][ 51]LogTemp: Input Vector: X=-1.120000, Y=-0.140000
+[2025.11.13-21.02.49:039][ 52]LogTemp: Input Vector: X=-1.680000, Y=-0.210000
+[2025.11.13-21.02.49:055][ 53]LogTemp: Input Vector: X=-0.770000, Y=-0.210000
+[2025.11.13-21.02.49:072][ 54]LogTemp: Input Vector: X=-0.770000, Y=-0.140000
+[2025.11.13-21.02.49:089][ 55]LogTemp: Input Vector: X=-0.700000, Y=-0.070000
+[2025.11.13-21.02.49:106][ 56]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.13-21.02.49:123][ 57]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.13-21.02.49:139][ 58]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.49:156][ 59]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-21.02.49:172][ 60]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-21.02.49:189][ 61]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.49:207][ 62]LogTemp: Input Vector: X=0.350000, Y=-0.280000
+[2025.11.13-21.02.49:224][ 63]LogTemp: Input Vector: X=0.350000, Y=-0.140000
+[2025.11.13-21.02.49:241][ 64]LogTemp: Input Vector: X=0.490000, Y=-0.140000
+[2025.11.13-21.02.49:259][ 65]LogTemp: Input Vector: X=0.700000, Y=-0.070000
+[2025.11.13-21.02.49:276][ 66]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.02.49:292][ 67]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.02.49:308][ 68]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-21.02.49:325][ 69]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.02.49:358][ 71]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.49:391][ 73]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.49:425][ 75]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.49:474][ 78]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.49:492][ 79]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.49:541][ 82]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.02.49:558][ 83]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.02.49:575][ 84]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.02.49:592][ 85]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.02.49:608][ 86]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.02.49:625][ 87]LogTemp: Input Vector: X=0.140000, Y=-0.070000
+[2025.11.13-21.02.49:641][ 88]LogTemp: Input Vector: X=0.280000, Y=-0.140000
+[2025.11.13-21.02.49:659][ 89]LogTemp: Input Vector: X=0.630000, Y=-0.210000
+[2025.11.13-21.02.49:675][ 90]LogTemp: Input Vector: X=0.420000, Y=-0.280000
+[2025.11.13-21.02.49:692][ 91]LogTemp: Input Vector: X=0.490000, Y=-0.140000
+[2025.11.13-21.02.49:708][ 92]LogTemp: Input Vector: X=0.280000, Y=-0.140000
+[2025.11.13-21.02.49:724][ 93]LogTemp: Input Vector: X=0.420000, Y=-0.210000
+[2025.11.13-21.02.49:741][ 94]LogTemp: Input Vector: X=0.140000, Y=-0.140000
+[2025.11.13-21.02.49:758][ 95]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.02.49:775][ 96]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.02.49:792][ 97]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.02.49:808][ 98]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.02.50:308][128]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-21.02.50:325][129]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.02.50:341][130]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-21.02.50:358][131]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.13-21.02.50:374][132]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.50:391][133]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.50:408][134]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-21.02.50:425][135]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.50:442][136]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.50:474][138]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.50:491][139]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.50:542][142]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.50:591][145]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.50:608][146]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.50:625][147]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-21.02.50:641][148]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.50:659][149]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-21.02.50:675][150]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.50:691][151]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.50:708][152]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.50:741][154]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.50:759][155]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-21.02.50:776][156]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.50:791][157]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-21.02.50:808][158]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.50:825][159]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-21.02.50:842][160]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.50:859][161]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.50:875][162]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.02.50:958][167]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.50:975][168]LogTemp: Input Vector: X=0.140000, Y=0.280000
+[2025.11.13-21.02.50:992][169]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.51:008][170]LogTemp: Input Vector: X=0.210000, Y=0.350000
+[2025.11.13-21.02.51:025][171]LogTemp: Input Vector: X=0.280000, Y=0.420000
+[2025.11.13-21.02.51:042][172]LogTemp: Input Vector: X=0.210000, Y=0.280000
+[2025.11.13-21.02.51:058][173]LogTemp: Input Vector: X=0.490000, Y=0.630000
+[2025.11.13-21.02.51:074][174]LogTemp: Input Vector: X=0.280000, Y=0.560000
+[2025.11.13-21.02.51:092][175]LogTemp: Input Vector: X=0.350000, Y=0.700000
+[2025.11.13-21.02.51:109][176]LogTemp: Input Vector: X=0.280000, Y=0.700000
+[2025.11.13-21.02.51:125][177]LogTemp: Input Vector: X=0.350000, Y=0.840000
+[2025.11.13-21.02.51:141][178]LogTemp: Input Vector: X=0.140000, Y=0.560000
+[2025.11.13-21.02.51:158][179]LogTemp: Input Vector: X=0.210000, Y=0.630000
+[2025.11.13-21.02.51:175][180]LogTemp: Input Vector: X=0.210000, Y=0.980000
+[2025.11.13-21.02.51:191][181]LogTemp: Input Vector: X=0.210000, Y=0.560000
+[2025.11.13-21.02.51:209][182]LogTemp: Input Vector: X=0.070000, Y=0.490000
+[2025.11.13-21.02.51:226][183]LogTemp: Input Vector: X=0.140000, Y=0.420000
+[2025.11.13-21.02.51:242][184]LogTemp: Input Vector: X=0.210000, Y=0.770000
+[2025.11.13-21.02.51:259][185]LogTemp: Input Vector: X=0.210000, Y=0.490000
+[2025.11.13-21.02.51:275][186]LogTemp: Input Vector: X=0.140000, Y=0.490000
+[2025.11.13-21.02.51:292][187]LogTemp: Input Vector: X=0.210000, Y=0.770000
+[2025.11.13-21.02.51:308][188]LogTemp: Input Vector: X=0.070000, Y=0.350000
+[2025.11.13-21.02.51:324][189]LogTemp: Input Vector: X=0.070000, Y=0.350000
+[2025.11.13-21.02.51:341][190]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.51:358][191]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.02.51:375][192]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.51:392][193]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.51:408][194]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.51:425][195]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.51:441][196]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.02.51:458][197]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.51:476][198]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-21.02.51:492][199]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.51:508][200]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.51:525][201]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.02.51:541][202]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.02.51:558][203]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-21.02.51:575][204]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.51:591][205]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-21.02.51:609][206]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.51:626][207]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.51:642][208]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.02.51:658][209]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.51:675][210]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.02.51:691][211]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.51:709][212]LogTemp: Input Vector: X=0.210000, Y=0.210000
+[2025.11.13-21.02.51:725][213]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.51:741][214]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.02.51:759][215]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.02.51:775][216]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.51:791][217]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.51:808][218]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.51:825][219]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.02.51:841][220]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.02.51:859][221]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.02.51:875][222]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-21.02.51:926][225]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.02.51:958][227]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.02.51:991][229]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.02.52:008][230]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.52:025][231]LogTemp: Input Vector: X=0.070000, Y=-0.140000
+[2025.11.13-21.02.52:041][232]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.52:059][233]LogTemp: Input Vector: X=0.070000, Y=-0.280000
+[2025.11.13-21.02.52:075][234]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.52:091][235]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.52:108][236]LogTemp: Input Vector: X=0.070000, Y=-0.210000
+[2025.11.13-21.02.52:124][237]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.52:159][239]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.52:191][241]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.52:225][243]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.52:341][250]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.53:225][303]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.53:242][304]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.53:258][305]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.53:276][306]LogTemp: Input Vector: X=0.070000, Y=-0.280000
+[2025.11.13-21.02.53:291][307]LogTemp: Input Vector: X=0.000000, Y=-0.280000
+[2025.11.13-21.02.53:308][308]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.53:325][309]LogTemp: Input Vector: X=-0.070000, Y=-0.140000
+[2025.11.13-21.02.53:342][310]LogTemp: Input Vector: X=-0.280000, Y=-0.350000
+[2025.11.13-21.02.53:359][311]LogTemp: Input Vector: X=-0.140000, Y=-0.210000
+[2025.11.13-21.02.53:375][312]LogTemp: Input Vector: X=-0.070000, Y=-0.280000
+[2025.11.13-21.02.53:392][313]LogTemp: Input Vector: X=-0.070000, Y=-0.280000
+[2025.11.13-21.02.53:408][314]LogTemp: Input Vector: X=-0.070000, Y=-0.210000
+[2025.11.13-21.02.53:425][315]LogTemp: Input Vector: X=-0.070000, Y=-0.210000
+[2025.11.13-21.02.53:442][316]LogTemp: Input Vector: X=-0.280000, Y=-0.210000
+[2025.11.13-21.02.53:458][317]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.53:475][318]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.53:491][319]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.53:509][320]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.02.53:525][321]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.53:541][322]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.53:558][323]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.02.53:575][324]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.53:592][325]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-21.02.53:608][326]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.02.53:625][327]LogTemp: Input Vector: X=-0.280000, Y=-0.210000
+[2025.11.13-21.02.53:641][328]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.53:658][329]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.53:675][330]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.02.53:691][331]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.02.53:708][332]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.53:724][333]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.53:741][334]LogTemp: Input Vector: X=0.000000, Y=-0.280000
+[2025.11.13-21.02.53:759][335]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.53:775][336]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.53:792][337]LogTemp: Input Vector: X=0.210000, Y=-0.420000
+[2025.11.13-21.02.53:809][338]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.13-21.02.53:826][339]LogTemp: Input Vector: X=0.140000, Y=-0.140000
+[2025.11.13-21.02.53:841][340]LogTemp: Input Vector: X=0.140000, Y=-0.140000
+[2025.11.13-21.02.53:858][341]LogTemp: Input Vector: X=0.210000, Y=-0.280000
+[2025.11.13-21.02.53:875][342]LogTemp: Input Vector: X=0.210000, Y=-0.070000
+[2025.11.13-21.02.53:891][343]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.02.53:908][344]LogTemp: Input Vector: X=0.560000, Y=-0.000000
+[2025.11.13-21.02.53:925][345]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.02.53:941][346]LogTemp: Input Vector: X=0.350000, Y=0.140000
+[2025.11.13-21.02.53:958][347]LogTemp: Input Vector: X=0.280000, Y=0.210000
+[2025.11.13-21.02.53:975][348]LogTemp: Input Vector: X=0.420000, Y=0.210000
+[2025.11.13-21.02.53:992][349]LogTemp: Input Vector: X=0.210000, Y=0.140000
+[2025.11.13-21.02.54:009][350]LogTemp: Input Vector: X=0.350000, Y=0.280000
+[2025.11.13-21.02.54:025][351]LogTemp: Input Vector: X=0.560000, Y=0.420000
+[2025.11.13-21.02.54:041][352]LogTemp: Input Vector: X=0.630000, Y=0.350000
+[2025.11.13-21.02.54:058][353]LogTemp: Input Vector: X=0.490000, Y=0.140000
+[2025.11.13-21.02.54:075][354]LogTemp: Input Vector: X=0.490000, Y=0.210000
+[2025.11.13-21.02.54:092][355]LogTemp: Input Vector: X=0.420000, Y=0.350000
+[2025.11.13-21.02.54:108][356]LogTemp: Input Vector: X=0.350000, Y=0.140000
+[2025.11.13-21.02.54:125][357]LogTemp: Input Vector: X=0.280000, Y=0.210000
+[2025.11.13-21.02.54:142][358]LogTemp: Input Vector: X=0.490000, Y=0.420000
+[2025.11.13-21.02.54:158][359]LogTemp: Input Vector: X=0.280000, Y=0.280000
+[2025.11.13-21.02.54:175][360]LogTemp: Input Vector: X=0.350000, Y=0.350000
+[2025.11.13-21.02.54:191][361]LogTemp: Input Vector: X=0.280000, Y=0.140000
+[2025.11.13-21.02.54:208][362]LogTemp: Input Vector: X=0.280000, Y=0.280000
+[2025.11.13-21.02.54:225][363]LogTemp: Input Vector: X=0.210000, Y=0.210000
+[2025.11.13-21.02.54:242][364]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.02.54:259][365]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.02.54:276][366]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.02.54:309][368]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.13-21.02.54:326][369]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.02.54:341][370]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.02.54:359][371]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.02.54:375][372]LogTemp: Input Vector: X=-0.420000, Y=-0.350000
+[2025.11.13-21.02.54:392][373]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.02.54:408][374]LogTemp: Input Vector: X=-0.070000, Y=-0.210000
+[2025.11.13-21.02.54:425][375]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.54:441][376]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.54:459][377]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.54:475][378]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.02.54:492][379]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.02.54:509][380]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.54:526][381]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.54:558][383]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.02.54:793][395]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.02.54:793][395]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.02.54:793][395]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.02.54:798][395]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.02.54:798][395]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.13-21.02.54:801][395]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.13-21.02.54:810][395]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.02.54:847][395]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.02.54:847][395]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2025.11.13-21.02.54:847][395]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10, StreamState=4
+[2025.11.13-21.02.54:850][395]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10, StreamState=2
+[2025.11.13-21.02.54:867][395]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2025.11.13-21.02.54:945][396]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2025.11.13-21.03.34:365][675]LogFab: Display: Asset Type = unreal-engine
+[2025.11.13-21.03.34:365][675]LogFab: Display: Is Quixel = 0
+[2025.11.13-21.03.34:365][675]LogFab: Display: Base Url https://fastly-download.epicgames.com/Builds/Rocket/Automated/Untitled0107e2459467V1/CloudDir,https://cloudflare.epicgamescdn.com/Builds/Rocket/Automated/Untitled0107e2459467V1/CloudDir,https://epicgames-download1.akamaized.net/Builds/Rocket/Automated/Untitled0107e2459467V1/CloudDir,https://download.epicgames.com/Builds/Rocket/Automated/Untitled0107e2459467V1/CloudDir
+[2025.11.13-21.03.42:475][143]LogDirectoryWatcher: Display: A directory notification failed for 'C:/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Collections/' because it could not be accessed. Aborting watch request...
+[2025.11.13-21.03.42:475][143]LogDirectoryWatcher: Display: A directory notification failed for 'C:/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Collections/' because it could not be accessed. Aborting watch request...
+[2025.11.13-21.03.42:475][143]LogDirectoryWatcher: Display: A directory notification failed for 'C:/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/Developers/linda/Collections/' because it could not be accessed. Aborting watch request...
+[2025.11.13-21.03.57:436][961]LogStreaming: Display: FlushAsyncLoading(619): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.13-21.04.03:056][246]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-21.04.03:140][246]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/boardGame/blueprints/BG_BP_Water_Tile_PROTO] ([2] browsable assets)...
+[2025.11.13-21.04.03:140][246]OBJ SavePackage: Finished generating thumbnails for package [/Game/boardGame/blueprints/BG_BP_Water_Tile_PROTO]
+[2025.11.13-21.04.03:160][246]LogSavePackage: Moving output files for package: /Game/boardGame/blueprints/BG_BP_Water_Tile_PROTO
+[2025.11.13-21.04.03:161][246]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/BG_BP_Water_Tile_PROTOAEEB6A604F9103B42BDE23B7107FE3AF.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/boardGame/blueprints/BG_BP_Water_Tile_PROTO.uasset'
+[2025.11.13-21.04.03:177][246]LogFileHelpers: InternalPromptForCheckoutAndSave took 120.732 ms (total: 3.15 sec)
+[2025.11.13-21.04.03:261][246]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.13-21.04.03:261][246]LogContentValidation: Enabled validators:
+[2025.11.13-21.04.03:261][246]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-21.04.03:261][246]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-21.04.03:261][246]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-21.04.03:261][246]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-21.04.03:261][246]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-21.04.03:261][246]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-21.04.03:261][246]AssetCheck: /Game/boardGame/blueprints/BG_BP_Water_Tile_PROTO Validating asset
+[2025.11.13-21.04.05:246][363]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.11.13-21.04.05:260][363]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.13-21.04.05:260][363]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.13-21.04.05:261][363]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 776 us (total: 8.302 ms)
+[2025.11.13-21.04.05:261][363]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.13-21.04.05:261][363]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.04.05:270][363]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.13-21.04.05:272][363]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.741 ms (total: 15.173 ms)
+[2025.11.13-21.04.05:272][363]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010471s)
+[2025.11.13-21.04.05:272][363]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.010524s)
+[2025.11.13-21.04.05:311][363]LogUObjectHash: Compacting FUObjectHashTables data took   1.69ms
+[2025.11.13-21.04.05:317][363]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.13-21.04.05:320][363]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.13-21.04.05:320][363]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.13-21.04.05:320][363]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.13-21.04.05:320][363]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.13-21.04.05:323][363]LogWorldPartition: Display: WorldPartition initialize took 2.489 ms (total: 377.606 ms)
+[2025.11.13-21.04.05:323][363]LogPlayLevel: PIE: World Init took: (0.005403s)
+[2025.11.13-21.04.05:324][363]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2025.11.13-21.04.05:324][363]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.13-21.04.05:324][363]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.13-21.04.05:324][363]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.13-21.04.05:324][363]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.13-21.04.05:324][363]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.13-21.04.05:325][363]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.13-21.04.05:325][363]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.13-21.04.05:325][363]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.13-21.04.05:325][363]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.13-21.04.05:325][363]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.13-21.04.05:325][363]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.13-21.04.05:328][363]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.13-21.04.05:404][363]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.13-21.04.05:404][363]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.13-21.04.05:404][363]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.13-21.04.05:404][363]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.13-21.04.05:405][363]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2025.11.13-21.04.05:405][363]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2025.11.13-21.04.05:408][363]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2025.11.13-21.04.05:408][363]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2025.11.13-21.04.05:408][363]LogInit: FAudioDevice initialized with ID 11.
+[2025.11.13-21.04.05:408][363]LogAudio: Display: Audio Device (ID: 11) registered with world 'Lvl_ThirdPerson'.
+[2025.11.13-21.04.05:408][363]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2025.11.13-21.04.05:413][363]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.13-21.04.05:417][363]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.13-21.04.05
+[2025.11.13-21.04.05:417][363]LogWorld: Bringing up level for play took: 0.003180
+[2025.11.13-21.04.05:420][363]LogOnline: OSS: Created online subsystem instance for: :Context_31
+[2025.11.13-21.04.05:421][363]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.13-21.04.05:478][363]PIE: Server logged in
+[2025.11.13-21.04.05:480][363]PIE: Play in editor total start time 0.221 seconds.
+[2025.11.13-21.04.05:925][378]LogTemp: Display: click callback called
+[2025.11.13-21.04.05:938][379]LogTemp: Display: click callback called
+[2025.11.13-21.04.05:955][380]LogTemp: Display: click callback called
+[2025.11.13-21.04.05:971][381]LogTemp: Display: click callback called
+[2025.11.13-21.04.05:988][382]LogTemp: Display: click callback called
+[2025.11.13-21.04.06:357][398]LogTemp: Input Vector: X=0.070000, Y=0.910000
+[2025.11.13-21.04.06:374][399]LogTemp: Input Vector: X=0.070000, Y=0.770000
+[2025.11.13-21.04.06:403][400]LogTemp: Input Vector: X=0.070000, Y=1.610000
+[2025.11.13-21.04.06:419][401]LogTemp: Input Vector: X=0.000000, Y=0.770000
+[2025.11.13-21.04.06:436][402]LogTemp: Input Vector: X=0.000000, Y=0.630000
+[2025.11.13-21.04.06:455][403]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.11.13-21.04.06:456][403]LogTemp: Input Vector: X=0.000000, Y=0.770000
+[2025.11.13-21.04.06:474][404]LogTemp: Input Vector: X=0.000000, Y=0.980000
+[2025.11.13-21.04.06:487][405]LogTemp: Input Vector: X=-0.070000, Y=0.560000
+[2025.11.13-21.04.06:504][406]LogTemp: Input Vector: X=-0.140000, Y=0.980000
+[2025.11.13-21.04.06:520][407]LogTemp: Input Vector: X=-0.140000, Y=0.420000
+[2025.11.13-21.04.06:538][408]LogTemp: Input Vector: X=-0.140000, Y=0.560000
+[2025.11.13-21.04.06:554][409]LogTemp: Input Vector: X=-0.280000, Y=0.630000
+[2025.11.13-21.04.06:570][410]LogTemp: Input Vector: X=-0.700000, Y=0.910000
+[2025.11.13-21.04.06:587][411]LogTemp: Input Vector: X=-0.700000, Y=0.700000
+[2025.11.13-21.04.06:603][412]LogTemp: Input Vector: X=-0.700000, Y=0.630000
+[2025.11.13-21.04.06:620][413]LogTemp: Input Vector: X=-1.680000, Y=0.910000
+[2025.11.13-21.04.06:638][414]LogTemp: Input Vector: X=-0.980000, Y=0.490000
+[2025.11.13-21.04.06:654][415]LogTemp: Input Vector: X=-0.630000, Y=0.280000
+[2025.11.13-21.04.06:670][416]LogTemp: Input Vector: X=-0.350000, Y=0.350000
+[2025.11.13-21.04.06:687][417]LogTemp: Input Vector: X=-0.420000, Y=0.210000
+[2025.11.13-21.04.06:704][418]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-21.04.06:720][419]LogTemp: Input Vector: X=-0.140000, Y=0.210000
+[2025.11.13-21.04.06:738][420]LogTemp: Input Vector: X=-0.280000, Y=0.210000
+[2025.11.13-21.04.06:754][421]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.06:770][422]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.06:787][423]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.06:804][424]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.06:853][427]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.06:954][433]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.06:970][434]LogTemp: Input Vector: X=0.420000, Y=-0.000000
+[2025.11.13-21.04.06:987][435]LogTemp: Input Vector: X=0.490000, Y=0.210000
+[2025.11.13-21.04.07:004][436]LogTemp: Input Vector: X=0.560000, Y=0.280000
+[2025.11.13-21.04.07:020][437]LogTemp: Input Vector: X=0.910000, Y=0.280000
+[2025.11.13-21.04.07:038][438]LogTemp: Input Vector: X=1.330000, Y=0.490000
+[2025.11.13-21.04.07:053][439]LogTemp: Input Vector: X=1.680000, Y=0.350000
+[2025.11.13-21.04.07:070][440]LogTemp: Input Vector: X=1.260000, Y=0.280000
+[2025.11.13-21.04.07:087][441]LogTemp: Input Vector: X=2.240000, Y=0.630000
+[2025.11.13-21.04.07:103][442]LogTemp: Input Vector: X=1.120000, Y=0.420000
+[2025.11.13-21.04.07:120][443]LogTemp: Input Vector: X=1.120000, Y=0.490000
+[2025.11.13-21.04.07:137][444]LogTemp: Input Vector: X=1.120000, Y=0.420000
+[2025.11.13-21.04.07:154][445]LogTemp: Input Vector: X=1.190000, Y=0.490000
+[2025.11.13-21.04.07:171][446]LogTemp: Input Vector: X=0.420000, Y=0.280000
+[2025.11.13-21.04.07:187][447]LogTemp: Input Vector: X=0.210000, Y=0.140000
+[2025.11.13-21.04.07:204][448]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.07:270][452]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.07:820][485]LogTemp: Input Vector: X=-0.210000, Y=0.070000
+[2025.11.13-21.04.07:837][486]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.07:854][487]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.07:870][488]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.04.07:887][489]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.07:904][490]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.07:920][491]LogTemp: Input Vector: X=-0.350000, Y=0.070000
+[2025.11.13-21.04.07:937][492]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.07:955][493]LogTemp: Input Vector: X=-0.560000, Y=0.070000
+[2025.11.13-21.04.07:971][494]LogTemp: Input Vector: X=-0.560000, Y=0.070000
+[2025.11.13-21.04.07:987][495]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.04.08:004][496]LogTemp: Input Vector: X=-0.490000, Y=0.070000
+[2025.11.13-21.04.08:020][497]LogTemp: Input Vector: X=-0.700000, Y=0.070000
+[2025.11.13-21.04.08:038][498]LogTemp: Input Vector: X=-0.350000, Y=0.070000
+[2025.11.13-21.04.08:055][499]LogTemp: Input Vector: X=-0.560000, Y=0.210000
+[2025.11.13-21.04.08:071][500]LogTemp: Input Vector: X=-1.890000, Y=0.350000
+[2025.11.13-21.04.08:087][501]LogTemp: Input Vector: X=-1.120000, Y=0.350000
+[2025.11.13-21.04.08:104][502]LogTemp: Input Vector: X=-1.260000, Y=0.280000
+[2025.11.13-21.04.08:120][503]LogTemp: Input Vector: X=-1.330000, Y=0.420000
+[2025.11.13-21.04.08:138][504]LogTemp: Input Vector: X=-1.330000, Y=0.280000
+[2025.11.13-21.04.08:154][505]LogTemp: Input Vector: X=-1.260000, Y=0.210000
+[2025.11.13-21.04.08:171][506]LogTemp: Input Vector: X=-1.610000, Y=0.350000
+[2025.11.13-21.04.08:188][507]LogTemp: Input Vector: X=-2.870000, Y=0.420000
+[2025.11.13-21.04.08:204][508]LogTemp: Input Vector: X=-1.540000, Y=0.490000
+[2025.11.13-21.04.08:221][509]LogTemp: Input Vector: X=-1.680000, Y=0.560000
+[2025.11.13-21.04.08:237][510]LogTemp: Input Vector: X=-1.400000, Y=0.420000
+[2025.11.13-21.04.08:254][511]LogTemp: Input Vector: X=-1.890000, Y=0.840000
+[2025.11.13-21.04.08:270][512]LogTemp: Input Vector: X=-1.540000, Y=0.490000
+[2025.11.13-21.04.08:288][513]LogTemp: Input Vector: X=-1.050000, Y=0.280000
+[2025.11.13-21.04.08:304][514]LogTemp: Input Vector: X=-1.610000, Y=0.140000
+[2025.11.13-21.04.08:320][515]LogTemp: Input Vector: X=-0.770000, Y=0.070000
+[2025.11.13-21.04.08:337][516]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.13-21.04.08:355][517]LogTemp: Input Vector: X=-0.630000, Y=-0.070000
+[2025.11.13-21.04.08:370][518]LogTemp: Input Vector: X=-1.540000, Y=-0.490000
+[2025.11.13-21.04.08:388][519]LogTemp: Input Vector: X=-1.330000, Y=-0.420000
+[2025.11.13-21.04.08:404][520]LogTemp: Input Vector: X=-1.050000, Y=-0.490000
+[2025.11.13-21.04.08:421][521]LogTemp: Input Vector: X=-1.470000, Y=-0.560000
+[2025.11.13-21.04.08:437][522]LogTemp: Input Vector: X=-0.700000, Y=-0.140000
+[2025.11.13-21.04.08:454][523]LogTemp: Input Vector: X=-0.560000, Y=-0.140000
+[2025.11.13-21.04.08:471][524]LogTemp: Input Vector: X=-0.490000, Y=-0.210000
+[2025.11.13-21.04.08:488][525]LogTemp: Input Vector: X=-0.700000, Y=-0.210000
+[2025.11.13-21.04.08:504][526]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.04.08:520][527]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.08:537][528]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.08:554][529]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.09:071][560]LogTemp: Input Vector: X=-0.840000, Y=-0.000000
+[2025.11.13-21.04.09:088][561]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.13-21.04.09:104][562]LogTemp: Input Vector: X=-0.910000, Y=-0.000000
+[2025.11.13-21.04.09:121][563]LogTemp: Input Vector: X=-1.050000, Y=-0.000000
+[2025.11.13-21.04.09:138][564]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.04.09:155][565]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.04.09:170][566]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.04.09:187][567]LogTemp: Input Vector: X=-0.980000, Y=-0.140000
+[2025.11.13-21.04.09:204][568]LogTemp: Input Vector: X=-1.050000, Y=-0.140000
+[2025.11.13-21.04.09:220][569]LogTemp: Input Vector: X=-0.910000, Y=-0.140000
+[2025.11.13-21.04.09:237][570]LogTemp: Input Vector: X=-0.910000, Y=-0.350000
+[2025.11.13-21.04.09:254][571]LogTemp: Input Vector: X=-0.770000, Y=-0.210000
+[2025.11.13-21.04.09:271][572]LogTemp: Input Vector: X=-0.700000, Y=-0.140000
+[2025.11.13-21.04.09:288][573]LogTemp: Input Vector: X=-0.630000, Y=-0.350000
+[2025.11.13-21.04.09:305][574]LogTemp: Input Vector: X=-0.700000, Y=-0.350000
+[2025.11.13-21.04.09:320][575]LogTemp: Input Vector: X=-0.420000, Y=-0.350000
+[2025.11.13-21.04.09:337][576]LogTemp: Input Vector: X=-0.630000, Y=-0.350000
+[2025.11.13-21.04.09:354][577]LogTemp: Input Vector: X=-1.120000, Y=-0.560000
+[2025.11.13-21.04.09:370][578]LogTemp: Input Vector: X=-0.840000, Y=-0.350000
+[2025.11.13-21.04.09:388][579]LogTemp: Input Vector: X=-0.700000, Y=-0.280000
+[2025.11.13-21.04.09:404][580]LogTemp: Input Vector: X=-0.630000, Y=-0.070000
+[2025.11.13-21.04.09:421][581]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.13-21.04.09:437][582]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.04.09:454][583]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.09:470][584]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.04.09:487][585]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.04.09:504][586]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.04.09:520][587]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.04.09:538][588]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.13-21.04.09:554][589]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.04.09:571][590]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.04.09:587][591]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.04.09:604][592]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.04.09:620][593]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.09:638][594]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.09:654][595]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.04.09:670][596]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.09:687][597]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.04.09:705][598]LogTemp: Input Vector: X=-0.630000, Y=-0.140000
+[2025.11.13-21.04.09:721][599]LogTemp: Input Vector: X=-0.560000, Y=-0.210000
+[2025.11.13-21.04.09:738][600]LogTemp: Input Vector: X=-0.840000, Y=-0.280000
+[2025.11.13-21.04.09:754][601]LogTemp: Input Vector: X=-0.700000, Y=-0.210000
+[2025.11.13-21.04.09:771][602]LogTemp: Input Vector: X=-1.190000, Y=-0.560000
+[2025.11.13-21.04.09:788][603]LogTemp: Input Vector: X=-1.120000, Y=-0.630000
+[2025.11.13-21.04.09:805][604]LogTemp: Input Vector: X=-0.910000, Y=-0.350000
+[2025.11.13-21.04.09:821][605]LogTemp: Input Vector: X=-0.910000, Y=-0.210000
+[2025.11.13-21.04.09:839][606]LogTemp: Input Vector: X=-0.560000, Y=-0.210000
+[2025.11.13-21.04.09:854][607]LogTemp: Input Vector: X=-0.490000, Y=-0.140000
+[2025.11.13-21.04.09:870][608]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.13-21.04.09:888][609]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.13-21.04.09:905][610]LogTemp: Input Vector: X=-0.140000, Y=-0.210000
+[2025.11.13-21.04.09:920][611]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.10:888][669]LogTemp: Input Vector: X=0.560000, Y=-0.560000
+[2025.11.13-21.04.10:904][670]LogTemp: Input Vector: X=0.490000, Y=-0.490000
+[2025.11.13-21.04.10:921][671]LogTemp: Input Vector: X=0.560000, Y=-0.560000
+[2025.11.13-21.04.10:938][672]LogTemp: Input Vector: X=0.140000, Y=-0.210000
+[2025.11.13-21.04.10:955][673]LogTemp: Input Vector: X=0.140000, Y=-0.140000
+[2025.11.13-21.04.10:971][674]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.13-21.04.10:987][675]LogTemp: Input Vector: X=-0.070000, Y=-0.070000
+[2025.11.13-21.04.11:004][676]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.04.11:021][677]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.11:038][678]LogTemp: Input Vector: X=-0.560000, Y=-0.280000
+[2025.11.13-21.04.11:054][679]LogTemp: Input Vector: X=-1.680000, Y=-1.330000
+[2025.11.13-21.04.11:071][680]LogTemp: Input Vector: X=-1.750000, Y=-1.190000
+[2025.11.13-21.04.11:088][681]LogTemp: Input Vector: X=-2.240000, Y=-1.120000
+[2025.11.13-21.04.11:105][682]LogTemp: Input Vector: X=-2.240000, Y=-1.330000
+[2025.11.13-21.04.11:121][683]LogTemp: Input Vector: X=-1.680000, Y=-0.770000
+[2025.11.13-21.04.11:138][684]LogTemp: Input Vector: X=-1.050000, Y=-0.630000
+[2025.11.13-21.04.11:154][685]LogTemp: Input Vector: X=-1.330000, Y=-0.700000
+[2025.11.13-21.04.11:171][686]LogTemp: Input Vector: X=-0.560000, Y=-0.420000
+[2025.11.13-21.04.11:187][687]LogTemp: Input Vector: X=-0.350000, Y=-0.280000
+[2025.11.13-21.04.11:205][688]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.04.11:221][689]LogTemp: Input Vector: X=-0.210000, Y=-0.280000
+[2025.11.13-21.04.11:237][690]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.11:270][692]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.11:288][693]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.11:305][694]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.11:321][695]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.11:338][696]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.04.11:355][697]LogTemp: Input Vector: X=0.210000, Y=0.140000
+[2025.11.13-21.04.11:371][698]LogTemp: Input Vector: X=0.280000, Y=0.210000
+[2025.11.13-21.04.11:388][699]LogTemp: Input Vector: X=0.560000, Y=0.210000
+[2025.11.13-21.04.11:404][700]LogTemp: Input Vector: X=0.350000, Y=0.140000
+[2025.11.13-21.04.11:420][701]LogTemp: Input Vector: X=0.280000, Y=0.070000
+[2025.11.13-21.04.11:437][702]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-21.04.11:454][703]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.04.11:471][704]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.11:488][705]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.11:504][706]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.04.11:521][707]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.11:538][708]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.11:555][709]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.11:571][710]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.11:588][711]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.11:621][713]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-21.04.11:638][714]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.11:655][715]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-21.04.11:671][716]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.04.11:688][717]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.04.11:704][718]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.04.11:721][719]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.04.11:738][720]LogTemp: Input Vector: X=0.210000, Y=0.210000
+[2025.11.13-21.04.11:755][721]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.11:771][722]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.11:788][723]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.04.11:804][724]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.11:821][725]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.11:854][727]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.11:870][728]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.11:888][729]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.11:921][731]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.04.11:938][732]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.11:955][733]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.11:971][734]LogTemp: Input Vector: X=0.280000, Y=0.280000
+[2025.11.13-21.04.11:988][735]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-21.04.12:004][736]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.13-21.04.12:021][737]LogTemp: Input Vector: X=0.140000, Y=0.280000
+[2025.11.13-21.04.12:038][738]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.13-21.04.12:054][739]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.04.12:070][740]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.04.12:087][741]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.12:105][742]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:121][743]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.04.12:139][744]LogTemp: Input Vector: X=0.070000, Y=0.280000
+[2025.11.13-21.04.12:154][745]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:171][746]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:188][747]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:205][748]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.12:221][749]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.12:238][750]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.12:255][751]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.12:271][752]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:287][753]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.13-21.04.12:304][754]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:320][755]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.12:355][757]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:388][759]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.13-21.04.12:421][761]LogTemp: Input Vector: X=0.070000, Y=0.070000
+[2025.11.13-21.04.12:437][762]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.12:455][763]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.12:472][764]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.12:488][765]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.12:504][766]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.12:521][767]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.04.12:537][768]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.04.12:554][769]LogTemp: Input Vector: X=0.490000, Y=-0.000000
+[2025.11.13-21.04.12:570][770]LogTemp: Input Vector: X=0.210000, Y=-0.070000
+[2025.11.13-21.04.12:588][771]LogTemp: Input Vector: X=0.280000, Y=-0.140000
+[2025.11.13-21.04.12:605][772]LogTemp: Input Vector: X=0.420000, Y=-0.280000
+[2025.11.13-21.04.12:621][773]LogTemp: Input Vector: X=0.210000, Y=-0.280000
+[2025.11.13-21.04.12:638][774]LogTemp: Input Vector: X=0.140000, Y=-0.210000
+[2025.11.13-21.04.12:655][775]LogTemp: Input Vector: X=0.210000, Y=-0.280000
+[2025.11.13-21.04.12:671][776]LogTemp: Input Vector: X=0.140000, Y=-0.140000
+[2025.11.13-21.04.12:688][777]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.12:838][786]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.12:854][787]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.12:871][788]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.12:888][789]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.12:904][790]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.04.12:971][794]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.12:987][795]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.13:004][796]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.04.13:021][797]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.13-21.04.13:039][798]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.13:054][799]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.13:087][801]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.13:120][803]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.13:137][804]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.13:170][806]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:187][807]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:221][809]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:238][810]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:255][811]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:271][812]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.04.13:288][813]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.04.13:304][814]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.04.13:321][815]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.04.13:338][816]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:370][818]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:437][822]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.13:587][831]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.13:604][832]LogTemp: Input Vector: X=-0.070000, Y=0.210000
+[2025.11.13-21.04.13:621][833]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.13-21.04.13:638][834]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.13:655][835]LogTemp: Input Vector: X=-0.070000, Y=0.210000
+[2025.11.13-21.04.13:671][836]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.13:688][837]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.13:704][838]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.13:720][839]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.13:755][841]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.13-21.04.13:888][849]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.14:004][856]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.14:054][859]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.14:438][882]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.14:454][883]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:472][884]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:488][885]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:504][886]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:521][887]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:538][888]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:555][889]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:571][890]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:587][891]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.04.14:604][892]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.13-21.04.14:622][893]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:638][894]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.13-21.04.14:654][895]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:671][896]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.14:687][897]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:704][898]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:720][899]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.04.14:738][900]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:755][901]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.14:772][902]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.04.14:787][903]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.04.14:804][904]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.04.15:754][961]LogTemp: Input Vector: X=0.140000, Y=-0.070000
+[2025.11.13-21.04.15:771][962]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.13-21.04.15:788][963]LogTemp: Input Vector: X=0.350000, Y=-0.140000
+[2025.11.13-21.04.15:805][964]LogTemp: Input Vector: X=0.350000, Y=-0.140000
+[2025.11.13-21.04.15:821][965]LogTemp: Input Vector: X=0.350000, Y=-0.070000
+[2025.11.13-21.04.15:838][966]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.04.15:854][967]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.04.15:871][968]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.04.15:888][969]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.15:905][970]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.15:921][971]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.04.15:937][972]LogTemp: Input Vector: X=0.490000, Y=0.140000
+[2025.11.13-21.04.15:955][973]LogTemp: Input Vector: X=0.700000, Y=0.560000
+[2025.11.13-21.04.15:971][974]LogTemp: Input Vector: X=0.630000, Y=0.490000
+[2025.11.13-21.04.15:987][975]LogTemp: Input Vector: X=0.560000, Y=0.560000
+[2025.11.13-21.04.16:005][976]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.13-21.04.16:021][977]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.16:038][978]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.16:055][979]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.16:071][980]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.16:087][981]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.04.16:105][982]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.16:254][991]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.04.16:338][996]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.16:355][997]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.04.16:372][998]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.16:388][999]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.13-21.04.16:404][  0]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.16:421][  1]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.16:455][  3]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.16:554][  9]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.04.17:332][ 54]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.04.17:333][ 54]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.04.17:333][ 54]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.17:338][ 54]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.17:338][ 54]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.13-21.04.17:342][ 54]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.13-21.04.17:354][ 54]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.17:386][ 54]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.04.17:387][ 54]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2025.11.13-21.04.17:387][ 54]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11, StreamState=4
+[2025.11.13-21.04.17:390][ 54]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11, StreamState=2
+[2025.11.13-21.04.17:407][ 54]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2025.11.13-21.04.17:482][ 55]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2025.11.13-21.04.30:693][793]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2025.11.13-21.04.30:922][793]LogSlate: Last resort fallback font was requested. Font: '<unknown>', Character: '<unknown>'
+[2025.11.13-21.04.30:942][793]LogSlate: Took 0.018559 seconds to synchronously load lazily loaded font '../../../Engine/Content/SlateDebug/Fonts/LastResort.ttf' (5269K)
+[2025.11.13-21.04.32:341][793]LogSlate: Window 'Delete Assets' being destroyed
+[2025.11.13-21.04.32:679][793]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.32:679][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.32:778][793]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.11.13-21.04.32:778][793]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.32:778][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.32:879][793]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.11.13-21.04.32:879][793]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.32:879][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.32:970][793]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.11.13-21.04.32:970][793]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.32:970][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.33:057][793]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.11.13-21.04.33:057][793]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.33:057][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.33:158][793]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.11.13-21.04.33:158][793]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.33:158][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.33:201][793]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/boardGame/blueprints/BG_BP_Farm_Tile_PROTO.BG_BP_Farm_Tile_PROTO
+	Asset Type: Blueprint
+[2025.11.13-21.04.33:693][793]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2025.11.13-21.04.33:803][793]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2025.11.13-21.04.33:843][793]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2025.11.13-21.04.33:883][793]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2025.11.13-21.04.33:933][793]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2025.11.13-21.04.41:741][216]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-21.04.41:849][216]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2025.11.13-21.04.41:886][216]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2025.11.13-21.04.41:926][216]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2025.11.13-21.04.41:944][216]LogFileHelpers: InternalPromptForCheckoutAndSave took 203.003 ms (total: 3.36 sec)
+[2025.11.13-21.04.50:701][711]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.11.13-21.04.50:715][711]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.13-21.04.50:715][711]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.13-21.04.50:716][711]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 890 us (total: 9.192 ms)
+[2025.11.13-21.04.50:716][711]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.13-21.04.50:716][711]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.04.50:724][711]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.13-21.04.50:726][711]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.641 ms (total: 16.815 ms)
+[2025.11.13-21.04.50:726][711]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010297s)
+[2025.11.13-21.04.50:726][711]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.010349s)
+[2025.11.13-21.04.50:761][711]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2025.11.13-21.04.50:766][711]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.13-21.04.50:769][711]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.13-21.04.50:769][711]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.13-21.04.50:769][711]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.13-21.04.50:769][711]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.13-21.04.50:770][711]LogWorldPartition: Display: WorldPartition initialize took 2.478 ms (total: 380.085 ms)
+[2025.11.13-21.04.50:771][711]LogPlayLevel: PIE: World Init took: (0.005407s)
+[2025.11.13-21.04.50:773][711]LogAudio: Display: Creating Audio Device:                 Id: 12, Scope: Unique, Realtime: True
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.13-21.04.50:773][711]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.13-21.04.50:773][711]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.13-21.04.50:773][711]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.13-21.04.50:773][711]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.13-21.04.50:773][711]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.13-21.04.50:775][711]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.13-21.04.50:854][711]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.13-21.04.50:854][711]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.13-21.04.50:854][711]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.13-21.04.50:854][711]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.13-21.04.50:855][711]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=12
+[2025.11.13-21.04.50:855][711]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=12
+[2025.11.13-21.04.50:859][711]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=12
+[2025.11.13-21.04.50:859][711]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=12
+[2025.11.13-21.04.50:859][711]LogInit: FAudioDevice initialized with ID 12.
+[2025.11.13-21.04.50:859][711]LogAudio: Display: Audio Device (ID: 12) registered with world 'Lvl_ThirdPerson'.
+[2025.11.13-21.04.50:859][711]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 12
+[2025.11.13-21.04.50:864][711]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.13-21.04.50:867][711]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.13-21.04.50
+[2025.11.13-21.04.50:867][711]LogWorld: Bringing up level for play took: 0.003199
+[2025.11.13-21.04.50:870][711]LogOnline: OSS: Created online subsystem instance for: :Context_32
+[2025.11.13-21.04.50:872][711]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.13-21.04.50:938][711]PIE: Server logged in
+[2025.11.13-21.04.50:941][711]PIE: Play in editor total start time 0.227 seconds.
+[2025.11.13-21.04.51:082][714]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.11.13-21.04.51:686][750]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:700][751]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:717][752]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:734][753]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:750][754]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:766][755]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:784][756]LogTemp: Display: click callback called
+[2025.11.13-21.04.51:800][757]LogTemp: Display: click callback called
+[2025.11.13-21.04.52:088][774]LogTemp: Input Vector: X=0.420000, Y=2.380000
+[2025.11.13-21.04.52:105][775]LogTemp: Input Vector: X=0.070000, Y=1.120000
+[2025.11.13-21.04.52:121][776]LogTemp: Input Vector: X=0.070000, Y=1.260000
+[2025.11.13-21.04.52:138][777]LogTemp: Input Vector: X=0.140000, Y=1.820000
+[2025.11.13-21.04.52:155][778]LogTemp: Input Vector: X=0.000000, Y=0.560000
+[2025.11.13-21.04.52:172][779]LogTemp: Input Vector: X=0.000000, Y=0.350000
+[2025.11.13-21.04.52:188][780]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-21.04.52:205][781]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-21.04.52:222][782]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.04.52:238][783]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.04.52:433][793]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.04.52:433][793]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.04.52:433][793]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.04.52:437][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.52:437][793]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.13-21.04.52:440][793]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.13-21.04.52:449][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.04.52:480][793]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.11.13-21.04.52:482][793]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 12
+[2025.11.13-21.04.52:482][793]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12, StreamState=4
+[2025.11.13-21.04.52:485][793]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12, StreamState=2
+[2025.11.13-21.04.52:490][793]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.04.52:498][793]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2025.11.13-21.04.52:572][794]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2025.11.13-21.04.58:536][141]LogTemp: Display: on construction called
+[2025.11.13-21.04.58:785][154]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.13-21.04.58:908][154]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2025.11.13-21.04.58:951][154]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2025.11.13-21.04.58:988][154]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2025.11.13-21.04.59:006][154]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/QW/BYARADA0RXAT90ZTJE0YHT
+[2025.11.13-21.04.59:006][154]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/BYARADA0RXAT90ZTJE0YHT184C8AE444EA1F031714ECA5520C279D.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/QW/BYARADA0RXAT90ZTJE0YHT.uasset'
+[2025.11.13-21.04.59:022][154]LogFileHelpers: InternalPromptForCheckoutAndSave took 237.326 ms (total: 3.59 sec)
+[2025.11.13-21.04.59:104][154]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.13-21.04.59:104][154]LogContentValidation: Enabled validators:
+[2025.11.13-21.04.59:104][154]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.13-21.04.59:104][154]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.13-21.04.59:104][154]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.13-21.04.59:104][154]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.13-21.04.59:104][154]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.13-21.04.59:104][154]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.13-21.04.59:104][154]AssetCheck: /Game/ThirdPerson/Lvl_ThirdPerson Validating asset
+[2025.11.13-21.04.59:987][206]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.11.13-21.05.00:001][206]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.13-21.05.00:001][206]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.13-21.05.00:002][206]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 850 us (total: 10.043 ms)
+[2025.11.13-21.05.00:002][206]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.13-21.05.00:002][206]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.05.00:011][206]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.13-21.05.00:013][206]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.766 ms (total: 18.581 ms)
+[2025.11.13-21.05.00:013][206]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010652s)
+[2025.11.13-21.05.00:013][206]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.010695s)
+[2025.11.13-21.05.00:052][206]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2025.11.13-21.05.00:054][206]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.13-21.05.00:057][206]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.13-21.05.00:057][206]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.13-21.05.00:057][206]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.13-21.05.00:057][206]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.13-21.05.00:060][206]LogWorldPartition: Display: WorldPartition initialize took 2.641 ms (total: 382.726 ms)
+[2025.11.13-21.05.00:060][206]LogPlayLevel: PIE: World Init took: (0.005434s)
+[2025.11.13-21.05.00:061][206]LogAudio: Display: Creating Audio Device:                 Id: 13, Scope: Unique, Realtime: True
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.13-21.05.00:061][206]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.13-21.05.00:061][206]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.13-21.05.00:061][206]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.13-21.05.00:061][206]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.13-21.05.00:061][206]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.13-21.05.00:065][206]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.13-21.05.00:146][206]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.13-21.05.00:147][206]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.13-21.05.00:147][206]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.13-21.05.00:147][206]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.13-21.05.00:147][206]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=13
+[2025.11.13-21.05.00:147][206]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=13
+[2025.11.13-21.05.00:151][206]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=13
+[2025.11.13-21.05.00:151][206]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=13
+[2025.11.13-21.05.00:151][206]LogInit: FAudioDevice initialized with ID 13.
+[2025.11.13-21.05.00:151][206]LogAudio: Display: Audio Device (ID: 13) registered with world 'Lvl_ThirdPerson'.
+[2025.11.13-21.05.00:152][206]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 13
+[2025.11.13-21.05.00:157][206]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.13-21.05.00:160][206]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.13-21.05.00
+[2025.11.13-21.05.00:160][206]LogWorld: Bringing up level for play took: 0.002934
+[2025.11.13-21.05.00:163][206]LogOnline: OSS: Created online subsystem instance for: :Context_33
+[2025.11.13-21.05.00:165][206]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.13-21.05.00:205][206]PIE: Server logged in
+[2025.11.13-21.05.00:208][206]PIE: Play in editor total start time 0.208 seconds.
+[2025.11.13-21.05.00:464][215]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:476][216]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:493][217]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:510][218]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:527][219]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:543][220]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:559][221]LogTemp: Display: click callback called
+[2025.11.13-21.05.00:927][243]LogTemp: Input Vector: X=0.350000, Y=1.330000
+[2025.11.13-21.05.00:943][244]LogTemp: Input Vector: X=0.700000, Y=2.030000
+[2025.11.13-21.05.00:960][245]LogTemp: Input Vector: X=0.350000, Y=1.330000
+[2025.11.13-21.05.00:977][246]LogTemp: Input Vector: X=0.280000, Y=0.910000
+[2025.11.13-21.05.00:994][247]LogTemp: Input Vector: X=0.560000, Y=1.470000
+[2025.11.13-21.05.01:010][248]LogTemp: Input Vector: X=0.280000, Y=0.980000
+[2025.11.13-21.05.01:027][249]LogTemp: Input Vector: X=0.350000, Y=0.700000
+[2025.11.13-21.05.01:044][250]LogTemp: Input Vector: X=0.280000, Y=0.700000
+[2025.11.13-21.05.01:060][251]LogTemp: Input Vector: X=0.490000, Y=1.540000
+[2025.11.13-21.05.01:077][252]LogTemp: Input Vector: X=0.280000, Y=1.050000
+[2025.11.13-21.05.01:094][253]LogTemp: Input Vector: X=0.280000, Y=0.770000
+[2025.11.13-21.05.01:110][254]LogTemp: Input Vector: X=0.210000, Y=1.190000
+[2025.11.13-21.05.01:131][255]LogTemp: Input Vector: X=0.140000, Y=0.560000
+[2025.11.13-21.05.01:147][256]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.13-21.05.01:164][257]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.13-21.05.01:182][258]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.13-21.05.01:265][263]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.01:280][264]LogTemp: Input Vector: X=0.070000, Y=-0.210000
+[2025.11.13-21.05.01:297][265]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-21.05.01:314][266]LogTemp: Input Vector: X=0.280000, Y=-0.070000
+[2025.11.13-21.05.01:330][267]LogTemp: Input Vector: X=0.070000, Y=-0.140000
+[2025.11.13-21.05.01:348][268]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.01:364][269]LogTemp: Input Vector: X=0.140000, Y=-0.070000
+[2025.11.13-21.05.01:381][270]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.13-21.05.01:398][271]LogTemp: Input Vector: X=0.210000, Y=-0.070000
+[2025.11.13-21.05.01:414][272]LogTemp: Input Vector: X=0.280000, Y=-0.210000
+[2025.11.13-21.05.01:431][273]LogTemp: Input Vector: X=0.560000, Y=-0.000000
+[2025.11.13-21.05.01:448][274]LogTemp: Input Vector: X=0.350000, Y=-0.070000
+[2025.11.13-21.05.01:464][275]LogTemp: Input Vector: X=0.420000, Y=-0.000000
+[2025.11.13-21.05.01:480][276]LogTemp: Input Vector: X=0.280000, Y=-0.070000
+[2025.11.13-21.05.01:497][277]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.05.01:515][278]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.01:531][279]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.01:564][281]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.01:582][282]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.05.01:597][283]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.13-21.05.01:614][284]LogTemp: Input Vector: X=0.280000, Y=-0.070000
+[2025.11.13-21.05.01:631][285]LogTemp: Input Vector: X=0.280000, Y=-0.140000
+[2025.11.13-21.05.01:648][286]LogTemp: Input Vector: X=0.210000, Y=-0.210000
+[2025.11.13-21.05.01:665][287]LogTemp: Input Vector: X=0.490000, Y=-0.000000
+[2025.11.13-21.05.01:681][288]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.01:697][289]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.05.01:714][290]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.05.01:731][291]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.01:748][292]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.01:848][298]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.13-21.05.01:864][299]LogTemp: Input Vector: X=-0.210000, Y=0.070000
+[2025.11.13-21.05.01:881][300]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.05.01:899][301]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.05.01:914][302]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.01:931][303]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.01:947][304]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.01:964][305]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.01:981][306]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.01:997][307]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:015][308]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.02:031][309]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:064][311]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.02:081][312]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.02:115][314]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.02:148][316]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.02:165][317]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:181][318]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.02:197][319]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.02:214][320]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:231][321]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:248][322]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-21.05.02:264][323]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-21.05.02:281][324]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:298][325]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.05.02:315][326]LogTemp: Input Vector: X=-0.490000, Y=-0.210000
+[2025.11.13-21.05.02:331][327]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.13-21.05.02:347][328]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.05.02:364][329]LogTemp: Input Vector: X=-0.770000, Y=-0.490000
+[2025.11.13-21.05.02:381][330]LogTemp: Input Vector: X=-0.630000, Y=-0.350000
+[2025.11.13-21.05.02:398][331]LogTemp: Input Vector: X=-0.560000, Y=-0.210000
+[2025.11.13-21.05.02:416][332]LogTemp: Input Vector: X=-0.700000, Y=-0.350000
+[2025.11.13-21.05.02:431][333]LogTemp: Input Vector: X=-0.350000, Y=-0.280000
+[2025.11.13-21.05.02:448][334]LogTemp: Input Vector: X=-0.350000, Y=-0.280000
+[2025.11.13-21.05.02:464][335]LogTemp: Input Vector: X=-0.280000, Y=-0.350000
+[2025.11.13-21.05.02:482][336]LogTemp: Input Vector: X=-0.280000, Y=-0.280000
+[2025.11.13-21.05.02:497][337]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-21.05.02:514][338]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.13-21.05.02:531][339]LogTemp: Input Vector: X=-0.280000, Y=-0.210000
+[2025.11.13-21.05.02:548][340]LogTemp: Input Vector: X=-0.840000, Y=-0.210000
+[2025.11.13-21.05.02:564][341]LogTemp: Input Vector: X=-0.630000, Y=-0.070000
+[2025.11.13-21.05.02:581][342]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.13-21.05.02:598][343]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.05.02:614][344]LogTemp: Input Vector: X=-0.140000, Y=-0.210000
+[2025.11.13-21.05.02:631][345]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.05.02:648][346]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.05.02:665][347]LogTemp: Input Vector: X=-0.630000, Y=-0.210000
+[2025.11.13-21.05.02:681][348]LogTemp: Input Vector: X=-0.840000, Y=-0.350000
+[2025.11.13-21.05.02:698][349]LogTemp: Input Vector: X=-0.980000, Y=-0.140000
+[2025.11.13-21.05.02:715][350]LogTemp: Input Vector: X=-0.980000, Y=-0.070000
+[2025.11.13-21.05.02:731][351]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.13-21.05.02:747][352]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.05.02:765][353]LogTemp: Input Vector: X=-1.120000, Y=-0.000000
+[2025.11.13-21.05.02:781][354]LogTemp: Input Vector: X=-1.260000, Y=0.070000
+[2025.11.13-21.05.02:797][355]LogTemp: Input Vector: X=-1.330000, Y=-0.000000
+[2025.11.13-21.05.02:815][356]LogTemp: Input Vector: X=-1.750000, Y=0.140000
+[2025.11.13-21.05.02:832][357]LogTemp: Input Vector: X=-1.470000, Y=0.070000
+[2025.11.13-21.05.02:848][358]LogTemp: Input Vector: X=-1.050000, Y=-0.000000
+[2025.11.13-21.05.02:864][359]LogTemp: Input Vector: X=-1.050000, Y=-0.000000
+[2025.11.13-21.05.02:881][360]LogTemp: Input Vector: X=-0.770000, Y=-0.000000
+[2025.11.13-21.05.02:898][361]LogTemp: Input Vector: X=-0.980000, Y=-0.000000
+[2025.11.13-21.05.02:914][362]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.13-21.05.02:931][363]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.05.02:948][364]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.05.02:964][365]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.02:981][366]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.05:748][532]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-21.05.05:764][533]LogTemp: Input Vector: X=-0.630000, Y=-0.350000
+[2025.11.13-21.05.05:781][534]LogTemp: Input Vector: X=-0.910000, Y=-0.560000
+[2025.11.13-21.05.05:798][535]LogTemp: Input Vector: X=-1.330000, Y=-0.560000
+[2025.11.13-21.05.05:815][536]LogTemp: Input Vector: X=-0.700000, Y=-0.140000
+[2025.11.13-21.05.05:831][537]LogTemp: Input Vector: X=-1.400000, Y=0.140000
+[2025.11.13-21.05.05:848][538]LogTemp: Input Vector: X=-1.540000, Y=0.560000
+[2025.11.13-21.05.05:864][539]LogTemp: Input Vector: X=-3.430000, Y=1.050000
+[2025.11.13-21.05.05:881][540]LogTemp: Input Vector: X=-2.240000, Y=1.120000
+[2025.11.13-21.05.05:898][541]LogTemp: Input Vector: X=-2.450000, Y=1.120000
+[2025.11.13-21.05.05:915][542]LogTemp: Input Vector: X=-2.870000, Y=2.240000
+[2025.11.13-21.05.05:931][543]LogTemp: Input Vector: X=-1.890000, Y=1.260000
+[2025.11.13-21.05.05:948][544]LogTemp: Input Vector: X=-1.610000, Y=1.330000
+[2025.11.13-21.05.05:965][545]LogTemp: Input Vector: X=-1.260000, Y=1.050000
+[2025.11.13-21.05.05:981][546]LogTemp: Input Vector: X=-1.400000, Y=0.770000
+[2025.11.13-21.05.05:998][547]LogTemp: Input Vector: X=-0.700000, Y=0.210000
+[2025.11.13-21.05.06:015][548]LogTemp: Input Vector: X=-0.490000, Y=0.070000
+[2025.11.13-21.05.06:031][549]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.05.06:048][550]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.13-21.05.06:065][551]LogTemp: Input Vector: X=-0.280000, Y=-0.280000
+[2025.11.13-21.05.06:081][552]LogTemp: Input Vector: X=-0.210000, Y=-0.560000
+[2025.11.13-21.05.06:097][553]LogTemp: Input Vector: X=-0.210000, Y=-1.470000
+[2025.11.13-21.05.06:114][554]LogTemp: Input Vector: X=0.000000, Y=-0.910000
+[2025.11.13-21.05.06:131][555]LogTemp: Input Vector: X=0.000000, Y=-0.770000
+[2025.11.13-21.05.06:148][556]LogTemp: Input Vector: X=0.000000, Y=-0.910000
+[2025.11.13-21.05.06:165][557]LogTemp: Input Vector: X=0.000000, Y=-0.770000
+[2025.11.13-21.05.06:182][558]LogTemp: Input Vector: X=0.000000, Y=-0.770000
+[2025.11.13-21.05.06:199][559]LogTemp: Input Vector: X=-0.210000, Y=-0.350000
+[2025.11.13-21.05.06:215][560]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.13-21.05.06:231][561]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.06:248][562]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.06:264][563]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.06:281][564]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.06:297][565]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.06:414][572]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.06:515][578]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.13-21.05.06:531][579]LogTemp: Input Vector: X=0.070000, Y=-0.140000
+[2025.11.13-21.05.06:549][580]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.13-21.05.06:565][581]LogTemp: Input Vector: X=0.140000, Y=-0.070000
+[2025.11.13-21.05.06:582][582]LogTemp: Input Vector: X=0.210000, Y=-0.070000
+[2025.11.13-21.05.06:599][583]LogTemp: Input Vector: X=0.140000, Y=-0.070000
+[2025.11.13-21.05.06:614][584]LogTemp: Input Vector: X=0.070000, Y=-0.140000
+[2025.11.13-21.05.06:631][585]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.13-21.05.06:915][602]LogTemp: Input Vector: X=-0.350000, Y=-0.350000
+[2025.11.13-21.05.06:931][603]LogTemp: Input Vector: X=-0.280000, Y=-0.280000
+[2025.11.13-21.05.06:948][604]LogTemp: Input Vector: X=-0.350000, Y=-0.280000
+[2025.11.13-21.05.06:965][605]LogTemp: Input Vector: X=-0.420000, Y=-0.350000
+[2025.11.13-21.05.06:981][606]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.13-21.05.06:998][607]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.13-21.05.07:015][608]LogTemp: Input Vector: X=-0.280000, Y=-0.210000
+[2025.11.13-21.05.07:031][609]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.13-21.05.07:048][610]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.13-21.05.07:065][611]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.05.07:081][612]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.05.07:099][613]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.13-21.05.07:115][614]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.05.07:131][615]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.05.07:148][616]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.05.07:165][617]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.07:181][618]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.05.07:199][619]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.13-21.05.07:215][620]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.13-21.05.07:232][621]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.07:248][622]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.07:264][623]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.07:282][624]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:298][625]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.07:315][626]LogTemp: Input Vector: X=-0.350000, Y=0.140000
+[2025.11.13-21.05.07:332][627]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.05.07:348][628]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.05.07:365][629]LogTemp: Input Vector: X=-0.280000, Y=0.070000
+[2025.11.13-21.05.07:381][630]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:398][631]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:414][632]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:431][633]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.07:449][634]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:465][635]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:482][636]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:498][637]LogTemp: Input Vector: X=-0.210000, Y=0.070000
+[2025.11.13-21.05.07:515][638]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:532][639]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:548][640]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:564][641]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:581][642]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.05.07:598][643]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:614][644]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:631][645]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:648][646]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:665][647]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.13-21.05.07:681][648]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:698][649]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.13-21.05.07:714][650]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.07:731][651]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:748][652]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:765][653]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:781][654]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.13-21.05.07:798][655]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:815][656]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:831][657]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:847][658]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.07:864][659]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.05.07:881][660]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:915][662]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.07:948][664]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.13-21.05.08:998][727]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.13-21.05.09:015][728]LogTemp: Input Vector: X=-0.840000, Y=-0.140000
+[2025.11.13-21.05.09:031][729]LogTemp: Input Vector: X=-1.120000, Y=-0.140000
+[2025.11.13-21.05.09:049][730]LogTemp: Input Vector: X=-1.050000, Y=-0.210000
+[2025.11.13-21.05.09:065][731]LogTemp: Input Vector: X=-0.630000, Y=-0.210000
+[2025.11.13-21.05.09:081][732]LogTemp: Input Vector: X=-0.770000, Y=-0.000000
+[2025.11.13-21.05.09:098][733]LogTemp: Input Vector: X=-1.120000, Y=-0.000000
+[2025.11.13-21.05.09:114][734]LogTemp: Input Vector: X=-1.400000, Y=0.280000
+[2025.11.13-21.05.09:131][735]LogTemp: Input Vector: X=-1.050000, Y=0.210000
+[2025.11.13-21.05.09:148][736]LogTemp: Input Vector: X=-1.260000, Y=0.280000
+[2025.11.13-21.05.09:166][737]LogTemp: Input Vector: X=-1.400000, Y=0.420000
+[2025.11.13-21.05.09:182][738]LogTemp: Input Vector: X=-1.120000, Y=0.350000
+[2025.11.13-21.05.09:199][739]LogTemp: Input Vector: X=-0.910000, Y=0.140000
+[2025.11.13-21.05.09:215][740]LogTemp: Input Vector: X=-0.630000, Y=0.070000
+[2025.11.13-21.05.09:231][741]LogTemp: Input Vector: X=-0.560000, Y=-0.000000
+[2025.11.13-21.05.09:248][742]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.13-21.05.09:264][743]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.13-21.05.09:281][744]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.13-21.05.09:348][748]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.13-21.05.09:832][777]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.05.09:848][778]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.13-21.05.09:865][779]LogTemp: Input Vector: X=0.280000, Y=-0.070000
+[2025.11.13-21.05.09:882][780]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.09:899][781]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.13-21.05.09:916][782]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.09:932][783]LogTemp: Input Vector: X=0.770000, Y=-0.000000
+[2025.11.13-21.05.09:948][784]LogTemp: Input Vector: X=0.700000, Y=-0.000000
+[2025.11.13-21.05.09:965][785]LogTemp: Input Vector: X=0.770000, Y=-0.000000
+[2025.11.13-21.05.09:982][786]LogTemp: Input Vector: X=0.910000, Y=-0.000000
+[2025.11.13-21.05.09:998][787]LogTemp: Input Vector: X=0.490000, Y=-0.070000
+[2025.11.13-21.05.10:016][788]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.10:031][789]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.10:048][790]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.13-21.05.10:066][791]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.13-21.05.11:542][878]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.05.11:542][878]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.13-21.05.11:543][878]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.13-21.05.11:546][878]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.05.11:546][878]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.13-21.05.11:549][878]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.13-21.05.11:558][878]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.13-21.05.11:593][878]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.13-21.05.11:593][878]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 13
+[2025.11.13-21.05.11:593][878]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13, StreamState=4
+[2025.11.13-21.05.11:597][878]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13, StreamState=2
+[2025.11.13-21.05.11:610][878]LogUObjectHash: Compacting FUObjectHashTables data took   1.69ms
+[2025.11.13-21.05.11:688][879]LogPlayLevel: Display: Destroying online subsystem :Context_33
+[2025.11.13-21.05.15:244][ 77]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms
