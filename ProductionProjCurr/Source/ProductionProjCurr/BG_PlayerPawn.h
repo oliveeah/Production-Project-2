@@ -75,8 +75,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
-	float TargetFOV = 90.0f;     
-	float CurrentFOV = 90.0f;    
-	float ZoomSpeed = 10.0f;      
-	float ZoomInterpSpeed = 10.0f; 
+	float BaseZoomDistance = 800.f;        
+	float TargetZoomDistance = 800.f;     
+	float CurrentZoomDistance = 800.f;      
+	float ZoomSpeed = 200.f;               
+	float ZoomInterpSpeed = 8.f;           
 };

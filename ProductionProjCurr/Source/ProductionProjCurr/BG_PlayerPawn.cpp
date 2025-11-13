@@ -33,7 +33,7 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 
 	//UI
 	UI_FactionCharacter = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("faction UI character"));
-	UI_FactionCharacter->SetupAttachment(RootComponent);
+	//UI_FactionCharacter->SetupAttachment(Camera);
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
@@ -43,7 +43,10 @@ void ABG_PlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//CurrentZoomDistance = BaseZoomDistance;
+	//TargetZoomDistance = BaseZoomDistance;
 
+	//Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));
 }
 
 
@@ -56,15 +59,12 @@ void ABG_PlayerPawn::clickCallback()
 
 void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)
 {
-	float scrollValue = Value.Get<float>();
+	//float scrollValue = Value.Get<float>();
 
-
-	if (FMath::Abs(scrollValue) > KINDA_SMALL_NUMBER)
-	{
-		TargetFOV = FMath::Clamp(TargetFOV - scrollValue * ZoomSpeed, 10.0f, 110.0f);
-
-		UE_LOG(LogTemp, Display, TEXT("Scroll: %f | TargetFOV: %f"), scrollValue, TargetFOV);
-	}
+	//if (FMath::Abs(scrollValue) > KINDA_SMALL_NUMBER)
+	//{
+	//	TargetZoomDistance = FMath::Clamp(TargetZoomDistance - scrollValue * ZoomSpeed, 200.f, 2000.f);
+	//}
 }
 
 
@@ -73,8 +73,9 @@ void ABG_PlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	CurrentFOV = FMath::FInterpTo(CurrentFOV, TargetFOV, DeltaTime, ZoomInterpSpeed);
-	Camera->SetFieldOfView(CurrentFOV);
+	//CurrentZoomDistance = FMath::FInterpTo(CurrentZoomDistance, TargetZoomDistance, DeltaTime, ZoomInterpSpeed);
+
+	//Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));
 }
 
 // Called to bind functionality to input
