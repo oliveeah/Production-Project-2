@@ -7,6 +7,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpectatorPawnMovement.h"
 // Sets default values
 ABG_PlayerPawn::ABG_PlayerPawn()
@@ -29,6 +30,10 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 	bUseControllerRotationPitch = true;
 	bUseControllerRotationYaw = true;
 	bUseControllerRotationRoll = false;
+
+	//UI
+	UI_FactionCharacter = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("faction UI character"));
+	UI_FactionCharacter->SetupAttachment(RootComponent);
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }

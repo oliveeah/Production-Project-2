@@ -16,14 +16,14 @@ class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn
 
 public:
 
-	/** Follow camera */
+	/** components  */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* Camera;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
 	class USpectatorPawnMovement* SpectatorMovementComponent;
 
-
+	//input
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	UInputAction* moveAction;
 
@@ -36,6 +36,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	UInputAction* scrollAction;
 
+	//UI
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3D UI")
+	USkeletalMeshComponent* UI_FactionCharacter;
 protected:
 	/** Called for movement input */
 	void MoveCallback(const FInputActionValue& Value);
