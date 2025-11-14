@@ -66,10 +66,16 @@ public://variables
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	TSubclassOf<ABG_Tile> MeadowTile;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TSubclassOf<ABG_Tile> SandyTile;
 	//tile child variants
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	TSubclassOf<ABG_Token> TokenClass;
+
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	bool shouldSpawnTokens;

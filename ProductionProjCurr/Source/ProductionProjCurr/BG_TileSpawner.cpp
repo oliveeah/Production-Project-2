@@ -76,6 +76,12 @@ void ABG_TileSpawner::BeginPlay()
 
 			}
 
+			else if (randomNum == 6)
+			{
+				NewTile = GetWorld()->SpawnActor<ABG_Tile>(SandyTile, instanceTransform);
+
+			}
+
 
 
 
@@ -118,6 +124,6 @@ void ABG_TileSpawner::Tick(float DeltaTime)
 
 int32 ABG_TileSpawner::generateRandomTileToSpawnNumber()
 {
-	return FMath::RandRange(1, 5);
+	return FMath::RandRange(1, 6);
 }
 
