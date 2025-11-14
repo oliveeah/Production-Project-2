@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeBG_PlayerPawn() {}
 // ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpectatorPawnMovement_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
@@ -102,6 +103,96 @@ DEFINE_FUNCTION(ABG_PlayerPawn::execDoMove)
 }
 // ********** End Class ABG_PlayerPawn Function DoMove *********************************************
 
+// ********** Begin Class ABG_PlayerPawn Function OnBeginMouseOver *********************************
+struct Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics
+{
+	struct BG_PlayerPawn_eventOnBeginMouseOver_Parms
+	{
+		UPrimitiveComponent* TouchedComponent;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TouchedComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TouchedComponent;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::NewProp_TouchedComponent = { "TouchedComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BG_PlayerPawn_eventOnBeginMouseOver_Parms, TouchedComponent), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TouchedComponent_MetaData), NewProp_TouchedComponent_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::NewProp_TouchedComponent,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABG_PlayerPawn, nullptr, "OnBeginMouseOver", Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::BG_PlayerPawn_eventOnBeginMouseOver_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::BG_PlayerPawn_eventOnBeginMouseOver_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABG_PlayerPawn::execOnBeginMouseOver)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_TouchedComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBeginMouseOver(Z_Param_TouchedComponent);
+	P_NATIVE_END;
+}
+// ********** End Class ABG_PlayerPawn Function OnBeginMouseOver ***********************************
+
+// ********** Begin Class ABG_PlayerPawn Function OnEndMouseOver ***********************************
+struct Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics
+{
+	struct BG_PlayerPawn_eventOnEndMouseOver_Parms
+	{
+		UPrimitiveComponent* TouchedComponent;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TouchedComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TouchedComponent;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::NewProp_TouchedComponent = { "TouchedComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BG_PlayerPawn_eventOnEndMouseOver_Parms, TouchedComponent), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TouchedComponent_MetaData), NewProp_TouchedComponent_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::NewProp_TouchedComponent,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABG_PlayerPawn, nullptr, "OnEndMouseOver", Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::BG_PlayerPawn_eventOnEndMouseOver_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::BG_PlayerPawn_eventOnEndMouseOver_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABG_PlayerPawn::execOnEndMouseOver)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_TouchedComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnEndMouseOver(Z_Param_TouchedComponent);
+	P_NATIVE_END;
+}
+// ********** End Class ABG_PlayerPawn Function OnEndMouseOver *************************************
+
 // ********** Begin Class ABG_PlayerPawn Function scrollCallback ***********************************
 struct Z_Construct_UFunction_ABG_PlayerPawn_scrollCallback_Statics
 {
@@ -155,6 +246,8 @@ void ABG_PlayerPawn::StaticRegisterNativesABG_PlayerPawn()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "clickCallback", &ABG_PlayerPawn::execclickCallback },
 		{ "DoMove", &ABG_PlayerPawn::execDoMove },
+		{ "OnBeginMouseOver", &ABG_PlayerPawn::execOnBeginMouseOver },
+		{ "OnEndMouseOver", &ABG_PlayerPawn::execOnEndMouseOver },
 		{ "scrollCallback", &ABG_PlayerPawn::execscrollCallback },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -259,6 +352,8 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABG_PlayerPawn_clickCallback, "clickCallback" }, // 3740202444
 		{ &Z_Construct_UFunction_ABG_PlayerPawn_DoMove, "DoMove" }, // 1853087355
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver, "OnBeginMouseOver" }, // 590078714
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver, "OnEndMouseOver" }, // 306840309
 		{ &Z_Construct_UFunction_ABG_PlayerPawn_scrollCallback, "scrollCallback" }, // 1446023604
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -320,10 +415,10 @@ ABG_PlayerPawn::~ABG_PlayerPawn() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 2365915373U) },
+		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 3496459375U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_3558468256(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_2165647803(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

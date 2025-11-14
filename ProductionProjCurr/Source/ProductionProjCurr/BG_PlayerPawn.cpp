@@ -9,6 +9,8 @@
 #include "InputActionValue.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpectatorPawnMovement.h"
+
+
 // Sets default values
 ABG_PlayerPawn::ABG_PlayerPawn()
 {
@@ -33,7 +35,7 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 
 	//UI
 	UI_FactionCharacter = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("faction UI character"));
-	//UI_FactionCharacter->SetupAttachment(Camera);
+	UI_FactionCharacter->SetupAttachment(Camera);
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
@@ -46,7 +48,20 @@ void ABG_PlayerPawn::BeginPlay()
 	//CurrentZoomDistance = BaseZoomDistance;
 	//TargetZoomDistance = BaseZoomDistance;
 
-	//Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));
+	//Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));#
+
+
+	playerController = Cast<APlayerController>(GetController());
+
+	if (playerController)
+	{
+		playerController->bShowMouseCursor = true;
+		playerController->bEnableClickEvents = true;
+		playerController->bEnableMouseOverEvents = true;
+
+		FInputModeGameAndUI mode;
+		playerController->SetInputMode(mode);
+	}
 }
 
 
@@ -55,6 +70,10 @@ void ABG_PlayerPawn::BeginPlay()
 void ABG_PlayerPawn::clickCallback()
 {
 	UE_LOG(LogTemp, Display, TEXT("click callback called"));
+
+	//playerController->DeprojectMousePositionToWorld(
+	//	GetWorld()
+	//)
 }
 
 void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)
@@ -147,4 +166,14 @@ void ABG_PlayerPawn::DoMove(float Right, float Forward)
 
 
 	}
+}
+
+void ABG_PlayerPawn::OnBeginMouseOver(UPrimitiveComponent* TouchedComponent)
+{
+
+}
+
+void ABG_PlayerPawn::OnEndMouseOver(UPrimitiveComponent* TouchedComponent)
+{
+
 }

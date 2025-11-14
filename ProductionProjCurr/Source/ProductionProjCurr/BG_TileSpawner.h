@@ -72,14 +72,23 @@ public://variables
 	TSubclassOf<ABG_Tile> SandyTile;
 	//tile child variants
 
+
+	//token logic
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	TSubclassOf<ABG_Token> TokenClass;
-
-
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	bool shouldSpawnTokens;
 
+	UPROPERTY(Transient)
+	TArray<AActor*> spawnedTokensArray;
+
+	UPROPERTY(Transient)
+	TArray<AActor*> spawnedTilesArray;
+
 	int32 generateRandomTileToSpawnNumber();
+
+	void spawnGrid();
+	void clearGrid();
 
 };

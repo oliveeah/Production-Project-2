@@ -35,7 +35,6 @@ ABG_Tile::ABG_Tile()
 
 	if (MAT_One.Succeeded())  MAT_Array.Add(MAT_One.Object);
 	if (MAT_Two.Succeeded())  MAT_Array.Add(MAT_Two.Object);
-	if (MAT_Two.Succeeded())  MAT_Array.Add(MAT_Two.Object);
 	if (MAT_Three.Succeeded())  MAT_Array.Add(MAT_Three.Object);
 	if (MAT_Four.Succeeded())  MAT_Array.Add(MAT_Four.Object);
 	
@@ -50,6 +49,11 @@ void ABG_Tile::BeginPlay()
 {
 	Super::BeginPlay();
 
+	
+}
+
+void ABG_Tile::OnConstruction(const FTransform& transform)
+{
 	//set material and clearing type
 	if (MAT_Array.Num() > 0 && tileMesh)
 	{
@@ -79,11 +83,6 @@ void ABG_Tile::BeginPlay()
 		//tileMesh->SetMaterial(0, MAT_Array[randomClearingType]);
 
 	}
-
-}
-
-void ABG_Tile::OnConstruction(const FTransform& transform)
-{
 
 }
 

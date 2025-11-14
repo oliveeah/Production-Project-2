@@ -252,12 +252,17 @@
     <None Include="..\..\ProductionProjCurr.uproject"/>
     <None Include="..\..\Source\ProductionProjCurr.Target.cs"/>
     <None Include="..\..\Source\ProductionProjCurrEditor.Target.cs"/>
+    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_AC_MouseOverlapReciever.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_AC_MouseOverlapReciever.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\BG_PlayerPawn.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

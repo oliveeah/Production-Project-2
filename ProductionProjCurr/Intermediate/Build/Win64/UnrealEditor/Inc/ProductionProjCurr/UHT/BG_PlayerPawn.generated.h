@@ -16,10 +16,13 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class UPrimitiveComponent;
 struct FInputActionValue;
 
 // ********** Begin Class ABG_PlayerPawn ***********************************************************
 #define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnEndMouseOver); \
+	DECLARE_FUNCTION(execOnBeginMouseOver); \
 	DECLARE_FUNCTION(execDoMove); \
 	DECLARE_FUNCTION(execscrollCallback); \
 	DECLARE_FUNCTION(execclickCallback);

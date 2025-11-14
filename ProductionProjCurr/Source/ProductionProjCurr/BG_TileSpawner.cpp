@@ -22,84 +22,12 @@ void ABG_TileSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// Clear old instances so we don’t duplicate
+	clearGrid();
 
-	float hexWidth = tileWidth;
-	float hexHeight = hexWidth * 0.866f; // sqrt(3)/2 for hex spacing
+	//spawn new tiles
+	spawnGrid();
 
-	FVector baseLocation = GetActorLocation();
-
-
-	//loop create instances
-	for (int32 rows = 1; rows < numberOfRows + 1; rows++)
-	{
-		//ySpawnOffset = ySpawnOffset * rows;
-
-		for (int32 cols = 0; cols < numberOfColumns; cols++)
-		{
-			float xOffset = (rows % 2 == 0) ? 0.0f : (hexWidth * 0.5f);
-
-
-
-			float X = cols * hexWidth;
-			float Y = rows * hexHeight;
-
-			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0.0f);
-			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
-
-			int32 randomNum = generateRandomTileToSpawnNumber();
-
-			ABG_Tile* NewTile = nullptr;
-
-			if (randomNum == 1)
-			{
-				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(FarmTile, instanceTransform);
-
-			}
-			else if (randomNum == 2)
-			{
-				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(WaterTile, instanceTransform);
-
-			}
-			else if (randomNum == 3)
-			{
-				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(MountainTile, instanceTransform);
-
-			}
-			else if (randomNum == 4)
-			{
-				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(ForestTile, instanceTransform);
-
-			}
-			else if (randomNum == 5)
-			{
-				NewTile = GetWorld()->SpawnActor<ABG_Tile>(MeadowTile, instanceTransform);
-
-			}
-
-			else if (randomNum == 6)
-			{
-				NewTile = GetWorld()->SpawnActor<ABG_Tile>(SandyTile, instanceTransform);
-
-			}
-
-
-
-
-			if (shouldSpawnTokens)
-			{
-				FVector tokenSpawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 10.0f);
-				FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
-
-				ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
-				if (NewToken)
-				{
-					NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
-
-				}
-
-			}
-		}
-	}
 }
 
 void ABG_TileSpawner::OnConstruction(const FTransform& transform)
@@ -107,9 +35,6 @@ void ABG_TileSpawner::OnConstruction(const FTransform& transform)
 	UE_LOG(LogTemp, Display, TEXT("on construction called"));
 
 	Super::OnConstruction(transform);
-
-	// Clear old instances so we don’t duplicate
-//	staticMesh->ClearInstances();
 
 
 	
@@ -125,5 +50,74 @@ void ABG_TileSpawner::Tick(float DeltaTime)
 int32 ABG_TileSpawner::generateRandomTileToSpawnNumber()
 {
 	return FMath::RandRange(1, 6);
+}
+
+void ABG_TileSpawner::spawnGrid()
+{
+	if (!GetWorld()) return;
+
+	float hexWidth = tileWidth;
+	float hexHeight = hexWidth * 0.866f;
+
+	FVector baseLocation = GetActorLocation();
+
+	for (int32 rows = 1; rows < numberOfRows + 1; rows++)
+	{
+		for (int32 cols = 0; cols < numberOfColumns; cols++)
+		{
+			float xOffset = (rows % 2 == 0) ? 0.0f : (hexWidth * 0.5f);
+
+			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
+			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
+
+			int32 randomNum = generateRandomTileToSpawnNumber();
+			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
+
+			switch (randomNum)
+			{
+			case 1: ChosenTileClass = FarmTile; break;
+			case 2: ChosenTileClass = WaterTile; break;
+			case 3: ChosenTileClass = MountainTile; break;
+			case 4: ChosenTileClass = ForestTile; break;
+			case 5: ChosenTileClass = MeadowTile; break;
+			case 6: ChosenTileClass = SandyTile; break;
+			}
+
+			ABG_Tile* NewTile = nullptr;
+			if (ChosenTileClass)
+			{
+				NewTile = GetWorld()->SpawnActor<ABG_Tile>(ChosenTileClass, instanceTransform);
+				spawnedTilesArray.Add(NewTile);
+			}
+
+			if (shouldSpawnTokens && TokenClass)
+			{
+				FVector tokenSpawnLocation = spawnLocation + FVector(0, 0, 10);
+				FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
+
+				ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
+				if (NewToken)
+				{
+					NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
+					spawnedTilesArray.Add(NewToken);
+				}
+			}
+		}
+	}
+}
+
+void ABG_TileSpawner::clearGrid()
+{
+	for (AActor* Tile : spawnedTilesArray)
+	{
+		if (Tile && Tile->IsPendingKillPending())
+		{
+			Tile->Destroy();
+		}
+	}
+	//will add for tokens too if needed
+
+	spawnedTilesArray.Empty();
+
 }
 

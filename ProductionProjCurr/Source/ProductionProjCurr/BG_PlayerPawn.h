@@ -23,6 +23,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
 	class USpectatorPawnMovement* SpectatorMovementComponent;
 
+	APlayerController* playerController;
+
 	//input
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	UInputAction* moveAction;
@@ -54,6 +56,12 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Input")
 	virtual void DoMove(float Right, float Forward);
+
+	UFUNCTION()
+	void OnBeginMouseOver(UPrimitiveComponent* TouchedComponent);
+
+	UFUNCTION()
+	void OnEndMouseOver(UPrimitiveComponent* TouchedComponent);
 
 public:
 	// Sets default values for this pawn's properties
