@@ -64,6 +64,8 @@ public://variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	TSubclassOf<ABG_Tile> ForestTile;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TSubclassOf<ABG_Tile> MeadowTile;
 	//tile child variants
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")

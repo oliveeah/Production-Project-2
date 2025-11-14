@@ -70,6 +70,11 @@ void ABG_TileSpawner::BeginPlay()
 				 NewTile = GetWorld()->SpawnActor<ABG_Tile>(ForestTile, instanceTransform);
 
 			}
+			else if (randomNum == 5)
+			{
+				NewTile = GetWorld()->SpawnActor<ABG_Tile>(MeadowTile, instanceTransform);
+
+			}
 
 
 
@@ -113,6 +118,6 @@ void ABG_TileSpawner::Tick(float DeltaTime)
 
 int32 ABG_TileSpawner::generateRandomTileToSpawnNumber()
 {
-	return FMath::RandRange(1, 4);
+	return FMath::RandRange(1, 5);
 }
 
