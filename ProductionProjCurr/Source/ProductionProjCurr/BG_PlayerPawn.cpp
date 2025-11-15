@@ -20,11 +20,19 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 	// Root component
 	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
 
+	//spring arm
+	springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComponent"));	
+	springArm->SetupAttachment(RootComponent);
+	springArm->bUsePawnControlRotation = true;
+	springArm->bDoCollisionTest = false;
+
+
 	// Camera
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
-	Camera->SetupAttachment(RootComponent);
-	Camera->bUsePawnControlRotation = true;
+	Camera->SetupAttachment(springArm);
+	Camera->bUsePawnControlRotation = false;
 
+	// spectator movement
 	SpectatorMovementComponent = CreateDefaultSubobject<USpectatorPawnMovement>(TEXT("MovementComponent"));
 	SpectatorMovementComponent->UpdatedComponent = RootComponent;
 
@@ -45,10 +53,10 @@ void ABG_PlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//CurrentZoomDistance = BaseZoomDistance;
-	//TargetZoomDistance = BaseZoomDistance;
+	CurrentZoomDistance = BaseZoomDistance;
+	TargetZoomDistance = BaseZoomDistance;
 
-	//Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));#
+	Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));
 
 
 	playerController = Cast<APlayerController>(GetController());
@@ -78,12 +86,12 @@ void ABG_PlayerPawn::clickCallback()
 
 void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)
 {
-	//float scrollValue = Value.Get<float>();
+	float scrollValue = Value.Get<float>();
 
-	//if (FMath::Abs(scrollValue) > KINDA_SMALL_NUMBER)
-	//{
-	//	TargetZoomDistance = FMath::Clamp(TargetZoomDistance - scrollValue * ZoomSpeed, 200.f, 2000.f);
-	//}
+	float armLength = springArm->TargetArmLength;
+	
+	springArm->TargetArmLength = ((scrollValue * 50.0f) + (armLength));
+
 }
 
 
@@ -92,9 +100,6 @@ void ABG_PlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//CurrentZoomDistance = FMath::FInterpTo(CurrentZoomDistance, TargetZoomDistance, DeltaTime, ZoomInterpSpeed);
-
-	//Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));
 }
 
 // Called to bind functionality to input
