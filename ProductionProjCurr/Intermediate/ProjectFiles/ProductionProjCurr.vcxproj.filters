@@ -40,6 +40,12 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\BG_AC_MouseOverlapReciever.h">
       <Filter>Source\ProductionProjCurr</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_CaptureActor.cpp">
+      <Filter>Source\ProductionProjCurr</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_CaptureActor.h">
+      <Filter>Source\ProductionProjCurr</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProductionProjCurr\BG_PlayerPawn.cpp">
       <Filter>Source\ProductionProjCurr</Filter>
     </ClCompile>
