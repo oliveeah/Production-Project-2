@@ -39,6 +39,10 @@ ABG_Tile::ABG_Tile()
 	if (MAT_Four.Succeeded())  MAT_Array.Add(MAT_Four.Object);
 	
 	tileMesh->SetBoundsScale(1000.0f);
+	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
+	tileMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	
 
 	
 
@@ -49,7 +53,11 @@ void ABG_Tile::BeginPlay()
 {
 	Super::BeginPlay();
 
-	
+	if (tileMesh)
+	{
+		tileMesh->OnBeginCursorOver.AddDynamic(this, &ABG_Tile::OnBeginMouseOverTile);
+		tileMesh->OnEndCursorOver.AddDynamic(this, &ABG_Tile::OnEndMouseOverTile);
+	}
 }
 
 void ABG_Tile::OnConstruction(const FTransform& transform)
@@ -96,6 +104,17 @@ void ABG_Tile::Tick(float DeltaTime)
 int32 ABG_Tile::generateRandomNumber()
 {
 	return FMath::RandRange(0, MAT_Array.Num() - 1);
+}
+
+void ABG_Tile::OnBeginMouseOverTile(UPrimitiveComponent* TouchedComponent)
+{
+	UE_LOG(LogTemp, Warning, TEXT("TILE : mouse hovering over tile"));
+}
+
+void ABG_Tile::OnEndMouseOverTile(UPrimitiveComponent* TouchedComponent)
+{
+	UE_LOG(LogTemp, Warning, TEXT("TILE : mouse STOPPED hovering over tile"));
+
 }
 
 

@@ -86,9 +86,10 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
-	float BaseZoomDistance = 800.f;        
-	float TargetZoomDistance = 800.f;     
-	float CurrentZoomDistance = 800.f;      
-	float ZoomSpeed = 200.f;               
-	float ZoomInterpSpeed = 8.f;           
+     
+
+
+
+	//temp
+	float targetArmLength = 0.0f;
 };

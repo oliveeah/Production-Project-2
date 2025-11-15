@@ -46,4 +46,9 @@ public://variables
 
 	int32 generateRandomNumber();
 
+	UFUNCTION()
+	void OnBeginMouseOverTile(UPrimitiveComponent* TouchedComponent);
+
+	UFUNCTION()
+	void OnEndMouseOverTile(UPrimitiveComponent* TouchedComponent);
 };

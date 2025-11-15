@@ -53,12 +53,6 @@ void ABG_PlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CurrentZoomDistance = BaseZoomDistance;
-	TargetZoomDistance = BaseZoomDistance;
-
-	Camera->SetRelativeLocation(FVector(-CurrentZoomDistance, 0, 0));
-
-
 	playerController = Cast<APlayerController>(GetController());
 
 	if (playerController)
@@ -175,10 +169,11 @@ void ABG_PlayerPawn::DoMove(float Right, float Forward)
 
 void ABG_PlayerPawn::OnBeginMouseOver(UPrimitiveComponent* TouchedComponent)
 {
-
+	UE_LOG(LogTemp, Warning, TEXT("player mouse overlapping"));
 }
 
 void ABG_PlayerPawn::OnEndMouseOver(UPrimitiveComponent* TouchedComponent)
 {
+	UE_LOG(LogTemp, Warning, TEXT("player mouse STOPPED overlapping"));
 
 }
