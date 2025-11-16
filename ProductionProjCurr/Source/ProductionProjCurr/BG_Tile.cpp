@@ -15,6 +15,8 @@ ABG_Tile::ABG_Tile()
 	tileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile mesh"));
 	SetRootComponent(tileMesh);
 
+	tileEdgeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile edge mesh"));
+	tileEdgeMesh->SetupAttachment(tileMesh);
 
 	//rootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root Component"));
 
@@ -67,16 +69,17 @@ int32 ABG_Tile::generateRandomNumber()
 	return FMath::RandRange(0, MAT_Array.Num() - 1);
 }
 
+
 void ABG_Tile::OnBeginMouseOverTile(UPrimitiveComponent* TouchedComponent)
 {
 	UE_LOG(LogTemp, Warning, TEXT("TILE : mouse hovering over tile"));
-	tileMesh->SetOverlayMaterial(overlayMAT);
+	tileEdgeMesh->SetVisibility(true);
 }
 
 void ABG_Tile::OnEndMouseOverTile(UPrimitiveComponent* TouchedComponent)
 {
 	UE_LOG(LogTemp, Warning, TEXT("TILE : mouse STOPPED hovering over tile"));
-	tileMesh->SetOverlayMaterial(nullptr);
+	tileEdgeMesh->SetVisibility(false);
 
 }
 

@@ -39,15 +39,17 @@ public://variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* tileMesh;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	UStaticMeshComponent* tileEdgeMesh;
+
 	enum clearingType { clearing1, clearing2, clearing3, clearing4 };
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	TArray<UMaterialInterface*> MAT_Array;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-	UMaterialInterface* overlayMAT;
 
 	int32 generateRandomNumber();
+
 
 	UFUNCTION()
 	void OnBeginMouseOverTile(UPrimitiveComponent* TouchedComponent);
