@@ -62,6 +62,7 @@ void ABG_PlayerPawn::BeginPlay()
 		playerController->bEnableMouseOverEvents = true;
 
 		FInputModeGameAndUI mode;
+
 		playerController->SetInputMode(mode);
 	}
 }
