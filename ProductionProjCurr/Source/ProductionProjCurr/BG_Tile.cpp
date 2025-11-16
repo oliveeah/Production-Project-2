@@ -27,16 +27,6 @@ ABG_Tile::ABG_Tile()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to load tile mesh!"));
 	}
-
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_One(TEXT("/Game/Fab/Megascans/Surfaces/Rippled_Sand_vd3lecfs/Medium/vd3lecfs_tier_2/Materials/MI_vd3lecfs.MI_vd3lecfs"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Two(TEXT("/Game/Fab/Megascans/Surfaces/Swamp_Water_tgmjffbqx/Medium/tgmjffbqx_tier_2/Materials/MI_tgmjffbqx.MI_tgmjffbqx"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Three(TEXT("/Game/Fab/Megascans/Surfaces/Uncut_Grass_oilpt20/Medium/oilpt20_tier_2/Materials/MI_oilpt20.MI_oilpt20"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> MAT_Four(TEXT("/Game/Fab/026_Weathered_RockMaterial___SeamlessTexture___Instance___Blueprint/Mat_026_Weathered_Rock/Materials/Mat_026_Weathered_Rock.Mat_026_Weathered_Rock"));
-
-	if (MAT_One.Succeeded())  MAT_Array.Add(MAT_One.Object);
-	if (MAT_Two.Succeeded())  MAT_Array.Add(MAT_Two.Object);
-	if (MAT_Three.Succeeded())  MAT_Array.Add(MAT_Three.Object);
-	if (MAT_Four.Succeeded())  MAT_Array.Add(MAT_Four.Object);
 	
 	tileMesh->SetBoundsScale(1000.0f);
 	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
@@ -62,35 +52,6 @@ void ABG_Tile::BeginPlay()
 
 void ABG_Tile::OnConstruction(const FTransform& transform)
 {
-	//set material and clearing type
-	if (MAT_Array.Num() > 0 && tileMesh)
-	{
-		int32 randomClearingType = generateRandomNumber();
-
-		clearingType tileClearingType;
-
-		switch (randomClearingType)
-		{
-		case 0:
-			tileClearingType = clearing1;
-
-			break;
-		case 1:
-			tileClearingType = clearing2;
-
-			break;
-		case 2:
-			tileClearingType = clearing3;
-
-			break;
-		case 3:
-			tileClearingType = clearing4;
-
-			break;
-		}
-		//tileMesh->SetMaterial(0, MAT_Array[randomClearingType]);
-
-	}
 
 }
 
@@ -109,11 +70,13 @@ int32 ABG_Tile::generateRandomNumber()
 void ABG_Tile::OnBeginMouseOverTile(UPrimitiveComponent* TouchedComponent)
 {
 	UE_LOG(LogTemp, Warning, TEXT("TILE : mouse hovering over tile"));
+	tileMesh->SetOverlayMaterial(overlayMAT);
 }
 
 void ABG_Tile::OnEndMouseOverTile(UPrimitiveComponent* TouchedComponent)
 {
 	UE_LOG(LogTemp, Warning, TEXT("TILE : mouse STOPPED hovering over tile"));
+	tileMesh->SetOverlayMaterial(nullptr);
 
 }
 

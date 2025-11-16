@@ -44,6 +44,9 @@ public://variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	TArray<UMaterialInterface*> MAT_Array;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	UMaterialInterface* overlayMAT;
+
 	int32 generateRandomNumber();
 
 	UFUNCTION()
