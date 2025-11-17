@@ -20,15 +20,15 @@ ABG_Tile::ABG_Tile()
 
 	//rootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root Component"));
 
-	ConstructorHelpers::FObjectFinder<UStaticMesh> clearingMeshAsset(TEXT("/Game/boardGame/assets/tile.tile"));
-	if (clearingMeshAsset.Succeeded())
-	{
-		tileMesh->SetStaticMesh(clearingMeshAsset.Object);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Failed to load tile mesh!"));
-	}
+	//ConstructorHelpers::FObjectFinder<UStaticMesh> clearingMeshAsset(TEXT("/Game/boardGame/assets/tile.tile"));
+	//if (clearingMeshAsset.Succeeded())
+	//{
+	//	tileMesh->SetStaticMesh(clearingMeshAsset.Object);
+	//}
+	//else
+	//{
+	//	UE_LOG(LogTemp, Warning, TEXT("Failed to load tile mesh!"));
+	//}
 	
 	tileMesh->SetBoundsScale(1000.0f);
 	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
