@@ -72,21 +72,21 @@ void ABG_TileSpawner::spawnGrid()
 			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
 			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
-			//int32 randomNum = generateRandomTileToSpawnNumber();
+			int32 randomNum = generateRandomTileToSpawnNumber();
 
 
 
 			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
-			if (FMath::RandRange(0.f, 1.f) <= chanceOfWater)
+			switch (randomNum)
 			{
-				ChosenTileClass = WaterTile;
+			case 1: ChosenTileClass = FarmTile; break;
+			case 2: ChosenTileClass = WaterTile; break;
+			case 3: ChosenTileClass = MountainTile; break;
+			case 4: ChosenTileClass = ForestTile; break;
+			case 5: ChosenTileClass = MeadowTile; break;
+			case 6: ChosenTileClass = SandyTile; break;
 			}
-			else
-			{
-				ChosenTileClass = MeadowTile;
-			}
-
 
 			ABG_Tile* NewTile = nullptr;
 			if (ChosenTileClass)

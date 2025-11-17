@@ -3695,3 +3695,1182 @@ FPackageName: Skipped package /Game/_assets/fonts/COMIC_Font has a valid, mounte
 [2025.11.17-22.30.38:561][ 94]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5, StreamState=2
 [2025.11.17-22.30.38:572][ 94]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
 [2025.11.17-22.30.38:634][ 95]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2025.11.17-22.33.09:681][642]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 327.562195
+[2025.11.17-22.33.10:683][645]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.11.17-22.33.10:684][645]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 328.229523, Update Interval: 320.898468
+[2025.11.17-22.35.35:572][300]LogLiveCoding: Display: Starting Live Coding compile.
+[2025.11.17-22.35.45:808][910]LogLiveCoding: Display: UbaCli v5.7.0-Uba_v1.0.0-43528563 (Rootdir: "C:\ProgramData\Epic\UbaCli", StoreCapacity: 0Gb)
+
+---- Starting trace: Debug7a936a92-a9ca-48ba-87dc-636be1f5dad3 ----
+Running C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64\link.exe @C:\Users\linda\AppData\Local\Temp\C095.tmp
+   Creating library C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_0.lib and object C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_0.exp
+Detoured run took 1.5s
+[2025.11.17-22.35.46:162][917]LogStreaming: Display: FlushAsyncLoading(377): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.17-22.35.46:162][917]LogUObjectGlobals: Warning: Failed to find object 'StaticMesh /Game/boardGame/assets/tokenmesh.tokenmesh'
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tokenmesh.tokenmesh
+
+[2025.11.17-22.35.46:163][917]LogTemp: Warning: Failed to load token mesh!
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Warning: Failed to find object 'MaterialInterface /Game/boardGame/assets/tile_MAT.tile_MAT'
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT.tile_MAT
+
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Warning: Failed to find object 'MaterialInterface /Game/boardGame/assets/tile_MAT1.tile_MAT1'
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT1.tile_MAT1
+
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Warning: Failed to find object 'MaterialInterface /Game/boardGame/assets/tile_MAT2.tile_MAT2'
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT2.tile_MAT2
+
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Warning: Failed to find object 'MaterialInterface /Game/boardGame/assets/tile_MAT3.tile_MAT3'
+[2025.11.17-22.35.46:163][917]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT3.tile_MAT3
+
+[2025.11.17-22.35.46:295][917]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2025.11.17-22.35.46:417][917]Display: Reload/Re-instancing Complete: 1 package changed, 12 classes unchanged, 12 functions remapped
+[2025.11.17-22.35.46:417][917]LogLiveCoding: Display: Live coding succeeded
+[2025.11.17-22.36.23:585][123]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.11.17-22.36.23:598][123]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.17-22.36.23:598][123]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.17-22.36.23:599][123]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 783 us (total: 3.877 ms)
+[2025.11.17-22.36.23:600][123]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.17-22.36.23:600][123]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.17-22.36.23:607][123]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.36.23:609][123]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.17-22.36.23:610][123]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.441 ms (total: 7.391 ms)
+[2025.11.17-22.36.23:610][123]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009760s)
+[2025.11.17-22.36.23:610][123]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.009813s)
+[2025.11.17-22.36.23:635][123]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.11.17-22.36.23:636][123]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.17-22.36.23:639][123]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.17-22.36.23:639][123]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.17-22.36.23:639][123]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.17-22.36.23:639][123]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.17-22.36.23:641][123]LogWorldPartition: Display: WorldPartition initialize took 2.306 ms (total: 293.427 ms)
+[2025.11.17-22.36.23:642][123]LogPlayLevel: PIE: World Init took: (0.004711s)
+[2025.11.17-22.36.23:643][123]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.17-22.36.23:643][123]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.17-22.36.23:643][123]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.17-22.36.23:643][123]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.17-22.36.23:643][123]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.17-22.36.23:643][123]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.17-22.36.23:646][123]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.17-22.36.23:739][123]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.17-22.36.23:739][123]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.17-22.36.23:739][123]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.17-22.36.23:739][123]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.17-22.36.23:739][123]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.11.17-22.36.23:739][123]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.11.17-22.36.23:742][123]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.11.17-22.36.23:743][123]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.11.17-22.36.23:743][123]LogInit: FAudioDevice initialized with ID 6.
+[2025.11.17-22.36.23:743][123]LogAudio: Display: Audio Device (ID: 6) registered with world 'Lvl_ThirdPerson'.
+[2025.11.17-22.36.23:743][123]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.11.17-22.36.23:748][123]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.17-22.36.23:749][123]LogText3D: BG_BP_renderCharacter_PROTO : Text3DRenderer StaticMeshesRenderer Created
+[2025.11.17-22.36.23:751][123]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.17-22.36.23
+[2025.11.17-22.36.23:751][123]LogWorld: Bringing up level for play took: 0.002986
+[2025.11.17-22.36.23:754][123]LogOnline: OSS: Created online subsystem instance for: :Context_15
+[2025.11.17-22.36.23:755][123]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.17-22.36.23:756][123]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2025.11.17-22.36.23:756][123]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2025.11.17-22.36.23:756][123]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2025.11.17-22.36.23:757][123]PIE: Server logged in
+[2025.11.17-22.36.23:759][123]PIE: Play in editor total start time 0.16 seconds.
+[2025.11.17-22.36.24:558][166]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.36.24:574][167]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.17-22.36.24:591][168]LogTemp: Input Vector: X=-0.630000, Y=-0.140000
+[2025.11.17-22.36.24:607][169]LogTemp: Input Vector: X=-2.240000, Y=-0.490000
+[2025.11.17-22.36.24:625][170]LogTemp: Input Vector: X=-1.400000, Y=-0.210000
+[2025.11.17-22.36.24:641][171]LogTemp: Input Vector: X=-1.610000, Y=-0.420000
+[2025.11.17-22.36.24:666][172]LogTemp: Input Vector: X=-2.660000, Y=-1.400000
+[2025.11.17-22.36.24:682][173]LogTemp: Input Vector: X=-1.400000, Y=-0.630000
+[2025.11.17-22.36.24:699][174]LogTemp: Input Vector: X=-1.260000, Y=-0.630000
+[2025.11.17-22.36.24:715][175]LogTemp: Input Vector: X=-0.980000, Y=-0.700000
+[2025.11.17-22.36.24:733][176]LogTemp: Input Vector: X=-1.680000, Y=-1.610000
+[2025.11.17-22.36.24:749][177]LogTemp: Input Vector: X=-0.840000, Y=-0.910000
+[2025.11.17-22.36.24:766][178]LogTemp: Input Vector: X=-0.630000, Y=-0.910000
+[2025.11.17-22.36.24:782][179]LogTemp: Input Vector: X=-0.420000, Y=-1.120000
+[2025.11.17-22.36.24:799][180]LogTemp: Input Vector: X=-0.420000, Y=-1.400000
+[2025.11.17-22.36.24:816][181]LogTemp: Input Vector: X=-0.210000, Y=-0.770000
+[2025.11.17-22.36.24:832][182]LogTemp: Input Vector: X=-0.140000, Y=-0.700000
+[2025.11.17-22.36.24:850][183]LogTemp: Input Vector: X=-0.210000, Y=-0.700000
+[2025.11.17-22.36.24:866][184]LogTemp: Input Vector: X=0.000000, Y=-0.210000
+[2025.11.17-22.36.24:882][185]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.17-22.36.24:899][186]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.17-22.36.24:916][187]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.17-22.36.24:933][188]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.17-22.36.24:948][189]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.17-22.36.24:966][190]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.17-22.36.24:982][191]LogTemp: Input Vector: X=0.280000, Y=0.210000
+[2025.11.17-22.36.24:999][192]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.17-22.36.25:015][193]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.17-22.36.25:033][194]LogTemp: Input Vector: X=0.280000, Y=0.140000
+[2025.11.17-22.36.25:049][195]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.17-22.36.25:389][213]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.17-22.36.25:389][213]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.17-22.36.25:389][213]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.17-22.36.25:389][213]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.17-22.36.25:389][213]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.17-22.36.25:391][213]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.17-22.36.25:394][213]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.17-22.36.25:414][213]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.17-22.36.25:414][213]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.11.17-22.36.25:414][213]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6, StreamState=4
+[2025.11.17-22.36.25:417][213]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6, StreamState=2
+[2025.11.17-22.36.25:423][213]LogText3D: BG_BP_renderCharacter_PROTO : Text3DRenderer StaticMeshesRenderer Destroyed
+[2025.11.17-22.36.25:426][213]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2025.11.17-22.36.25:490][214]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2025.11.17-22.36.57:234][647]LogLiveCoding: Display: Starting Live Coding compile.
+[2025.11.17-22.37.01:468][662]LogLiveCoding: Display: UbaCli v5.7.0-Uba_v1.0.0-43528563 (Rootdir: "C:\ProgramData\Epic\UbaCli", StoreCapacity: 0Gb)
+
+---- Starting trace: Debug2d61b1f6-6880-4691-9ec3-644fad7674f0 ----
+Running C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64\link.exe @C:\Users\linda\AppData\Local\Temp\EA80.tmp
+   Creating library C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_1.lib and object C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_1.exp
+Detoured run took 910ms
+[2025.11.17-22.37.02:219][663]LogStreaming: Display: FlushAsyncLoading(382): 1 QueuedPackages, 0 AsyncPackages
+[2025.11.17-22.37.02:219][663]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tokenmesh.tokenmesh
+
+[2025.11.17-22.37.02:219][663]LogTemp: Warning: Failed to load token mesh!
+[2025.11.17-22.37.02:219][663]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT.tile_MAT
+
+[2025.11.17-22.37.02:219][663]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT1.tile_MAT1
+
+[2025.11.17-22.37.02:219][663]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT2.tile_MAT2
+
+[2025.11.17-22.37.02:219][663]LogUObjectGlobals: Error: CDO Constructor (BG_Token): Failed to find /Game/boardGame/assets/tile_MAT3.tile_MAT3
+
+[2025.11.17-22.37.02:303][663]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2025.11.17-22.37.02:399][664]Display: Reload/Re-instancing Complete: 1 package changed, 12 classes unchanged, 12 functions remapped
+[2025.11.17-22.37.02:399][664]LogLiveCoding: Display: Live coding succeeded
+[2025.11.17-22.37.21:087][648]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.11.17-22.37.21:101][648]LogContentBundle: [Lvl_ThirdPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.11.17-22.37.21:102][648]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' started...
+[2025.11.17-22.37.21:102][648]LogWorldPartition: Display: GenerateStreaming for 'Lvl_ThirdPerson' took 855 us (total: 4.733 ms)
+[2025.11.17-22.37.21:103][648]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.17-22.37.21:103][648]LogPlayLevel: Creating play world package: /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.17-22.37.21:110][648]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.21:112][648]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.11.17-22.37.21:114][648]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.569 ms (total: 8.961 ms)
+[2025.11.17-22.37.21:114][648]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010175s)
+[2025.11.17-22.37.21:114][648]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson to /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson (0.010216s)
+[2025.11.17-22.37.21:137][648]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.11.17-22.37.21:138][648]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_ThirdPerson
+[2025.11.17-22.37.21:141][648]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_ThirdPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.11.17-22.37.21:141][648]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.11.17-22.37.21:141][648]LogWorldPartition: UWorldPartition::Initialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.11.17-22.37.21:141][648]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.11.17-22.37.21:143][648]LogWorldPartition: Display: WorldPartition initialize took 2.347 ms (total: 295.775 ms)
+[2025.11.17-22.37.21:143][648]LogPlayLevel: PIE: World Init took: (0.004690s)
+[2025.11.17-22.37.21:144][648]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.17-22.37.21:144][648]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.17-22.37.21:144][648]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.17-22.37.21:144][648]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.17-22.37.21:144][648]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.17-22.37.21:144][648]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.17-22.37.21:147][648]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.17-22.37.21:215][648]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.17-22.37.21:216][648]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.17-22.37.21:216][648]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.17-22.37.21:216][648]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.17-22.37.21:216][648]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.11.17-22.37.21:216][648]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2025.11.17-22.37.21:219][648]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.11.17-22.37.21:219][648]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.11.17-22.37.21:219][648]LogInit: FAudioDevice initialized with ID 7.
+[2025.11.17-22.37.21:219][648]LogAudio: Display: Audio Device (ID: 7) registered with world 'Lvl_ThirdPerson'.
+[2025.11.17-22.37.21:219][648]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.11.17-22.37.21:224][648]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2025.11.17-22.37.21:225][648]LogText3D: BG_BP_renderCharacter_PROTO : Text3DRenderer StaticMeshesRenderer Created
+[2025.11.17-22.37.21:227][648]LogWorld: Bringing World /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson up for play (max tick rate 60) at 2025.11.17-22.37.21
+[2025.11.17-22.37.21:227][648]LogWorld: Bringing up level for play took: 0.002991
+[2025.11.17-22.37.21:230][648]LogOnline: OSS: Created online subsystem instance for: :Context_16
+[2025.11.17-22.37.21:232][648]LogBlueprintUserMessages: [BP_DelegateSender_C_UAID_D8BBC1B585A34A9F02_1391140425] delegate bound
+[2025.11.17-22.37.21:241][648]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2025.11.17-22.37.21:241][648]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2025.11.17-22.37.21:241][648]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2025.11.17-22.37.21:241][648]PIE: Server logged in
+[2025.11.17-22.37.21:244][648]PIE: Play in editor total start time 0.142 seconds.
+[2025.11.17-22.37.21:947][685]LogTemp: Display: click callback called
+[2025.11.17-22.37.21:961][686]LogTemp: Display: click callback called
+[2025.11.17-22.37.21:978][687]LogTemp: Display: click callback called
+[2025.11.17-22.37.21:995][688]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:011][689]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:028][690]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:045][691]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:062][692]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:079][693]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:095][694]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:112][695]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:112][695]LogTemp: Input Vector: X=-0.840000, Y=-0.700000
+[2025.11.17-22.37.22:129][696]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:129][696]LogTemp: Input Vector: X=-1.050000, Y=-0.770000
+[2025.11.17-22.37.22:154][697]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:154][697]LogTemp: Input Vector: X=-1.470000, Y=-0.910000
+[2025.11.17-22.37.22:170][698]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:170][698]LogTemp: Input Vector: X=-0.980000, Y=-0.840000
+[2025.11.17-22.37.22:187][699]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:187][699]LogTemp: Input Vector: X=-0.910000, Y=-1.120000
+[2025.11.17-22.37.22:204][700]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:204][700]LogTemp: Input Vector: X=-0.490000, Y=-0.420000
+[2025.11.17-22.37.22:220][701]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:220][701]LogTemp: Input Vector: X=-0.420000, Y=-0.490000
+[2025.11.17-22.37.22:239][702]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:239][702]LogTemp: Input Vector: X=-0.630000, Y=-1.050000
+[2025.11.17-22.37.22:254][703]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:254][703]LogTemp: Input Vector: X=-0.350000, Y=-0.770000
+[2025.11.17-22.37.22:271][704]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:271][704]LogTemp: Input Vector: X=-0.210000, Y=-0.700000
+[2025.11.17-22.37.22:287][705]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:287][705]LogTemp: Input Vector: X=-0.140000, Y=-0.490000
+[2025.11.17-22.37.22:304][706]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:304][706]LogTemp: Input Vector: X=-0.210000, Y=-0.420000
+[2025.11.17-22.37.22:321][707]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:321][707]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.17-22.37.22:337][708]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:338][708]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.22:354][709]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:354][709]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.22:371][710]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:371][710]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.22:387][711]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:387][711]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.22:404][712]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:404][712]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.22:421][713]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:421][713]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.22:438][714]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:438][714]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.22:454][715]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:454][715]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.22:470][716]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:470][716]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.22:488][717]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:488][717]LogTemp: Input Vector: X=-0.140000, Y=0.280000
+[2025.11.17-22.37.22:504][718]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:504][718]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:521][719]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:521][719]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:537][720]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:537][720]LogTemp: Input Vector: X=-0.070000, Y=0.210000
+[2025.11.17-22.37.22:553][721]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:554][721]LogTemp: Input Vector: X=-0.070000, Y=0.210000
+[2025.11.17-22.37.22:571][722]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:571][722]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.22:588][723]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:588][723]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.22:604][724]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:604][724]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.17-22.37.22:621][725]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:621][725]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:637][726]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:638][726]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.22:654][727]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:654][727]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.17-22.37.22:671][728]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:671][728]LogTemp: Input Vector: X=0.000000, Y=0.280000
+[2025.11.17-22.37.22:688][729]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:688][729]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:703][730]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:703][730]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.22:721][731]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:721][731]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:738][732]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:738][732]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.22:755][733]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:755][733]LogTemp: Input Vector: X=-0.070000, Y=0.210000
+[2025.11.17-22.37.22:771][734]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:771][734]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.22:787][735]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:787][735]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:804][736]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:804][736]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.22:821][737]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:822][737]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.17-22.37.22:838][738]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:838][738]LogTemp: Input Vector: X=-0.210000, Y=0.280000
+[2025.11.17-22.37.22:854][739]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:854][739]LogTemp: Input Vector: X=-0.070000, Y=0.070000
+[2025.11.17-22.37.22:871][740]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:871][740]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.22:888][741]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:888][741]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.22:905][742]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:905][742]LogTemp: Input Vector: X=-0.210000, Y=0.560000
+[2025.11.17-22.37.22:921][743]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:922][743]LogTemp: Input Vector: X=-0.280000, Y=0.490000
+[2025.11.17-22.37.22:938][744]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:938][744]LogTemp: Input Vector: X=-0.140000, Y=0.630000
+[2025.11.17-22.37.22:955][745]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:956][745]LogTemp: Input Vector: X=-0.490000, Y=0.770000
+[2025.11.17-22.37.22:971][746]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:971][746]LogTemp: Input Vector: X=-0.140000, Y=0.350000
+[2025.11.17-22.37.22:988][747]LogTemp: Display: click callback called
+[2025.11.17-22.37.22:988][747]LogTemp: Input Vector: X=-0.140000, Y=0.350000
+[2025.11.17-22.37.23:005][748]LogTemp: Input Vector: X=-0.070000, Y=0.140000
+[2025.11.17-22.37.24:288][825]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.24:289][825]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:289][825]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:289][825]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:289][825]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:289][825]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:290][825]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:654][847]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.24:654][847]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.24:655][847]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:655][847]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:655][847]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:655][847]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:656][847]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.24:656][847]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.25:472][896]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.25:472][896]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.25:472][896]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.25:472][896]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.25:472][896]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.25:472][896]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.25:472][896]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.25:472][896]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:006][928]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:021][929]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:038][930]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:054][931]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:071][932]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:088][933]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:104][934]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:121][935]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:121][935]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.17-22.37.26:138][936]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:138][936]LogTemp: Input Vector: X=-0.490000, Y=0.280000
+[2025.11.17-22.37.26:155][937]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:155][937]LogTemp: Input Vector: X=-0.350000, Y=0.140000
+[2025.11.17-22.37.26:172][938]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:172][938]LogTemp: Input Vector: X=-0.490000, Y=0.210000
+[2025.11.17-22.37.26:188][939]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:188][939]LogTemp: Input Vector: X=-0.700000, Y=0.210000
+[2025.11.17-22.37.26:204][940]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:204][940]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.17-22.37.26:221][941]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:222][941]LogTemp: Input Vector: X=-0.350000, Y=0.070000
+[2025.11.17-22.37.26:238][942]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:238][942]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:255][943]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:255][943]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.26:272][944]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:272][944]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.26:288][945]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:288][945]LogTemp: Input Vector: X=-0.420000, Y=-0.140000
+[2025.11.17-22.37.26:304][946]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:304][946]LogTemp: Input Vector: X=-1.050000, Y=-0.000000
+[2025.11.17-22.37.26:321][947]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:322][947]LogTemp: Input Vector: X=-1.610000, Y=0.070000
+[2025.11.17-22.37.26:338][948]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.26:338][948]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.26:338][948]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:338][948]LogTemp: Input Vector: X=-0.770000, Y=0.140000
+[2025.11.17-22.37.26:339][948]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:339][948]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:339][948]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:339][948]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:339][948]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:356][949]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:356][949]LogTemp: Input Vector: X=-0.980000, Y=0.280000
+[2025.11.17-22.37.26:357][949]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:371][950]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:372][950]LogTemp: Input Vector: X=-0.770000, Y=0.280000
+[2025.11.17-22.37.26:388][951]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:388][951]LogTemp: Input Vector: X=-0.840000, Y=0.350000
+[2025.11.17-22.37.26:404][952]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:405][952]LogTemp: Input Vector: X=-0.490000, Y=0.490000
+[2025.11.17-22.37.26:422][953]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:422][953]LogTemp: Input Vector: X=-0.630000, Y=0.420000
+[2025.11.17-22.37.26:438][954]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:438][954]LogTemp: Input Vector: X=-1.260000, Y=0.980000
+[2025.11.17-22.37.26:455][955]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:455][955]LogTemp: Input Vector: X=-0.910000, Y=0.490000
+[2025.11.17-22.37.26:472][956]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:472][956]LogTemp: Input Vector: X=-0.700000, Y=0.420000
+[2025.11.17-22.37.26:488][957]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:488][957]LogTemp: Input Vector: X=-0.700000, Y=0.490000
+[2025.11.17-22.37.26:505][958]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:505][958]LogTemp: Input Vector: X=-1.400000, Y=0.770000
+[2025.11.17-22.37.26:523][959]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:523][959]LogTemp: Input Vector: X=-0.840000, Y=0.350000
+[2025.11.17-22.37.26:539][960]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:539][960]LogTemp: Input Vector: X=-0.700000, Y=0.350000
+[2025.11.17-22.37.26:555][961]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:555][961]LogTemp: Input Vector: X=-0.910000, Y=0.350000
+[2025.11.17-22.37.26:572][962]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:572][962]LogTemp: Input Vector: X=-0.560000, Y=0.140000
+[2025.11.17-22.37.26:588][963]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:588][963]LogTemp: Input Vector: X=-0.490000, Y=0.210000
+[2025.11.17-22.37.26:605][964]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:605][964]LogTemp: Input Vector: X=-0.490000, Y=0.140000
+[2025.11.17-22.37.26:622][965]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:622][965]LogTemp: Input Vector: X=-0.630000, Y=0.140000
+[2025.11.17-22.37.26:638][966]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:639][966]LogTemp: Input Vector: X=-0.490000, Y=0.070000
+[2025.11.17-22.37.26:655][967]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:655][967]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.17-22.37.26:672][968]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:672][968]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:688][969]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.26:688][969]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.26:688][969]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:689][969]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.17-22.37.26:690][969]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:690][969]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:690][969]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:690][969]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:690][969]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:705][970]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:705][970]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:706][970]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.26:721][971]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:721][971]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:739][972]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:739][972]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:755][973]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:755][973]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.26:772][974]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:772][974]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:788][975]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:788][975]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.26:805][976]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:805][976]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.26:822][977]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:822][977]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.26:838][978]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:838][978]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.26:854][979]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:855][979]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.17-22.37.26:871][980]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:871][980]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.17-22.37.26:888][981]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:888][981]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.26:905][982]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:905][982]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.17-22.37.26:921][983]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:921][983]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.17-22.37.26:939][984]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:939][984]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.17-22.37.26:955][985]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:955][985]LogTemp: Input Vector: X=-0.490000, Y=0.070000
+[2025.11.17-22.37.26:972][986]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:972][986]LogTemp: Input Vector: X=-0.700000, Y=0.140000
+[2025.11.17-22.37.26:988][987]LogTemp: Display: click callback called
+[2025.11.17-22.37.26:988][987]LogTemp: Input Vector: X=-0.770000, Y=0.070000
+[2025.11.17-22.37.27:005][988]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:005][988]LogTemp: Input Vector: X=-0.700000, Y=0.210000
+[2025.11.17-22.37.27:022][989]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:022][989]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.17-22.37.27:039][990]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:039][990]LogTemp: Input Vector: X=-0.840000, Y=0.070000
+[2025.11.17-22.37.27:054][991]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:055][991]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.17-22.37.27:071][992]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:071][992]LogTemp: Input Vector: X=-0.840000, Y=-0.000000
+[2025.11.17-22.37.27:088][993]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:088][993]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.17-22.37.27:105][994]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:105][994]LogTemp: Input Vector: X=-0.630000, Y=-0.210000
+[2025.11.17-22.37.27:121][995]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:122][995]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.17-22.37.27:138][996]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:138][996]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.17-22.37.27:155][997]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:155][997]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.17-22.37.27:171][998]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:172][998]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:188][999]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:188][999]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:205][  0]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.27:205][  0]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.27:205][  0]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:205][  0]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.17-22.37.27:206][  0]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:207][  0]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:207][  0]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:207][  0]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:207][  0]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:207][  0]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:222][  1]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:222][  1]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.27:239][  2]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:239][  2]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.27:255][  3]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:255][  3]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.27:271][  4]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:272][  4]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.17-22.37.27:288][  5]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:288][  5]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.17-22.37.27:305][  6]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.27:305][  6]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.27:305][  6]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:305][  6]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.17-22.37.27:306][  6]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:306][  6]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:306][  6]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:306][  6]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:306][  6]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:307][  6]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:321][  7]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:322][  7]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.27:338][  8]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:338][  8]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.27:354][  9]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:354][  9]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:371][ 10]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:371][ 10]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.27:388][ 11]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:388][ 11]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:405][ 12]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:405][ 12]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.27:421][ 13]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:421][ 13]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:438][ 14]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:438][ 14]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:454][ 15]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:455][ 15]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.27:471][ 16]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:471][ 16]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.27:489][ 17]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:489][ 17]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.27:504][ 18]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:522][ 19]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:538][ 20]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:554][ 21]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:571][ 22]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:587][ 23]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:604][ 24]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:621][ 25]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:638][ 26]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:654][ 27]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:672][ 28]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:687][ 29]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:704][ 30]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.27:705][ 30]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.27:705][ 30]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:706][ 30]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:706][ 30]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:706][ 30]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:706][ 30]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:706][ 30]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:706][ 30]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.27:721][ 31]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:738][ 32]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:754][ 33]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:771][ 34]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:788][ 35]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:805][ 36]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:821][ 37]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:838][ 38]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:855][ 39]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:871][ 40]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:888][ 41]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:904][ 42]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:921][ 43]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:938][ 44]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:954][ 45]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:971][ 46]LogTemp: Display: click callback called
+[2025.11.17-22.37.27:988][ 47]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:005][ 48]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:022][ 49]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.28:022][ 49]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:038][ 50]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:055][ 51]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:071][ 52]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:088][ 53]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:105][ 54]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:121][ 55]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:138][ 56]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:155][ 57]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:172][ 58]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:188][ 59]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:204][ 60]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:221][ 61]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:238][ 62]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:255][ 63]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:271][ 64]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:287][ 65]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:304][ 66]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:321][ 67]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:338][ 68]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:355][ 69]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:371][ 70]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:388][ 71]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:404][ 72]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:421][ 73]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:438][ 74]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:455][ 75]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:471][ 76]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:487][ 77]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:504][ 78]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:521][ 79]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:538][ 80]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:554][ 81]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:572][ 82]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:588][ 83]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:605][ 84]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:621][ 85]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:638][ 86]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:654][ 87]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:671][ 88]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:688][ 89]LogTemp: Display: click callback called
+[2025.11.17-22.37.28:705][ 90]LogTemp: Display: click callback called
+[2025.11.17-22.37.29:088][113]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.29:089][113]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:090][113]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:090][113]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:090][113]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:090][113]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:090][113]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:105][114]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.29:721][151]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.29:722][151]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:722][151]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:722][151]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:722][151]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:722][151]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:739][152]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:872][160]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.29:872][160]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.29:873][160]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:873][160]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:873][160]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:873][160]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:873][160]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.29:874][160]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:005][168]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.30:005][168]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.30:006][168]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:006][168]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:006][168]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:006][168]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:006][168]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:007][168]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:188][179]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.30:538][200]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.30:539][200]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:539][200]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:539][200]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:539][200]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:539][200]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.30:556][201]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.31:305][246]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.32:188][299]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.32:205][300]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.17-22.37.32:221][301]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.17-22.37.32:239][302]LogTemp: Input Vector: X=-0.770000, Y=-0.560000
+[2025.11.17-22.37.32:255][303]LogTemp: Input Vector: X=-0.980000, Y=-0.350000
+[2025.11.17-22.37.32:272][304]LogTemp: Input Vector: X=-0.770000, Y=-0.350000
+[2025.11.17-22.37.32:288][305]LogTemp: Input Vector: X=-0.630000, Y=-0.280000
+[2025.11.17-22.37.32:305][306]LogTemp: Input Vector: X=-1.260000, Y=-0.490000
+[2025.11.17-22.37.32:321][307]LogTemp: Input Vector: X=-0.980000, Y=-0.140000
+[2025.11.17-22.37.32:339][308]LogTemp: Input Vector: X=-0.770000, Y=-0.140000
+[2025.11.17-22.37.32:355][309]LogTemp: Input Vector: X=-1.820000, Y=-0.560000
+[2025.11.17-22.37.32:372][310]LogTemp: Input Vector: X=-1.540000, Y=-0.210000
+[2025.11.17-22.37.32:388][311]LogTemp: Input Vector: X=-1.680000, Y=-0.210000
+[2025.11.17-22.37.32:405][312]LogTemp: Input Vector: X=-2.100000, Y=-0.070000
+[2025.11.17-22.37.32:422][313]LogTemp: Input Vector: X=-3.010000, Y=0.420000
+[2025.11.17-22.37.32:439][314]LogTemp: Input Vector: X=-1.400000, Y=0.280000
+[2025.11.17-22.37.32:455][315]LogTemp: Input Vector: X=-1.540000, Y=0.280000
+[2025.11.17-22.37.32:472][316]LogTemp: Input Vector: X=-1.260000, Y=0.070000
+[2025.11.17-22.37.32:488][317]LogTemp: Input Vector: X=-1.750000, Y=-0.000000
+[2025.11.17-22.37.32:506][318]LogTemp: Input Vector: X=-1.330000, Y=-0.000000
+[2025.11.17-22.37.32:522][319]LogTemp: Input Vector: X=-1.260000, Y=-0.000000
+[2025.11.17-22.37.32:538][320]LogTemp: Input Vector: X=-1.820000, Y=-0.070000
+[2025.11.17-22.37.32:555][321]LogTemp: Input Vector: X=-1.120000, Y=-0.070000
+[2025.11.17-22.37.32:572][322]LogTemp: Input Vector: X=-0.980000, Y=-0.000000
+[2025.11.17-22.37.32:589][323]LogTemp: Input Vector: X=-0.980000, Y=-0.140000
+[2025.11.17-22.37.32:605][324]LogTemp: Input Vector: X=-1.610000, Y=-0.070000
+[2025.11.17-22.37.32:622][325]LogTemp: Input Vector: X=-0.980000, Y=-0.070000
+[2025.11.17-22.37.32:639][326]LogTemp: Input Vector: X=-1.050000, Y=-0.000000
+[2025.11.17-22.37.32:655][327]LogTemp: Input Vector: X=-1.190000, Y=-0.000000
+[2025.11.17-22.37.32:672][328]LogTemp: Input Vector: X=-0.770000, Y=-0.000000
+[2025.11.17-22.37.32:689][329]LogTemp: Input Vector: X=-0.700000, Y=-0.070000
+[2025.11.17-22.37.32:706][330]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.17-22.37.32:722][331]LogTemp: Input Vector: X=-1.050000, Y=-0.070000
+[2025.11.17-22.37.32:738][332]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.17-22.37.32:756][333]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.17-22.37.32:772][334]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.17-22.37.32:788][335]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.32:805][336]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.32:821][337]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.32:839][338]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.17-22.37.32:856][339]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.32:872][340]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.32:889][341]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.32:906][342]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.32:922][343]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.32:938][344]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.32:955][345]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.32:972][346]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.32:988][347]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.33:088][353]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.17-22.37.33:105][354]LogTemp: Input Vector: X=0.140000, Y=0.070000
+[2025.11.17-22.37.33:122][355]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.17-22.37.33:138][356]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.17-22.37.33:155][357]LogTemp: Input Vector: X=0.210000, Y=0.070000
+[2025.11.17-22.37.33:172][358]LogTemp: Input Vector: X=0.140000, Y=-0.000000
+[2025.11.17-22.37.33:188][359]LogTemp: Input Vector: X=0.210000, Y=-0.000000
+[2025.11.17-22.37.33:205][360]LogTemp: Input Vector: X=0.070000, Y=-0.000000
+[2025.11.17-22.37.33:221][361]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.17-22.37.33:239][362]LogTemp: Input Vector: X=0.280000, Y=-0.140000
+[2025.11.17-22.37.33:255][363]LogTemp: Input Vector: X=0.700000, Y=-0.280000
+[2025.11.17-22.37.33:272][364]LogTemp: Input Vector: X=0.700000, Y=-0.420000
+[2025.11.17-22.37.33:289][365]LogTemp: Input Vector: X=0.910000, Y=-0.630000
+[2025.11.17-22.37.33:306][366]LogTemp: Input Vector: X=0.980000, Y=-0.770000
+[2025.11.17-22.37.33:322][367]LogTemp: Input Vector: X=1.050000, Y=-0.910000
+[2025.11.17-22.37.33:338][368]LogTemp: Input Vector: X=0.630000, Y=-0.490000
+[2025.11.17-22.37.33:356][369]LogTemp: Input Vector: X=0.630000, Y=-0.350000
+[2025.11.17-22.37.33:372][370]LogTemp: Input Vector: X=0.700000, Y=-0.420000
+[2025.11.17-22.37.33:389][371]LogTemp: Input Vector: X=0.350000, Y=-0.140000
+[2025.11.17-22.37.33:406][372]LogTemp: Input Vector: X=0.350000, Y=-0.070000
+[2025.11.17-22.37.33:422][373]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.17-22.37.33:439][374]LogTemp: Input Vector: X=0.490000, Y=-0.000000
+[2025.11.17-22.37.33:455][375]LogTemp: Input Vector: X=0.280000, Y=-0.000000
+[2025.11.17-22.37.33:472][376]LogTemp: Input Vector: X=0.420000, Y=-0.000000
+[2025.11.17-22.37.33:489][377]LogTemp: Input Vector: X=0.490000, Y=-0.000000
+[2025.11.17-22.37.33:505][378]LogTemp: Input Vector: X=0.840000, Y=0.140000
+[2025.11.17-22.37.33:522][379]LogTemp: Input Vector: X=0.560000, Y=0.140000
+[2025.11.17-22.37.33:539][380]LogTemp: Input Vector: X=0.490000, Y=0.070000
+[2025.11.17-22.37.33:555][381]LogTemp: Input Vector: X=0.630000, Y=0.280000
+[2025.11.17-22.37.33:572][382]LogTemp: Input Vector: X=0.560000, Y=0.140000
+[2025.11.17-22.37.33:589][383]LogTemp: Input Vector: X=0.770000, Y=0.140000
+[2025.11.17-22.37.33:605][384]LogTemp: Input Vector: X=0.770000, Y=0.140000
+[2025.11.17-22.37.33:622][385]LogTemp: Input Vector: X=1.050000, Y=0.280000
+[2025.11.17-22.37.33:638][386]LogTemp: Input Vector: X=0.700000, Y=0.140000
+[2025.11.17-22.37.33:655][387]LogTemp: Input Vector: X=0.840000, Y=0.140000
+[2025.11.17-22.37.33:672][388]LogTemp: Input Vector: X=1.400000, Y=0.210000
+[2025.11.17-22.37.33:688][389]LogTemp: Input Vector: X=0.630000, Y=0.210000
+[2025.11.17-22.37.33:705][390]LogTemp: Input Vector: X=0.700000, Y=0.140000
+[2025.11.17-22.37.33:723][391]LogTemp: Input Vector: X=0.910000, Y=0.140000
+[2025.11.17-22.37.33:739][392]LogTemp: Input Vector: X=1.470000, Y=0.280000
+[2025.11.17-22.37.33:756][393]LogTemp: Input Vector: X=0.910000, Y=0.210000
+[2025.11.17-22.37.33:772][394]LogTemp: Input Vector: X=0.980000, Y=0.070000
+[2025.11.17-22.37.33:789][395]LogTemp: Input Vector: X=1.750000, Y=0.140000
+[2025.11.17-22.37.33:805][396]LogTemp: Input Vector: X=0.910000, Y=-0.000000
+[2025.11.17-22.37.33:822][397]LogTemp: Input Vector: X=1.190000, Y=0.070000
+[2025.11.17-22.37.33:838][398]LogTemp: Input Vector: X=1.400000, Y=0.070000
+[2025.11.17-22.37.33:855][399]LogTemp: Input Vector: X=1.400000, Y=0.070000
+[2025.11.17-22.37.33:872][400]LogTemp: Input Vector: X=0.980000, Y=-0.000000
+[2025.11.17-22.37.33:889][401]LogTemp: Input Vector: X=1.050000, Y=-0.000000
+[2025.11.17-22.37.33:906][402]LogTemp: Input Vector: X=1.260000, Y=-0.000000
+[2025.11.17-22.37.33:922][403]LogTemp: Input Vector: X=0.700000, Y=-0.000000
+[2025.11.17-22.37.33:939][404]LogTemp: Input Vector: X=0.770000, Y=-0.000000
+[2025.11.17-22.37.33:956][405]LogTemp: Input Vector: X=0.910000, Y=-0.070000
+[2025.11.17-22.37.33:973][406]LogTemp: Input Vector: X=1.120000, Y=-0.000000
+[2025.11.17-22.37.33:988][407]LogTemp: Input Vector: X=0.560000, Y=0.070000
+[2025.11.17-22.37.34:006][408]LogTemp: Input Vector: X=0.910000, Y=-0.000000
+[2025.11.17-22.37.34:022][409]LogTemp: Input Vector: X=0.910000, Y=0.070000
+[2025.11.17-22.37.34:039][410]LogTemp: Input Vector: X=1.050000, Y=0.280000
+[2025.11.17-22.37.34:055][411]LogTemp: Input Vector: X=0.630000, Y=0.140000
+[2025.11.17-22.37.34:073][412]LogTemp: Input Vector: X=0.700000, Y=0.140000
+[2025.11.17-22.37.34:089][413]LogTemp: Input Vector: X=1.120000, Y=0.420000
+[2025.11.17-22.37.34:106][414]LogTemp: Input Vector: X=0.700000, Y=0.210000
+[2025.11.17-22.37.34:122][415]LogTemp: Input Vector: X=0.560000, Y=0.350000
+[2025.11.17-22.37.34:138][416]LogTemp: Input Vector: X=0.420000, Y=0.210000
+[2025.11.17-22.37.34:156][417]LogTemp: Input Vector: X=1.050000, Y=0.490000
+[2025.11.17-22.37.34:172][418]LogTemp: Input Vector: X=0.700000, Y=0.280000
+[2025.11.17-22.37.34:188][419]LogTemp: Input Vector: X=0.630000, Y=0.210000
+[2025.11.17-22.37.34:205][420]LogTemp: Input Vector: X=0.490000, Y=0.210000
+[2025.11.17-22.37.34:222][421]LogTemp: Input Vector: X=0.560000, Y=0.210000
+[2025.11.17-22.37.34:239][422]LogTemp: Input Vector: X=0.350000, Y=0.210000
+[2025.11.17-22.37.34:256][423]LogTemp: Input Vector: X=0.280000, Y=0.210000
+[2025.11.17-22.37.34:272][424]LogTemp: Input Vector: X=0.490000, Y=0.350000
+[2025.11.17-22.37.34:289][425]LogTemp: Input Vector: X=0.280000, Y=0.210000
+[2025.11.17-22.37.34:306][426]LogTemp: Input Vector: X=0.350000, Y=0.210000
+[2025.11.17-22.37.34:322][427]LogTemp: Input Vector: X=0.280000, Y=0.280000
+[2025.11.17-22.37.34:338][428]LogTemp: Input Vector: X=0.420000, Y=0.210000
+[2025.11.17-22.37.34:355][429]LogTemp: Input Vector: X=0.210000, Y=0.210000
+[2025.11.17-22.37.34:372][430]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.17-22.37.34:389][431]LogTemp: Input Vector: X=0.350000, Y=0.210000
+[2025.11.17-22.37.34:405][432]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.17-22.37.34:423][433]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.17-22.37.34:439][434]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.17-22.37.34:456][435]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.17-22.37.34:472][436]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.17-22.37.34:490][437]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.17-22.37.34:505][438]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.34:522][439]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.17-22.37.34:539][440]LogTemp: Input Vector: X=0.000000, Y=-0.140000
+[2025.11.17-22.37.34:556][441]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.17-22.37.34:572][442]LogTemp: Input Vector: X=0.070000, Y=-0.210000
+[2025.11.17-22.37.34:589][443]LogTemp: Input Vector: X=0.140000, Y=-0.210000
+[2025.11.17-22.37.34:606][444]LogTemp: Input Vector: X=0.560000, Y=-0.980000
+[2025.11.17-22.37.34:622][445]LogTemp: Input Vector: X=0.350000, Y=-0.490000
+[2025.11.17-22.37.34:639][446]LogTemp: Input Vector: X=-0.280000, Y=-0.490000
+[2025.11.17-22.37.34:655][447]LogTemp: Input Vector: X=-0.350000, Y=-0.350000
+[2025.11.17-22.37.34:672][448]LogTemp: Input Vector: X=-0.140000, Y=-0.140000
+[2025.11.17-22.37.34:689][449]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.17-22.37.34:705][450]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.34:722][451]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.17-22.37.34:739][452]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.17-22.37.34:755][453]LogTemp: Input Vector: X=-0.490000, Y=-0.280000
+[2025.11.17-22.37.34:772][454]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.17-22.37.34:788][455]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.17-22.37.34:805][456]LogTemp: Input Vector: X=-0.700000, Y=-0.210000
+[2025.11.17-22.37.34:822][457]LogTemp: Input Vector: X=-0.700000, Y=-0.280000
+[2025.11.17-22.37.34:839][458]LogTemp: Input Vector: X=-0.700000, Y=-0.140000
+[2025.11.17-22.37.34:855][459]LogTemp: Input Vector: X=-0.560000, Y=-0.140000
+[2025.11.17-22.37.34:872][460]LogTemp: Input Vector: X=-0.700000, Y=-0.420000
+[2025.11.17-22.37.34:889][461]LogTemp: Input Vector: X=-0.420000, Y=-0.280000
+[2025.11.17-22.37.34:905][462]LogTemp: Input Vector: X=-0.490000, Y=-0.350000
+[2025.11.17-22.37.34:922][463]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.34:923][463]LogTemp: Input Vector: X=-0.700000, Y=-0.490000
+[2025.11.17-22.37.34:923][463]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:923][463]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:923][463]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:923][463]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:923][463]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:924][463]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:939][464]LogTemp: Input Vector: X=-0.420000, Y=-0.350000
+[2025.11.17-22.37.34:955][465]LogTemp: Input Vector: X=-0.490000, Y=-0.280000
+[2025.11.17-22.37.34:972][466]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.34:972][466]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.34:972][466]LogTemp: Input Vector: X=-0.420000, Y=-0.210000
+[2025.11.17-22.37.34:973][466]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:973][466]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:973][466]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:973][466]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:973][466]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.34:989][467]LogTemp: Input Vector: X=-0.420000, Y=-0.210000
+[2025.11.17-22.37.34:991][467]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:005][468]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.17-22.37.35:022][469]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.17-22.37.35:039][470]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:039][470]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:039][470]LogTemp: Input Vector: X=-0.560000, Y=-0.280000
+[2025.11.17-22.37.35:040][470]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:040][470]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:040][470]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:040][470]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:040][470]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:040][470]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:055][471]LogTemp: Input Vector: X=-1.260000, Y=-0.420000
+[2025.11.17-22.37.35:072][472]LogTemp: Input Vector: X=-0.840000, Y=-0.350000
+[2025.11.17-22.37.35:089][473]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:089][473]LogTemp: Input Vector: X=-1.120000, Y=-0.490000
+[2025.11.17-22.37.35:106][474]LogTemp: Input Vector: X=-2.170000, Y=-0.910000
+[2025.11.17-22.37.35:122][475]LogTemp: Input Vector: X=-1.540000, Y=-0.350000
+[2025.11.17-22.37.35:139][476]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:139][476]LogTemp: Input Vector: X=-1.470000, Y=0.070000
+[2025.11.17-22.37.35:140][476]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:140][476]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:140][476]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:140][476]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:140][476]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:140][476]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:155][477]LogTemp: Input Vector: X=-0.910000, Y=0.140000
+[2025.11.17-22.37.35:172][478]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:172][478]LogTemp: Input Vector: X=-0.840000, Y=0.140000
+[2025.11.17-22.37.35:188][479]LogTemp: Input Vector: X=-0.490000, Y=0.140000
+[2025.11.17-22.37.35:205][480]LogTemp: Input Vector: X=-0.420000, Y=0.070000
+[2025.11.17-22.37.35:222][481]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.35:239][482]LogTemp: Input Vector: X=-0.490000, Y=-0.000000
+[2025.11.17-22.37.35:255][483]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.35:272][484]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.35:289][485]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.35:305][486]LogTemp: Input Vector: X=0.700000, Y=-0.350000
+[2025.11.17-22.37.35:322][487]LogTemp: Input Vector: X=1.680000, Y=-0.350000
+[2025.11.17-22.37.35:338][488]LogTemp: Input Vector: X=2.730000, Y=-0.280000
+[2025.11.17-22.37.35:355][489]LogTemp: Input Vector: X=4.340000, Y=0.490000
+[2025.11.17-22.37.35:372][490]LogTemp: Input Vector: X=2.940000, Y=0.770000
+[2025.11.17-22.37.35:389][491]LogTemp: Input Vector: X=3.010000, Y=0.840000
+[2025.11.17-22.37.35:406][492]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:406][492]LogTemp: Input Vector: X=4.270000, Y=1.120000
+[2025.11.17-22.37.35:407][492]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:407][492]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:407][492]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:407][492]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:407][492]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:407][492]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:422][493]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:422][493]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:422][493]LogTemp: Input Vector: X=2.030000, Y=0.700000
+[2025.11.17-22.37.35:423][493]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:424][493]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:424][493]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:424][493]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:424][493]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:424][493]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:439][494]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:439][494]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:439][494]LogTemp: Input Vector: X=1.260000, Y=0.210000
+[2025.11.17-22.37.35:440][494]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:440][494]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:440][494]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:440][494]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:440][494]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:455][495]LogTemp: Input Vector: X=0.210000, Y=-0.350000
+[2025.11.17-22.37.35:457][495]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:472][496]LogTemp: Input Vector: X=0.000000, Y=-0.070000
+[2025.11.17-22.37.35:522][499]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.35:539][500]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.35:556][501]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.35:573][502]LogTemp: Input Vector: X=-0.280000, Y=0.210000
+[2025.11.17-22.37.35:589][503]LogTemp: Input Vector: X=-0.280000, Y=0.350000
+[2025.11.17-22.37.35:605][504]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:605][504]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:605][504]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.17-22.37.35:606][504]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:606][504]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:606][504]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:607][504]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:607][504]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:607][504]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:622][505]LogTemp: Input Vector: X=-0.140000, Y=0.210000
+[2025.11.17-22.37.35:639][506]LogTemp: Input Vector: X=-0.420000, Y=0.210000
+[2025.11.17-22.37.35:655][507]LogTemp: Input Vector: X=-0.350000, Y=0.280000
+[2025.11.17-22.37.35:672][508]LogTemp: Input Vector: X=-0.700000, Y=0.560000
+[2025.11.17-22.37.35:689][509]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:689][509]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:689][509]LogTemp: Input Vector: X=-0.770000, Y=0.630000
+[2025.11.17-22.37.35:690][509]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:690][509]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:690][509]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:690][509]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:690][509]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:690][509]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:706][510]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:706][510]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:706][510]LogTemp: Input Vector: X=-1.190000, Y=0.910000
+[2025.11.17-22.37.35:707][510]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:707][510]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:707][510]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:707][510]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:707][510]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:708][510]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:723][511]LogTemp: Input Vector: X=-0.630000, Y=0.770000
+[2025.11.17-22.37.35:739][512]LogTemp: Input Vector: X=-0.280000, Y=0.770000
+[2025.11.17-22.37.35:755][513]LogTemp: Input Vector: X=-0.420000, Y=0.420000
+[2025.11.17-22.37.35:772][514]LogTemp: Input Vector: X=-0.490000, Y=0.210000
+[2025.11.17-22.37.35:789][515]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.17-22.37.35:805][516]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.35:822][517]LogTemp: Input Vector: X=-0.350000, Y=0.070000
+[2025.11.17-22.37.35:839][518]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.35:856][519]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:856][519]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:856][519]LogTemp: Input Vector: X=-0.140000, Y=-0.070000
+[2025.11.17-22.37.35:857][519]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:857][519]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:857][519]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:857][519]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:857][519]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:857][519]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:872][520]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:872][520]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:872][520]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.17-22.37.35:873][520]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:874][520]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:874][520]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:874][520]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:874][520]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:874][520]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:888][521]LogTemp: Input Vector: X=0.210000, Y=-0.910000
+[2025.11.17-22.37.35:905][522]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:905][522]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:905][522]LogTemp: Input Vector: X=0.350000, Y=-0.560000
+[2025.11.17-22.37.35:906][522]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:906][522]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:906][522]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:906][522]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:906][522]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:922][523]LogTemp: Input Vector: X=0.490000, Y=-0.420000
+[2025.11.17-22.37.35:923][523]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:938][524]LogTemp: Input Vector: X=0.350000, Y=-0.280000
+[2025.11.17-22.37.35:955][525]LogTemp: Input Vector: X=0.700000, Y=-0.560000
+[2025.11.17-22.37.35:972][526]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.35:972][526]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.35:972][526]LogTemp: Input Vector: X=1.190000, Y=-1.330000
+[2025.11.17-22.37.35:974][526]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:974][526]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:974][526]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:974][526]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:974][526]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:974][526]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.35:988][527]LogTemp: Input Vector: X=1.400000, Y=-1.400000
+[2025.11.17-22.37.36:005][528]LogTemp: Input Vector: X=2.660000, Y=-2.800000
+[2025.11.17-22.37.36:022][529]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.36:022][529]LogTemp: Input Vector: X=1.750000, Y=-1.470000
+[2025.11.17-22.37.36:038][530]LogTemp: Input Vector: X=1.610000, Y=-1.470000
+[2025.11.17-22.37.36:055][531]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.36:055][531]LogTemp: Input Vector: X=1.120000, Y=-1.260000
+[2025.11.17-22.37.36:056][531]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.36:056][531]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.36:056][531]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.36:056][531]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.36:056][531]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.36:057][531]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.36:072][532]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.36:072][532]LogTemp: Input Vector: X=1.820000, Y=-1.050000
+[2025.11.17-22.37.36:089][533]LogTemp: Input Vector: X=0.910000, Y=-0.560000
+[2025.11.17-22.37.36:106][534]LogTemp: Input Vector: X=1.120000, Y=-0.700000
+[2025.11.17-22.37.36:122][535]LogTemp: Input Vector: X=2.240000, Y=-1.120000
+[2025.11.17-22.37.36:139][536]LogTemp: Input Vector: X=2.380000, Y=-0.700000
+[2025.11.17-22.37.36:156][537]LogTemp: Input Vector: X=2.730000, Y=-0.490000
+[2025.11.17-22.37.36:172][538]LogTemp: Input Vector: X=2.870000, Y=-0.070000
+[2025.11.17-22.37.36:189][539]LogTemp: Input Vector: X=3.080000, Y=0.840000
+[2025.11.17-22.37.36:205][540]LogTemp: Input Vector: X=1.540000, Y=0.560000
+[2025.11.17-22.37.36:222][541]LogTemp: Input Vector: X=1.260000, Y=0.630000
+[2025.11.17-22.37.36:239][542]LogTemp: Input Vector: X=1.260000, Y=1.050000
+[2025.11.17-22.37.36:255][543]LogTemp: Input Vector: X=0.700000, Y=0.770000
+[2025.11.17-22.37.36:272][544]LogTemp: Input Vector: X=0.910000, Y=0.770000
+[2025.11.17-22.37.36:289][545]LogTemp: Input Vector: X=0.910000, Y=0.910000
+[2025.11.17-22.37.36:305][546]LogTemp: Input Vector: X=1.190000, Y=1.820000
+[2025.11.17-22.37.36:323][547]LogTemp: Input Vector: X=0.770000, Y=1.120000
+[2025.11.17-22.37.36:339][548]LogTemp: Input Vector: X=0.700000, Y=0.840000
+[2025.11.17-22.37.36:356][549]LogTemp: Input Vector: X=0.910000, Y=0.910000
+[2025.11.17-22.37.36:372][550]LogTemp: Input Vector: X=0.280000, Y=0.490000
+[2025.11.17-22.37.36:389][551]LogTemp: Input Vector: X=0.210000, Y=0.280000
+[2025.11.17-22.37.36:405][552]LogTemp: Input Vector: X=0.280000, Y=0.350000
+[2025.11.17-22.37.36:422][553]LogTemp: Input Vector: X=0.630000, Y=0.490000
+[2025.11.17-22.37.36:439][554]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.17-22.37.36:522][559]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.36:539][560]LogTemp: Input Vector: X=-0.210000, Y=0.210000
+[2025.11.17-22.37.36:555][561]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.17-22.37.36:573][562]LogTemp: Input Vector: X=-0.350000, Y=0.140000
+[2025.11.17-22.37.36:589][563]LogTemp: Input Vector: X=-0.280000, Y=0.210000
+[2025.11.17-22.37.36:606][564]LogTemp: Input Vector: X=-0.420000, Y=0.210000
+[2025.11.17-22.37.36:622][565]LogTemp: Input Vector: X=-0.210000, Y=0.280000
+[2025.11.17-22.37.36:639][566]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.36:656][567]LogTemp: Input Vector: X=-0.420000, Y=0.350000
+[2025.11.17-22.37.36:672][568]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.17-22.37.36:689][569]LogTemp: Input Vector: X=-0.350000, Y=0.350000
+[2025.11.17-22.37.36:706][570]LogTemp: Input Vector: X=-0.280000, Y=0.280000
+[2025.11.17-22.37.36:722][571]LogTemp: Input Vector: X=-0.700000, Y=0.840000
+[2025.11.17-22.37.36:739][572]LogTemp: Input Vector: X=-0.350000, Y=0.560000
+[2025.11.17-22.37.36:755][573]LogTemp: Input Vector: X=-0.350000, Y=0.560000
+[2025.11.17-22.37.36:772][574]LogTemp: Input Vector: X=-0.140000, Y=0.140000
+[2025.11.17-22.37.36:789][575]LogTemp: Input Vector: X=-0.210000, Y=0.210000
+[2025.11.17-22.37.36:806][576]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.36:855][579]LogTemp: Input Vector: X=0.070000, Y=-0.070000
+[2025.11.17-22.37.36:873][580]LogTemp: Input Vector: X=0.210000, Y=-0.140000
+[2025.11.17-22.37.36:889][581]LogTemp: Input Vector: X=0.350000, Y=-0.280000
+[2025.11.17-22.37.36:906][582]LogTemp: Input Vector: X=0.700000, Y=-0.630000
+[2025.11.17-22.37.36:923][583]LogTemp: Input Vector: X=0.980000, Y=-0.840000
+[2025.11.17-22.37.36:939][584]LogTemp: Input Vector: X=1.190000, Y=-1.260000
+[2025.11.17-22.37.36:955][585]LogTemp: Input Vector: X=1.820000, Y=-1.820000
+[2025.11.17-22.37.36:972][586]LogTemp: Input Vector: X=1.330000, Y=-1.260000
+[2025.11.17-22.37.36:989][587]LogTemp: Input Vector: X=1.190000, Y=-1.190000
+[2025.11.17-22.37.37:006][588]LogTemp: Input Vector: X=2.030000, Y=-1.330000
+[2025.11.17-22.37.37:022][589]LogTemp: Input Vector: X=3.010000, Y=-1.680000
+[2025.11.17-22.37.37:039][590]LogTemp: Input Vector: X=1.750000, Y=-0.910000
+[2025.11.17-22.37.37:057][591]LogTemp: Input Vector: X=1.890000, Y=-0.840000
+[2025.11.17-22.37.37:073][592]LogTemp: Input Vector: X=1.540000, Y=-0.560000
+[2025.11.17-22.37.37:089][593]LogTemp: Input Vector: X=1.540000, Y=-0.280000
+[2025.11.17-22.37.37:105][594]LogTemp: Input Vector: X=0.490000, Y=-0.000000
+[2025.11.17-22.37.37:122][595]LogTemp: Input Vector: X=0.350000, Y=-0.000000
+[2025.11.17-22.37.37:139][596]LogTemp: Input Vector: X=0.280000, Y=0.140000
+[2025.11.17-22.37.37:155][597]LogTemp: Input Vector: X=0.140000, Y=0.140000
+[2025.11.17-22.37.37:172][598]LogTemp: Input Vector: X=0.210000, Y=0.210000
+[2025.11.17-22.37.37:189][599]LogTemp: Input Vector: X=0.140000, Y=0.560000
+[2025.11.17-22.37.37:206][600]LogTemp: Input Vector: X=0.070000, Y=0.910000
+[2025.11.17-22.37.37:223][601]LogTemp: Input Vector: X=0.140000, Y=0.630000
+[2025.11.17-22.37.37:239][602]LogTemp: Input Vector: X=0.280000, Y=0.770000
+[2025.11.17-22.37.37:256][603]LogTemp: Input Vector: X=0.420000, Y=1.680000
+[2025.11.17-22.37.37:273][604]LogTemp: Input Vector: X=0.350000, Y=0.840000
+[2025.11.17-22.37.37:289][605]LogTemp: Input Vector: X=0.350000, Y=1.050000
+[2025.11.17-22.37.37:306][606]LogTemp: Input Vector: X=0.420000, Y=1.190000
+[2025.11.17-22.37.37:322][607]LogTemp: Input Vector: X=0.700000, Y=1.260000
+[2025.11.17-22.37.37:339][608]LogTemp: Input Vector: X=0.420000, Y=0.490000
+[2025.11.17-22.37.37:355][609]LogTemp: Input Vector: X=0.420000, Y=0.560000
+[2025.11.17-22.37.37:373][610]LogTemp: Input Vector: X=0.420000, Y=0.700000
+[2025.11.17-22.37.37:389][611]LogTemp: Input Vector: X=0.280000, Y=0.350000
+[2025.11.17-22.37.37:406][612]LogTemp: Input Vector: X=0.140000, Y=0.210000
+[2025.11.17-22.37.37:422][613]LogTemp: Input Vector: X=0.070000, Y=0.140000
+[2025.11.17-22.37.37:439][614]LogTemp: Input Vector: X=0.000000, Y=0.210000
+[2025.11.17-22.37.37:455][615]LogTemp: Input Vector: X=0.070000, Y=0.210000
+[2025.11.17-22.37.37:472][616]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.37:522][619]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.37:606][624]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.37:672][628]LogTemp: Warning: TILE : mouse hovering over tile
+[2025.11.17-22.37.37:673][628]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.37:673][628]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.37:673][628]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.37:673][628]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.37:673][628]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.37:673][628]LogStaticMesh: Warning: Invalid material [MAT_boundstest_Inst] used on Nanite static mesh [tile_edges]. Only opaque or masked blend modes are currently supported, [BLEND_Translucent] blend mode was specified. (NOTE: "Disallow Nanite" on static mesh components can be used to suppress this warning and forcibly render the object as non-Nanite.)
+[2025.11.17-22.37.37:722][631]LogTemp: Warning: TILE : mouse STOPPED hovering over tile
+[2025.11.17-22.37.37:739][632]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.37:755][633]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.37:789][635]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.37:822][637]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.37:889][641]LogTemp: Input Vector: X=-0.070000, Y=-0.000000
+[2025.11.17-22.37.38:422][673]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.38:439][674]LogTemp: Input Vector: X=-0.420000, Y=-0.000000
+[2025.11.17-22.37.38:456][675]LogTemp: Input Vector: X=-0.630000, Y=-0.000000
+[2025.11.17-22.37.38:473][676]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.38:490][677]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.17-22.37.38:506][678]LogTemp: Input Vector: X=-0.630000, Y=-0.140000
+[2025.11.17-22.37.38:522][679]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.17-22.37.38:539][680]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.17-22.37.38:556][681]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.17-22.37.38:573][682]LogTemp: Input Vector: X=-0.560000, Y=-0.140000
+[2025.11.17-22.37.38:589][683]LogTemp: Input Vector: X=-0.280000, Y=-0.140000
+[2025.11.17-22.37.38:606][684]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.17-22.37.38:622][685]LogTemp: Input Vector: X=-0.210000, Y=-0.140000
+[2025.11.17-22.37.38:639][686]LogTemp: Input Vector: X=-0.210000, Y=-0.210000
+[2025.11.17-22.37.38:656][687]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.17-22.37.38:672][688]LogTemp: Input Vector: X=-0.210000, Y=-0.070000
+[2025.11.17-22.37.38:689][689]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.17-22.37.38:706][690]LogTemp: Input Vector: X=-0.280000, Y=-0.070000
+[2025.11.17-22.37.38:723][691]LogTemp: Input Vector: X=-0.210000, Y=-0.000000
+[2025.11.17-22.37.38:739][692]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.17-22.37.38:756][693]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.17-22.37.38:773][694]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.38:789][695]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.38:806][696]LogTemp: Input Vector: X=-0.420000, Y=-0.070000
+[2025.11.17-22.37.38:823][697]LogTemp: Input Vector: X=-0.280000, Y=-0.000000
+[2025.11.17-22.37.38:839][698]LogTemp: Input Vector: X=-0.350000, Y=-0.070000
+[2025.11.17-22.37.38:856][699]LogTemp: Input Vector: X=-0.350000, Y=-0.210000
+[2025.11.17-22.37.38:872][700]LogTemp: Input Vector: X=-0.700000, Y=-0.000000
+[2025.11.17-22.37.38:889][701]LogTemp: Input Vector: X=-0.490000, Y=-0.070000
+[2025.11.17-22.37.38:906][702]LogTemp: Input Vector: X=-0.350000, Y=-0.140000
+[2025.11.17-22.37.38:923][703]LogTemp: Input Vector: X=-0.700000, Y=-0.070000
+[2025.11.17-22.37.38:939][704]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.38:956][705]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.38:973][706]LogTemp: Input Vector: X=-0.350000, Y=-0.000000
+[2025.11.17-22.37.38:989][707]LogTemp: Input Vector: X=-0.350000, Y=0.070000
+[2025.11.17-22.37.39:006][708]LogTemp: Input Vector: X=-0.210000, Y=0.070000
+[2025.11.17-22.37.39:022][709]LogTemp: Input Vector: X=-0.210000, Y=0.140000
+[2025.11.17-22.37.39:039][710]LogTemp: Input Vector: X=-0.140000, Y=-0.000000
+[2025.11.17-22.37.39:056][711]LogTemp: Input Vector: X=-0.210000, Y=0.280000
+[2025.11.17-22.37.39:073][712]LogTemp: Input Vector: X=-0.140000, Y=0.070000
+[2025.11.17-22.37.39:106][714]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.17-22.37.39:123][715]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.39:139][716]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.39:155][717]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.39:172][718]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.17-22.37.39:206][720]LogTemp: Input Vector: X=0.000000, Y=0.140000
+[2025.11.17-22.37.39:239][722]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.39:256][723]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.39:272][724]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.39:289][725]LogTemp: Input Vector: X=0.000000, Y=0.070000
+[2025.11.17-22.37.40:562][799]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.17-22.37.40:562][799]LogWorld: BeginTearingDown for /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson
+[2025.11.17-22.37.40:562][799]LogWorld: UWorld::CleanupWorld for Lvl_ThirdPerson, bSessionEnded=true, bCleanupResources=true
+[2025.11.17-22.37.40:563][799]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.17-22.37.40:563][799]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/ThirdPerson/UEDPIE_0_Lvl_ThirdPerson.Lvl_ThirdPerson
+[2025.11.17-22.37.40:566][799]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.17-22.37.40:569][799]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.17-22.37.40:594][799]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.17-22.37.40:594][799]LogText3D: BG_BP_renderCharacter_PROTO : Text3DRenderer StaticMeshesRenderer Destroyed
+[2025.11.17-22.37.40:594][799]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.11.17-22.37.40:594][799]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7, StreamState=4
+[2025.11.17-22.37.40:597][799]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7, StreamState=2
+[2025.11.17-22.37.40:606][799]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2025.11.17-22.37.40:667][800]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2025.11.17-22.37.46:874][ 56]LogText3D: Text3D Engine Subsystem is clearing unreferenced cached fonts and typefaces.
+[2025.11.17-22.38.33:883][197]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 651.747620
+[2025.11.17-22.38.34:883][200]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.11.17-22.38.34:883][201]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 652.413574, Update Interval: 312.308716
