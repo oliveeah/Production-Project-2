@@ -56,4 +56,9 @@ public://variables
 
 	UFUNCTION()
 	void OnEndMouseOverTile(UPrimitiveComponent* TouchedComponent);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Debug")
+
+	FString numberInGrid;
+	void setnumberInGrid(FString _numberInGrid_DisplayName);
 };

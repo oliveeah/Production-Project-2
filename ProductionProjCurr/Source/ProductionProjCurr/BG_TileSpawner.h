@@ -93,4 +93,7 @@ public://variables
 
 
 
+	UPROPERTY(EditAnywhere, Category = "Hex setup")
+	float chanceOfWater;
+
 };

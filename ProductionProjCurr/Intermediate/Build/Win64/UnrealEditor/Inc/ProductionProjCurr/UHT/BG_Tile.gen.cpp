@@ -177,11 +177,16 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 		{ "Category", "Components" },
 		{ "ModuleRelativePath", "BG_Tile.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_numberInGrid_MetaData[] = {
+		{ "Category", "Debug" },
+		{ "ModuleRelativePath", "BG_Tile.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_tileMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_tileEdgeMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MAT_Array_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_MAT_Array;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_numberInGrid;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -198,11 +203,13 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Stati
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileEdgeMesh = { "tileEdgeMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, tileEdgeMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_tileEdgeMesh_MetaData), NewProp_tileEdgeMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_MAT_Array_Inner = { "MAT_Array", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_MAT_Array = { "MAT_Array", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, MAT_Array), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MAT_Array_MetaData), NewProp_MAT_Array_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_numberInGrid = { "numberInGrid", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, numberInGrid), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_numberInGrid_MetaData), NewProp_numberInGrid_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_Tile_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileEdgeMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_MAT_Array_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_MAT_Array,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_numberInGrid,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_Tile_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_Tile_Statics::DependentSingletons[])() = {
@@ -241,10 +248,10 @@ ABG_Tile::~ABG_Tile() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 3156720865U) },
+		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 2866849968U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_161668475(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_4220372103(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -83,5 +83,10 @@ void ABG_Tile::OnEndMouseOverTile(UPrimitiveComponent* TouchedComponent)
 
 }
 
+void ABG_Tile::setnumberInGrid(FString _numberInGrid_DisplayName)
+{
+	numberInGrid = _numberInGrid_DisplayName;
+}
+
 
 

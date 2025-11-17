@@ -54,12 +54,14 @@ int32 ABG_TileSpawner::generateRandomTileToSpawnNumber()
 
 void ABG_TileSpawner::spawnGrid()
 {
+	int32 iteration = 0;
 	if (!GetWorld()) return;
 
 	float hexWidth = tileWidth;
 	float hexHeight = hexWidth * 0.866f;
 
 	FVector baseLocation = GetActorLocation();
+
 
 	for (int32 rows = 1; rows < numberOfRows + 1; rows++)
 	{
@@ -70,23 +72,31 @@ void ABG_TileSpawner::spawnGrid()
 			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
 			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
-			int32 randomNum = generateRandomTileToSpawnNumber();
+			//int32 randomNum = generateRandomTileToSpawnNumber();
+
+
+
 			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
-			switch (randomNum)
+			if (FMath::RandRange(0.f, 1.f) <= chanceOfWater)
 			{
-			case 1: ChosenTileClass = FarmTile; break;
-			case 2: ChosenTileClass = WaterTile; break;
-			case 3: ChosenTileClass = MountainTile; break;
-			case 4: ChosenTileClass = ForestTile; break;
-			case 5: ChosenTileClass = MeadowTile; break;
-			case 6: ChosenTileClass = SandyTile; break;
+				ChosenTileClass = WaterTile;
 			}
+			else
+			{
+				ChosenTileClass = MeadowTile;
+			}
+
 
 			ABG_Tile* NewTile = nullptr;
 			if (ChosenTileClass)
 			{
 				NewTile = GetWorld()->SpawnActor<ABG_Tile>(ChosenTileClass, instanceTransform);
+				iteration++;
+				NewTile->setnumberInGrid(FString::Printf(TEXT("Tile_%d-%d"), cols, rows));
+
+				//NewTile->SetActorLabel(FString::Printf(TEXT("Tile_%d-%d"), cols, rows));
+				
 				spawnedTilesArray.Add(NewTile);
 			}
 
