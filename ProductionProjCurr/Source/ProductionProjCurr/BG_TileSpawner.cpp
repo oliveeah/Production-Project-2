@@ -122,9 +122,11 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows,
 	TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
 	UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
+
 	if (Value < 0.35f)//0 - .4
 	{
 		ChosenTileClass = WaterTile;
+
 	}
 	else if (Value > 0.35f && Value < 0.40f) // .4 - .5
 	{
@@ -148,7 +150,7 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows,
 	}
 	else if (Value > 0.8f)
 	{
-		ChosenTileClass = MountainTile;
+		ChosenTileClass = MountainTile; 
 	}
 
 	else
@@ -156,6 +158,12 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows,
 
 		ChosenTileClass = MeadowTile;
 	}
+	bool test = shouldSpawnAlternateTile(chanceForAlternateTile);
+	if (test)
+	{
+		//spawnAlternateTile();
+	}
+	
 
 	return ChosenTileClass;
 }
@@ -175,14 +183,27 @@ void ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransfo
 
 bool ABG_TileSpawner::shouldSpawnAlternateTile(float percentToSpawnAlternateTile)
 {
-	
+	const float ClampedPercent = FMath::Clamp(percentToSpawnAlternateTile, 0.0f, 100.0f); // val between 0 and 100
+	const float Fraction = ClampedPercent / 100.0f; // get fraction
 
-	return false;
+	const float Rand = FMath::FRand(); 	// Get a random in 0..1 and test
+	const bool bShouldSpawn = (Rand < Fraction); 
+
+	UE_LOG(LogTemp, Display, TEXT("Rand = %f, Fraction = %f -> Spawn = %s"), Rand, Fraction, bShouldSpawn ? TEXT("true") : TEXT("false"));
+
+	return bShouldSpawn;
 }
+
 
 bool ABG_TileSpawner::shouldSpawnStructureTile(float percentToSpawnStructure)
 {
 	return false;
+}
+//might not need below
+
+
+void ABG_TileSpawner::spawnAlternateTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform)
+{
 }
 
 void ABG_TileSpawner::spawnToken()

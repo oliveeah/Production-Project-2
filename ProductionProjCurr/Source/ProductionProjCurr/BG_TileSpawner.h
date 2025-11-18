@@ -109,6 +109,10 @@ public://variables
 	void spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform);
 
 	bool shouldSpawnAlternateTile(float percentToSpawnAlternateTile);
+
+	void spawnAlternateTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform);
+
+
 	bool shouldSpawnStructureTile(float percentToSpawnStructure);
 	
 	void spawnToken();
@@ -124,4 +128,7 @@ public://variables
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
 	float chanceForStructure;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
+	float chanceForAlternateTile;
 };
