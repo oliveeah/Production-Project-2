@@ -16,10 +16,37 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+// ********** Begin ScriptStruct FTileVariant ******************************************************
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_28_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FTileVariant_Statics; \
+	PRODUCTIONPROJCURR_API static class UScriptStruct* StaticStruct();
+
+
+struct FTileVariant;
+// ********** End ScriptStruct FTileVariant ********************************************************
+
+// ********** Begin ScriptStruct FBiomeConfig ******************************************************
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_41_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FBiomeConfig_Statics; \
+	PRODUCTIONPROJCURR_API static class UScriptStruct* StaticStruct();
+
+
+struct FBiomeConfig;
+// ********** End ScriptStruct FBiomeConfig ********************************************************
+
+// ********** Begin ScriptStruct FBiomeEntry *******************************************************
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_60_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FBiomeEntry_Statics; \
+	PRODUCTIONPROJCURR_API static class UScriptStruct* StaticStruct();
+
+
+struct FBiomeEntry;
+// ********** End ScriptStruct FBiomeEntry *********************************************************
+
 // ********** Begin Class ABG_TileSpawner **********************************************************
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner_NoRegister();
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_72_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABG_TileSpawner(); \
 	friend struct Z_Construct_UClass_ABG_TileSpawner_Statics; \
@@ -30,7 +57,7 @@ public: \
 	DECLARE_SERIALIZER(ABG_TileSpawner)
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_72_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABG_TileSpawner(ABG_TileSpawner&&) = delete; \
 	ABG_TileSpawner(const ABG_TileSpawner&) = delete; \
@@ -40,12 +67,12 @@ public: \
 	NO_API virtual ~ABG_TileSpawner();
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_14_PROLOG
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_17_GENERATED_BODY \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_69_PROLOG
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_72_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_72_INCLASS_NO_PURE_DECLS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h_72_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,5 +83,20 @@ class ABG_TileSpawner;
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h
+
+// ********** Begin Enum EBiomeType ****************************************************************
+#define FOREACH_ENUM_EBIOMETYPE(op) \
+	op(EBiomeType::Water) \
+	op(EBiomeType::Sandy) \
+	op(EBiomeType::Grassland) \
+	op(EBiomeType::Forest) \
+	op(EBiomeType::Stone) \
+	op(EBiomeType::Hill) \
+	op(EBiomeType::Mountain) 
+
+enum class EBiomeType : uint8;
+template<> struct TIsUEnumClass<EBiomeType> { enum { Value = true }; };
+template<> PRODUCTIONPROJCURR_API UEnum* StaticEnum<EBiomeType>();
+// ********** End Enum EBiomeType ******************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

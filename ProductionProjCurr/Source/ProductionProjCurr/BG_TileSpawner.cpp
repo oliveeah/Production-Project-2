@@ -26,6 +26,10 @@ void ABG_TileSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//generate random number and seed with it
+	randomNum = FMath::Rand();
+	randomStream.Initialize(randomNum);
+
 	// Clear old instances so we don’t duplicate
 	clearGrid();
 
@@ -66,7 +70,6 @@ void ABG_TileSpawner::spawnGrid()
 
 	FVector baseLocation = GetActorLocation();
 
-	randomNum = FMath::Rand();
 
 	FastNoiseLite Noise;
 
@@ -168,7 +171,7 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows,
 	return ChosenTileClass;
 }
 
-void ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform)
+ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform) // changed
 {
 	ABG_Tile* NewTile = nullptr;
 
@@ -220,5 +223,34 @@ void ABG_TileSpawner::spawnToken()
 //		spawnedTilesArray.Add(NewToken);
 //	}
 //}
+}
+
+const FBiomeConfig* ABG_TileSpawner::GetConfigForBiome(EBiomeType Biome) const
+{
+	for(const FBiomeEntry& EntryBiome : BiomeConfigs)
+	{
+		if (EntryBiome.Biome == Biome)
+		{
+			return &EntryBiome.Config;
+		}
+	}
+	return nullptr;
+}
+
+bool ABG_TileSpawner::ShouldSpawnByFraction(float Fraction, FRandomStream* Stream) const
+{
+	const float Clamped = FMath::Clamp(Fraction, 0.0f, 1.0f); //this ensures fraction is between 0 and 1
+	const float Rand = Stream ? Stream->FRand() : FMath::FRand(); //get random number between 0 and 1
+	return (Rand < Fraction); 
+}
+
+TSubclassOf<ABG_Tile> ABG_TileSpawner::ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream) const
+{
+	if (Variants.Num() == 0)
+	{
+		return nullptr;
+	}
+
+
 }
 

@@ -10,6 +10,61 @@
 #include "BG_Token.h"
 #include "BG_TileSpawner.generated.h"
 
+UENUM(BlueprintType)
+enum class EBiomeType : uint8
+{
+	Water,
+	Sandy,
+	Grassland,
+	Forest,
+	Stone,
+	Hill,
+	Mountain
+};
+
+USTRUCT(BlueprintType)
+struct FTileVariant
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Variant")
+	TSubclassOf<ABG_Tile> TileClass = nullptr;
+
+	// Relative weight for roulette selection; 1.0 = equal
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Variant", meta = (ClampMin = "0.0"))
+	float Weight = 1.0f;
+};
+
+USTRUCT(BlueprintType)
+struct FBiomeConfig
+{
+	GENERATED_BODY()
+
+	// Default tile class for this biome (designer sets this; used when no alternate chosen)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome")
+	TSubclassOf<ABG_Tile> DefaultTile = nullptr;
+
+	// Zero or more alternate variants for this biome
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome")
+	TArray<FTileVariant> TileVariants;
+
+	// Chance (0..100) to pick a variant instead of the default tile
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome", meta = (ClampMin = "0.0", ClampMax = "100.0"))
+	float AlternateChance = 0.0f;
+
+};
+
+USTRUCT(BlueprintType)
+struct FBiomeEntry
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome Entry")
+	EBiomeType Biome = EBiomeType::Grassland;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome Entry")
+	FBiomeConfig Config;
+};
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_TileSpawner : public AActor
@@ -131,4 +186,7 @@ public://variables
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
 	float chanceForAlternateTile;
+
+	UPROPERTY(EditAnywhere, Category = "Biome")
+	TArray<FBiomeEntry> BiomeConfigs;
 };

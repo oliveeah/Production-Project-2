@@ -21,8 +21,309 @@ PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Token_NoRegister();
+PRODUCTIONPROJCURR_API UEnum* Z_Construct_UEnum_ProductionProjCurr_EBiomeType();
+PRODUCTIONPROJCURR_API UScriptStruct* Z_Construct_UScriptStruct_FBiomeConfig();
+PRODUCTIONPROJCURR_API UScriptStruct* Z_Construct_UScriptStruct_FBiomeEntry();
+PRODUCTIONPROJCURR_API UScriptStruct* Z_Construct_UScriptStruct_FTileVariant();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin Enum EBiomeType ****************************************************************
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EBiomeType;
+static UEnum* EBiomeType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EBiomeType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EBiomeType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProductionProjCurr_EBiomeType, (UObject*)Z_Construct_UPackage__Script_ProductionProjCurr(), TEXT("EBiomeType"));
+	}
+	return Z_Registration_Info_UEnum_EBiomeType.OuterSingleton;
+}
+template<> PRODUCTIONPROJCURR_API UEnum* StaticEnum<EBiomeType>()
+{
+	return EBiomeType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Forest.Name", "EBiomeType::Forest" },
+		{ "Grassland.Name", "EBiomeType::Grassland" },
+		{ "Hill.Name", "EBiomeType::Hill" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+		{ "Mountain.Name", "EBiomeType::Mountain" },
+		{ "Sandy.Name", "EBiomeType::Sandy" },
+		{ "Stone.Name", "EBiomeType::Stone" },
+		{ "Water.Name", "EBiomeType::Water" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EBiomeType::Water", (int64)EBiomeType::Water },
+		{ "EBiomeType::Sandy", (int64)EBiomeType::Sandy },
+		{ "EBiomeType::Grassland", (int64)EBiomeType::Grassland },
+		{ "EBiomeType::Forest", (int64)EBiomeType::Forest },
+		{ "EBiomeType::Stone", (int64)EBiomeType::Stone },
+		{ "EBiomeType::Hill", (int64)EBiomeType::Hill },
+		{ "EBiomeType::Mountain", (int64)EBiomeType::Mountain },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProductionProjCurr,
+	nullptr,
+	"EBiomeType",
+	"EBiomeType",
+	Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProductionProjCurr_EBiomeType()
+{
+	if (!Z_Registration_Info_UEnum_EBiomeType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EBiomeType.InnerSingleton, Z_Construct_UEnum_ProductionProjCurr_EBiomeType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EBiomeType.InnerSingleton;
+}
+// ********** End Enum EBiomeType ******************************************************************
+
+// ********** Begin ScriptStruct FTileVariant ******************************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FTileVariant;
+class UScriptStruct* FTileVariant::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FTileVariant.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FTileVariant.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FTileVariant, (UObject*)Z_Construct_UPackage__Script_ProductionProjCurr(), TEXT("TileVariant"));
+	}
+	return Z_Registration_Info_UScriptStruct_FTileVariant.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FTileVariant_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TileClass_MetaData[] = {
+		{ "Category", "Tile Variant" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Weight_MetaData[] = {
+		{ "Category", "Tile Variant" },
+		{ "ClampMin", "0.0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Relative weight for roulette selection; 1.0 = equal\n" },
+#endif
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Relative weight for roulette selection; 1.0 = equal" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_TileClass;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Weight;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTileVariant>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FTileVariant_Statics::NewProp_TileClass = { "TileClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTileVariant, TileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Tile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TileClass_MetaData), NewProp_TileClass_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FTileVariant_Statics::NewProp_Weight = { "Weight", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTileVariant, Weight), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Weight_MetaData), NewProp_Weight_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FTileVariant_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTileVariant_Statics::NewProp_TileClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTileVariant_Statics::NewProp_Weight,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTileVariant_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTileVariant_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProductionProjCurr,
+	nullptr,
+	&NewStructOps,
+	"TileVariant",
+	Z_Construct_UScriptStruct_FTileVariant_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTileVariant_Statics::PropPointers),
+	sizeof(FTileVariant),
+	alignof(FTileVariant),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTileVariant_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FTileVariant_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FTileVariant()
+{
+	if (!Z_Registration_Info_UScriptStruct_FTileVariant.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FTileVariant.InnerSingleton, Z_Construct_UScriptStruct_FTileVariant_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FTileVariant.InnerSingleton;
+}
+// ********** End ScriptStruct FTileVariant ********************************************************
+
+// ********** Begin ScriptStruct FBiomeConfig ******************************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FBiomeConfig;
+class UScriptStruct* FBiomeConfig::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FBiomeConfig.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FBiomeConfig.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FBiomeConfig, (UObject*)Z_Construct_UPackage__Script_ProductionProjCurr(), TEXT("BiomeConfig"));
+	}
+	return Z_Registration_Info_UScriptStruct_FBiomeConfig.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FBiomeConfig_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultTile_MetaData[] = {
+		{ "Category", "Biome" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Default tile class for this biome (designer sets this; used when no alternate chosen)\n" },
+#endif
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Default tile class for this biome (designer sets this; used when no alternate chosen)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TileVariants_MetaData[] = {
+		{ "Category", "Biome" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Zero or more alternate variants for this biome\n" },
+#endif
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Zero or more alternate variants for this biome" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AlternateChance_MetaData[] = {
+		{ "Category", "Biome" },
+		{ "ClampMax", "100.0" },
+		{ "ClampMin", "0.0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Chance (0..100) to pick a variant instead of the default tile\n" },
+#endif
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Chance (0..100) to pick a variant instead of the default tile" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_DefaultTile;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_TileVariants_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_TileVariants;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_AlternateChance;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBiomeConfig>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_DefaultTile = { "DefaultTile", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBiomeConfig, DefaultTile), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Tile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultTile_MetaData), NewProp_DefaultTile_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_TileVariants_Inner = { "TileVariants", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FTileVariant, METADATA_PARAMS(0, nullptr) }; // 2642859578
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_TileVariants = { "TileVariants", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBiomeConfig, TileVariants), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TileVariants_MetaData), NewProp_TileVariants_MetaData) }; // 2642859578
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_AlternateChance = { "AlternateChance", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBiomeConfig, AlternateChance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AlternateChance_MetaData), NewProp_AlternateChance_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FBiomeConfig_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_DefaultTile,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_TileVariants_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_TileVariants,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewProp_AlternateChance,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBiomeConfig_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBiomeConfig_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProductionProjCurr,
+	nullptr,
+	&NewStructOps,
+	"BiomeConfig",
+	Z_Construct_UScriptStruct_FBiomeConfig_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBiomeConfig_Statics::PropPointers),
+	sizeof(FBiomeConfig),
+	alignof(FBiomeConfig),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBiomeConfig_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FBiomeConfig_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FBiomeConfig()
+{
+	if (!Z_Registration_Info_UScriptStruct_FBiomeConfig.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FBiomeConfig.InnerSingleton, Z_Construct_UScriptStruct_FBiomeConfig_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FBiomeConfig.InnerSingleton;
+}
+// ********** End ScriptStruct FBiomeConfig ********************************************************
+
+// ********** Begin ScriptStruct FBiomeEntry *******************************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FBiomeEntry;
+class UScriptStruct* FBiomeEntry::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FBiomeEntry.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FBiomeEntry.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FBiomeEntry, (UObject*)Z_Construct_UPackage__Script_ProductionProjCurr(), TEXT("BiomeEntry"));
+	}
+	return Z_Registration_Info_UScriptStruct_FBiomeEntry.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FBiomeEntry_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Biome_MetaData[] = {
+		{ "Category", "Biome Entry" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Config_MetaData[] = {
+		{ "Category", "Biome Entry" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Biome_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Biome;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Config;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBiomeEntry>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewProp_Biome_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewProp_Biome = { "Biome", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBiomeEntry, Biome), Z_Construct_UEnum_ProductionProjCurr_EBiomeType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Biome_MetaData), NewProp_Biome_MetaData) }; // 791558875
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewProp_Config = { "Config", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBiomeEntry, Config), Z_Construct_UScriptStruct_FBiomeConfig, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Config_MetaData), NewProp_Config_MetaData) }; // 3150066780
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FBiomeEntry_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewProp_Biome_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewProp_Biome,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewProp_Config,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBiomeEntry_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBiomeEntry_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProductionProjCurr,
+	nullptr,
+	&NewStructOps,
+	"BiomeEntry",
+	Z_Construct_UScriptStruct_FBiomeEntry_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBiomeEntry_Statics::PropPointers),
+	sizeof(FBiomeEntry),
+	alignof(FBiomeEntry),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBiomeEntry_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FBiomeEntry_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FBiomeEntry()
+{
+	if (!Z_Registration_Info_UScriptStruct_FBiomeEntry.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FBiomeEntry.InnerSingleton, Z_Construct_UScriptStruct_FBiomeEntry_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FBiomeEntry.InnerSingleton;
+}
+// ********** End ScriptStruct FBiomeEntry *********************************************************
 
 // ********** Begin Class ABG_TileSpawner **********************************************************
 void ABG_TileSpawner::StaticRegisterNativesABG_TileSpawner()
@@ -184,6 +485,10 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 		{ "Category", "Hex | Setup" },
 		{ "ModuleRelativePath", "BG_TileSpawner.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BiomeConfigs_MetaData[] = {
+		{ "Category", "Biome" },
+		{ "ModuleRelativePath", "BG_TileSpawner.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_rootScene;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_staticMesh;
@@ -212,6 +517,8 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_noiseFrequency;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_chanceForStructure;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_chanceForAlternateTile;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_BiomeConfigs_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_BiomeConfigs;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -249,6 +556,8 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_TileSpawner
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_noiseFrequency = { "noiseFrequency", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, noiseFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_noiseFrequency_MetaData), NewProp_noiseFrequency_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_chanceForStructure = { "chanceForStructure", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, chanceForStructure), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_chanceForStructure_MetaData), NewProp_chanceForStructure_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_chanceForAlternateTile = { "chanceForAlternateTile", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, chanceForAlternateTile), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_chanceForAlternateTile_MetaData), NewProp_chanceForAlternateTile_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_BiomeConfigs_Inner = { "BiomeConfigs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FBiomeEntry, METADATA_PARAMS(0, nullptr) }; // 38705899
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_BiomeConfigs = { "BiomeConfigs", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, BiomeConfigs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BiomeConfigs_MetaData), NewProp_BiomeConfigs_MetaData) }; // 38705899
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_TileSpawner_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_rootScene,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_staticMesh,
@@ -276,6 +585,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_TileS
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_noiseFrequency,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_chanceForStructure,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_chanceForAlternateTile,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_BiomeConfigs_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_BiomeConfigs,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_TileSpawner_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_TileSpawner_Statics::DependentSingletons[])() = {
@@ -313,14 +624,22 @@ ABG_TileSpawner::~ABG_TileSpawner() {}
 // ********** Begin Registration *******************************************************************
 struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ EBiomeType_StaticEnum, TEXT("EBiomeType"), &Z_Registration_Info_UEnum_EBiomeType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 791558875U) },
+	};
+	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FTileVariant::StaticStruct, Z_Construct_UScriptStruct_FTileVariant_Statics::NewStructOps, TEXT("TileVariant"), &Z_Registration_Info_UScriptStruct_FTileVariant, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTileVariant), 2642859578U) },
+		{ FBiomeConfig::StaticStruct, Z_Construct_UScriptStruct_FBiomeConfig_Statics::NewStructOps, TEXT("BiomeConfig"), &Z_Registration_Info_UScriptStruct_FBiomeConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBiomeConfig), 3150066780U) },
+		{ FBiomeEntry::StaticStruct, Z_Construct_UScriptStruct_FBiomeEntry_Statics::NewStructOps, TEXT("BiomeEntry"), &Z_Registration_Info_UScriptStruct_FBiomeEntry, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBiomeEntry), 38705899U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_TileSpawner, ABG_TileSpawner::StaticClass, TEXT("ABG_TileSpawner"), &Z_Registration_Info_UClass_ABG_TileSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_TileSpawner), 3053241010U) },
+		{ Z_Construct_UClass_ABG_TileSpawner, ABG_TileSpawner::StaticClass, TEXT("ABG_TileSpawner"), &Z_Registration_Info_UClass_ABG_TileSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_TileSpawner), 1008425847U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_2523578911(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_4176463853(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ClassInfo),
-	nullptr, 0,
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
