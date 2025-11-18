@@ -3,7 +3,7 @@
 
 #include "BG_TileSpawner.h"
 #include "Kismet/GameplayStatics.h"
-#include "Noise/FastNoiseLite.h"
+#include <Kismet/KismetMathLibrary.h>
 
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
@@ -17,6 +17,8 @@ ABG_TileSpawner::ABG_TileSpawner()
 
 	//staticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
 	//RootComponent = staticMesh;
+
+
 }
 
 // Called when the game starts or when spawned
@@ -64,13 +66,13 @@ void ABG_TileSpawner::spawnGrid()
 
 	FVector baseLocation = GetActorLocation();
 
-	FastNoiseLite Noise;
 	randomNum = FMath::Rand();
 
+	FastNoiseLite Noise;
 
 	Noise.SetSeed(randomNum);
 	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
-	Noise.SetFrequency(.1f);
+	Noise.SetFrequency(noiseFrequency);
 
 	for (int32 rows = 1; rows < numberOfRows + 1; rows++)
 	{
@@ -81,63 +83,26 @@ void ABG_TileSpawner::spawnGrid()
 			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
 			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
-			//int32 randomNum = generateRandomTileToSpawnNumber();
+			
+			TSubclassOf<ABG_Tile> ChosenTileClass = generateBiomeTypeBasedOnNoise(rows, cols, Noise);
 
-
-
-			float Nx = cols + (rows % 2) * 0.5f;
-			float Ny = rows * 0.8660254f;
-
-			float Value = (Noise.GetNoise(Nx, Ny) + 1.f) * 0.5f;
-
-			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
-
-			UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
-			if (Value < 0.4f)
-			{
-				ChosenTileClass = WaterTile; 
-			}
-			else if (Value < 0.47f && Value > 0.4f)
-			{
-				ChosenTileClass = SandyTile;
-			}
-			else if (Value > 0.8f)
-			{
-				ChosenTileClass = MountainTile;
-			}
-			else
-			{
-				ChosenTileClass = MeadowTile; 
-			}
+			spawnTile(ChosenTileClass, instanceTransform);
 
 
 
 
+			//if (shouldSpawnTokens && TokenClass)
+			//{
+			//	FVector tokenSpawnLocation = spawnLocation + FVector(0, 0, 10);
+			//	FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
 
-			ABG_Tile* NewTile = nullptr;
-			if (ChosenTileClass)
-			{
-				NewTile = GetWorld()->SpawnActor<ABG_Tile>(ChosenTileClass, instanceTransform);
-				iteration++;
-				NewTile->setnumberInGrid(FString::Printf(TEXT("Tile_%d-%d"), cols, rows));
-
-				//NewTile->SetActorLabel(FString::Printf(TEXT("Tile_%d-%d"), cols, rows));
-				
-				spawnedTilesArray.Add(NewTile);
-			}
-
-			if (shouldSpawnTokens && TokenClass)
-			{
-				FVector tokenSpawnLocation = spawnLocation + FVector(0, 0, 10);
-				FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
-
-				ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
-				if (NewToken)
-				{
-					NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
-					spawnedTilesArray.Add(NewToken);
-				}
-			}
+			//	ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
+			//	if (NewToken)
+			//	{
+			//		NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
+			//		spawnedTilesArray.Add(NewToken);
+			//	}
+			//}
 		}
 	}
 }
@@ -155,5 +120,58 @@ void ABG_TileSpawner::clearGrid()
 
 	spawnedTilesArray.Empty();
 
+}
+
+TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise)
+{
+
+	float Nx = cols + (rows % 2) * 0.5f;
+	float Ny = rows * 0.8660254f;
+
+	float Value = (_Noise.GetNoise(Nx, Ny) + 1.f) * 0.5f;
+
+	TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
+
+	UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
+	if (Value < 0.4f)
+	{
+		ChosenTileClass = WaterTile;
+	}
+	else if (Value < 0.5f && Value > 0.4f)
+	{
+		ChosenTileClass = SandyTile;
+	}
+	else if (Value > 0.8f)
+	{
+		ChosenTileClass = MountainTile;
+	}
+	else if (Value > 0.7 && Value < 0.8f)
+	{
+		ChosenTileClass = StoneTile;
+	}
+	else
+	{
+
+		ChosenTileClass = MeadowTile;
+	}
+
+	return ChosenTileClass;
+}
+
+void ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform)
+{
+	ABG_Tile* NewTile = nullptr;
+
+	if (_ChosenTileClass)
+	{
+		NewTile = GetWorld()->SpawnActor<ABG_Tile>(_ChosenTileClass, _instanceTransform);
+
+		spawnedTilesArray.Add(NewTile);
+	}
+
+}
+
+void ABG_TileSpawner::spawnToken()
+{
 }
 
