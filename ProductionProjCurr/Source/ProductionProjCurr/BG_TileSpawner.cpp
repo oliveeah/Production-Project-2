@@ -65,7 +65,10 @@ void ABG_TileSpawner::spawnGrid()
 	FVector baseLocation = GetActorLocation();
 
 	FastNoiseLite Noise;
-	Noise.SetSeed(1337);
+	randomNum = FMath::Rand();
+
+
+	Noise.SetSeed(randomNum);
 	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
 	Noise.SetFrequency(.1f);
 
@@ -90,11 +93,15 @@ void ABG_TileSpawner::spawnGrid()
 			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
 			UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
-			if (Value < 0.5f)
+			if (Value < 0.4f)
 			{
 				ChosenTileClass = WaterTile; 
 			}
-			else if (Value > 0.85f)
+			else if (Value < 0.47f && Value > 0.4f)
+			{
+				ChosenTileClass = SandyTile;
+			}
+			else if (Value > 0.8f)
 			{
 				ChosenTileClass = MountainTile;
 			}

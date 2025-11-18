@@ -93,7 +93,8 @@ public://variables
 
 
 
-	UPROPERTY(EditAnywhere, Category = "Hex setup")
-	float chanceOfWater;
+	FRandomStream randomStream;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hex Setup")
+	float randomNum;
 };
