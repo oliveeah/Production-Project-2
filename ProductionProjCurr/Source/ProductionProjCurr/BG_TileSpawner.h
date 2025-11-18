@@ -65,6 +65,9 @@ public://variables
 	TSubclassOf<ABG_Tile> MountainTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
+	TSubclassOf<ABG_Tile> RockHillTile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> ForestTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
@@ -74,6 +77,9 @@ public://variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> SandyTile;
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
+	TSubclassOf<ABG_Tile> RockyTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> StoneTile;
@@ -101,6 +107,10 @@ public://variables
 	TSubclassOf<ABG_Tile> generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise);
 
 	void spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform);
+
+	bool shouldSpawnAlternateTile(float percentToSpawnAlternateTile);
+	bool shouldSpawnStructureTile(float percentToSpawnStructure);
+	
 	void spawnToken();
 
 
@@ -111,4 +121,7 @@ public://variables
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
 	float noiseFrequency;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
+	float chanceForStructure;
 };

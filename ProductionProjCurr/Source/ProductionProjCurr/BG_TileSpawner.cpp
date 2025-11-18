@@ -91,18 +91,7 @@ void ABG_TileSpawner::spawnGrid()
 
 
 
-			//if (shouldSpawnTokens && TokenClass)
-			//{
-			//	FVector tokenSpawnLocation = spawnLocation + FVector(0, 0, 10);
-			//	FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
 
-			//	ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
-			//	if (NewToken)
-			//	{
-			//		NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
-			//		spawnedTilesArray.Add(NewToken);
-			//	}
-			//}
 		}
 	}
 }
@@ -133,22 +122,35 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows,
 	TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
 	UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
-	if (Value < 0.4f)
+	if (Value < 0.35f)//0 - .4
 	{
 		ChosenTileClass = WaterTile;
 	}
-	else if (Value < 0.5f && Value > 0.4f)
+	else if (Value > 0.35f && Value < 0.40f) // .4 - .5
 	{
 		ChosenTileClass = SandyTile;
+	}
+	else if (Value > 0.6f && Value < 0.7f)//.55 - /7
+	{
+		ChosenTileClass = ForestTile;
+	}
+	else if (Value > 0.65 && Value < 0.7f)
+	{
+		ChosenTileClass = StoneTile;
+	}
+	else if (Value > 0.7f && Value < 0.75f)
+	{
+		ChosenTileClass = RockyTile;
+	}
+	else if (Value > 0.75 && Value < 0.8f)
+	{
+		ChosenTileClass = RockHillTile;
 	}
 	else if (Value > 0.8f)
 	{
 		ChosenTileClass = MountainTile;
 	}
-	else if (Value > 0.7 && Value < 0.8f)
-	{
-		ChosenTileClass = StoneTile;
-	}
+
 	else
 	{
 
@@ -171,7 +173,31 @@ void ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransfo
 
 }
 
+bool ABG_TileSpawner::shouldSpawnAlternateTile(float percentToSpawnAlternateTile)
+{
+	
+
+	return false;
+}
+
+bool ABG_TileSpawner::shouldSpawnStructureTile(float percentToSpawnStructure)
+{
+	return false;
+}
+
 void ABG_TileSpawner::spawnToken()
 {
+	//if (shouldSpawnTokens && TokenClass)
+//{
+//	FVector tokenSpawnLocation = spawnLocation + FVector(0, 0, 10);
+//	FTransform tokenInstanceTransform(FRotator::ZeroRotator, tokenSpawnLocation);
+
+//	ABG_Token* NewToken = GetWorld()->SpawnActor<ABG_Token>(TokenClass, tokenInstanceTransform);
+//	if (NewToken)
+//	{
+//		NewToken->AttachToActor(NewTile, FAttachmentTransformRules::KeepWorldTransform);
+//		spawnedTilesArray.Add(NewToken);
+//	}
+//}
 }
 
