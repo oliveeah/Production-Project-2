@@ -3,6 +3,8 @@
 
 #include "BG_TileSpawner.h"
 #include "Kismet/GameplayStatics.h"
+#include "Noise/FastNoiseLite.h"
+
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
 {
@@ -62,6 +64,10 @@ void ABG_TileSpawner::spawnGrid()
 
 	FVector baseLocation = GetActorLocation();
 
+	FastNoiseLite Noise;
+	Noise.SetSeed(1337);
+	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
+	Noise.SetFrequency(.1f);
 
 	for (int32 rows = 1; rows < numberOfRows + 1; rows++)
 	{
@@ -72,21 +78,34 @@ void ABG_TileSpawner::spawnGrid()
 			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
 			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
-			int32 randomNum = generateRandomTileToSpawnNumber();
+			//int32 randomNum = generateRandomTileToSpawnNumber();
 
 
+
+			float Nx = cols + (rows % 2) * 0.5f;
+			float Ny = rows * 0.8660254f;
+
+			float Value = (Noise.GetNoise(Nx, Ny) + 1.f) * 0.5f;
 
 			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
-			switch (randomNum)
+			UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
+			if (Value < 0.5f)
 			{
-			case 1: ChosenTileClass = FarmTile; break;
-			case 2: ChosenTileClass = WaterTile; break;
-			case 3: ChosenTileClass = MountainTile; break;
-			case 4: ChosenTileClass = ForestTile; break;
-			case 5: ChosenTileClass = MeadowTile; break;
-			case 6: ChosenTileClass = SandyTile; break;
+				ChosenTileClass = WaterTile; 
 			}
+			else if (Value > 0.85f)
+			{
+				ChosenTileClass = MountainTile;
+			}
+			else
+			{
+				ChosenTileClass = MeadowTile; 
+			}
+
+
+
+
 
 			ABG_Tile* NewTile = nullptr;
 			if (ChosenTileClass)
