@@ -4,6 +4,7 @@
 #include "BG_TileSpawner.h"
 #include "Kismet/GameplayStatics.h"
 #include <Kismet/KismetMathLibrary.h>
+#include "Engine/World.h" // Added include to fix GetWorld() error
 
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
@@ -55,20 +56,15 @@ void ABG_TileSpawner::Tick(float DeltaTime)
 
 }
 
-int32 ABG_TileSpawner::generateRandomTileToSpawnNumber()
-{
-	return FMath::RandRange(1, 6);
-}
 
 void ABG_TileSpawner::spawnGrid()
 {
 	int32 iteration = 0;
 	if (!GetWorld()) return;
 
-	float hexWidth = tileWidth;
-	float hexHeight = hexWidth * 0.866f;
-
-	FVector baseLocation = GetActorLocation();
+	const float hexWidth = tileWidth;
+	const float hexHeight = hexWidth * 0.866f;
+	const FVector baseLocation = GetActorLocation();
 
 
 	FastNoiseLite Noise;
@@ -81,15 +77,36 @@ void ABG_TileSpawner::spawnGrid()
 	{
 		for (int32 cols = 0; cols < numberOfColumns; cols++)
 		{
-			float xOffset = (rows % 2 == 0) ? 0.0f : (hexWidth * 0.5f);
+			const float xOffset = (rows % 2 == 0) ? 0.0f : (hexWidth * 0.5f);
+			const FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
+			const FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
-			FVector spawnLocation = baseLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
-			FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
+			const EBiomeType biomeType = generateBiomeTypeBasedOnNoise(rows, cols, Noise); //determine biome type based on noise
+			const FBiomeConfig* biomeConfig = GetConfigForBiome(biomeType); //get config (if there is one) for above biome type
 
-			
-			TSubclassOf<ABG_Tile> ChosenTileClass = generateBiomeTypeBasedOnNoise(rows, cols, Noise);
+			TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
+			{
+				if (biomeConfig && biomeConfig->DefaultTile) //choose default tile
+				{
+					ChosenTileClass = biomeConfig->DefaultTile; 
+				}
+			}
 
-			spawnTile(ChosenTileClass, instanceTransform);
+			if (biomeConfig && biomeConfig->TileVariants.Num() > 0 && biomeConfig->AlternateChance > 0.0f)
+			{
+				const float fraction = FMath::Clamp(biomeConfig->AlternateChance / 100.0f, 0.0f, 1.0f); //normalize val between 0 and 1 then clamp
+				if (ShouldSpawnByFraction(fraction, &randomStream))
+				{
+					const TSubclassOf<ABG_Tile> VariantTileClass = ChooseWeightedTileVariant(biomeConfig->TileVariants, &randomStream);
+					if(VariantTileClass)
+					{
+						ChosenTileClass = VariantTileClass;
+					}
+				}
+			}
+
+			ABG_Tile* NewTile = spawnTile(ChosenTileClass, instanceTransform);
+
 
 
 
@@ -114,7 +131,7 @@ void ABG_TileSpawner::clearGrid()
 
 }
 
-TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise)
+EBiomeType ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise)
 {
 
 	float Nx = cols + (rows % 2) * 0.5f;
@@ -122,79 +139,43 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows,
 
 	float Value = (_Noise.GetNoise(Nx, Ny) + 1.f) * 0.5f;
 
-	TSubclassOf<ABG_Tile> ChosenTileClass = nullptr;
 
-	UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
+	//UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
 
-	if (Value < 0.35f)//0 - .4
-	{
-		ChosenTileClass = WaterTile;
+	if (Value < 0.35f) return EBiomeType::Water;
+	if (Value < 0.40f) return EBiomeType::Sandy;
+	if (Value < 0.60f) return EBiomeType::Grassland;
+	if (Value < 0.70f) return EBiomeType::Forest;
+	if (Value < 0.75f) return EBiomeType::Stone;
+	if (Value < 0.8f) return EBiomeType::Hill;
+	return EBiomeType::Mountain;
 
-	}
-	else if (Value > 0.35f && Value < 0.40f) // .4 - .5
-	{
-		ChosenTileClass = SandyTile;
-	}
-	else if (Value > 0.6f && Value < 0.7f)//.55 - /7
-	{
-		ChosenTileClass = ForestTile;
-	}
-	else if (Value > 0.65 && Value < 0.7f)
-	{
-		ChosenTileClass = StoneTile;
-	}
-	else if (Value > 0.7f && Value < 0.75f)
-	{
-		ChosenTileClass = RockyTile;
-	}
-	else if (Value > 0.75 && Value < 0.8f)
-	{
-		ChosenTileClass = RockHillTile;
-	}
-	else if (Value > 0.8f)
-	{
-		ChosenTileClass = MountainTile; 
-	}
-
-	else
-	{
-
-		ChosenTileClass = MeadowTile;
-	}
-	bool test = shouldSpawnAlternateTile(chanceForAlternateTile);
-	if (test)
-	{
-		//spawnAlternateTile();
-	}
-	
-
-	return ChosenTileClass;
 }
 
-ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform) // changed
+ABG_Tile* ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform)
 {
-	ABG_Tile* NewTile = nullptr;
+	if (!_ChosenTileClass) return nullptr;
 
-	if (_ChosenTileClass)
+	UWorld* World = GetWorld();
+	if (!World) return nullptr;
+
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+
+	ABG_Tile* NewTile = World->SpawnActor<ABG_Tile>(_ChosenTileClass, _instanceTransform, SpawnParams);
+
+	if(NewTile)
 	{
-		NewTile = GetWorld()->SpawnActor<ABG_Tile>(_ChosenTileClass, _instanceTransform);
-
 		spawnedTilesArray.Add(NewTile);
 	}
 
+	return NewTile;
 }
 
 bool ABG_TileSpawner::shouldSpawnAlternateTile(float percentToSpawnAlternateTile)
 {
-	const float ClampedPercent = FMath::Clamp(percentToSpawnAlternateTile, 0.0f, 100.0f); // val between 0 and 100
-	const float Fraction = ClampedPercent / 100.0f; // get fraction
-
-	const float Rand = FMath::FRand(); 	// Get a random in 0..1 and test
-	const bool bShouldSpawn = (Rand < Fraction); 
-
-	UE_LOG(LogTemp, Display, TEXT("Rand = %f, Fraction = %f -> Spawn = %s"), Rand, Fraction, bShouldSpawn ? TEXT("true") : TEXT("false"));
-
-	return bShouldSpawn;
+	const float Fraction = FMath::Clamp(percentToSpawnAlternateTile / 100.0f, 0.0f, 1.0f);
+	return ShouldSpawnByFraction(Fraction, &randomStream); // deterministic
 }
 
 
@@ -203,11 +184,6 @@ bool ABG_TileSpawner::shouldSpawnStructureTile(float percentToSpawnStructure)
 	return false;
 }
 //might not need below
-
-
-void ABG_TileSpawner::spawnAlternateTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform)
-{
-}
 
 void ABG_TileSpawner::spawnToken()
 {
@@ -239,18 +215,46 @@ const FBiomeConfig* ABG_TileSpawner::GetConfigForBiome(EBiomeType Biome) const
 
 bool ABG_TileSpawner::ShouldSpawnByFraction(float Fraction, FRandomStream* Stream) const
 {
-	const float Clamped = FMath::Clamp(Fraction, 0.0f, 1.0f); //this ensures fraction is between 0 and 1
-	const float Rand = Stream ? Stream->FRand() : FMath::FRand(); //get random number between 0 and 1
-	return (Rand < Fraction); 
+	const float Clamped = FMath::Clamp(Fraction, 0.0f, 1.0f);
+	const float Rand = Stream ? Stream->FRand() : FMath::FRand();
+	return (Rand < Clamped);
 }
 
 TSubclassOf<ABG_Tile> ABG_TileSpawner::ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream) const
 {
-	if (Variants.Num() == 0)
+	if (Variants.Num() == 0) return nullptr;
+
+	float totalWeight = 0.0f;	
+	for (const FTileVariant& V : Variants) //foreach variant add weight
 	{
+		totalWeight += FMath::Max(0.0f, V.Weight);
+	}
+
+	if(totalWeight <= 0.0f) //if no weight, return first variant
+	{
+		for (const FTileVariant& V : Variants)
+		{
+			if (V.TileClass) return V.TileClass;
+		}
 		return nullptr;
 	}
 
+	const float Pick = (Stream ? Stream->FRand() : FMath::FRand()) * totalWeight;
+	float Accum = 0.0f;
+	for (const FTileVariant& V : Variants)//foreach variant add weight to accum and check if pick is less than accum
+	{
+		Accum += FMath::Max(0.0f, V.Weight);
+		if (Pick <= Accum && V.TileClass)
+		{
+			return V.TileClass;
+		}
+	}
 
+	// numerical fallback //not necessary
+	for (int32 i = Variants.Num() - 1; i >= 0; --i)
+	{
+		if (Variants[i].TileClass) return Variants[i].TileClass;
+	}
+	return nullptr;
 }
 

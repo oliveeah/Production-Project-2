@@ -154,14 +154,12 @@ public://variables
 	UPROPERTY(Transient)
 	TArray<AActor*> spawnedTilesArray;
 
-	int32 generateRandomTileToSpawnNumber();
-
 	void spawnGrid();
 	void clearGrid();
 
-	TSubclassOf<ABG_Tile> generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise);
+	EBiomeType generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise); //changed
 
-	void spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform);
+	ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform);
 
 	bool shouldSpawnAlternateTile(float percentToSpawnAlternateTile);
 
@@ -189,4 +187,8 @@ public://variables
 
 	UPROPERTY(EditAnywhere, Category = "Biome")
 	TArray<FBiomeEntry> BiomeConfigs;
+
+	const FBiomeConfig* GetConfigForBiome(EBiomeType Biome) const; //changed
+	bool ShouldSpawnByFraction(float Fraction, FRandomStream* Stream = nullptr) const; // Fraction 0..1 // changed
+	TSubclassOf<ABG_Tile> ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream = nullptr) const; // changed
 };
