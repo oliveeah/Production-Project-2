@@ -4,17 +4,18 @@
 		"Module.ProductionProjCurr.gen.cpp.obj": [
 			"BG_AC_MouseOverlapReciever.gen.cpp.obj",
 			"BG_CaptureActor.gen.cpp.obj",
-			"BG_PlayerPawn.gen.cpp.obj",
-			"BG_Tile.gen.cpp.obj",
-			"BG_TileSpawner.gen.cpp.obj",
 			"BG_Token.gen.cpp.obj",
 			"MyAnimNotifyState.gen.cpp.obj",
 			"NPC_BaseClass.gen.cpp.obj",
-			"ProductionProjCurr.init.gen.cpp.obj",
 			"ProductionProjCurrCharacter.gen.cpp.obj",
 			"ProductionProjCurrGameMode.gen.cpp.obj",
 			"ProductionProjCurrPlayerController.gen.cpp.obj",
-			"testInterface.gen.cpp.obj"
+			"testInterface.gen.cpp.obj",
+			"UPlayerProfile.gen.cpp.obj",
+			"BG_PlayerPawn.gen.cpp.obj",
+			"BG_Tile.gen.cpp.obj",
+			"BG_TileSpawner.gen.cpp.obj",
+			"ProductionProjCurr.init.gen.cpp.obj"
 		]
 	}
 }

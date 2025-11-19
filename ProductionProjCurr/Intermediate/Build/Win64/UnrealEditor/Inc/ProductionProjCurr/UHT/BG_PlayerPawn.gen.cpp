@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "BG_PlayerPawn.h"
+#include "playerData/BG_PlayerPawn.h"
 #include "InputActionValue.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
@@ -32,7 +32,7 @@ struct Z_Construct_UFunction_ABG_PlayerPawn_clickCallback_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -67,7 +67,7 @@ struct Z_Construct_UFunction_ABG_PlayerPawn_DoMove_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Right;
@@ -113,7 +113,7 @@ struct Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TouchedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -158,7 +158,7 @@ struct Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TouchedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -204,7 +204,7 @@ struct Z_Construct_UFunction_ABG_PlayerPawn_scrollCallback_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
 		{ "NativeConst", "" },
@@ -287,8 +287,8 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "BG_PlayerPawn.h" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "IncludePath", "playerData/BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -297,7 +297,7 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 		{ "Comment", "/** components  */" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "components" },
 #endif
@@ -306,34 +306,34 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpectatorMovementComponent_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_moveAction_MetaData[] = {
 		{ "Category", "Input" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//input\n" },
 #endif
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "input" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_lookAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_clickAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_scrollAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UI_FactionCharacter_MetaData[] = {
 		{ "Category", "3D UI" },
@@ -341,7 +341,7 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 		{ "Comment", "//UI\n" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BG_PlayerPawn.h" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "UI" },
 #endif
@@ -358,11 +358,11 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABG_PlayerPawn_clickCallback, "clickCallback" }, // 3740202444
-		{ &Z_Construct_UFunction_ABG_PlayerPawn_DoMove, "DoMove" }, // 1853087355
-		{ &Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver, "OnBeginMouseOver" }, // 590078714
-		{ &Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver, "OnEndMouseOver" }, // 306840309
-		{ &Z_Construct_UFunction_ABG_PlayerPawn_scrollCallback, "scrollCallback" }, // 1446023604
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_clickCallback, "clickCallback" }, // 610477640
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_DoMove, "DoMove" }, // 3507902295
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_OnBeginMouseOver, "OnBeginMouseOver" }, // 1938927344
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_OnEndMouseOver, "OnEndMouseOver" }, // 2609864249
+		{ &Z_Construct_UFunction_ABG_PlayerPawn_scrollCallback, "scrollCallback" }, // 2656094818
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -422,14 +422,14 @@ ABG_PlayerPawn::~ABG_PlayerPawn() {}
 // ********** End Class ABG_PlayerPawn *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics
+struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 2977066591U) },
+		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 418865012U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_3307083350(TEXT("/Script/ProductionProjCurr"),
-	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_2347449514(TEXT("/Script/ProductionProjCurr"),
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

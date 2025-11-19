@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "BG_Tile.h"
+#include "tileSpawningLogic/BG_Tile.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -30,7 +30,7 @@ struct Z_Construct_UFunction_ABG_Tile_OnBeginMouseOverTile_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TouchedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -75,7 +75,7 @@ struct Z_Construct_UFunction_ABG_Tile_OnEndMouseOverTile_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TouchedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -154,8 +154,8 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "BG_Tile.h" },
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "IncludePath", "tileSpawningLogic/BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_tileMesh_MetaData[] = {
 		{ "Category", "Components" },
@@ -163,7 +163,7 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 		{ "Comment", "//variables\n" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "variables" },
 #endif
@@ -171,15 +171,15 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_tileEdgeMesh_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MAT_Array_MetaData[] = {
 		{ "Category", "Components" },
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_numberInGrid_MetaData[] = {
 		{ "Category", "Debug" },
-		{ "ModuleRelativePath", "BG_Tile.h" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_tileMesh;
@@ -190,8 +190,8 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABG_Tile_OnBeginMouseOverTile, "OnBeginMouseOverTile" }, // 1499540828
-		{ &Z_Construct_UFunction_ABG_Tile_OnEndMouseOverTile, "OnEndMouseOverTile" }, // 410851823
+		{ &Z_Construct_UFunction_ABG_Tile_OnBeginMouseOverTile, "OnBeginMouseOverTile" }, // 3124407102
+		{ &Z_Construct_UFunction_ABG_Tile_OnEndMouseOverTile, "OnEndMouseOverTile" }, // 1957394576
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -245,14 +245,14 @@ ABG_Tile::~ABG_Tile() {}
 // ********** End Class ABG_Tile *******************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_Statics
+struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 2866849968U) },
+		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 923319144U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_4220372103(TEXT("/Script/ProductionProjCurr"),
-	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_3052789027(TEXT("/Script/ProductionProjCurr"),
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

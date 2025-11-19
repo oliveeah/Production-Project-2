@@ -115,5 +115,23 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\testInterface.h">
       <Filter>Source\ProductionProjCurr</Filter>
     </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Noise">
+      <UniqueIdentifier>{9AD8258A-6CC8-381F-85F5-2517D01AD9C9}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Noise\FastNoiseLite.h">
+      <Filter>Source\ProductionProjCurr\Noise</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Private">
+      <UniqueIdentifier>{6C7AB881-23CC-3AC1-95A1-ECF84B730CC2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProductionProjCurr\Public">
+      <UniqueIdentifier>{9664A9DA-BD2D-3ABC-8239-4F68364AEA1D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\UPlayerProfile.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
