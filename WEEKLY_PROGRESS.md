@@ -32,6 +32,9 @@ Initial project setup and foundation work. The first commit established the core
 ### Commits
 - `952e99b` - created folders for c++ scripts and finalised map generation for now
 
+### Errors Encountered
+- No significant errors reported during initial project setup
+
 ---
 
 ## Week Commencing: November 24, 2025
@@ -45,10 +48,33 @@ Current active development week. Documentation and planning updates.
 ### Commits
 - `c555c4c` - Initial plan
 
+### Errors Encountered
+- No significant errors reported during this week
+
 ### In Progress
 - Continued development of board game mechanics
 - Refinement of tile generation system
 - Further NPC and interaction system development
+
+---
+
+## Week Commencing: December 1, 2025
+
+### Summary
+Development continuation and documentation updates.
+
+### Completed Work
+- **Documentation**: Added weekly progress tracking with errors encountered sections
+
+### Commits
+- *(Pending commits this week)*
+
+### Errors Encountered
+- No significant errors reported during this week
+
+### In Progress
+- Ongoing game development
+- Feature refinements
 
 ---
 
@@ -68,4 +94,4 @@ Current active development week. Documentation and planning updates.
 
 ---
 
-*Last Updated: November 25, 2025*
+*Last Updated: December 7, 2025*
