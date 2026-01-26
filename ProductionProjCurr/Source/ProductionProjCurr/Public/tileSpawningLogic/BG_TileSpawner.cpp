@@ -4,7 +4,7 @@
 #include "BG_TileSpawner.h"
 #include "Kismet/GameplayStatics.h"
 #include <Kismet/KismetMathLibrary.h>
-#include "Engine/World.h" // Added include to fix GetWorld() error
+#include "Engine/World.h" 
 
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
@@ -13,8 +13,8 @@ ABG_TileSpawner::ABG_TileSpawner()
 
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 
-	rootScene = CreateDefaultSubobject<USceneComponent>(TEXT("Root Scene"));
-	SetRootComponent(rootScene);
+	//rootScene = CreateDefaultSubobject<USceneComponent>(TEXT("Root Scene"));
+	//SetRootComponent(rootScene);
 
 	//staticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
 	//RootComponent = staticMesh;
@@ -39,19 +39,6 @@ void ABG_TileSpawner::BeginPlay()
 
 }
 
-void ABG_TileSpawner::OnConstruction(const FTransform& transform)
-{
-	UE_LOG(LogTemp, Display, TEXT("on construction called"));
-
-	Super::OnConstruction(transform);
-}
-
-// Called every frame
-void ABG_TileSpawner::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
 
 
 void ABG_TileSpawner::spawnGrid()
@@ -89,18 +76,18 @@ void ABG_TileSpawner::spawnGrid()
 				}
 			}
 
-			if (biomeConfig && biomeConfig->TileVariants.Num() > 0 && biomeConfig->AlternateChance > 0.0f)
-			{
-				const float fraction = FMath::Clamp(biomeConfig->AlternateChance / 100.0f, 0.0f, 1.0f); //normalize val between 0 and 1 then clamp
-				if (ShouldSpawnByFraction(fraction, &randomStream))
-				{
-					const TSubclassOf<ABG_Tile> VariantTileClass = ChooseWeightedTileVariant(biomeConfig->TileVariants, &randomStream);
-					if(VariantTileClass)
-					{
-						ChosenTileClass = VariantTileClass;
-					}
-				}
-			}
+			//if (biomeConfig && biomeConfig->TileVariants.Num() > 0 && biomeConfig->AlternateChance > 0.0f)
+			//{
+			//	const float fraction = FMath::Clamp(biomeConfig->AlternateChance / 100.0f, 0.0f, 1.0f); //normalize val between 0 and 1 then clamp
+			//	if (ShouldSpawnByFraction(fraction, &randomStream))
+			//	{
+			//		const TSubclassOf<ABG_Tile> VariantTileClass = ChooseWeightedTileVariant(biomeConfig->TileVariants, &randomStream);
+			//		if(VariantTileClass)
+			//		{
+			//			ChosenTileClass = VariantTileClass;
+			//		}
+			//	}
+			//}
 
 			ABG_Tile* NewTile = spawnTile(ChosenTileClass, instanceTransform);
 		}
@@ -163,11 +150,11 @@ ABG_Tile* ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, con
 	return NewTile;
 }
 
-bool ABG_TileSpawner::shouldSpawnAlternateTile(float percentToSpawnAlternateTile)
-{
-	const float Fraction = FMath::Clamp(percentToSpawnAlternateTile / 100.0f, 0.0f, 1.0f);
-	return ShouldSpawnByFraction(Fraction, &randomStream); // deterministic
-}
+//bool ABG_TileSpawner::shouldSpawnAlternateTile(float percentToSpawnAlternateTile)
+//{
+//	const float Fraction = FMath::Clamp(percentToSpawnAlternateTile / 100.0f, 0.0f, 1.0f);
+//	return ShouldSpawnByFraction(Fraction, &randomStream); // deterministic
+//}
 
 const FBiomeConfig* ABG_TileSpawner::GetConfigForBiome(EBiomeType Biome) const
 {
@@ -181,48 +168,48 @@ const FBiomeConfig* ABG_TileSpawner::GetConfigForBiome(EBiomeType Biome) const
 	return nullptr;
 }
 
-bool ABG_TileSpawner::ShouldSpawnByFraction(float Fraction, FRandomStream* Stream) const
-{
-	const float Clamped = FMath::Clamp(Fraction, 0.0f, 1.0f);
-	const float Rand = Stream ? Stream->FRand() : FMath::FRand();
-	return (Rand < Clamped);
-}
+//bool ABG_TileSpawner::ShouldSpawnByFraction(float Fraction, FRandomStream* Stream) const
+//{
+//	const float Clamped = FMath::Clamp(Fraction, 0.0f, 1.0f);
+//	const float Rand = Stream ? Stream->FRand() : FMath::FRand();
+//	return (Rand < Clamped);
+//}
 
-TSubclassOf<ABG_Tile> ABG_TileSpawner::ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream) const
-{
-	if (Variants.Num() == 0) return nullptr;
-
-	float totalWeight = 0.0f;	
-	for (const FTileVariant& V : Variants) //foreach variant add weight
-	{
-		totalWeight += FMath::Max(0.0f, V.Weight);
-	}
-
-	if(totalWeight <= 0.0f) //if no weight, return first variant
-	{
-		for (const FTileVariant& V : Variants)
-		{
-			if (V.TileClass) return V.TileClass;
-		}
-		return nullptr;
-	}
-
-	const float Pick = (Stream ? Stream->FRand() : FMath::FRand()) * totalWeight;
-	float Accum = 0.0f;
-	for (const FTileVariant& V : Variants)//foreach variant add weight to accum and check if pick is less than accum
-	{
-		Accum += FMath::Max(0.0f, V.Weight);
-		if (Pick <= Accum && V.TileClass)
-		{
-			return V.TileClass;
-		}
-	}
-
-	// numerical fallback //not necessary
-	for (int32 i = Variants.Num() - 1; i >= 0; --i)
-	{
-		if (Variants[i].TileClass) return Variants[i].TileClass;
-	}
-	return nullptr;
-}
+//TSubclassOf<ABG_Tile> ABG_TileSpawner::ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream) const
+//{
+//	if (Variants.Num() == 0) return nullptr;
+//
+//	float totalWeight = 0.0f;	
+//	for (const FTileVariant& V : Variants) //foreach variant add weight
+//	{
+//		totalWeight += FMath::Max(0.0f, V.Weight);
+//	}
+//
+//	if(totalWeight <= 0.0f) //if no weight, return first variant
+//	{
+//		for (const FTileVariant& V : Variants)
+//		{
+//			if (V.TileClass) return V.TileClass;
+//		}
+//		return nullptr;
+//	}
+//
+//	const float Pick = (Stream ? Stream->FRand() : FMath::FRand()) * totalWeight;
+//	float Accum = 0.0f;
+//	for (const FTileVariant& V : Variants)//foreach variant add weight to accum and check if pick is less than accum
+//	{
+//		Accum += FMath::Max(0.0f, V.Weight);
+//		if (Pick <= Accum && V.TileClass)
+//		{
+//			return V.TileClass;
+//		}
+//	}
+//
+//	// numerical fallback //not necessary
+//	for (int32 i = Variants.Num() - 1; i >= 0; --i)
+//	{
+//		if (Variants[i].TileClass) return Variants[i].TileClass;
+//	}
+//	return nullptr;
+//}
 

@@ -6,9 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "BG_Tile.h"
 #include "Noise/FastNoiseLite.h"
-
-#include "BG_Token.h"
 #include "BG_TileSpawner.generated.h"
+
 
 UENUM(BlueprintType)
 enum class EBiomeType : uint8
@@ -77,22 +76,11 @@ public:
 
 	virtual void BeginPlay() override;
 
-	virtual void OnConstruction(const FTransform& transform) override;
-
-public:	//functions
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 
 public://variables
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hex | Components")
-	USceneComponent* rootScene;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Components")
-	UStaticMeshComponent* staticMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
-	float tileWidth;
+	 float tileWidth;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
 	int32 numberOfColumns;
@@ -101,8 +89,27 @@ public://variables
 	int32 numberOfRows;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
-
 	float xSpawnOffset;
+
+	FRandomStream randomStream;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
+	float randomNum;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
+	float noiseFrequency;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
+	float chanceForStructure;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
+	float chanceForAlternateTile;
+
+	UPROPERTY(EditAnywhere, Category = "Biome")
+	TArray<FBiomeEntry> BiomeConfigs;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
+	TArray<UStaticMeshComponent*> tileMeshArray;
 
 	//tile class 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Hex | Biomes")
@@ -140,55 +147,19 @@ public://variables
 	TSubclassOf<ABG_Tile> StoneTile;
 	//tile child variants
 
-
-	//token logic
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Hex | Components")
-	TSubclassOf<ABG_Token> TokenClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Components")
-	bool shouldSpawnTokens;
-
-	UPROPERTY(Transient)
-	TArray<AActor*> spawnedTokensArray;
-
 	UPROPERTY(Transient)
 	TArray<AActor*> spawnedTilesArray;
 
 	void spawnGrid();
 	void clearGrid();
 
+	const FBiomeConfig* GetConfigForBiome(EBiomeType Biome) const; //changed
+	bool ShouldSpawnByFraction(float Fraction, FRandomStream* Stream = nullptr) const; // Fraction 0..1 // changed
+	TSubclassOf<ABG_Tile> ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream = nullptr) const; // changed
+
 	EBiomeType generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise); //changed
 
 	ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform);
 
 	bool shouldSpawnAlternateTile(float percentToSpawnAlternateTile);
-
-	void spawnAlternateTile(TSubclassOf<ABG_Tile> _ChosenTileClass, FTransform _instanceTransform);
-
-
-	bool shouldSpawnStructureTile(float percentToSpawnStructure);
-	
-	void spawnToken();
-
-
-	FRandomStream randomStream;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float randomNum;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float noiseFrequency;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float chanceForStructure;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float chanceForAlternateTile;
-
-	UPROPERTY(EditAnywhere, Category = "Biome")
-	TArray<FBiomeEntry> BiomeConfigs;
-
-	const FBiomeConfig* GetConfigForBiome(EBiomeType Biome) const; //changed
-	bool ShouldSpawnByFraction(float Fraction, FRandomStream* Stream = nullptr) const; // Fraction 0..1 // changed
-	TSubclassOf<ABG_Tile> ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream = nullptr) const; // changed
 };

@@ -16,14 +16,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
-class UPrimitiveComponent;
-
 // ********** Begin Class ABG_Tile *****************************************************************
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnEndMouseOverTile); \
-	DECLARE_FUNCTION(execOnBeginMouseOverTile);
-
-
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile_NoRegister();
 
 #define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h_15_INCLASS_NO_PURE_DECLS \
@@ -51,7 +44,6 @@ public: \
 #define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h_15_ENHANCED_CONSTRUCTORS \
 private: \
