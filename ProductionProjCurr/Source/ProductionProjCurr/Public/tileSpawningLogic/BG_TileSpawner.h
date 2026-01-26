@@ -21,66 +21,18 @@ enum class EBiomeType : uint8
 	Mountain
 };
 
-USTRUCT(BlueprintType)
-struct FTileVariant
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Variant")
-	TSubclassOf<ABG_Tile> TileClass = nullptr;
-
-	// Relative weight for roulette selection; 1.0 = equal
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Variant", meta = (ClampMin = "0.0"))
-	float Weight = 1.0f;
-};
-
-USTRUCT(BlueprintType)
-struct FBiomeConfig
-{
-	GENERATED_BODY()
-
-	// Default tile class for this biome (designer sets this; used when no alternate chosen)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome")
-	TSubclassOf<ABG_Tile> DefaultTile = nullptr;
-
-	// Zero or more alternate variants for this biome
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome")
-	TArray<FTileVariant> TileVariants;
-
-	// Chance (0..100) to pick a variant instead of the default tile
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome", meta = (ClampMin = "0.0", ClampMax = "100.0"))
-	float AlternateChance = 0.0f;
-
-};
-
-USTRUCT(BlueprintType)
-struct FBiomeEntry
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome Entry")
-	EBiomeType Biome = EBiomeType::Grassland;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Biome Entry")
-	FBiomeConfig Config;
-};
-
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_TileSpawner : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ABG_TileSpawner();
 
+	ABG_TileSpawner();
 	virtual void BeginPlay() override;
 
-
-public://variables
-
+public:
+	// Grid Setup
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
-	 float tileWidth;
+	float tileWidth;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
 	int32 numberOfColumns;
@@ -91,75 +43,46 @@ public://variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
 	float xSpawnOffset;
 
-	FRandomStream randomStream;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float randomNum;
-
+	// Noise Settings
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
 	float noiseFrequency;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float chanceForStructure;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hex | Setup")
-	float chanceForAlternateTile;
-
-	UPROPERTY(EditAnywhere, Category = "Biome")
-	TArray<FBiomeEntry> BiomeConfigs;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TArray<UStaticMeshComponent*> tileMeshArray;
-
-	//tile class 
+	// Tile Classes
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> TileClass;
-
-
-	//tile child variants
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> FarmTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> WaterTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> MountainTile;
+	TSubclassOf<ABG_Tile> SandyTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> RockHillTile;
+	TSubclassOf<ABG_Tile> MeadowTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> ForestTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> MeadowTile;
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> SandyTile;
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> RockyTile;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> StoneTile;
-	//tile child variants
 
-	UPROPERTY(Transient)
-	TArray<AActor*> spawnedTilesArray;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
+	TSubclassOf<ABG_Tile> RockHillTile;
 
-	void spawnGrid();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
+	TSubclassOf<ABG_Tile> MountainTile;
+
+	TArray<TArray<ABG_Tile*>> TileGrid;
+
+
+
+	FRandomStream randomStream;
+
+	// Methods
+	void spawnGrid(const float& randomNum);
 	void clearGrid();
 
-	const FBiomeConfig* GetConfigForBiome(EBiomeType Biome) const; //changed
-	bool ShouldSpawnByFraction(float Fraction, FRandomStream* Stream = nullptr) const; // Fraction 0..1 // changed
-	TSubclassOf<ABG_Tile> ChooseWeightedTileVariant(const TArray<FTileVariant>& Variants, FRandomStream* Stream = nullptr) const; // changed
-
-	EBiomeType generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise); //changed
-
+	TSubclassOf<ABG_Tile> GetTileClassForBiome(EBiomeType Biome) const;
+	EBiomeType generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise);
 	ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform);
-
-	bool shouldSpawnAlternateTile(float percentToSpawnAlternateTile);
 };
