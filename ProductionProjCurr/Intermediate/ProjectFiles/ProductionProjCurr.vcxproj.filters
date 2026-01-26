@@ -12,7 +12,6 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.gitignore" />
-    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -34,54 +33,6 @@
     <Filter Include="Source\ProductionProjCurr">
       <UniqueIdentifier>{2241C6AD-8074-3134-90DD-B28B5ECA43D7}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_AC_MouseOverlapReciever.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_AC_MouseOverlapReciever.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_CaptureActor.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_CaptureActor.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_PlayerPawn.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_PlayerPawn.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_Tile.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_Tile.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_TileSpawner.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_TileSpawner.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\BG_Token.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\BG_Token.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\MyAnimNotifyState.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\MyAnimNotifyState.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\NPC_BaseClass.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\NPC_BaseClass.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
     <None Include="..\..\Source\ProductionProjCurr\ProductionProjCurr.Build.cs">
       <Filter>Source\ProductionProjCurr</Filter>
     </None>
@@ -89,30 +40,6 @@
       <Filter>Source\ProductionProjCurr</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\ProductionProjCurr.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\ProductionProjCurrCharacter.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\ProductionProjCurrCharacter.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\ProductionProjCurrGameMode.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\ProductionProjCurrGameMode.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\ProductionProjCurrPlayerController.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\ProductionProjCurrPlayerController.h">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\testInterface.cpp">
-      <Filter>Source\ProductionProjCurr</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\testInterface.h">
       <Filter>Source\ProductionProjCurr</Filter>
     </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Noise">
@@ -130,8 +57,77 @@
     <Filter Include="Source\ProductionProjCurr\Public">
       <UniqueIdentifier>{9664A9DA-BD2D-3ABC-8239-4F68364AEA1D}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\UPlayerProfile.h">
-      <Filter>Source\ProductionProjCurr\Public</Filter>
+    <Filter Include="Source\ProductionProjCurr\Public\animations">
+      <UniqueIdentifier>{20D59EF5-F078-3D92-908B-702F7B5E5CC0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.cpp">
+      <Filter>Source\ProductionProjCurr\Public\animations</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.h">
+      <Filter>Source\ProductionProjCurr\Public\animations</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Public\gameMode">
+      <UniqueIdentifier>{D8DE4CA4-6E41-3184-AC2A-24695D66E0D4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\gameMode\ProductionProjCurrGameMode.cpp">
+      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\ProductionProjCurrGameMode.h">
+      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Public\input">
+      <UniqueIdentifier>{7702F729-0DC4-39AB-8858-51007A3E133C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\input\BG_AC_MouseOverlapReciever.cpp">
+      <Filter>Source\ProductionProjCurr\Public\input</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\input\BG_AC_MouseOverlapReciever.h">
+      <Filter>Source\ProductionProjCurr\Public\input</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\input\ProductionProjCurrPlayerController.cpp">
+      <Filter>Source\ProductionProjCurr\Public\input</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\input\ProductionProjCurrPlayerController.h">
+      <Filter>Source\ProductionProjCurr\Public\input</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Public\playerData">
+      <UniqueIdentifier>{0B174A4E-84CE-3C39-9FA4-FE096592392C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\BG_PlayerPawn.cpp">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\BG_PlayerPawn.h">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\ProductionProjCurrCharacter.cpp">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\ProductionProjCurrCharacter.h">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\UPlayerProfile.h">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Public\tileSpawningLogic">
+      <UniqueIdentifier>{BE9F21B0-68BD-3757-A122-3FF12EE9C5EB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Tile.cpp">
+      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Tile.h">
+      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_TileSpawner.cpp">
+      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_TileSpawner.h">
+      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Token.cpp">
+      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Token.h">
+      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

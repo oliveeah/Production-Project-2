@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProductionProjCurrPlayerController.h"
+#include "input/ProductionProjCurrPlayerController.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -60,8 +60,8 @@ struct Z_Construct_UClass_AProductionProjCurrPlayerController_Statics
 		{ "Comment", "/**\n *  Basic PlayerController class for a third person game\n *  Manages input mappings\n */" },
 #endif
 		{ "HideCategories", "Collision Rendering Transformation" },
-		{ "IncludePath", "ProductionProjCurrPlayerController.h" },
-		{ "ModuleRelativePath", "ProductionProjCurrPlayerController.h" },
+		{ "IncludePath", "input/ProductionProjCurrPlayerController.h" },
+		{ "ModuleRelativePath", "Public/input/ProductionProjCurrPlayerController.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Basic PlayerController class for a third person game\nManages input mappings" },
 #endif
@@ -72,7 +72,7 @@ struct Z_Construct_UClass_AProductionProjCurrPlayerController_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Input Mapping Contexts */" },
 #endif
-		{ "ModuleRelativePath", "ProductionProjCurrPlayerController.h" },
+		{ "ModuleRelativePath", "Public/input/ProductionProjCurrPlayerController.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Input Mapping Contexts" },
 #endif
@@ -128,14 +128,14 @@ AProductionProjCurrPlayerController::~AProductionProjCurrPlayerController() {}
 // ********** End Class AProductionProjCurrPlayerController ****************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics
+struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrPlayerController, AProductionProjCurrPlayerController::StaticClass, TEXT("AProductionProjCurrPlayerController"), &Z_Registration_Info_UClass_AProductionProjCurrPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrPlayerController), 1323197710U) },
+		{ Z_Construct_UClass_AProductionProjCurrPlayerController, AProductionProjCurrPlayerController::StaticClass, TEXT("AProductionProjCurrPlayerController"), &Z_Registration_Info_UClass_AProductionProjCurrPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrPlayerController), 1132466586U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_1593885697(TEXT("/Script/ProductionProjCurr"),
-	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_204467312(TEXT("/Script/ProductionProjCurr"),
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

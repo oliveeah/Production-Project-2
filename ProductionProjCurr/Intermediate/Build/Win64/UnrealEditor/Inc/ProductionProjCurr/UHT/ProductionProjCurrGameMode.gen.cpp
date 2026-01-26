@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProductionProjCurrGameMode.h"
+#include "gameMode/ProductionProjCurrGameMode.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -59,8 +59,8 @@ struct Z_Construct_UClass_AProductionProjCurrGameMode_Statics
 		{ "Comment", "/**\n *  Simple GameMode for a third person game\n */" },
 #endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "ProductionProjCurrGameMode.h" },
-		{ "ModuleRelativePath", "ProductionProjCurrGameMode.h" },
+		{ "IncludePath", "gameMode/ProductionProjCurrGameMode.h" },
+		{ "ModuleRelativePath", "Public/gameMode/ProductionProjCurrGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Simple GameMode for a third person game" },
@@ -106,14 +106,14 @@ AProductionProjCurrGameMode::~AProductionProjCurrGameMode() {}
 // ********** End Class AProductionProjCurrGameMode ************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics
+struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrGameMode, AProductionProjCurrGameMode::StaticClass, TEXT("AProductionProjCurrGameMode"), &Z_Registration_Info_UClass_AProductionProjCurrGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrGameMode), 2036966534U) },
+		{ Z_Construct_UClass_AProductionProjCurrGameMode, AProductionProjCurrGameMode::StaticClass, TEXT("AProductionProjCurrGameMode"), &Z_Registration_Info_UClass_AProductionProjCurrGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrGameMode), 3028522774U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_56187119(TEXT("/Script/ProductionProjCurr"),
-	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_3692739884(TEXT("/Script/ProductionProjCurr"),
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

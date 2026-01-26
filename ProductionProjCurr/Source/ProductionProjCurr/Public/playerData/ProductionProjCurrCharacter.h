@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-#include "testInterface.h"
 #include "ProductionProjCurrCharacter.generated.h"
 
 class USpringArmComponent;
@@ -18,7 +17,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 
 UCLASS(abstract)
-class AProductionProjCurrCharacter : public ACharacter, public ItestInterface
+class AProductionProjCurrCharacter : public ACharacter//, public ItestInterface
 {
 	GENERATED_BODY()
 

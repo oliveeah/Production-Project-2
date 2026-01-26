@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "ProductionProjCurrPlayerController.h"
+// IWYU pragma: private, include "input/ProductionProjCurrPlayerController.h"
 
 #ifdef PRODUCTIONPROJCURR_ProductionProjCurrPlayerController_generated_h
 #error "ProductionProjCurrPlayerController.generated.h already included, missing '#pragma once' in ProductionProjCurrPlayerController.h"
@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AProductionProjCurrPlayerController **************************************
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrPlayerController_NoRegister();
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAProductionProjCurrPlayerController(); \
 	friend struct Z_Construct_UClass_AProductionProjCurrPlayerController_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AProductionProjCurrPlayerController)
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AProductionProjCurrPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~AProductionProjCurrPlayerController();
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h_15_PROLOG
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h_18_GENERATED_BODY \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h_15_PROLOG
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class AProductionProjCurrPlayerController;
 // ********** End Class AProductionProjCurrPlayerController ****************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrPlayerController_h
+#define CURRENT_FILE_ID FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

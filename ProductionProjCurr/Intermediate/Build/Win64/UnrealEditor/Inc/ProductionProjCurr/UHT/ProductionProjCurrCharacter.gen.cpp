@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProductionProjCurrCharacter.h"
+#include "playerData/ProductionProjCurrCharacter.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -19,7 +19,6 @@ ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrCharacter();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrCharacter_NoRegister();
-PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_UtestInterface_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
@@ -38,7 +37,7 @@ struct Z_Construct_UFunction_AProductionProjCurrCharacter_DoMove_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Handles move inputs from either controls or UI interfaces */" },
 #endif
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Handles move inputs from either controls or UI interfaces" },
 #endif
@@ -84,7 +83,7 @@ struct Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -114,7 +113,7 @@ struct Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -144,7 +143,7 @@ struct Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -214,8 +213,8 @@ struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "ProductionProjCurrCharacter.h" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "IncludePath", "playerData/ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -224,7 +223,7 @@ struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics
 		{ "Comment", "/** Camera boom positioning the camera behind the character */" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Camera boom positioning the camera behind the character" },
 #endif
@@ -236,7 +235,7 @@ struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics
 		{ "Comment", "/** Follow camera */" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Follow camera" },
 #endif
@@ -246,26 +245,26 @@ struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Move Input Action */" },
 #endif
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Move Input Action" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_useAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_interactAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_myWidget_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_myWidgetClass_MetaData[] = {
 		{ "Category", "ProductionProjCurrCharacter" },
-		{ "ModuleRelativePath", "ProductionProjCurrCharacter.h" },
+		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
@@ -278,13 +277,12 @@ struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_DoMove, "DoMove" }, // 293883639
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback, "interactCallback" }, // 2673671603
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn, "toggleBuildModeFn" }, // 3790110106
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed, "UsePressed" }, // 1039340311
+		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_DoMove, "DoMove" }, // 1835785841
+		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback, "interactCallback" }, // 233748648
+		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn, "toggleBuildModeFn" }, // 1171398491
+		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed, "UsePressed" }, // 2925887762
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
-	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AProductionProjCurrCharacter>::IsAbstract,
 	};
@@ -312,9 +310,6 @@ UObject* (*const Z_Construct_UClass_AProductionProjCurrCharacter_Statics::Depend
 	(UObject* (*)())Z_Construct_UPackage__Script_ProductionProjCurr,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrCharacter_Statics::DependentSingletons) < 16);
-const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AProductionProjCurrCharacter_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UtestInterface_NoRegister, (int32)VTABLE_OFFSET(AProductionProjCurrCharacter, ItestInterface), false },  // 1458855180
-};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AProductionProjCurrCharacter_Statics::ClassParams = {
 	&AProductionProjCurrCharacter::StaticClass,
 	"Game",
@@ -322,11 +317,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AProductionProjCurrChar
 	DependentSingletons,
 	FuncInfo,
 	Z_Construct_UClass_AProductionProjCurrCharacter_Statics::PropPointers,
-	InterfaceParams,
+	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrCharacter_Statics::PropPointers),
-	UE_ARRAY_COUNT(InterfaceParams),
+	0,
 	0x008001A5u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_AProductionProjCurrCharacter_Statics::Class_MetaDataParams)
 };
@@ -343,14 +338,14 @@ AProductionProjCurrCharacter::~AProductionProjCurrCharacter() {}
 // ********** End Class AProductionProjCurrCharacter ***********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics
+struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrCharacter, AProductionProjCurrCharacter::StaticClass, TEXT("AProductionProjCurrCharacter"), &Z_Registration_Info_UClass_AProductionProjCurrCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrCharacter), 3764916415U) },
+		{ Z_Construct_UClass_AProductionProjCurrCharacter, AProductionProjCurrCharacter::StaticClass, TEXT("AProductionProjCurrCharacter"), &Z_Registration_Info_UClass_AProductionProjCurrCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrCharacter), 74156358U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_994800201(TEXT("/Script/ProductionProjCurr"),
-	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_454352953(TEXT("/Script/ProductionProjCurr"),
+	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
