@@ -16,6 +16,7 @@ void ABG_TileSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
+
 	// Generate random number and seed with it
 	const float randomNum = FMath::Rand();
 	randomStream.Initialize(randomNum);
@@ -56,8 +57,11 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
 	Noise.SetFrequency(noiseFrequency);
 
-	for (int32 rows = 1; rows < numberOfRows + 1; rows++)
+	TileGrid.SetNum(numberOfRows);
+
+	for (int32 rows = 0; rows < numberOfRows; rows++)
 	{
+		TileGrid[rows].SetNum(numberOfColumns);
 		for (int32 cols = 0; cols < numberOfColumns; cols++)
 		{
 			// Offset every other row

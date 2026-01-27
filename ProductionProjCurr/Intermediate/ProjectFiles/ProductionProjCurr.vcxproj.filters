@@ -129,5 +129,6 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Token.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
+    <None Include="..\..\.clang-format" />
   </ItemGroup>
 </Project>
