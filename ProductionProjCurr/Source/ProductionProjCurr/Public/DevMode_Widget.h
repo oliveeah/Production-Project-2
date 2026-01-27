@@ -6,6 +6,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
+#include "gameMode/ProductionProjCurrGameMode.h"
 #include "DevMode_Widget.generated.h"
 
 /**

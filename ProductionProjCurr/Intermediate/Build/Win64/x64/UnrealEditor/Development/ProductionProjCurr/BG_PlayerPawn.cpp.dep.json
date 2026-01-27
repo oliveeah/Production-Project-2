@@ -133,6 +133,12 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h",
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\source\\productionprojcurr\\public\\gamemode\\productionprojcurrgamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\productionprojcurrgamemode.generated.h",
             "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\devmode_widget.generated.h",
             "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\bg_playerpawn.generated.h"
         ],

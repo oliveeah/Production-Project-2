@@ -2,6 +2,7 @@
 
 
 #include "DevMode_Widget.h"
+#include <Kismet/GameplayStatics.h>
 
 void UDevMode_Widget::NativeConstruct()
 {
@@ -71,6 +72,11 @@ void UDevMode_Widget::initializeButtonLabels()
 void UDevMode_Widget::ShowTileCoord_ButtonClicked()
 {
 	UE_LOG(LogTemp, Display, TEXT("show tile coord button clicked"));
+
+	if (AProductionProjCurrGameMode* GameMode = Cast<AProductionProjCurrGameMode>(UGameplayStatics::GetGameMode(this)))
+	{
+		GameMode->ToggleTileDebugCoordinates(); 
+	}
 }
 
 void UDevMode_Widget::ShowAdjacentTiles_ButtonClicked()

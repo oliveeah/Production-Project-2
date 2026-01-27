@@ -7,7 +7,22 @@
         "Includes": [
             "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\productionprojcurr\\definitions.productionprojcurr.h",
             "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\source\\productionprojcurr\\public\\tilespawninglogic\\bg_tile.h",
-            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\bg_tile.generated.h"
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\bg_tile.generated.h",
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\source\\productionprojcurr\\public\\gamemode\\productionprojcurrgamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\productionprojcurrgamemode.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

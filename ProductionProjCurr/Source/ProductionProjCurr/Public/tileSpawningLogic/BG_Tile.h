@@ -2,7 +2,6 @@
 
 #pragma once
 #include "UObject/ConstructorHelpers.h"
-
 #include "Components/StaticMeshComponent.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
@@ -14,25 +13,20 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 {
 	GENERATED_BODY()
 
+
+
 	public:
 	// Sets default values for this actor's properties
-		ABG_Tile()
-		{
-			PrimaryActorTick.bCanEverTick = false;
+		ABG_Tile();
+
+		virtual void BeginPlay() override;
+
+		UFUNCTION()
+		void OnDebugToggled(bool bNewShowDebug);
 
 
-			tileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile mesh"));
-			SetRootComponent(tileMesh);
-
-			tileEdgeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile edge mesh"));
-			tileEdgeMesh->SetupAttachment(tileMesh);
-
-
-			tileMesh->SetBoundsScale(1000.0f);
-			tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-			tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
-			tileMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-		};
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
+		bool bShowDebug = false;
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* tileMesh;
@@ -42,4 +36,6 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
 		FVector2D gridCoordinates;
+
+
 };
