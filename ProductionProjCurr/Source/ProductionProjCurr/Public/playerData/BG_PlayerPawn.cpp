@@ -2,7 +2,7 @@
 
 
 #include "BG_PlayerPawn.h" //must be at top
-
+#include <tileSpawningLogic/BG_Tile.h>
 
 
 
@@ -22,7 +22,6 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 	springArm->bUsePawnControlRotation = true;
 	springArm->bDoCollisionTest = false;
 
-
 	// Camera
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
 	Camera->SetupAttachment(springArm);
@@ -38,8 +37,8 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 	bUseControllerRotationRoll = false;
 
 	//UI
-	UI_FactionCharacter = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("faction UI character"));
-	UI_FactionCharacter->SetupAttachment(Camera);
+	//UI_FactionCharacter = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("faction UI character"));
+	//UI_FactionCharacter->SetupAttachment(Camera);
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
@@ -75,10 +74,6 @@ void ABG_PlayerPawn::BeginPlay()
 		{
 			UE_LOG(LogTemp, Error, TEXT("Failed to create dev menu widget!"));
 		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("devMenuWidgetRef is not set in Blueprint!"));
 	}
 }
 
@@ -117,7 +112,6 @@ void ABG_PlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 void ABG_PlayerPawn::MoveCallback(const FInputActionValue& Value)
 {
 	// input is a Vector2D
-
 	FVector2D MovementVector = Value.Get<FVector2D>();
 
 	// route the input
@@ -127,8 +121,6 @@ void ABG_PlayerPawn::MoveCallback(const FInputActionValue& Value)
 void ABG_PlayerPawn::LookCallback(const FInputActionValue& Value)
 {
 	FVector2D InputVector = Value.Get<FVector2D>();
-
-	UE_LOG(LogTemp, Log, TEXT("Input Vector: X=%f, Y=%f"), InputVector.X, InputVector.Y);
 
 	if (IsValid(Controller))
 	{
@@ -148,30 +140,13 @@ void ABG_PlayerPawn::DoMove(float Right, float Forward)
 
 		// get forward vector
 		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-
 		// get right vector 
 		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
 
 		// add movement 
 		AddMovementInput(ForwardDirection, Forward);
 		AddMovementInput(RightDirection, Right);
-
-
-
-
 	}
-}
-
-void ABG_PlayerPawn::OnBeginMouseOver(UPrimitiveComponent* TouchedComponent)
-{
-	UE_LOG(LogTemp, Warning, TEXT("player mouse overlapping"));
-}
-
-void ABG_PlayerPawn::OnEndMouseOver(UPrimitiveComponent* TouchedComponent)
-{
-	UE_LOG(LogTemp, Warning, TEXT("player mouse STOPPED overlapping"));
-
 }
 
 void ABG_PlayerPawn::OpenDevMenuCallback(const FInputActionValue& Value)
@@ -182,8 +157,6 @@ void ABG_PlayerPawn::OpenDevMenuCallback(const FInputActionValue& Value)
 	}
 	else
 	{
-	}
-	{
 		devMenuWidgetInstance->SetVisibility(ESlateVisibility::Visible);
 	}
 }
@@ -192,9 +165,46 @@ void ABG_PlayerPawn::clickCallback()
 {
 	UE_LOG(LogTemp, Display, TEXT("click callback called"));
 
-	// playerController->DeprojectMousePositionToWorld(
-	//	GetWorld()
-	//)
+	if (!playerController)
+	{
+		return;
+	}
+
+	// Get the mouse cursor position and perform a line trace
+	FHitResult HitResult;
+	bool bHit = playerController->GetHitResultUnderCursor(ECC_Visibility, false, HitResult);
+
+	if (bHit)
+	{
+		UPrimitiveComponent* HitComponent = HitResult.GetComponent();
+		
+		if (HitComponent && HitComponent->ComponentHasTag(FName("Tile")))
+		{
+			AActor* HitActor = HitResult.GetActor();
+			FString TileName = HitComponent->GetName();
+			FVector HitLocation = HitResult.Location;
+
+			UE_LOG(LogTemp, Warning, TEXT("Clicked on tile: %s at location: %s"), 
+				*TileName, *HitLocation.ToString());
+
+			// If you need to access the tile actor specifically
+			if (ABG_Tile* Tile = Cast<ABG_Tile>(HitActor))
+			{
+				// Do something with the tile
+				UE_LOG(LogTemp, Warning, TEXT("Clicked on ABG_Tile: %s"), *Tile->GetName());
+				// You can call methods on the tile here
+			}
+		}
+		else
+		{
+			UE_LOG(LogTemp, Display, TEXT("Clicked on non-tile object: %s"), 
+				HitResult.GetActor() ? *HitResult.GetActor()->GetName() : TEXT("None"));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Display, TEXT("Click did not hit any object"));
+	}
 }
 
 void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)

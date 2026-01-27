@@ -12,6 +12,10 @@ void UDevMode_Widget::NativeConstruct()
 	{
 		WidgetTitle->SetText(FText::FromString(TEXT("Developer Widget")));
 	}
+	if (SelectedTile)
+	{
+		SelectedTile->SetText(FText::FromString(TEXT("Selected Tile: N/A")));
+	}
 
 	initializeButtonLabels();
 

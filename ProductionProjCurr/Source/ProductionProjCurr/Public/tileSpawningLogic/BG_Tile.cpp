@@ -19,6 +19,8 @@ ABG_Tile::ABG_Tile()
 	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
 	tileMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+	Tags.Add(FName("Tile"));
 }
 
 void ABG_Tile::BeginPlay()

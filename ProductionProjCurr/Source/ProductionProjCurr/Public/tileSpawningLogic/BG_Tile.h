@@ -38,4 +38,5 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 		FVector2D gridCoordinates;
 
 
+
 };

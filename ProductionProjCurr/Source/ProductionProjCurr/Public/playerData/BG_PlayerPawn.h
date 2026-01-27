@@ -19,6 +19,7 @@
 #include "BG_PlayerPawn.generated.h"
 
 
+
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn
 {
@@ -105,5 +106,7 @@ public:
 	TSubclassOf<UUserWidget> devMenuWidgetRef;
 	UPROPERTY()
 	class UUserWidget* devMenuWidgetInstance; 
+
+
 	// developer
 };
