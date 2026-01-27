@@ -3,12 +3,8 @@
 
 #include "BG_PlayerPawn.h" //must be at top
 
-#include "GameFramework/FloatingPawnMovement.h"
-#include "EnhancedInputComponent.h"
-#include "EnhancedInputSubsystems.h"
-#include "InputActionValue.h"
-#include "Components/SkeletalMeshComponent.h"
-#include "GameFramework/SpectatorPawnMovement.h"
+
+
 
 
 // Sets default values
@@ -62,33 +58,29 @@ void ABG_PlayerPawn::BeginPlay()
 		playerController->bEnableMouseOverEvents = true;
 
 		FInputModeGameAndUI mode;
-
 		playerController->SetInputMode(mode);
 	}
+
+	// Create the dev menu widget
+	if (devMenuWidgetRef)
+	{
+		devMenuWidgetInstance = CreateWidget<UUserWidget>(GetWorld(), devMenuWidgetRef);
+		
+		if (devMenuWidgetInstance)
+		{
+			devMenuWidgetInstance->AddToViewport();
+			devMenuWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Failed to create dev menu widget!"));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("devMenuWidgetRef is not set in Blueprint!"));
+	}
 }
-
-
-
-
-void ABG_PlayerPawn::clickCallback()
-{
-	UE_LOG(LogTemp, Display, TEXT("click callback called"));
-
-	//playerController->DeprojectMousePositionToWorld(
-	//	GetWorld()
-	//)
-}
-
-void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)
-{
-	float scrollValue = Value.Get<float>();
-
-	float armLength = springArm->TargetArmLength;
-	
-	springArm->TargetArmLength = ((scrollValue * 50.0f) + (armLength));
-
-}
-
 
 // Called every frame
 void ABG_PlayerPawn::Tick(float DeltaTime)
@@ -111,6 +103,9 @@ void ABG_PlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::MoveCallback);
 		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::LookCallback);
 		EnhancedInputComponent->BindAction(scrollAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::scrollCallback);
+
+		//developer
+		EnhancedInputComponent->BindAction(openDevMenu, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::OpenDevMenuCallback);
 
 	}
 	else
@@ -177,4 +172,36 @@ void ABG_PlayerPawn::OnEndMouseOver(UPrimitiveComponent* TouchedComponent)
 {
 	UE_LOG(LogTemp, Warning, TEXT("player mouse STOPPED overlapping"));
 
+}
+
+void ABG_PlayerPawn::OpenDevMenuCallback(const FInputActionValue& Value)
+{
+	if (devMenuWidgetInstance->IsVisible())
+	{
+		devMenuWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
+	}
+	else
+	{
+	}
+	{
+		devMenuWidgetInstance->SetVisibility(ESlateVisibility::Visible);
+	}
+}
+
+void ABG_PlayerPawn::clickCallback()
+{
+	UE_LOG(LogTemp, Display, TEXT("click callback called"));
+
+	// playerController->DeprojectMousePositionToWorld(
+	//	GetWorld()
+	//)
+}
+
+void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)
+{
+	float scrollValue = Value.Get<float>();
+
+	float armLength = springArm->TargetArmLength;
+
+	springArm->TargetArmLength = ((scrollValue * 50.0f) + (armLength));
 }

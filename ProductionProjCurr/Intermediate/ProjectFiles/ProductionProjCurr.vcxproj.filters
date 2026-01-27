@@ -11,7 +11,9 @@
     <None Include="..\..\Source\ProductionProjCurrEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.clang-format" />
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -51,12 +53,18 @@
     <Filter Include="Source\ProductionProjCurr\Private">
       <UniqueIdentifier>{6C7AB881-23CC-3AC1-95A1-ECF84B730CC2}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\DevMode_Widget.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Public">
       <UniqueIdentifier>{9664A9DA-BD2D-3ABC-8239-4F68364AEA1D}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\DevMode_Widget.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\animations">
       <UniqueIdentifier>{20D59EF5-F078-3D92-908B-702F7B5E5CC0}</UniqueIdentifier>
     </Filter>
@@ -129,6 +137,5 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Token.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
-    <None Include="..\..\.clang-format" />
   </ItemGroup>
 </Project>

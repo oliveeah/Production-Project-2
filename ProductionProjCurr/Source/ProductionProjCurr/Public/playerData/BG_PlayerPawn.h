@@ -7,7 +7,17 @@
 #include "InputAction.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "GameFramework/FloatingPawnMovement.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
+#include "InputActionValue.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/SpectatorPawnMovement.h"
+
+#include "DevMode_Widget.h"
+
 #include "BG_PlayerPawn.generated.h"
+
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn
@@ -41,10 +51,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	UInputAction* scrollAction;
 
+	//developer-----------------
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+	UInputAction* openDevMenu;
+	//developer-----------------
+
 	//UI
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3D UI")
 	USkeletalMeshComponent* UI_FactionCharacter;
 protected:
+
 	/** Called for movement input */
 	void MoveCallback(const FInputActionValue& Value);
 
@@ -66,30 +82,28 @@ protected:
 	UFUNCTION()
 	void OnEndMouseOver(UPrimitiveComponent* TouchedComponent);
 
-public:
-	// Sets default values for this pawn's properties
-	ABG_PlayerPawn();
+	// developer-----------------
+	UFUNCTION()
+	void OpenDevMenuCallback(const FInputActionValue& Value);
+	// developer-----------------
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-protected:
-
-
-
-public:	
+public:		
+	// Sets default values for this pawn's properties
+	ABG_PlayerPawn();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-public:
-     
-
-
-
-	//temp
-	float targetArmLength = 0.0f;
+	//developer
+	UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TSubclassOf<UUserWidget> devMenuWidgetRef;
+	UPROPERTY()
+	class UUserWidget* devMenuWidgetInstance; 
+	// developer
 };

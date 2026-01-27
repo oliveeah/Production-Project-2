@@ -20,7 +20,8 @@ class UPrimitiveComponent;
 struct FInputActionValue;
 
 // ********** Begin Class ABG_PlayerPawn ***********************************************************
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOpenDevMenuCallback); \
 	DECLARE_FUNCTION(execOnEndMouseOver); \
 	DECLARE_FUNCTION(execOnBeginMouseOver); \
 	DECLARE_FUNCTION(execDoMove); \
@@ -30,7 +31,7 @@ struct FInputActionValue;
 
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_PlayerPawn_NoRegister();
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABG_PlayerPawn(); \
 	friend struct Z_Construct_UClass_ABG_PlayerPawn_Statics; \
@@ -41,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(ABG_PlayerPawn)
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABG_PlayerPawn(ABG_PlayerPawn&&) = delete; \
 	ABG_PlayerPawn(const ABG_PlayerPawn&) = delete; \
@@ -51,13 +52,13 @@ public: \
 	NO_API virtual ~ABG_PlayerPawn();
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_12_PROLOG
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_GENERATED_BODY \
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_22_PROLOG
+#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
