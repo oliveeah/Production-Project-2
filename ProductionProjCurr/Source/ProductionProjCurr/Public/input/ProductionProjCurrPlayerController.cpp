@@ -141,8 +141,6 @@ void AProductionProjCurrPlayerController::ClickCallback()
 	if (bHit && HitResult.GetActor())
 	{
 		AActor* HitActor = HitResult.GetActor();
-		UE_LOG(LogTemp, Warning, TEXT("Clicked on: %s"), *HitActor->GetName());
-
 		if (HitActor && HitActor->GetClass()->ImplementsInterface(UInteractionInterface::StaticClass()))
 		{
 			IInteractionInterface::Execute_ReactToPlayerInteraction(HitActor); // This is the Execute_* function. The asterisk means your function name. :)

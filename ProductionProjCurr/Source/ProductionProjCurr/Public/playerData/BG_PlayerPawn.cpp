@@ -43,10 +43,9 @@ ABG_PlayerPawn::ABG_PlayerPawn()
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
 
-void ABG_PlayerPawn::ReactToPlayerInteraction()
-{
-	UE_LOG(LogTemp, Display, TEXT("Player Pawn interacted with"));
-}
+
+
+
 
 // Called when the game starts or when spawned
 void ABG_PlayerPawn::BeginPlay()

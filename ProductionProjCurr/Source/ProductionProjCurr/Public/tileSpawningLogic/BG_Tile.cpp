@@ -41,12 +41,13 @@ void ABG_Tile::OnDebugToggled()
 
 }
 
-void ABG_Tile::ReactToPlayerInteraction()
+void ABG_Tile::ReactToPlayerInteraction_Implementation()
 {
 	FString name = this->GetName();
 
 	UE_LOG(LogTemp, Warning, TEXT("tile.cpp reactToPlayerInteractioncalled, tile name: %s"), *name);
 }
+
 
 
 

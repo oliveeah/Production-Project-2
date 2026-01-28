@@ -25,7 +25,7 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		UFUNCTION()
 		void OnDebugToggled();
 
-		virtual void ReactToPlayerInteraction() override;
+		virtual void ReactToPlayerInteraction_Implementation() override;
 
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")

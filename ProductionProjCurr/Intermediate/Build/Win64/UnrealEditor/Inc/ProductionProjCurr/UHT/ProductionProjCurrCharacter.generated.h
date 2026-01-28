@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class AProductionProjCurrCharacter *********************************************
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execinteractCallback); \
 	DECLARE_FUNCTION(exectoggleBuildModeFn); \
 	DECLARE_FUNCTION(execUsePressed); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrCharacter_NoRegister();
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAProductionProjCurrCharacter(); \
 	friend struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(AProductionProjCurrCharacter)
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AProductionProjCurrCharacter(AProductionProjCurrCharacter&&) = delete; \
 	AProductionProjCurrCharacter(const AProductionProjCurrCharacter&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~AProductionProjCurrCharacter();
 
 
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_19_PROLOG
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_GENERATED_BODY \
+#define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_19_PROLOG
+#define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_INCLASS_NO_PURE_DECLS \
+	FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,6 +63,6 @@ class AProductionProjCurrCharacter;
 // ********** End Class AProductionProjCurrCharacter ***********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h
+#define CURRENT_FILE_ID FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

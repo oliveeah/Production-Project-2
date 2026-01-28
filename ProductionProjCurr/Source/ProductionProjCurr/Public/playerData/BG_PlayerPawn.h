@@ -22,13 +22,12 @@
 
 
 UCLASS()
-class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn, public IInteractionInterface
+class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
 
-		virtual void ReactToPlayerInteraction() override;
 
 	/** components  */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))

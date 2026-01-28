@@ -20,7 +20,6 @@ ENGINE_API UClass* Z_Construct_UClass_USpectatorPawnMovement_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_PlayerPawn();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_PlayerPawn_NoRegister();
-PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_UInteractionInterface_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
@@ -123,7 +122,6 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_devMenuWidgetInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
-	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABG_PlayerPawn>::IsAbstract,
 	};
@@ -149,9 +147,6 @@ UObject* (*const Z_Construct_UClass_ABG_PlayerPawn_Statics::DependentSingletons[
 	(UObject* (*)())Z_Construct_UPackage__Script_ProductionProjCurr,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_PlayerPawn_Statics::DependentSingletons) < 16);
-const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABG_PlayerPawn_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UInteractionInterface_NoRegister, (int32)VTABLE_OFFSET(ABG_PlayerPawn, IInteractionInterface), false },  // 1406007049
-};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ABG_PlayerPawn_Statics::ClassParams = {
 	&ABG_PlayerPawn::StaticClass,
 	"Game",
@@ -159,11 +154,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ABG_PlayerPawn_Statics:
 	DependentSingletons,
 	nullptr,
 	Z_Construct_UClass_ABG_PlayerPawn_Statics::PropPointers,
-	InterfaceParams,
+	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_ABG_PlayerPawn_Statics::PropPointers),
-	UE_ARRAY_COUNT(InterfaceParams),
+	0,
 	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_PlayerPawn_Statics::Class_MetaDataParams), Z_Construct_UClass_ABG_PlayerPawn_Statics::Class_MetaDataParams)
 };
@@ -180,14 +175,14 @@ ABG_PlayerPawn::~ABG_PlayerPawn() {}
 // ********** End Class ABG_PlayerPawn *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics
+struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 816309825U) },
+		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 3128764192U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_2565358008(TEXT("/Script/ProductionProjCurr"),
-	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_3814918665(TEXT("/Script/ProductionProjCurr"),
+	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
