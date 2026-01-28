@@ -3,6 +3,9 @@
 
 #include "DevMode_Widget.h"
 #include <Kismet/GameplayStatics.h>
+#include "tileSpawningLogic/TileManager.h"
+#include "Engine/World.h"           // For GetWorld()
+#include "EngineUtils.h"            // For TActorIterator
 
 void UDevMode_Widget::NativeConstruct()
 {
@@ -34,6 +37,19 @@ void UDevMode_Widget::NativeConstruct()
 	if (SwapCurrentPlayer_Button)
 	{
 		SwapCurrentPlayer_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::SwapCurrentPlayer_ButtonClicked);
+	}
+
+	// Find the first TileManager actor in the current world and assign it
+	for (TActorIterator<ATileManager> It(GetWorld()); It; ++It)
+	{
+		DevTileManager = *It;
+		UE_LOG(LogTemp, Display, TEXT("DevTileManager found and assigned!"));
+		break;
+	}
+
+	if (!DevTileManager)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed to find TileManager in the level!"));
 	}
 }
 
@@ -80,6 +96,7 @@ void UDevMode_Widget::ShowTileCoord_ButtonClicked()
 	if (AProductionProjCurrGameMode* GameMode = Cast<AProductionProjCurrGameMode>(UGameplayStatics::GetGameMode(this)))
 	{
 		GameMode->ToggleTileDebugCoordinates(); 
+
 	}
 }
 
@@ -90,7 +107,21 @@ void UDevMode_Widget::ShowAdjacentTiles_ButtonClicked()
 
 void UDevMode_Widget::OwnTiles_ButtonClicked()
 {
-	UE_LOG(LogTemp, Display, TEXT("own tiles button clicked"));
+	if (SelectedTile)
+	{
+		if (DevTileManager)
+		{
+			FString coords = DevTileManager->GetSelectedTileCoordinates();
+			SelectedTile->SetText(FText::FromString(FString::Printf(TEXT("Selected Tile: %s"), *coords)));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Display, TEXT("fail"));
+			SelectedTile->SetText(FText::FromString(TEXT("Selected Tile: N/A")));
+		}
+
+
+	}
 }
 
 void UDevMode_Widget::SwapCurrentPlayer_ButtonClicked()

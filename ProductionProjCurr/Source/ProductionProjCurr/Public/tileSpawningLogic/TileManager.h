@@ -4,8 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "BG_TileSpawner.h"
 #include "TileManager.generated.h"
+
+// Forward declarations to break circular includes
+class ABG_Tile;
+class ABG_TileSpawner;
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATileManager : public AActor
@@ -24,4 +27,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
+	UPROPERTY(BlueprintReadOnly)
+	ABG_Tile* SelectedTile;
+
+	FString& GetSelectedTileCoordinates();
+	
+	UFUNCTION()
+	// Called to bind tile delegates
+	void OnTileClicked(ABG_Tile* Tile);
+
+	// Returns neighbors
+	TArray<ABG_Tile*> GetAdjacentTiles(ABG_Tile* Tile, bool bIncludeDiagonals = false);
 };

@@ -1,8 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "tileSpawningLogic/TileManager.h"  
+#include "tileSpawningLogic/BG_TileSpawner.h"
+#include "tileSpawningLogic/BG_Tile.h"
+#include "Kismet/GameplayStatics.h" // For GetActorOfClass
 
-#include "tileSpawningLogic/TileManager.h"
-#include <Kismet/GameplayStatics.h>
 
 // Sets default values
 ATileManager::ATileManager()
@@ -27,11 +29,37 @@ void ATileManager::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("TileSpawner not found!"));
 	}
 
+	
 }
 
 // Called every frame
 void ATileManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+
+FString& ATileManager::GetSelectedTileCoordinates()
+{
+		static FString coords = TEXT("N/A");
+		if (SelectedTile)
+		{
+			coords = FString::Printf(TEXT("(%d, %d)"), (int)SelectedTile->getGridCoordinates().X, (int)SelectedTile->getGridCoordinates().Y);
+		}
+		else
+		{
+			coords = TEXT("N/A");
+		}
+		return coords;
+}
+
+void ATileManager::OnTileClicked(ABG_Tile* Tile)
+{
+	SelectedTile = Tile;
+}
+
+TArray<ABG_Tile*> ATileManager::GetAdjacentTiles(ABG_Tile* Tile, bool bIncludeDiagonals)
+{
+	return TArray<ABG_Tile*>();
 }
 

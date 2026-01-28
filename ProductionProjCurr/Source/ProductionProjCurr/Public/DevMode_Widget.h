@@ -9,6 +9,7 @@
 #include "gameMode/ProductionProjCurrGameMode.h"
 #include "DevMode_Widget.generated.h"
 
+class ATileManager;
 /**
  * 
  */
@@ -61,4 +62,7 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
 	TObjectPtr<UTextBlock> SelectedTile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	ATileManager* DevTileManager;
 };

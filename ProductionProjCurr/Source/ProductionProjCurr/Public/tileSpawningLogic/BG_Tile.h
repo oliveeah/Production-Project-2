@@ -4,10 +4,14 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Components/StaticMeshComponent.h"
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h" 
+#include "GameFramework/Actor.h"
 #include "playerData/InteractionInterface.h"
-
 #include "BG_Tile.generated.h"
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
+	FOnTileSelected,
+	ABG_Tile*, 
+	Tile);
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterface
@@ -27,6 +31,11 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 
 		virtual void ReactToPlayerInteraction_Implementation() override;
 
+		void setSelectedTile();
+
+		UPROPERTY(BlueprintAssignable, Category = "Tile Debug")
+
+		FOnTileSelected OnTileSelectedDelegate;
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* tileMesh;
@@ -37,6 +46,7 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
 		FVector2D gridCoordinates;
 
+		FVector2D getGridCoordinates() const { return gridCoordinates; }
 
 
 };

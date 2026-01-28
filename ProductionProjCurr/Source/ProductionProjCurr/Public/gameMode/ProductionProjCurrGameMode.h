@@ -35,6 +35,13 @@ public:
 		OnToggleTileDebugCoordinates.Broadcast();
 	}
 
+public:
+	UFUNCTION(BlueprintCallable)
+	ATileManager* GetTileManager() const { return TileManagerInstance; }
+
+private:
+	UPROPERTY()
+	ATileManager* TileManagerInstance;
 };
 
 

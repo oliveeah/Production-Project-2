@@ -4,6 +4,8 @@
 #include "BG_Tile.h"
 #include <gameMode/ProductionProjCurrGameMode.h>
 #include <Kismet/GameplayStatics.h>
+#include "TileManager.h" // Only if you need to reference it here
+
 
 ABG_Tile::ABG_Tile()
 {
@@ -31,6 +33,8 @@ void ABG_Tile::BeginPlay()
 	{
 		GameMode->OnToggleTileDebugCoordinates.AddDynamic(this, &ABG_Tile::OnDebugToggled);
 	}
+
+
 }
 
 void ABG_Tile::OnDebugToggled()
@@ -43,10 +47,17 @@ void ABG_Tile::OnDebugToggled()
 
 void ABG_Tile::ReactToPlayerInteraction_Implementation()
 {
-	FString name = this->GetName();
+	FString DebugText = FString::Printf(TEXT("^^^"));
+	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 200), DebugText, nullptr, FColor::Red, 5.0f, true);
 
-	UE_LOG(LogTemp, Warning, TEXT("tile.cpp reactToPlayerInteractioncalled, tile name: %s"), *name);
+	setSelectedTile();
 }
+
+void ABG_Tile::setSelectedTile()
+{
+	OnTileSelectedDelegate.Broadcast(this);
+}
+
 
 
 
