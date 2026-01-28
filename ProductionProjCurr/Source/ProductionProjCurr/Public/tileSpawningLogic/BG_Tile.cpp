@@ -33,20 +33,12 @@ void ABG_Tile::BeginPlay()
 	}
 }
 
-void ABG_Tile::OnDebugToggled(bool bNewShowDebug)
+void ABG_Tile::OnDebugToggled()
 {
-    bShowDebug = bNewShowDebug;
-    
-    // Example: Draw 3D debug text showing grid coordinates
-    if (bShowDebug)
-    {
-        FString DebugText = FString::Printf(TEXT("(%d, %d)"), (int)gridCoordinates.X, (int)gridCoordinates.Y);
-        DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 100), DebugText, nullptr, FColor::Green, 5.0f, true);
-    }
-    else
-    {
-        FlushPersistentDebugLines(GetWorld());
-    }
+
+    FString DebugText = FString::Printf(TEXT("(%d, %d)"), (int)gridCoordinates.X, (int)gridCoordinates.Y);
+    DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 100), DebugText, nullptr, FColor::Green, 5.0f, true);
+
 }
 
 

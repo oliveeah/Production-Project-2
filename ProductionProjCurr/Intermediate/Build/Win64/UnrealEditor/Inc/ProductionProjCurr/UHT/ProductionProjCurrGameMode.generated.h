@@ -18,7 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Delegate FOnToggleTileDebugCoordinates *****************************************
 #define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h_10_DELEGATE \
-PRODUCTIONPROJCURR_API void FOnToggleTileDebugCoordinates_DelegateWrapper(const FMulticastScriptDelegate& OnToggleTileDebugCoordinates, bool bShowDebugTileCoordinates);
+PRODUCTIONPROJCURR_API void FOnToggleTileDebugCoordinates_DelegateWrapper(const FMulticastScriptDelegate& OnToggleTileDebugCoordinates);
 
 
 // ********** End Delegate FOnToggleTileDebugCoordinates *******************************************

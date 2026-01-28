@@ -29,7 +29,7 @@ class PRODUCTIONPROJCURR_API ABG_TileSpawner : public AActor
 	ABG_TileSpawner();
 	virtual void BeginPlay() override;
 
-public:
+protected:
 	// Grid Setup
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Setup")
 	float tileWidth;
@@ -85,4 +85,5 @@ public:
 	TSubclassOf<ABG_Tile> GetTileClassForBiome(EBiomeType Biome) const;
 	EBiomeType generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise);
 	ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform);
+
 };

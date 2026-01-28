@@ -7,7 +7,7 @@
 #include "ProductionProjCurrGameMode.generated.h"
 
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnToggleTileDebugCoordinates, bool, bShowDebugTileCoordinates);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnToggleTileDebugCoordinates);
 /**
  *  Simple GameMode for a third person game
  */
@@ -29,14 +29,10 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Tile Debug")
 	FOnToggleTileDebugCoordinates OnToggleTileDebugCoordinates;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Debug")
-	bool bShowTileDebugCoordinates = false;
-
 	UFUNCTION(BlueprintCallable, Category = "Tile Debug")
 	void ToggleTileDebugCoordinates()
 	{
-		bShowTileDebugCoordinates = !bShowTileDebugCoordinates;
-		OnToggleTileDebugCoordinates.Broadcast(bShowTileDebugCoordinates);
+		OnToggleTileDebugCoordinates.Broadcast();
 	}
 
 };

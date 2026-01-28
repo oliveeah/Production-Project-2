@@ -4,26 +4,63 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "InputActionValue.h"
 #include "ProductionProjCurrPlayerController.generated.h"
 
 class UInputMappingContext;
+class UInputAction;
+class ABG_PlayerPawn;
 
 /**
  *  Basic PlayerController class for a third person game
  *  Manages input mappings
  */
-UCLASS(abstract)
-class AProductionProjCurrPlayerController : public APlayerController
+UCLASS()
+class PRODUCTIONPROJCURR_API AProductionProjCurrPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+public:
+	AProductionProjCurrPlayerController();
 	
 protected:
+	virtual void BeginPlay() override;
+	virtual void SetupInputComponent() override;
+	virtual void OnPossess(APawn* InPawn) override;
 
-	/** Input Mapping Contexts */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category ="Input", meta = (AllowPrivateAccess = "true"))
+	// ========== INPUT ACTIONS (MOVED FROM PAWN) ==========
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Actions")
+	UInputAction* moveAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Actions")
+	UInputAction* lookAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Actions")
+	UInputAction* clickAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Actions")
+	UInputAction* scrollAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Actions")
+	UInputAction* openDevMenu;
+
+	// Input Mapping Context
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Contexts")
 	TArray<UInputMappingContext*> DefaultMappingContexts;
 
-	/** Input mapping context setup */
-	virtual void SetupInputComponent() override;
+	// ========== INPUT CALLBACKS (MOVED FROM PAWN) ==========
+	void MoveCallback(const FInputActionValue& Value);
+	void LookCallback(const FInputActionValue& Value);
+	void ClickCallback();
+	void ScrollCallback(const FInputActionValue& Value);
+	void OpenDevMenuCallback(const FInputActionValue& Value);
 
+
+private:
+	// Cache reference to controlled pawn
+	UPROPERTY()
+	ABG_PlayerPawn* ControlledPawn;
+
+	// Helper function to get controlled pawn
+	ABG_PlayerPawn* GetControlledPawn() const;
 };

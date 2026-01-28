@@ -48,19 +48,7 @@ void ABG_PlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	playerController = Cast<APlayerController>(GetController());
-
-	if (playerController)
-	{
-		playerController->bShowMouseCursor = true;
-		playerController->bEnableClickEvents = true;
-		playerController->bEnableMouseOverEvents = true;
-
-		FInputModeGameAndUI mode;
-		playerController->SetInputMode(mode);
-	}
-
-	// Create the dev menu widget
+	/*developer*/
 	if (devMenuWidgetRef)
 	{
 		devMenuWidgetInstance = CreateWidget<UUserWidget>(GetWorld(), devMenuWidgetRef);
@@ -84,134 +72,26 @@ void ABG_PlayerPawn::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void ABG_PlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ABG_PlayerPawn::ToggleDevMenu()
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	// Set up action bindings
-	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-
-
-		// Moving
-		EnhancedInputComponent->BindAction(clickAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::clickCallback);
-		EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::MoveCallback);
-		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::LookCallback);
-		EnhancedInputComponent->BindAction(scrollAction, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::scrollCallback);
-
-		//developer
-		EnhancedInputComponent->BindAction(openDevMenu, ETriggerEvent::Triggered, this, &ABG_PlayerPawn::OpenDevMenuCallback);
-
-	}
-	else
+	if (devMenuWidgetInstance)
 	{
-		UE_LOG(LogTemp, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
-	}
-}
-
-void ABG_PlayerPawn::MoveCallback(const FInputActionValue& Value)
-{
-	// input is a Vector2D
-	FVector2D MovementVector = Value.Get<FVector2D>();
-
-	// route the input
-	DoMove(MovementVector.X, MovementVector.Y);
-}
-
-void ABG_PlayerPawn::LookCallback(const FInputActionValue& Value)
-{
-	FVector2D InputVector = Value.Get<FVector2D>();
-
-	if (IsValid(Controller))
-	{
-		AddControllerYawInput(InputVector.X);
-		AddControllerPitchInput(InputVector.Y);
-	}
-}
-
-
-void ABG_PlayerPawn::DoMove(float Right, float Forward)
-{
-	if (GetController() != nullptr)
-	{
-		// find out which way is forward
-		const FRotator Rotation = GetController()->GetControlRotation();
-		const FRotator YawRotation(0, Rotation.Yaw, 0);
-
-		// get forward vector
-		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-		// get right vector 
-		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
-		// add movement 
-		AddMovementInput(ForwardDirection, Forward);
-		AddMovementInput(RightDirection, Right);
-	}
-}
-
-void ABG_PlayerPawn::OpenDevMenuCallback(const FInputActionValue& Value)
-{
-	if (devMenuWidgetInstance->IsVisible())
-	{
-		devMenuWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
-	}
-	else
-	{
-		devMenuWidgetInstance->SetVisibility(ESlateVisibility::Visible);
-	}
-}
-
-void ABG_PlayerPawn::clickCallback()
-{
-	UE_LOG(LogTemp, Display, TEXT("click callback called"));
-
-	if (!playerController)
-	{
-		return;
-	}
-
-	// Get the mouse cursor position and perform a line trace
-	FHitResult HitResult;
-	bool bHit = playerController->GetHitResultUnderCursor(ECC_Visibility, false, HitResult);
-
-	if (bHit)
-	{
-		UPrimitiveComponent* HitComponent = HitResult.GetComponent();
-		
-		if (HitComponent && HitComponent->ComponentHasTag(FName("Tile")))
+		ESlateVisibility currentVisibility = devMenuWidgetInstance->GetVisibility();
+		if (currentVisibility == ESlateVisibility::Visible)
 		{
-			AActor* HitActor = HitResult.GetActor();
-			FString TileName = HitComponent->GetName();
-			FVector HitLocation = HitResult.Location;
-
-			UE_LOG(LogTemp, Warning, TEXT("Clicked on tile: %s at location: %s"), 
-				*TileName, *HitLocation.ToString());
-
-			// If you need to access the tile actor specifically
-			if (ABG_Tile* Tile = Cast<ABG_Tile>(HitActor))
-			{
-				// Do something with the tile
-				UE_LOG(LogTemp, Warning, TEXT("Clicked on ABG_Tile: %s"), *Tile->GetName());
-				// You can call methods on the tile here
-			}
+			devMenuWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
 		}
 		else
 		{
-			UE_LOG(LogTemp, Display, TEXT("Clicked on non-tile object: %s"), 
-				HitResult.GetActor() ? *HitResult.GetActor()->GetName() : TEXT("None"));
+			devMenuWidgetInstance->SetVisibility(ESlateVisibility::Visible);
 		}
 	}
-	else
-	{
-		UE_LOG(LogTemp, Display, TEXT("Click did not hit any object"));
-	}
 }
 
-void ABG_PlayerPawn::scrollCallback(const FInputActionValue& Value)
+void ABG_PlayerPawn::AdjustCameraZoom(float scrollAmount)
 {
-	float scrollValue = Value.Get<float>();
-
-	float armLength = springArm->TargetArmLength;
-
-	springArm->TargetArmLength = ((scrollValue * 50.0f) + (armLength));
+	float newArmLength = springArm->TargetArmLength + scrollAmount;
+	newArmLength = FMath::Clamp(newArmLength, 300.f, 1500.f);
+	springArm->TargetArmLength = newArmLength;
 }
+

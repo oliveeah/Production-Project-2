@@ -37,55 +37,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
 	class USpectatorPawnMovement* SpectatorMovementComponent;
 
-	APlayerController* playerController;
-
-	//input
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	UInputAction* moveAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	UInputAction* lookAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	UInputAction* clickAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	UInputAction* scrollAction;
-
-	//developer-----------------
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	UInputAction* openDevMenu;
-	//developer-----------------
-
 	//UI
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3D UI")
 	USkeletalMeshComponent* UI_FactionCharacter;
 protected:
 
-	/** Called for movement input */
-	void MoveCallback(const FInputActionValue& Value);
 
-	/** Called for looking input */
-	void LookCallback(const FInputActionValue& Value);
-
-	UFUNCTION(BlueprintCallable, Category = "Input")
-	virtual void clickCallback();
-
-	UFUNCTION(BlueprintCallable, Category = "Input")
-	virtual void scrollCallback(const FInputActionValue& Value);
-
-	UFUNCTION(BlueprintCallable, Category = "Input")
-	virtual void DoMove(float Right, float Forward);
-
-	UFUNCTION()
-	void OnBeginMouseOver(UPrimitiveComponent* TouchedComponent);
-
-	UFUNCTION()
-	void OnEndMouseOver(UPrimitiveComponent* TouchedComponent);
-
-	// developer-----------------
-	UFUNCTION()
-	void OpenDevMenuCallback(const FInputActionValue& Value);
 	// developer-----------------
 
 protected:
@@ -98,15 +55,15 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 	//developer
 	UPROPERTY(EditDefaultsOnly, Category = "UI")
 	TSubclassOf<UUserWidget> devMenuWidgetRef;
 	UPROPERTY()
 	class UUserWidget* devMenuWidgetInstance; 
 
+	void ToggleDevMenu();
+
+	void AdjustCameraZoom(float scrollAmount);
 
 	// developer
 };

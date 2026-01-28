@@ -140,7 +140,9 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
             "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\productionprojcurrgamemode.generated.h",
             "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\devmode_widget.generated.h",
-            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\bg_playerpawn.generated.h"
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\bg_playerpawn.generated.h",
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\source\\productionprojcurr\\public\\tilespawninglogic\\bg_tile.h",
+            "c:\\users\\linda\\documents\\github\\production-project-2\\productionprojcurr\\intermediate\\build\\win64\\unrealeditor\\inc\\productionprojcurr\\uht\\bg_tile.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -16,19 +16,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
-class UPrimitiveComponent;
-struct FInputActionValue;
-
 // ********** Begin Class ABG_PlayerPawn ***********************************************************
-#define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOpenDevMenuCallback); \
-	DECLARE_FUNCTION(execOnEndMouseOver); \
-	DECLARE_FUNCTION(execOnBeginMouseOver); \
-	DECLARE_FUNCTION(execDoMove); \
-	DECLARE_FUNCTION(execscrollCallback); \
-	DECLARE_FUNCTION(execclickCallback);
-
-
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_PlayerPawn_NoRegister();
 
 #define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_26_INCLASS_NO_PURE_DECLS \
@@ -56,7 +44,6 @@ public: \
 #define FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_26_INCLASS_NO_PURE_DECLS \
 	FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h_26_ENHANCED_CONSTRUCTORS \
 private: \

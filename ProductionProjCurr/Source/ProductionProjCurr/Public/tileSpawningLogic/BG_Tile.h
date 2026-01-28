@@ -22,11 +22,10 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 		virtual void BeginPlay() override;
 
 		UFUNCTION()
-		void OnDebugToggled(bool bNewShowDebug);
+		void OnDebugToggled();
 
 
-		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
-		bool bShowDebug = false;
+
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* tileMesh;
