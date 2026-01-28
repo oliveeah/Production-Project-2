@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "InputActionValue.h"
+#include "playerData/InteractionInterface.h"
 #include "ProductionProjCurrPlayerController.generated.h"
 
 class UInputMappingContext;
@@ -16,12 +17,14 @@ class ABG_PlayerPawn;
  *  Manages input mappings
  */
 UCLASS()
-class PRODUCTIONPROJCURR_API AProductionProjCurrPlayerController : public APlayerController
+class PRODUCTIONPROJCURR_API AProductionProjCurrPlayerController : public APlayerController, public IInteractionInterface
 {
 	GENERATED_BODY()
 
 public:
 	AProductionProjCurrPlayerController();
+
+
 	
 protected:
 	virtual void BeginPlay() override;

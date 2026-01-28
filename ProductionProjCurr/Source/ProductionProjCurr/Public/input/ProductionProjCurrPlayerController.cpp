@@ -13,6 +13,8 @@ AProductionProjCurrPlayerController::AProductionProjCurrPlayerController()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+
+
 void AProductionProjCurrPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -140,6 +142,11 @@ void AProductionProjCurrPlayerController::ClickCallback()
 	{
 		AActor* HitActor = HitResult.GetActor();
 		UE_LOG(LogTemp, Warning, TEXT("Clicked on: %s"), *HitActor->GetName());
+
+		if (HitActor && HitActor->GetClass()->ImplementsInterface(UInteractionInterface::StaticClass()))
+		{
+			IInteractionInterface::Execute_ReactToPlayerInteraction(HitActor); // This is the Execute_* function. The asterisk means your function name. :)
+		}
 		
 		// Add your tile interaction logic here
 	}
@@ -167,3 +174,4 @@ void AProductionProjCurrPlayerController::OpenDevMenuCallback(const FInputAction
 
 	_ControlledPawn->ToggleDevMenu();
 }
+

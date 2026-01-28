@@ -4,12 +4,13 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Components/StaticMeshComponent.h"
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "GameFramework/Actor.h" 
+#include "playerData/InteractionInterface.h"
+
 #include "BG_Tile.generated.h"
 
-
 UCLASS()
-class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
+class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterface
 {
 	GENERATED_BODY()
 
@@ -24,7 +25,7 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor
 		UFUNCTION()
 		void OnDebugToggled();
 
-
+		virtual void ReactToPlayerInteraction() override;
 
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")

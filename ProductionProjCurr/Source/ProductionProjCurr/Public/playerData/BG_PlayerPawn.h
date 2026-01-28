@@ -16,16 +16,19 @@
 
 #include "DevMode_Widget.h"
 
+#include "playerData/InteractionInterface.h"
 #include "BG_PlayerPawn.generated.h"
 
 
 
 UCLASS()
-class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn
+class PRODUCTIONPROJCURR_API ABG_PlayerPawn : public APawn, public IInteractionInterface
 {
 	GENERATED_BODY()
 
 public:
+
+		virtual void ReactToPlayerInteraction() override;
 
 	/** components  */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))

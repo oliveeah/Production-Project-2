@@ -18,6 +18,7 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_PlayerPawn_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrPlayerController();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrPlayerController_NoRegister();
+PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_UInteractionInterface_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
 
@@ -124,6 +125,7 @@ struct Z_Construct_UClass_AProductionProjCurrPlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControlledPawn;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AProductionProjCurrPlayerController>::IsAbstract,
 	};
@@ -153,6 +155,9 @@ UObject* (*const Z_Construct_UClass_AProductionProjCurrPlayerController_Statics:
 	(UObject* (*)())Z_Construct_UPackage__Script_ProductionProjCurr,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UInteractionInterface_NoRegister, (int32)VTABLE_OFFSET(AProductionProjCurrPlayerController, IInteractionInterface), false },  // 1406007049
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::ClassParams = {
 	&AProductionProjCurrPlayerController::StaticClass,
 	"Game",
@@ -160,11 +165,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AProductionProjCurrPlay
 	DependentSingletons,
 	nullptr,
 	Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009003A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::Class_MetaDataParams), Z_Construct_UClass_AProductionProjCurrPlayerController_Statics::Class_MetaDataParams)
 };
@@ -184,10 +189,10 @@ AProductionProjCurrPlayerController::~AProductionProjCurrPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrPlayerController, AProductionProjCurrPlayerController::StaticClass, TEXT("AProductionProjCurrPlayerController"), &Z_Registration_Info_UClass_AProductionProjCurrPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrPlayerController), 3601537066U) },
+		{ Z_Construct_UClass_AProductionProjCurrPlayerController, AProductionProjCurrPlayerController::StaticClass, TEXT("AProductionProjCurrPlayerController"), &Z_Registration_Info_UClass_AProductionProjCurrPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrPlayerController), 643771792U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_4009046756(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_2704018413(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
