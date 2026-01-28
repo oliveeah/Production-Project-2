@@ -2,6 +2,7 @@
 
 
 #include "tileSpawningLogic/TileManager.h"
+#include <Kismet/GameplayStatics.h>
 
 // Sets default values
 ATileManager::ATileManager()
@@ -13,7 +14,19 @@ ATileManager::ATileManager()
 // Called when the game starts or when spawned
 void ATileManager::BeginPlay()
 {
-	Super::BeginPlay();	
+	Super::BeginPlay();
+
+	if (ABG_TileSpawner* TileSpawner = Cast<ABG_TileSpawner>(UGameplayStatics::GetActorOfClass(this, ABG_TileSpawner::StaticClass())))
+	{
+		UE_LOG(LogTemp, Display, TEXT("Found TileSpawner, binding to delegate"));
+
+		TileGrid = TileSpawner->getTileGrid();
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("TileSpawner not found!"));
+	}
+
 }
 
 // Called every frame

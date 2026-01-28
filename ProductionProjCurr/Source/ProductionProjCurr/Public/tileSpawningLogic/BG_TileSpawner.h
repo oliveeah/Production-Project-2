@@ -8,6 +8,7 @@
 #include "Noise/FastNoiseLite.h"
 #include "BG_TileSpawner.generated.h"
 
+// Delegate declaration for when tiles are spawned
 
 UENUM(BlueprintType)
 enum class EBiomeType : uint8
@@ -24,10 +25,18 @@ enum class EBiomeType : uint8
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_TileSpawner : public AActor
 {
+public:
 	GENERATED_BODY()
 
 	ABG_TileSpawner();
+
 	virtual void BeginPlay() override;
+
+
+	const TArray<TArray<ABG_Tile*>>& getTileGrid() const
+	{
+		return TileGrid;
+	}
 
 protected:
 	// Grid Setup
@@ -73,6 +82,8 @@ protected:
 	TSubclassOf<ABG_Tile> MountainTile;
 
 	TArray<TArray<ABG_Tile*>> TileGrid;
+
+
 
 
 
