@@ -28,6 +28,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void SetGridWidth(int32 Width) { GridWidth = Width; }
+	void SetGridHeight(int32 Height) { GridHeight = Height; }
+
+	int32 GridWidth;
+	int32 GridHeight;
 
 	UPROPERTY(BlueprintReadOnly)
 	ABG_Tile* SelectedTile;
@@ -39,7 +44,14 @@ public:
 	void OnTileClicked(ABG_Tile* Tile);
 
 	// Returns neighbors
-	TArray<FVector2D> GetAdjacentTiles(bool bIncludeDiagonals);
+	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange);
 
-void checkTile(int xToCheck, int yToCheck, TArray<FVector2D>& Neighbors);
+	bool HasTile(const FIntPoint& Coords) const;
+
+	UPROPERTY()
+	TMap<FIntPoint, ABG_Tile*> TileMap;
+
+	void RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile);
+
+
 };

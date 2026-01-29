@@ -60,6 +60,8 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 	Noise.SetFrequency(noiseFrequency);
 
 	TileGrid.SetNum(numberOfRows);
+	TileManager->SetGridWidth(numberOfColumns);
+	TileManager->SetGridHeight(numberOfRows);
 
 	for (int32 rows = 0; rows < numberOfRows; rows++)
 	{
@@ -83,10 +85,11 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 			if (NewTile)
 			{
 				TileGrid[rows][cols] = NewTile; 
-				NewTile->gridCoordinates = FVector2D(rows, cols);
+				NewTile->gridCoordinates = FIntPoint(cols, rows);
 				if (TileManager)
 				{
 					NewTile->OnTileSelectedDelegate.AddDynamic(TileManager, &ATileManager::OnTileClicked);
+					TileManager->RegisterTile(FIntPoint(cols, rows), NewTile); 
 				}
 				else
 				{

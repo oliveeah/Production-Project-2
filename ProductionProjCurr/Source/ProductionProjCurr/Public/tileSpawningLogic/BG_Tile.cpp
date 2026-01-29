@@ -40,15 +40,18 @@ void ABG_Tile::BeginPlay()
 void ABG_Tile::OnDebugToggled()
 {
 
-    FString DebugText = FString::Printf(TEXT("(%d, %d)"), (int)gridCoordinates.X, (int)gridCoordinates.Y);
-    DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 100), DebugText, nullptr, FColor::Green, 5.0f, true);
+FString DebugText = FString::Printf(
+		TEXT("(%d, %d)"),
+		gridCoordinates.X,
+		gridCoordinates.Y);
+
+	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 100), DebugText, nullptr, FColor::Green, 5.0f, true);
 
 }
 
 void ABG_Tile::ReactToPlayerInteraction_Implementation()
 {
-	FString DebugText = FString::Printf(TEXT("^^^"));
-	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 200), DebugText, nullptr, FColor::Red, 5.0f, true);
+	drawDebugPointer(FColor::Yellow);
 
 	setSelectedTile();
 }
@@ -56,6 +59,12 @@ void ABG_Tile::ReactToPlayerInteraction_Implementation()
 void ABG_Tile::setSelectedTile()
 {
 	OnTileSelectedDelegate.Broadcast(this);
+}
+
+void ABG_Tile::drawDebugPointer(FColor color)
+{
+	FString DebugText = FString::Printf(TEXT("^^^"));
+	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 200), DebugText, nullptr, color, 5.0f, true);
 }
 
 

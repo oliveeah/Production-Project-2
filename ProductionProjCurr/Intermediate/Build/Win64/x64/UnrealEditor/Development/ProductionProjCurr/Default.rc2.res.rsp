@@ -87,5 +87,5 @@
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
 /DPROJECT_PRODUCT_NAME="Third Person Game Template"
 /DPROJECT_PRODUCT_IDENTIFIER=ProductionProjCurr
-/fo "C:/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProductionProjCurr/Default.rc2.res"
+/fo "C:/Users/linda/Desktop/PP2/Production-Project-2/ProductionProjCurr/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProductionProjCurr/Default.rc2.res"
 "../Build/Windows/Resources/Default.rc2"

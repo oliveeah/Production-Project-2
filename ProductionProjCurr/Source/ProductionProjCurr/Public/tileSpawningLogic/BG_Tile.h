@@ -44,9 +44,10 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		UStaticMeshComponent* tileEdgeMesh;
 
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
-		FVector2D gridCoordinates;
+		FIntPoint gridCoordinates;
 
-		FVector2D getGridCoordinates() const { return gridCoordinates; }
+		FIntPoint getGridCoordinates() const { return gridCoordinates; }
 
+		void drawDebugPointer(FColor color);
 
 };

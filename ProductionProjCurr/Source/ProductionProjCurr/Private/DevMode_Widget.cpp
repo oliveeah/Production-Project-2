@@ -105,10 +105,10 @@ void UDevMode_Widget::ShowAdjacentTiles_ButtonClicked()
 
 	if(DevTileManager)
 	{
-		TArray<FVector2D> Neighbours = DevTileManager->GetAdjacentTiles(true);
+		TArray<FIntPoint> Neighbours = DevTileManager->GetAdjacentTiles(true, 0);
 		for (int i = 0; i < Neighbours.Num(); i++)
 		{
-			UE_LOG(LogTemp, Display, TEXT("Neighbour Tile Coords: (%d, %d)"), (int)Neighbours[i].X, (int)Neighbours[i].Y);
+			UE_LOG(LogTemp, Display, TEXT("Neighbour Tile Coords: (%d, %d)"), Neighbours[i].X, Neighbours[i].Y);
 		}
 	}
 }
