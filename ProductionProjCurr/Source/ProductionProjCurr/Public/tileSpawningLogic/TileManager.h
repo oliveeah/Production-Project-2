@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include <vector>
 #include "TileManager.generated.h"
 
 // Forward declarations to break circular includes
@@ -38,5 +39,7 @@ public:
 	void OnTileClicked(ABG_Tile* Tile);
 
 	// Returns neighbors
-	TArray<ABG_Tile*> GetAdjacentTiles(ABG_Tile* Tile, bool bIncludeDiagonals = false);
+	TArray<FVector2D> GetAdjacentTiles(bool bIncludeDiagonals);
+
+void checkTile(int xToCheck, int yToCheck, TArray<FVector2D>& Neighbors);
 };

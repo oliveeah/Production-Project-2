@@ -6,7 +6,7 @@
 #include "tileSpawningLogic/TileManager.h"
 #include "Engine/World.h"           // For GetWorld()
 #include "EngineUtils.h"            // For TActorIterator
-
+#include <vector>
 void UDevMode_Widget::NativeConstruct()
 {
 	Super::NativeConstruct();
@@ -96,13 +96,21 @@ void UDevMode_Widget::ShowTileCoord_ButtonClicked()
 	if (AProductionProjCurrGameMode* GameMode = Cast<AProductionProjCurrGameMode>(UGameplayStatics::GetGameMode(this)))
 	{
 		GameMode->ToggleTileDebugCoordinates(); 
-
 	}
 }
 
 void UDevMode_Widget::ShowAdjacentTiles_ButtonClicked()
 {
 	UE_LOG(LogTemp, Display, TEXT("show adjacent tiles button clicked"));
+
+	if(DevTileManager)
+	{
+		TArray<FVector2D> Neighbours = DevTileManager->GetAdjacentTiles(true);
+		for (int i = 0; i < Neighbours.Num(); i++)
+		{
+			UE_LOG(LogTemp, Display, TEXT("Neighbour Tile Coords: (%d, %d)"), (int)Neighbours[i].X, (int)Neighbours[i].Y);
+		}
+	}
 }
 
 void UDevMode_Widget::OwnTiles_ButtonClicked()

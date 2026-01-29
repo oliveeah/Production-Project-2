@@ -5,7 +5,6 @@
 #include "tileSpawningLogic/BG_Tile.h"
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
 
-
 // Sets default values
 ATileManager::ATileManager()
 {
@@ -58,8 +57,59 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile)
 	SelectedTile = Tile;
 }
 
-TArray<ABG_Tile*> ATileManager::GetAdjacentTiles(ABG_Tile* Tile, bool bIncludeDiagonals)
+TArray<FVector2D> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals)
 {
-	return TArray<ABG_Tile*>();
+	if (SelectedTile == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No tile selected!"));
+		return TArray<FVector2D>();
+	}
+
+	TArray<FVector2D> Neighbors;
+	if (!SelectedTile)
+		return Neighbors;
+
+	FVector2D SelectedCoords = SelectedTile->getGridCoordinates();
+	int	cx = (int)SelectedCoords.X;
+	int	cy = (int)SelectedCoords.Y;
+
+
+	for (int dx = -1; dx <= 1; dx++)
+	{
+		for (int dy = -1; dy <= 1; dy++)
+		{
+			if (dx == 0 && dy == 0)
+				continue; // Skip the selected tile itself
+
+
+			int nx = cx + dx;
+			int ny = cy + dy;
+
+			checkTile(nx, ny, Neighbors);
+
+		}
+	}
+
+
+
+	return Neighbors;
 }
+
+
+
+	void ATileManager::checkTile(int xToCheck, int yToCheck, TArray<FVector2D>& Neighbors)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Checking (%d, %d)"), xToCheck, yToCheck);
+		if (TileGrid.IsValidIndex(xToCheck) && TileGrid[xToCheck].IsValidIndex(yToCheck))
+		{
+			UE_LOG(LogTemp, Display, TEXT("neighbour : (%d, %d)"), xToCheck, yToCheck);
+			Neighbors.Add(FVector2D(xToCheck, yToCheck));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Display, TEXT("no neighbour at : (%d, %d)"), xToCheck, yToCheck);
+		}
+	}
+
+
 
