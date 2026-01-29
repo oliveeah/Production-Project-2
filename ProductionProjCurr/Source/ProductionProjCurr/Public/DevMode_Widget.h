@@ -37,6 +37,14 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	UFUNCTION()
 	void SwapCurrentPlayer_ButtonClicked();
 
+	UFUNCTION()
+	void SpawnTroopAtSelectedTile_ButtonClicked();
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	TObjectPtr<UButton> SpawnTroopAtSelectedTile_Button;
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	TObjectPtr<UTextBlock> SpawnTroopAtSelectedTiled_ButtonLabel;
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> ShowTileCoord_Button;
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))

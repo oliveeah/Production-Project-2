@@ -276,6 +276,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\MyPlayerState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\tileSpawningLogic\TileManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -301,6 +304,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\BG_PlayerPawn.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\InteractionInterface.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\MyPlayerState.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\ProductionProjCurrCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

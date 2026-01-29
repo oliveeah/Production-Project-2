@@ -38,6 +38,10 @@ void UDevMode_Widget::NativeConstruct()
 	{
 		SwapCurrentPlayer_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::SwapCurrentPlayer_ButtonClicked);
 	}
+	if (SpawnTroopAtSelectedTile_Button)
+	{
+		SpawnTroopAtSelectedTile_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::SpawnTroopAtSelectedTile_ButtonClicked);
+	}
 
 	// Find the first TileManager actor in the current world and assign it
 	for (TActorIterator<ATileManager> It(GetWorld()); It; ++It)
@@ -59,21 +63,24 @@ void UDevMode_Widget::initializeButtonLabels()
 		ShowTileCoord_Button,
 		ShowAdjacentTiles_Button,
 		OwnTiles_Button,
-		SwapCurrentPlayer_Button
+		SwapCurrentPlayer_Button,
+		SpawnTroopAtSelectedTile_Button
 	};
 
 	TArray<UTextBlock*> Labels = {
 		ShowTileCoord_ButtonLabel,
 		ShowAdjacentTiles_ButtonLabel,
 		OwnTiles_ButtonLabel,
-		SwapCurrentPlayer_ButtonLabel
+		SwapCurrentPlayer_ButtonLabel,
+		SpawnTroopAtSelectedTiled_ButtonLabel
 	};
 
 	TArray<FString> LabelTexts = {
 		TEXT("Show Tile Coordinates"),
 		TEXT("Show Adjacent Tiles"),
 		TEXT("Own Tiles"),
-		TEXT("Swap Current Player")
+		TEXT("Swap Current Player"),
+		TEXT("Spawn Troop At Selected Tile")
 	};
 
 	for (int32 i = 0; i < Buttons.Num(); ++i)
@@ -135,6 +142,10 @@ void UDevMode_Widget::OwnTiles_ButtonClicked()
 void UDevMode_Widget::SwapCurrentPlayer_ButtonClicked()
 {
 	UE_LOG(LogTemp, Display, TEXT("swap current player button clicked"));
+}
+
+void UDevMode_Widget::SpawnTroopAtSelectedTile_ButtonClicked()
+{
 }
 
 void UDevMode_Widget::generateButtonLabelText(UTextBlock* buttonLabel, const FString& labelText)

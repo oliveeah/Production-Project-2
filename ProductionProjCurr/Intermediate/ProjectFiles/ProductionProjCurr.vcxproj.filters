@@ -66,6 +66,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
       <Filter>Source\ProductionProjCurr\Private\playerData</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\MyPlayerState.cpp">
+      <Filter>Source\ProductionProjCurr\Private\playerData</Filter>
+    </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\tileSpawningLogic">
       <UniqueIdentifier>{FCDAFDBD-806D-3FA3-BDEB-39AFCD5BEA69}</UniqueIdentifier>
     </Filter>
@@ -121,6 +124,9 @@
       <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\InteractionInterface.h">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\MyPlayerState.h">
       <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\ProductionProjCurrCharacter.cpp">
