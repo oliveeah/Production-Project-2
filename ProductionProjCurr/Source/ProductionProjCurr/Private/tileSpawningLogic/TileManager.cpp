@@ -4,6 +4,7 @@
 #include "tileSpawningLogic/BG_TileSpawner.h"
 #include "tileSpawningLogic/BG_Tile.h"
 #include "Troop.h"
+#include "WorldEffectManager.h"
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
 
 // Sets default values
@@ -55,7 +56,29 @@ FString& ATileManager::GetSelectedTileCoordinates()
 
 void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 {
+	if (!Tile)
+		return;
+
+	// Turn off previous selection
+	if (SelectedTile)
+	{
+		SelectedTile->toggleOutlineEffect();
+	}
+
+	// Update selection
 	SelectedTile = Tile;
+
+	// Turn on new selection
+	SelectedTile->toggleOutlineEffect();
+
+	if (isOccupied)
+	{
+		// occupied logic
+	}
+	else
+	{
+		// empty logic
+	}
 }
 
 TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange)
@@ -118,7 +141,7 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	FVector SpawnLocation = Tile->GetActorLocation();
 	SpawnLocation.Z += troopSpawnHeight; 
 	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
-	ATroop*	SpawnedTroop = World->SpawnActor<ATroop>(troopToSpawn, SpawnTransform);
+	//ATroop*	SpawnedTroop = World->SpawnActor<ATroop>(troopToSpawn, SpawnTransform);
 	ATroop* Troop = World->SpawnActor<ATroop>(troopToSpawn,SpawnTransform);
 
 	Troop->SetGridPosition(Tile->getGridCoordinates());

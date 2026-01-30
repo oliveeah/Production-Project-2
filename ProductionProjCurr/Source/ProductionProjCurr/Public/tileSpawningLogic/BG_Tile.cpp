@@ -4,6 +4,7 @@
 #include "BG_Tile.h"
 #include <gameMode/ProductionProjCurrGameMode.h>
 #include <Kismet/GameplayStatics.h>
+#include "Materials/MaterialInstance.h"
 #include "TileManager.h" // Only if you need to reference it here
 
 
@@ -21,6 +22,8 @@ ABG_Tile::ABG_Tile()
 	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
 	tileMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+
 
 	Tags.Add(FName("Tile"));
 }
@@ -65,6 +68,18 @@ void ABG_Tile::drawDebugPointer(FColor color)
 {
 	FString DebugText = FString::Printf(TEXT("^^^"));
 	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 200), DebugText, nullptr, color, 5.0f, true);
+}
+
+void ABG_Tile::toggleOutlineEffect()
+{
+	if (isPlayingEffect && tileEdgeMesh)
+	{
+		tileEdgeMesh->SetVisibility(false);
+	}
+	else if (tileEdgeMesh)
+	{
+		tileEdgeMesh->SetVisibility(true);
+	}
 }
 
 

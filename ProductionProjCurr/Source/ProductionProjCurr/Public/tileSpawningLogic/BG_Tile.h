@@ -6,6 +6,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "playerData/InteractionInterface.h"
+#include "Components/DecalComponent.h"
 #include "BG_Tile.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
@@ -60,4 +61,9 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 
 		UPROPERTY()
 		TSubclassOf<class ATroop> occupyingTroopClass;
+
+		bool isPlayingEffect = false;
+
+
+		void toggleOutlineEffect();
 };
