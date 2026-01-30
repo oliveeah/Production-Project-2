@@ -56,8 +56,9 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 	
 	FastNoiseLite Noise;
 	Noise.SetSeed(randomNum);
-	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
+	Noise.SetNoiseType(FastNoiseLite::NoiseType_ValueCubic);
 	Noise.SetFrequency(noiseFrequency);
+
 
 	TileGrid.SetNum(numberOfRows);
 	TileManager->SetGridWidth(numberOfColumns);

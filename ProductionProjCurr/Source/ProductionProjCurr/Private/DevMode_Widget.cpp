@@ -7,6 +7,7 @@
 #include "Engine/World.h"           // For GetWorld()
 #include "EngineUtils.h"            // For TActorIterator
 #include <vector>
+
 void UDevMode_Widget::NativeConstruct()
 {
 	Super::NativeConstruct();

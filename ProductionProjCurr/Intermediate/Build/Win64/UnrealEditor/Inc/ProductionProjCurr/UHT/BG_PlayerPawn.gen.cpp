@@ -113,6 +113,10 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ZoomSpeed_MetaData[] = {
+		{ "Category", "Camera" },
+		{ "ModuleRelativePath", "Public/playerData/BG_PlayerPawn.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_springArm;
@@ -120,6 +124,7 @@ struct Z_Construct_UClass_ABG_PlayerPawn_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_UI_FactionCharacter;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_devMenuWidgetRef;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_devMenuWidgetInstance;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ZoomSpeed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -133,6 +138,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_PlayerPawn
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_UI_FactionCharacter = { "UI_FactionCharacter", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_PlayerPawn, UI_FactionCharacter), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UI_FactionCharacter_MetaData), NewProp_UI_FactionCharacter_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_devMenuWidgetRef = { "devMenuWidgetRef", nullptr, (EPropertyFlags)0x0014000000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_PlayerPawn, devMenuWidgetRef), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_devMenuWidgetRef_MetaData), NewProp_devMenuWidgetRef_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_devMenuWidgetInstance = { "devMenuWidgetInstance", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_PlayerPawn, devMenuWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_devMenuWidgetInstance_MetaData), NewProp_devMenuWidgetInstance_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_ZoomSpeed = { "ZoomSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_PlayerPawn, ZoomSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ZoomSpeed_MetaData), NewProp_ZoomSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_PlayerPawn_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_Camera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_springArm,
@@ -140,6 +146,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_Playe
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_UI_FactionCharacter,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_devMenuWidgetRef,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_devMenuWidgetInstance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_PlayerPawn_Statics::NewProp_ZoomSpeed,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_PlayerPawn_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_PlayerPawn_Statics::DependentSingletons[])() = {
@@ -178,10 +185,10 @@ ABG_PlayerPawn::~ABG_PlayerPawn() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 3128764192U) },
+		{ Z_Construct_UClass_ABG_PlayerPawn, ABG_PlayerPawn::StaticClass, TEXT("ABG_PlayerPawn"), &Z_Registration_Info_UClass_ABG_PlayerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_PlayerPawn), 4107992578U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_3814918665(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_2055888348(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_BG_PlayerPawn_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

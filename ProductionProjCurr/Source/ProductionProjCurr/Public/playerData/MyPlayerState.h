@@ -16,9 +16,9 @@ class PRODUCTIONPROJCURR_API AMyPlayerState : public APlayerState
 
 private:
 	UPROPERTY()
-	FString PlayerName;
+	FString Unique_PlayerName;
 	UPROPERTY()
-	int32 PlayerID;
+	int32 Unique_PlayerID;
 
 public:
 	UPROPERTY()
@@ -28,10 +28,10 @@ public:
 
 	FString GetPlayerName() const 
 	{
-		return PlayerName; 
+		return Unique_PlayerName; 
 	}
 	int32 GetPlayerID() const
 	{
-		return PlayerID;
+		return Unique_PlayerID;
 	}
 };

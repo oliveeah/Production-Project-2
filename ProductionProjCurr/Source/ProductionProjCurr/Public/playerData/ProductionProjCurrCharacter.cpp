@@ -66,11 +66,6 @@ void AProductionProjCurrCharacter::BeginPlay()
 
 }
 
-void AProductionProjCurrCharacter::Tick(float DeltaTime)
-{
-
-}
-
 
 
 void AProductionProjCurrCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -82,10 +77,7 @@ void AProductionProjCurrCharacter::SetupPlayerInputComponent(UInputComponent* Pl
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AProductionProjCurrCharacter::Move);
 
-		EnhancedInputComponent->BindAction(useAction, ETriggerEvent::Started, this, &AProductionProjCurrCharacter::UsePressed);
 
-		//toggle build
-		EnhancedInputComponent->BindAction(interactAction, ETriggerEvent::Started, this, &AProductionProjCurrCharacter::interactCallback);
 
 
 	}
@@ -107,6 +99,7 @@ void AProductionProjCurrCharacter::Move(const FInputActionValue& Value)
 	// route the input
 	DoMove(MovementVector.X, MovementVector.Y);
 }
+
 
 
 
@@ -132,30 +125,6 @@ void AProductionProjCurrCharacter::DoMove(float Right, float Forward)
 	
 
 	}
-}
-
-
-
-
-
-
-
-
-
-void AProductionProjCurrCharacter::UsePressed()
-{
-
-}
-
-void AProductionProjCurrCharacter::toggleBuildModeFn()
-{
-}
-
-
-void AProductionProjCurrCharacter::interactCallback()
-{
-
-
 }
 
 
