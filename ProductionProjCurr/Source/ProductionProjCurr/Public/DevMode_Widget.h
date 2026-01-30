@@ -71,6 +71,9 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
 	TObjectPtr<UTextBlock> SelectedTile;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "TileManager")
 	ATileManager* DevTileManager;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	TSubclassOf<class ATroop> TroopToSpawn;
 };

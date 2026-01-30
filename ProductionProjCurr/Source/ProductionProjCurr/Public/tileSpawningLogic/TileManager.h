@@ -10,6 +10,8 @@
 // Forward declarations to break circular includes
 class ABG_Tile;
 class ABG_TileSpawner;
+class ATroop;
+class AWorldEffectManager;
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATileManager : public AActor
@@ -41,7 +43,7 @@ public:
 	
 	UFUNCTION()
 	// Called to bind tile delegates
-	void OnTileClicked(ABG_Tile* Tile);
+	void OnTileClicked(ABG_Tile* Tile, bool isOccupied);
 
 	// Returns neighbors
 	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange);
@@ -53,5 +55,8 @@ public:
 
 	void RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile);
 
+	void spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
+	float troopSpawnHeight = 20.0f;
 };

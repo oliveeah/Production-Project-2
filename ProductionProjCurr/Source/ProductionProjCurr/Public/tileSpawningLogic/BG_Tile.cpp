@@ -58,7 +58,7 @@ void ABG_Tile::ReactToPlayerInteraction_Implementation()
 
 void ABG_Tile::setSelectedTile()
 {
-	OnTileSelectedDelegate.Broadcast(this);
+	OnTileSelectedDelegate.Broadcast(this, isOccupied);
 }
 
 void ABG_Tile::drawDebugPointer(FColor color)

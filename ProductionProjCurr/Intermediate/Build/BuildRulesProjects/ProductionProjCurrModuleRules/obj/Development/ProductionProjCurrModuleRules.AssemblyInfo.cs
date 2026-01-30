@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProductionProjCurrModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cdbd133772df6a4ae7a7ebd9b7ed61e064e6499")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de63f3ee4faacd142367dd59c8b9e6fbb69809d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProductionProjCurrModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProductionProjCurrModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

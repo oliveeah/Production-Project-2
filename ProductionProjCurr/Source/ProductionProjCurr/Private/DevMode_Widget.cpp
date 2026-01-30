@@ -21,6 +21,7 @@ void UDevMode_Widget::NativeConstruct()
 		SelectedTile->SetText(FText::FromString(TEXT("Selected Tile: N/A")));
 	}
 
+
 	initializeButtonLabels();
 
 	if (ShowTileCoord_Button)
@@ -147,6 +148,18 @@ void UDevMode_Widget::SwapCurrentPlayer_ButtonClicked()
 
 void UDevMode_Widget::SpawnTroopAtSelectedTile_ButtonClicked()
 {
+	if (DevTileManager)
+	{
+		if (DevTileManager->SelectedTile)
+		{
+			DevTileManager->spawnTroop(TroopToSpawn, DevTileManager->SelectedTile);
+			UE_LOG(LogTemp, Display, TEXT("Spawned troop at selected tile"));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("No tile selected to spawn troop on!"));
+		}
+	}
 }
 
 void UDevMode_Widget::generateButtonLabelText(UTextBlock* buttonLabel, const FString& labelText)

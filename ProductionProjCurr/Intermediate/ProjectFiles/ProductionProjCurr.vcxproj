@@ -279,6 +279,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\WorldEffectManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -291,6 +294,7 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\DevMode_Widget.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\OccupantInterface.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Troop.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\WorldEffectManager.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

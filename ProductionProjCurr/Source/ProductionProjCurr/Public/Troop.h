@@ -4,27 +4,41 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Components/StaticMeshComponent.h"
 #include "Troop.generated.h"
+
+class UStaticMeshComponent;
+class UCapsuleComponent;
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATroop : public AActor
 {
 	GENERATED_BODY()
-	
+private:
+	int		  troopHealth = 3;
+	FIntPoint GridPosition;
+	int		  troopDamage = 1;
+
 public:	
 	// Sets default values for this actor's properties
 	ATroop();
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+	USceneComponent* RootComp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	UStaticMeshComponent* TroopMesh;
 
-	int troopHealth;
-	FIntPoint GridPos;
-	int troopDamage;
+
+
+	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
+	void SetTroopHealth(int NewHealth) { troopHealth = NewHealth; }
+	void SetTroopDamage(int NewDamage) { troopDamage = NewDamage; }
 
 	virtual bool CanMoveTo(const FIntPoint& Target) const;
 	virtual void MoveToTile(class ABG_Tile* Tile);
+
+
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -33,5 +47,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 
 };

@@ -3,6 +3,7 @@
 #include "tileSpawningLogic/TileManager.h"  
 #include "tileSpawningLogic/BG_TileSpawner.h"
 #include "tileSpawningLogic/BG_Tile.h"
+#include "Troop.h"
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
 
 // Sets default values
@@ -52,7 +53,7 @@ FString& ATileManager::GetSelectedTileCoordinates()
 		return coords;
 }
 
-void ATileManager::OnTileClicked(ABG_Tile* Tile)
+void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 {
 	SelectedTile = Tile;
 }
@@ -103,6 +104,28 @@ void ATileManager::RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile)
 {
 	TileMap.Add(Coords, Tile);
 }
+
+void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
+{
+	if (!troopToSpawn || !Tile)
+		return;
+	if (Tile->isOccupied)
+		return;
+	UWorld* World = GetWorld();
+	if (!World)
+		return;
+
+	FVector SpawnLocation = Tile->GetActorLocation();
+	SpawnLocation.Z += troopSpawnHeight; 
+	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
+	ATroop*	SpawnedTroop = World->SpawnActor<ATroop>(troopToSpawn, SpawnTransform);
+	ATroop* Troop = World->SpawnActor<ATroop>(troopToSpawn,SpawnTransform);
+
+	Troop->SetGridPosition(Tile->getGridCoordinates());
+}
+
+
+
 
 
 

@@ -8,10 +8,12 @@
 #include "playerData/InteractionInterface.h"
 #include "BG_Tile.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	FOnTileSelected,
 	ABG_Tile*, 
-	Tile);
+	Tile,
+	bool,
+	isOccupied);
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterface
@@ -50,4 +52,12 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 
 		void drawDebugPointer(FColor color);
 
+		UPROPERTY()
+		bool isOccupied = false;
+
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Info")
+		bool isSpawnableTile = true;
+
+		UPROPERTY()
+		TSubclassOf<class ATroop> occupyingTroopClass;
 };
