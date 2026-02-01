@@ -61,7 +61,6 @@ protected:
 
 	virtual void BeginPlay() override;
 
-	virtual void Tick(float DeltaTime) override;
 
 protected:
 
@@ -78,14 +77,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoMove(float Right, float Forward);
 
-	UFUNCTION(BlueprintCallable, Category = "Input")
-	virtual void UsePressed();
-
-	UFUNCTION(BlueprintCallable, Category = "Input")
-	virtual void toggleBuildModeFn();
-
-	UFUNCTION(BlueprintCallable, Category = "Input")
-	virtual void interactCallback();
 
 
 

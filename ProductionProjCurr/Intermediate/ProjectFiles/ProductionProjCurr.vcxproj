@@ -254,6 +254,7 @@
     <None Include="..\..\Source\ProductionProjCurrEditor.Target.cs"/>
     <None Include="..\..\.clang-format"/>
     <None Include="..\..\.gitignore"/>
+    <None Include="..\..\.vsconfig"/>
     <ClInclude Include="..\..\BG_TileSpawner.h"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
@@ -269,16 +270,35 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\DevMode_Widget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\OccupantInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\TileHighlightTypes.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Troop.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\WorldEffectManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\MyPlayerState.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\tileSpawningLogic\TileManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\DevMode_Widget.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\OccupantInterface.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\TileHighlightTypes.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Troop.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\WorldEffectManager.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -300,6 +320,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\BG_PlayerPawn.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\InteractionInterface.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\MyPlayerState.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\ProductionProjCurrCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -1,9 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BG_TileSpawner.h"
+#include "BG_Tile.h"
+#include "TileManager.h"
 #include "Kismet/GameplayStatics.h"
-#include "Kismet/KismetMathLibrary.h"
-#include "Engine/World.h" 
+
 
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
@@ -44,6 +45,7 @@ void ABG_TileSpawner::clearGrid()
 	TileGrid.Empty();
 }
 
+
 void ABG_TileSpawner::spawnGrid(const float& randomNum)
 {
 	if (!GetWorld()) return;
@@ -54,10 +56,13 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 	
 	FastNoiseLite Noise;
 	Noise.SetSeed(randomNum);
-	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
+	Noise.SetNoiseType(FastNoiseLite::NoiseType_ValueCubic);
 	Noise.SetFrequency(noiseFrequency);
 
+
 	TileGrid.SetNum(numberOfRows);
+	TileManager->SetGridWidth(numberOfColumns);
+	TileManager->SetGridHeight(numberOfRows);
 
 	for (int32 rows = 0; rows < numberOfRows; rows++)
 	{
@@ -81,7 +86,16 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 			if (NewTile)
 			{
 				TileGrid[rows][cols] = NewTile; 
-				NewTile->gridCoordinates = FVector2D(rows, cols);
+				NewTile->gridCoordinates = FIntPoint(cols, rows);
+				if (TileManager)
+				{
+					NewTile->OnTileSelectedDelegate.AddDynamic(TileManager, &ATileManager::OnTileClicked);
+					TileManager->RegisterTile(FIntPoint(cols, rows), NewTile); 
+				}
+				else
+				{
+					UE_LOG(LogTemp, Warning, TEXT("TileManager not set in TileSpawner! Cannot bind delegate."));
+				}
 			}
 		}
 	}

@@ -17,6 +17,7 @@ ENGINE_API UClass* Z_Construct_UClass_AActor();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_TileSpawner_NoRegister();
+PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ATileManager_NoRegister();
 PRODUCTIONPROJCURR_API UEnum* Z_Construct_UEnum_ProductionProjCurr_EBiomeType();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
@@ -199,6 +200,10 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 		{ "Category", "Hex | Biomes" },
 		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_TileSpawner.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TileManager_MetaData[] = {
+		{ "Category", "TileManager" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_TileSpawner.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_tileWidth;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_numberOfColumns;
@@ -213,6 +218,7 @@ struct Z_Construct_UClass_ABG_TileSpawner_Statics
 	static const UECodeGen_Private::FClassPropertyParams NewProp_StoneTile;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RockHillTile;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_MountainTile;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TileManager;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -233,6 +239,7 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_TileSpawner
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_StoneTile = { "StoneTile", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, StoneTile), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Tile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StoneTile_MetaData), NewProp_StoneTile_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_RockHillTile = { "RockHillTile", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, RockHillTile), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Tile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RockHillTile_MetaData), NewProp_RockHillTile_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_MountainTile = { "MountainTile", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, MountainTile), Z_Construct_UClass_UClass, Z_Construct_UClass_ABG_Tile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MountainTile_MetaData), NewProp_MountainTile_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_TileManager = { "TileManager", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_TileSpawner, TileManager), Z_Construct_UClass_ATileManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TileManager_MetaData), NewProp_TileManager_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_TileSpawner_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_tileWidth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_numberOfColumns,
@@ -247,6 +254,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_TileS
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_StoneTile,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_RockHillTile,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_MountainTile,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_TileSpawner_Statics::NewProp_TileManager,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_TileSpawner_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_TileSpawner_Statics::DependentSingletons[])() = {
@@ -288,10 +296,10 @@ struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_Pr
 		{ EBiomeType_StaticEnum, TEXT("EBiomeType"), &Z_Registration_Info_UEnum_EBiomeType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3334049638U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_TileSpawner, ABG_TileSpawner::StaticClass, TEXT("ABG_TileSpawner"), &Z_Registration_Info_UClass_ABG_TileSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_TileSpawner), 1739010762U) },
+		{ Z_Construct_UClass_ABG_TileSpawner, ABG_TileSpawner::StaticClass, TEXT("ABG_TileSpawner"), &Z_Registration_Info_UClass_ABG_TileSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_TileSpawner), 2934016869U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_TileSpawner_h__Script_ProductionProjCurr_2832235190(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_TileSpawner_h__Script_ProductionProjCurr_2963903875(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_TileSpawner_h__Script_ProductionProjCurr_Statics::EnumInfo));

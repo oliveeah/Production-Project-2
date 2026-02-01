@@ -13,6 +13,7 @@
     </None>
     <None Include="..\..\.clang-format" />
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
     <ClInclude Include="..\..\BG_TileSpawner.h" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -56,13 +57,28 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\DevMode_Widget.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\OccupantInterface.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\TileHighlightTypes.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Troop.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\WorldEffectManager.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\playerData">
       <UniqueIdentifier>{D4B4FD6D-096B-3D52-9AE9-8AB0B397F8A6}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
+      <Filter>Source\ProductionProjCurr\Private\playerData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\MyPlayerState.cpp">
       <Filter>Source\ProductionProjCurr\Private\playerData</Filter>
     </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\tileSpawningLogic">
@@ -75,6 +91,18 @@
       <UniqueIdentifier>{9664A9DA-BD2D-3ABC-8239-4F68364AEA1D}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\DevMode_Widget.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\OccupantInterface.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\TileHighlightTypes.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Troop.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\WorldEffectManager.h">
       <Filter>Source\ProductionProjCurr\Public</Filter>
     </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\animations">
@@ -120,6 +148,9 @@
       <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\InteractionInterface.h">
+      <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\playerData\MyPlayerState.h">
       <Filter>Source\ProductionProjCurr\Public\playerData</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\ProductionProjCurrCharacter.cpp">

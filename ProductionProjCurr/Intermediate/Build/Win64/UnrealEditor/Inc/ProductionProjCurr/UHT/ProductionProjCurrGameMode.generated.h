@@ -16,6 +16,8 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class ATileManager;
+
 // ********** Begin Delegate FOnToggleTileDebugCoordinates *****************************************
 #define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h_10_DELEGATE \
 PRODUCTIONPROJCURR_API void FOnToggleTileDebugCoordinates_DelegateWrapper(const FMulticastScriptDelegate& OnToggleTileDebugCoordinates);
@@ -25,6 +27,7 @@ PRODUCTIONPROJCURR_API void FOnToggleTileDebugCoordinates_DelegateWrapper(const 
 
 // ********** Begin Class AProductionProjCurrGameMode **********************************************
 #define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetTileManager); \
 	DECLARE_FUNCTION(execToggleTileDebugCoordinates);
 
 

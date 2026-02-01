@@ -65,7 +65,9 @@ public:
 
 	void ToggleDevMenu();
 
-	void AdjustCameraZoom(float scrollAmount);
+	void AdjustCameraZoom(float desiredOrthoWidth);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+	float ZoomSpeed = 10.0f;
 	// developer
 };

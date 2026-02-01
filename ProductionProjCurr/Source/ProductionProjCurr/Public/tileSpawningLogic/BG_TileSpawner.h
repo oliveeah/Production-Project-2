@@ -4,9 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "BG_Tile.h"
 #include "Noise/FastNoiseLite.h"
 #include "BG_TileSpawner.generated.h"
+
+// Forward declarations
+class ABG_Tile;
+class ATileManager;
 
 // Delegate declaration for when tiles are spawned
 
@@ -83,9 +86,8 @@ protected:
 
 	TArray<TArray<ABG_Tile*>> TileGrid;
 
-
-
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	ATileManager* TileManager;
 
 	FRandomStream randomStream;
 

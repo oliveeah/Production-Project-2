@@ -77,105 +77,12 @@ DEFINE_FUNCTION(AProductionProjCurrCharacter::execDoMove)
 }
 // ********** End Class AProductionProjCurrCharacter Function DoMove *******************************
 
-// ********** Begin Class AProductionProjCurrCharacter Function interactCallback *******************
-struct Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AProductionProjCurrCharacter, nullptr, "interactCallback", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback_Statics::Function_MetaDataParams), Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AProductionProjCurrCharacter::execinteractCallback)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->interactCallback();
-	P_NATIVE_END;
-}
-// ********** End Class AProductionProjCurrCharacter Function interactCallback *********************
-
-// ********** Begin Class AProductionProjCurrCharacter Function toggleBuildModeFn ******************
-struct Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AProductionProjCurrCharacter, nullptr, "toggleBuildModeFn", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn_Statics::Function_MetaDataParams), Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AProductionProjCurrCharacter::exectoggleBuildModeFn)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->toggleBuildModeFn();
-	P_NATIVE_END;
-}
-// ********** End Class AProductionProjCurrCharacter Function toggleBuildModeFn ********************
-
-// ********** Begin Class AProductionProjCurrCharacter Function UsePressed *************************
-struct Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Public/playerData/ProductionProjCurrCharacter.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AProductionProjCurrCharacter, nullptr, "UsePressed", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed_Statics::Function_MetaDataParams), Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AProductionProjCurrCharacter::execUsePressed)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->UsePressed();
-	P_NATIVE_END;
-}
-// ********** End Class AProductionProjCurrCharacter Function UsePressed ***************************
-
 // ********** Begin Class AProductionProjCurrCharacter *********************************************
 void AProductionProjCurrCharacter::StaticRegisterNativesAProductionProjCurrCharacter()
 {
 	UClass* Class = AProductionProjCurrCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "DoMove", &AProductionProjCurrCharacter::execDoMove },
-		{ "interactCallback", &AProductionProjCurrCharacter::execinteractCallback },
-		{ "toggleBuildModeFn", &AProductionProjCurrCharacter::exectoggleBuildModeFn },
-		{ "UsePressed", &AProductionProjCurrCharacter::execUsePressed },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -278,9 +185,6 @@ struct Z_Construct_UClass_AProductionProjCurrCharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_DoMove, "DoMove" }, // 1835785841
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_interactCallback, "interactCallback" }, // 233748648
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_toggleBuildModeFn, "toggleBuildModeFn" }, // 1171398491
-		{ &Z_Construct_UFunction_AProductionProjCurrCharacter_UsePressed, "UsePressed" }, // 2925887762
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -341,10 +245,10 @@ AProductionProjCurrCharacter::~AProductionProjCurrCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrCharacter, AProductionProjCurrCharacter::StaticClass, TEXT("AProductionProjCurrCharacter"), &Z_Registration_Info_UClass_AProductionProjCurrCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrCharacter), 74156358U) },
+		{ Z_Construct_UClass_AProductionProjCurrCharacter, AProductionProjCurrCharacter::StaticClass, TEXT("AProductionProjCurrCharacter"), &Z_Registration_Info_UClass_AProductionProjCurrCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrCharacter), 3078158403U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_454352953(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_3494306567(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

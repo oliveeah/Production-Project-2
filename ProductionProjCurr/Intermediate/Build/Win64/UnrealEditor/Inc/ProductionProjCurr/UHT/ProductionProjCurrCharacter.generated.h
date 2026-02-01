@@ -18,9 +18,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class AProductionProjCurrCharacter *********************************************
 #define FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_playerData_ProductionProjCurrCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execinteractCallback); \
-	DECLARE_FUNCTION(exectoggleBuildModeFn); \
-	DECLARE_FUNCTION(execUsePressed); \
 	DECLARE_FUNCTION(execDoMove);
 
 

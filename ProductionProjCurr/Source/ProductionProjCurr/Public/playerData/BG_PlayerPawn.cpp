@@ -92,10 +92,8 @@ void ABG_PlayerPawn::ToggleDevMenu()
 	}
 }
 
-void ABG_PlayerPawn::AdjustCameraZoom(float scrollAmount)
+void ABG_PlayerPawn::AdjustCameraZoom(float desiredOrthoWidth)
 {
-	float newArmLength = springArm->TargetArmLength + scrollAmount;
-	newArmLength = FMath::Clamp(newArmLength, 300.f, 1500.f);
-	springArm->TargetArmLength = newArmLength;
+	Camera->OrthoWidth = desiredOrthoWidth;
 }
 
