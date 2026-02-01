@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include <vector>
+#include "tileSpawningLogic/TileHighlightState.h"
 #include "TileManager.generated.h"
 
 // Forward declarations to break circular includes
@@ -13,14 +13,6 @@ class ABG_TileSpawner;
 class ATroop;
 class AWorldEffectManager;
 
-UENUM(BlueprintType)
-enum class EOutlineType : uint8
-{
-	Standard,
-	Adjacency,
-	Attack
-
-};
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATileManager : public AActor
@@ -69,7 +61,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
 	float troopSpawnHeight = 20.0f;
 
-	FLinearColor getOutlineColor(EOutlineType outlineType) const;
+	FLinearColor getOutlineColor(ETileHighlightState highlightState) const;
 
 	TArray<ABG_Tile*> TilesWithOutline;
 

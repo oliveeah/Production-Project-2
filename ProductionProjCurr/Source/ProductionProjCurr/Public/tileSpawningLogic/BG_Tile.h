@@ -8,18 +8,8 @@
 #include "playerData/InteractionInterface.h"
 #include "Components/DecalComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "tileSpawningLogic/TileHighlightState.h"
 #include "BG_Tile.generated.h"
-
-UENUM(BlueprintType)
-enum class TypeOfHighlight : uint8
-{
-	Standard,
-	Adjacency,
-	Attack,
-	None
-};
-
-
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	FOnTileSelected,
@@ -88,7 +78,11 @@ private:
 
 		bool getIsPlayingEffect() const { return isPlayingEffect; }
 
-		TypeOfHighlight currentHighlightType;
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
+		ETileHighlightState currentHighlightType = ETileHighlightState::None;
 
-		TypeOfHighlight& getHighlightType() { return currentHighlightType; }
+		void SetHighlightType(ETileHighlightState newType) { currentHighlightType = newType; }
+
+		ETileHighlightState& getHighlightType() { return currentHighlightType; }
+
 };

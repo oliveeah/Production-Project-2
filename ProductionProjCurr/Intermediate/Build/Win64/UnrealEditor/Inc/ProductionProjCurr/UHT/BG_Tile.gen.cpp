@@ -22,66 +22,10 @@ PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ABG_Tile_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ATroop_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_UInteractionInterface_NoRegister();
-PRODUCTIONPROJCURR_API UEnum* Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight();
+PRODUCTIONPROJCURR_API UEnum* Z_Construct_UEnum_ProductionProjCurr_ETileHighlightState();
 PRODUCTIONPROJCURR_API UFunction* Z_Construct_UDelegateFunction_ProductionProjCurr_OnTileSelected__DelegateSignature();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
-
-// ********** Begin Enum TypeOfHighlight ***********************************************************
-static FEnumRegistrationInfo Z_Registration_Info_UEnum_TypeOfHighlight;
-static UEnum* TypeOfHighlight_StaticEnum()
-{
-	if (!Z_Registration_Info_UEnum_TypeOfHighlight.OuterSingleton)
-	{
-		Z_Registration_Info_UEnum_TypeOfHighlight.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight, (UObject*)Z_Construct_UPackage__Script_ProductionProjCurr(), TEXT("TypeOfHighlight"));
-	}
-	return Z_Registration_Info_UEnum_TypeOfHighlight.OuterSingleton;
-}
-template<> PRODUCTIONPROJCURR_API UEnum* StaticEnum<TypeOfHighlight>()
-{
-	return TypeOfHighlight_StaticEnum();
-}
-struct Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-		{ "Adjacency.Name", "TypeOfHighlight::Adjacency" },
-		{ "Attack.Name", "TypeOfHighlight::Attack" },
-		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
-		{ "None.Name", "TypeOfHighlight::None" },
-		{ "Standard.Name", "TypeOfHighlight::Standard" },
-	};
-#endif // WITH_METADATA
-	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
-		{ "TypeOfHighlight::Standard", (int64)TypeOfHighlight::Standard },
-		{ "TypeOfHighlight::Adjacency", (int64)TypeOfHighlight::Adjacency },
-		{ "TypeOfHighlight::Attack", (int64)TypeOfHighlight::Attack },
-		{ "TypeOfHighlight::None", (int64)TypeOfHighlight::None },
-	};
-	static const UECodeGen_Private::FEnumParams EnumParams;
-};
-const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics::EnumParams = {
-	(UObject*(*)())Z_Construct_UPackage__Script_ProductionProjCurr,
-	nullptr,
-	"TypeOfHighlight",
-	"TypeOfHighlight",
-	Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics::Enumerators,
-	RF_Public|RF_Transient|RF_MarkAsNative,
-	UE_ARRAY_COUNT(Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics::Enumerators),
-	EEnumFlags::None,
-	(uint8)UEnum::ECppForm::EnumClass,
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics::Enum_MetaDataParams)
-};
-UEnum* Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight()
-{
-	if (!Z_Registration_Info_UEnum_TypeOfHighlight.InnerSingleton)
-	{
-		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_TypeOfHighlight.InnerSingleton, Z_Construct_UEnum_ProductionProjCurr_TypeOfHighlight_Statics::EnumParams);
-	}
-	return Z_Registration_Info_UEnum_TypeOfHighlight.InnerSingleton;
-}
-// ********** End Enum TypeOfHighlight *************************************************************
 
 // ********** Begin Delegate FOnTileSelected *******************************************************
 struct Z_Construct_UDelegateFunction_ProductionProjCurr_OnTileSelected__DelegateSignature_Statics
@@ -249,6 +193,10 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HexDecalMID_MetaData[] = {
 		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_currentHighlightType_MetaData[] = {
+		{ "Category", "Tile Info" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnTileSelectedDelegate;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_tileMesh;
@@ -261,6 +209,8 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_isSpawnableTile;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_occupyingTroopClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HexDecalMID;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_currentHighlightType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_currentHighlightType;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -290,6 +240,8 @@ void Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile_SetBit(void* O
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile = { "isSpawnableTile", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABG_Tile), &Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_isSpawnableTile_MetaData), NewProp_isSpawnableTile_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_occupyingTroopClass = { "occupyingTroopClass", nullptr, (EPropertyFlags)0x0014000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, occupyingTroopClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ATroop_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_occupyingTroopClass_MetaData), NewProp_occupyingTroopClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_HexDecalMID = { "HexDecalMID", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, HexDecalMID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HexDecalMID_MetaData), NewProp_HexDecalMID_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType = { "currentHighlightType", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, currentHighlightType), Z_Construct_UEnum_ProductionProjCurr_ETileHighlightState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentHighlightType_MetaData), NewProp_currentHighlightType_MetaData) }; // 2436747448
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_Tile_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_OnTileSelectedDelegate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileMesh,
@@ -300,6 +252,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_Tile_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_occupyingTroopClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_HexDecalMID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_Tile_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_Tile_Statics::DependentSingletons[])() = {
@@ -340,17 +294,14 @@ ABG_Tile::~ABG_Tile() {}
 // ********** Begin Registration *******************************************************************
 struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics
 {
-	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ TypeOfHighlight_StaticEnum, TEXT("TypeOfHighlight"), &Z_Registration_Info_UEnum_TypeOfHighlight, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2326215327U) },
-	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 1321393608U) },
+		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 1229955297U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_3806501307(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_3066699093(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::EnumInfo));
+	nullptr, 0);
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

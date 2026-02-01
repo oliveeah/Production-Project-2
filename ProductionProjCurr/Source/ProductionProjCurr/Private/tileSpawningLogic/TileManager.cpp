@@ -4,7 +4,6 @@
 #include "tileSpawningLogic/BG_TileSpawner.h"
 #include "tileSpawningLogic/BG_Tile.h"
 #include "Troop.h"
-#include "WorldEffectManager.h"
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
 
 // Sets default values
@@ -56,6 +55,7 @@ FString& ATileManager::GetSelectedTileCoordinates()
 
 void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 {
+	// determine if valid tile and apply selection logic
 	if (!Tile)
 		return;
 
@@ -71,34 +71,58 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 		}
 		TilesWithOutline.Empty();
 	}
-
 	// Update selection
 	SelectedTile = Tile;
+
 	FLinearColor outlineColor;
-	// Turn on new selection
 
-	if (isOccupied)
-	{	
-		// occupied logic for each neighbour
-		outlineColor = getOutlineColor(EOutlineType::Adjacency);
-
-		TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1);
-		for (int i =0; i < adjacentTiles.Num(); i++)
+	// Check if tile is already highlighted
+	if (Tile->getIsPlayingEffect())
+	{
+		ETileHighlightState currentState = Tile->getHighlightType();
+		switch (currentState)
 		{
-			if (ABG_Tile* AdjTile = TileMap[adjacentTiles[i]])
-			{
-				AdjTile->addOutlineEffect(outlineColor);
-				TilesWithOutline.Add(AdjTile);
-			}
+			case ETileHighlightState::None:
+				break;
+			case ETileHighlightState::Standard:
+				break;
+			case ETileHighlightState::Adjacency:
+				break;
+			case ETileHighlightState::Attack:
+				break;
+			default:
+				break;
 		}
 	}
 	else
 	{
-		//standard logic
-		outlineColor = getOutlineColor(EOutlineType::Standard);
-		SelectedTile->addOutlineEffect(outlineColor);
-		TilesWithOutline.Add(SelectedTile);
+		if (isOccupied)
+		{
+			// occupied logic for each neighbour
+			outlineColor = getOutlineColor(ETileHighlightState::Adjacency);
+			Tile->SetHighlightType(ETileHighlightState::Adjacency);
+
+			TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1);
+			for (int i = 0; i < adjacentTiles.Num(); i++)
+			{
+				if (ABG_Tile* AdjTile = TileMap[adjacentTiles[i]])
+				{
+					AdjTile->addOutlineEffect(outlineColor);
+					TilesWithOutline.Add(AdjTile);
+				}
+			}
+		}
+		else
+		{
+			// standard logic
+			outlineColor = getOutlineColor(ETileHighlightState::Standard);
+			Tile->SetHighlightType(ETileHighlightState::Standard);
+
+			SelectedTile->addOutlineEffect(outlineColor);
+			TilesWithOutline.Add(SelectedTile);
+		}
 	}
+
 }
 
 TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange)
@@ -158,26 +182,28 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 		return;
 
 	FVector SpawnLocation = Tile->GetActorLocation();
-	SpawnLocation.Z += troopSpawnHeight; 
 	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
-	//ATroop*	SpawnedTroop = World->SpawnActor<ATroop>(troopToSpawn, SpawnTransform);
 	ATroop* Troop = World->SpawnActor<ATroop>(troopToSpawn,SpawnTransform);
+	Troop->AttachToComponent(
+		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
+		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
+		"TroopSpawnSocket");
 
 	Troop->SetGridPosition(Tile->getGridCoordinates());
 	Tile->isOccupied = true;
 }
 
-FLinearColor ATileManager::getOutlineColor(EOutlineType outlineType) const
+FLinearColor ATileManager::getOutlineColor(ETileHighlightState highlightState) const
 {
-	switch (outlineType)
+	switch (highlightState)
 	{
-		case EOutlineType::Standard:
-			return FLinearColor(0, 0, 0, 1); // White
+		case ETileHighlightState::Standard:
+			return FLinearColor(0, 0, 0, 1); // black
 
-		case EOutlineType::Adjacency:
+		case ETileHighlightState::Adjacency:
 			return FLinearColor(0, 0, 5, 1); // Blue
 
-		case EOutlineType::Attack:
+		case ETileHighlightState::Attack:
 			return FLinearColor(5, 0, 0, 1); // Red
 
 		default:

@@ -84,7 +84,7 @@ void ABG_Tile::removeOutlineEffect()
 		//tileEdgeMesh->SetVisibility(false);
 		isPlayingEffect = false;
 		decalComponent->SetVisibility(false);
-		currentHighlightType = TypeOfHighlight::None;
+		currentHighlightType = ETileHighlightState::None;
 	}
 }
 
