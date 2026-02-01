@@ -165,18 +165,10 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_TileSpawner.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Token.cpp">
-      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\BG_Token.h">
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\TileHighlightState.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\TileManager.h">
-      <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\TileHighlightState.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
   </ItemGroup>
