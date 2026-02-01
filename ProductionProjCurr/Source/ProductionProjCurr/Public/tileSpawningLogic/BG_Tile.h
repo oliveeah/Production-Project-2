@@ -71,7 +71,7 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		bool isPlayingEffect = false;
 
 		void removeOutlineEffect();
-		void addOutlineEffect(FColor color);
+		void addOutlineEffect(const FLinearColor& color);
 
 		UPROPERTY()
 		UMaterialInstanceDynamic* HexDecalMID;

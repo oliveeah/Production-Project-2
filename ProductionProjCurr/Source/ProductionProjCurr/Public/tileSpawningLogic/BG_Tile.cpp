@@ -87,7 +87,7 @@ void ABG_Tile::removeOutlineEffect()
 	}
 }
 
-void ABG_Tile::addOutlineEffect(FColor color)
+void ABG_Tile::addOutlineEffect(const FLinearColor& color)
 {
 	if (tileEdgeMesh)
 	{

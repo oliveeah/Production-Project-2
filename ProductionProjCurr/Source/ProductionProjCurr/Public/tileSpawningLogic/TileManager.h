@@ -69,7 +69,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
 	float troopSpawnHeight = 20.0f;
 
-	FColor getOutlineColor(EOutlineType outlineType) const;
+	FLinearColor getOutlineColor(EOutlineType outlineType) const;
 
 	TArray<ABG_Tile*> TilesWithOutline;
 

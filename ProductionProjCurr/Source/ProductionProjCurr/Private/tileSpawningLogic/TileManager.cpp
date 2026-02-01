@@ -74,7 +74,7 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 
 	// Update selection
 	SelectedTile = Tile;
-	FColor outlineColor;
+	FLinearColor outlineColor;
 	// Turn on new selection
 
 	if (isOccupied)
@@ -167,19 +167,21 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	Tile->isOccupied = true;
 }
 
-FColor ATileManager::getOutlineColor(EOutlineType outlineType) const
+FLinearColor ATileManager::getOutlineColor(EOutlineType outlineType) const
 {
 	switch (outlineType)
 	{
 		case EOutlineType::Standard:
-			return FColor::Black;
+			return FLinearColor(0, 0, 0, 1); // White
+
 		case EOutlineType::Adjacency:
-			return FColor::Blue;
+			return FLinearColor(0, 0, 5, 1); // Blue
+
 		case EOutlineType::Attack:
-			return FColor::Red;
+			return FLinearColor(5, 0, 0, 1); // Red
+
 		default:
-			return FColor::White;
-		break;
+			return FLinearColor(5, 5, 5, 1); // White
 	}
 }
 
