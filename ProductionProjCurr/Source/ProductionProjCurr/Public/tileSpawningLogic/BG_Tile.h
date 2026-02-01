@@ -10,6 +10,17 @@
 #include "Materials/MaterialInstanceDynamic.h"
 #include "BG_Tile.generated.h"
 
+UENUM()
+enum class TypeOfHighlight : uint8
+{
+	Standard,
+	Adjacency,
+	Attack,
+	None
+};
+
+
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	FOnTileSelected,
 	ABG_Tile*, 
@@ -22,7 +33,8 @@ UCLASS()
 class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterface
 {
 	GENERATED_BODY()
-
+private:
+	bool isPlayingEffect = false;
 
 
 	public:
@@ -68,7 +80,6 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		TSubclassOf<class ATroop> occupyingTroopClass;
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 
-		bool isPlayingEffect = false;
 
 		void removeOutlineEffect();
 		void addOutlineEffect(const FLinearColor& color);
@@ -76,5 +87,9 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		UPROPERTY()
 		UMaterialInstanceDynamic* HexDecalMID;
 
+		bool getIsPlayingEffect() const { return isPlayingEffect; }
 
+		TypeOfHighlight currentHighlightType;
+
+		TypeOfHighlight& getHighlightType() { return currentHighlightType; }
 };

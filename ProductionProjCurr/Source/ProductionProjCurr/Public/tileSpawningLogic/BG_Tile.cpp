@@ -84,10 +84,11 @@ void ABG_Tile::removeOutlineEffect()
 		//tileEdgeMesh->SetVisibility(false);
 		isPlayingEffect = false;
 		decalComponent->SetVisibility(false);
+		currentHighlightType = TypeOfHighlight::None;
 	}
 }
 
-void ABG_Tile::addOutlineEffect(const FLinearColor& color)
+void ABG_Tile::addOutlineEffect(const FLinearColor& color, EOutlineType outlineType)
 {
 	if (tileEdgeMesh)
 	{
@@ -99,6 +100,21 @@ void ABG_Tile::addOutlineEffect(const FLinearColor& color)
 			HexDecalMID->SetVectorParameterValue(
 				TEXT("DecalTint"), // Must match your material parameter name
 				color);
+		}
+
+		switch (outlineType)
+		{
+			case EOutlineType::Standard:
+				currentHighlightType = TypeOfHighlight::Standard;
+				break;
+			case EOutlineType::Adjacency:
+				currentHighlightType = TypeOfHighlight::Adjacency;
+				break;
+			case EOutlineType::Attack:
+				currentHighlightType = TypeOfHighlight::Attack;
+				break;
+			default:
+				break;
 		}
 
 		decalComponent->SetVisibility(true);

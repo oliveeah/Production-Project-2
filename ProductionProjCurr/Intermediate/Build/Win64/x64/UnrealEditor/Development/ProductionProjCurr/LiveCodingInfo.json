@@ -25,6 +25,7 @@
 			"OccupantInterface.cpp.obj",
 			"InteractionInterface.cpp.obj",
 			"MyPlayerState.cpp.obj",
+			"TileManager.cpp.obj",
 			"Troop.cpp.obj",
 			"UPlayerProfile.cpp.obj",
 			"WorldEffectManager.cpp.obj",
@@ -35,10 +36,9 @@
 			"ProductionProjCurrPlayerController.cpp.obj",
 			"BG_PlayerPawn.cpp.obj",
 			"ProductionProjCurrCharacter.cpp.obj",
+			"BG_Tile.cpp.obj",
 			"BG_TileSpawner.cpp.obj",
-			"BG_Token.cpp.obj",
-			"TileManager.cpp.obj",
-			"BG_Tile.cpp.obj"
+			"BG_Token.cpp.obj"
 		]
 	}
 }

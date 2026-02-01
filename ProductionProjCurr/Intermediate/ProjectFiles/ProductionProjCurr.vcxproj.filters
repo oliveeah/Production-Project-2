@@ -60,6 +60,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\OccupantInterface.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\TileHighlightTypes.cpp">
+      <Filter>Source\ProductionProjCurr\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Troop.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
@@ -91,6 +94,9 @@
       <Filter>Source\ProductionProjCurr\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\OccupantInterface.h">
+      <Filter>Source\ProductionProjCurr\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\TileHighlightTypes.h">
       <Filter>Source\ProductionProjCurr\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Troop.h">

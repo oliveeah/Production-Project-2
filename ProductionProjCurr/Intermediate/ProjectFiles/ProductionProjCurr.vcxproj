@@ -273,6 +273,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\OccupantInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\TileHighlightTypes.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Troop.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -293,6 +296,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\DevMode_Widget.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\OccupantInterface.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\TileHighlightTypes.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Troop.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\WorldEffectManager.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.cpp">
