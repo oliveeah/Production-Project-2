@@ -18,12 +18,10 @@
 			"TileManager.gen.cpp.obj",
 			"Troop.gen.cpp.obj",
 			"UPlayerProfile.gen.cpp.obj",
-			"PerModuleInline.gen.cpp.obj",
 			"DevMode_Widget.cpp.obj",
 			"OccupantInterface.cpp.obj",
 			"InteractionInterface.cpp.obj",
 			"MyPlayerState.cpp.obj",
-			"Troop.cpp.obj",
 			"UPlayerProfile.cpp.obj",
 			"ProductionProjCurr.cpp.obj",
 			"BG_CaptureActor.cpp.obj",
@@ -36,7 +34,9 @@
 			"BG_Token.cpp.obj",
 			"BG_Tile.gen.cpp.obj",
 			"ProductionProjCurr.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
 			"TileManager.cpp.obj",
+			"Troop.cpp.obj",
 			"BG_Tile.cpp.obj"
 		]
 	}

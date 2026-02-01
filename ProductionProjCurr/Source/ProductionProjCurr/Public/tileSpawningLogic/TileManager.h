@@ -13,6 +13,15 @@ class ABG_TileSpawner;
 class ATroop;
 class AWorldEffectManager;
 
+UENUM(BlueprintType)
+enum class EPlayerIntent : uint8
+{
+	SelectTile,
+	MoveTroop,
+	AttackTroop,
+	ReselectTile,
+	Cancel
+};
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATileManager : public AActor
@@ -64,5 +73,7 @@ public:
 	FLinearColor getOutlineColor(ETileHighlightState highlightState) const;
 
 	TArray<ABG_Tile*> TilesWithOutline;
+
+	EPlayerIntent determinePlayerIntent(ABG_Tile* ClickedTile) const;
 
 };

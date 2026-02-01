@@ -12,7 +12,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBG_Tile() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UDecalComponent_NoRegister();
@@ -156,6 +155,14 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 		{ "IncludePath", "tileSpawningLogic/BG_Tile.h" },
 		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_occupyingTroopClass_MetaData[] = {
+		{ "Category", "BG_Tile" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_currentHighlightType_MetaData[] = {
+		{ "Category", "BG_Tile" },
+		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnTileSelectedDelegate_MetaData[] = {
 		{ "Category", "Tile Debug" },
 		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
@@ -187,17 +194,13 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 		{ "Category", "Tile Info" },
 		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_occupyingTroopClass_MetaData[] = {
-		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HexDecalMID_MetaData[] = {
 		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_currentHighlightType_MetaData[] = {
-		{ "Category", "Tile Info" },
-		{ "ModuleRelativePath", "Public/tileSpawningLogic/BG_Tile.h" },
-	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_occupyingTroopClass;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_currentHighlightType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_currentHighlightType;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnTileSelectedDelegate;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_tileMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_tileEdgeMesh;
@@ -207,10 +210,7 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_isOccupied;
 	static void NewProp_isSpawnableTile_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_isSpawnableTile;
-	static const UECodeGen_Private::FClassPropertyParams NewProp_occupyingTroopClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HexDecalMID;
-	static const UECodeGen_Private::FBytePropertyParams NewProp_currentHighlightType_Underlying;
-	static const UECodeGen_Private::FEnumPropertyParams NewProp_currentHighlightType;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -223,6 +223,9 @@ struct Z_Construct_UClass_ABG_Tile_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_occupyingTroopClass = { "occupyingTroopClass", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, occupyingTroopClass), Z_Construct_UClass_ATroop_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_occupyingTroopClass_MetaData), NewProp_occupyingTroopClass_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType = { "currentHighlightType", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, currentHighlightType), Z_Construct_UEnum_ProductionProjCurr_ETileHighlightState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentHighlightType_MetaData), NewProp_currentHighlightType_MetaData) }; // 2436747448
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_OnTileSelectedDelegate = { "OnTileSelectedDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, OnTileSelectedDelegate), Z_Construct_UDelegateFunction_ProductionProjCurr_OnTileSelected__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnTileSelectedDelegate_MetaData), NewProp_OnTileSelectedDelegate_MetaData) }; // 2066019166
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileMesh = { "tileMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, tileMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_tileMesh_MetaData), NewProp_tileMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileEdgeMesh = { "tileEdgeMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, tileEdgeMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_tileEdgeMesh_MetaData), NewProp_tileEdgeMesh_MetaData) };
@@ -238,11 +241,11 @@ void Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile_SetBit(void* O
 	((ABG_Tile*)Obj)->isSpawnableTile = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile = { "isSpawnableTile", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABG_Tile), &Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_isSpawnableTile_MetaData), NewProp_isSpawnableTile_MetaData) };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_occupyingTroopClass = { "occupyingTroopClass", nullptr, (EPropertyFlags)0x0014000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, occupyingTroopClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ATroop_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_occupyingTroopClass_MetaData), NewProp_occupyingTroopClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_HexDecalMID = { "HexDecalMID", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, HexDecalMID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HexDecalMID_MetaData), NewProp_HexDecalMID_MetaData) };
-const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType = { "currentHighlightType", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABG_Tile, currentHighlightType), Z_Construct_UEnum_ProductionProjCurr_ETileHighlightState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentHighlightType_MetaData), NewProp_currentHighlightType_MetaData) }; // 2436747448
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_Tile_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_occupyingTroopClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_OnTileSelectedDelegate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_tileEdgeMesh,
@@ -250,10 +253,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABG_Tile_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_gridCoordinates,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_isOccupied,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_isSpawnableTile,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_occupyingTroopClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_HexDecalMID,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType_Underlying,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABG_Tile_Statics::NewProp_currentHighlightType,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABG_Tile_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABG_Tile_Statics::DependentSingletons[])() = {
@@ -295,10 +295,10 @@ ABG_Tile::~ABG_Tile() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 1229955297U) },
+		{ Z_Construct_UClass_ABG_Tile, ABG_Tile::StaticClass, TEXT("ABG_Tile"), &Z_Registration_Info_UClass_ABG_Tile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABG_Tile), 1766323162U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_3066699093(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_1931350567(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_tileSpawningLogic_BG_Tile_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

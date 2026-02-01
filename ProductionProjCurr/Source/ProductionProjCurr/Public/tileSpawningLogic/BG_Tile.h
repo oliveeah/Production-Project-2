@@ -11,6 +11,8 @@
 #include "tileSpawningLogic/TileHighlightState.h"
 #include "BG_Tile.generated.h"
 
+class ATroop;
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	FOnTileSelected,
 	ABG_Tile*, 
@@ -25,6 +27,12 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 	GENERATED_BODY()
 private:
 	bool isPlayingEffect = false;
+
+	UPROPERTY(VisibleAnywhere)
+	ATroop* occupyingTroopClass;
+	UPROPERTY(VisibleAnywhere)
+
+	ETileHighlightState currentHighlightType = ETileHighlightState::None;
 
 
 	public:
@@ -66,9 +74,8 @@ private:
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Info")
 		bool isSpawnableTile = true;
 
-		UPROPERTY()
-		TSubclassOf<class ATroop> occupyingTroopClass;
-
+		void	SetOccupyingTroop(ATroop* Troop) { occupyingTroopClass = Troop; }
+		ATroop* getOccupyingTroop() const { return occupyingTroopClass; }
 
 		void removeOutlineEffect();
 		void addOutlineEffect(const FLinearColor& color);
@@ -77,9 +84,6 @@ private:
 		UMaterialInstanceDynamic* HexDecalMID;
 
 		bool getIsPlayingEffect() const { return isPlayingEffect; }
-
-		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
-		ETileHighlightState currentHighlightType = ETileHighlightState::None;
 
 		void SetHighlightType(ETileHighlightState newType) { currentHighlightType = newType; }
 

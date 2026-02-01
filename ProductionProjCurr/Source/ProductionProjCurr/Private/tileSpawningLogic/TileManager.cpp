@@ -55,9 +55,15 @@ FString& ATileManager::GetSelectedTileCoordinates()
 
 void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 {
+	static ABG_Tile* previousTile = nullptr;
+
 	// determine if valid tile and apply selection logic
 	if (!Tile)
 		return;
+
+	//get intent
+	EPlayerIntent playerIntent = determinePlayerIntent(Tile);
+	previousTile = SelectedTile;
 
 	// Turn off previous selection
 	if (SelectedTile)
@@ -74,56 +80,83 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 	// Update selection
 	SelectedTile = Tile;
 
-	FLinearColor outlineColor;
-
-	// Check if tile is already highlighted
-	if (Tile->getIsPlayingEffect())
+	switch (playerIntent)
 	{
-		ETileHighlightState currentState = Tile->getHighlightType();
-		switch (currentState)
-		{
-			case ETileHighlightState::None:
-				break;
-			case ETileHighlightState::Standard:
-				break;
-			case ETileHighlightState::Adjacency:
-				break;
-			case ETileHighlightState::Attack:
-				break;
-			default:
-				break;
-		}
-	}
-	else
-	{
-		if (isOccupied)
-		{
-			// occupied logic for each neighbour
-			outlineColor = getOutlineColor(ETileHighlightState::Adjacency);
-			Tile->SetHighlightType(ETileHighlightState::Adjacency);
-
-			TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1);
-			for (int i = 0; i < adjacentTiles.Num(); i++)
+		case EPlayerIntent::SelectTile:
+			if (isOccupied)//if troop is on tile
 			{
-				if (ABG_Tile* AdjTile = TileMap[adjacentTiles[i]])
+				FLinearColor color = getOutlineColor(ETileHighlightState::Adjacency);
+				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1);
+
+				for (FIntPoint Coord : adjacentTiles)
 				{
-					AdjTile->addOutlineEffect(outlineColor);
-					TilesWithOutline.Add(AdjTile);
+					if (ABG_Tile* AdjTile = TileMap[Coord])
+					{
+						AdjTile->SetHighlightType(ETileHighlightState::Adjacency);
+						AdjTile->addOutlineEffect(color);
+						TilesWithOutline.Add(AdjTile);
+					}
 				}
 			}
-		}
-		else
-		{
-			// standard logic
-			outlineColor = getOutlineColor(ETileHighlightState::Standard);
-			Tile->SetHighlightType(ETileHighlightState::Standard);
+			else
+			{
+				FLinearColor color = getOutlineColor(ETileHighlightState::Standard);
+				Tile->SetHighlightType(ETileHighlightState::Standard);
 
-			SelectedTile->addOutlineEffect(outlineColor);
-			TilesWithOutline.Add(SelectedTile);
+				Tile->addOutlineEffect(color);
+				TilesWithOutline.Add(Tile);
+			}
+			break;
+		case EPlayerIntent::MoveTroop:
+		{
+			ATroop* OccupyingTroop = previousTile->getOccupyingTroop();
+			if (OccupyingTroop)
+			{
+				OccupyingTroop->DeleteTroop();
+				previousTile->isOccupied = false;
+			}
+			break;
 		}
+		case EPlayerIntent::AttackTroop:
+			break;
+		case EPlayerIntent::ReselectTile:
+
+			break;
+		case EPlayerIntent::Cancel:
+			break;
+		default:
+			break;
 	}
 
+	// Check if tile is already highlighted // assume player trying to do action
+
+
+
 }
+
+EPlayerIntent ATileManager::determinePlayerIntent(ABG_Tile* ClickedTile) const
+{
+	if (!ClickedTile)
+		return EPlayerIntent::Cancel;
+	if (!ClickedTile->getIsPlayingEffect())
+		return EPlayerIntent::SelectTile;
+
+	switch (ClickedTile->getHighlightType())
+	{
+		case ETileHighlightState::Adjacency:
+			return EPlayerIntent::MoveTroop;
+
+		case ETileHighlightState::Attack:
+			return EPlayerIntent::AttackTroop;
+
+		case ETileHighlightState::Standard:
+			//return EPlayerIntent::ReselectTile;
+
+		default:
+			return EPlayerIntent::SelectTile;
+	}
+}
+
 
 TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange)
 {
@@ -188,7 +221,7 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
 		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
 		"TroopSpawnSocket");
-
+	Tile->SetOccupyingTroop(Troop);
 	Troop->SetGridPosition(Tile->getGridCoordinates());
 	Tile->isOccupied = true;
 }
@@ -210,6 +243,7 @@ FLinearColor ATileManager::getOutlineColor(ETileHighlightState highlightState) c
 			return FLinearColor(5, 5, 5, 1); // White
 	}
 }
+
 
 
 
