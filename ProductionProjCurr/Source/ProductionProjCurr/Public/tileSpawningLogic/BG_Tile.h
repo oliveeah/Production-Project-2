@@ -10,7 +10,7 @@
 #include "Materials/MaterialInstanceDynamic.h"
 #include "BG_Tile.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class TypeOfHighlight : uint8
 {
 	Standard,
@@ -78,7 +78,6 @@ private:
 
 		UPROPERTY()
 		TSubclassOf<class ATroop> occupyingTroopClass;
-		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 
 
 		void removeOutlineEffect();

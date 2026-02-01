@@ -254,7 +254,6 @@
     <None Include="..\..\Source\ProductionProjCurrEditor.Target.cs"/>
     <None Include="..\..\.clang-format"/>
     <None Include="..\..\.gitignore"/>
-    <None Include="..\..\.vsconfig"/>
     <ClInclude Include="..\..\BG_TileSpawner.h"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
