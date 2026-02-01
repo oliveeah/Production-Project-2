@@ -23,7 +23,8 @@ ABG_Tile::ABG_Tile()
 	tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
 	tileMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 
-
+	decalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("decal component"));
+	decalComponent->SetupAttachment(tileMesh);
 
 	Tags.Add(FName("Tile"));
 }
@@ -37,7 +38,13 @@ void ABG_Tile::BeginPlay()
 		GameMode->OnToggleTileDebugCoordinates.AddDynamic(this, &ABG_Tile::OnDebugToggled);
 	}
 
+	if (decalComponent && decalComponent->GetMaterial(0))
+	{
+		HexDecalMID = UMaterialInstanceDynamic::Create(
+			decalComponent->GetMaterial(0), this);
 
+		decalComponent->SetMaterial(0, HexDecalMID);
+	}
 }
 
 void ABG_Tile::OnDebugToggled()
@@ -54,7 +61,7 @@ FString DebugText = FString::Printf(
 
 void ABG_Tile::ReactToPlayerInteraction_Implementation()
 {
-	drawDebugPointer(FColor::Yellow);
+//	drawDebugPointer(FColor::Yellow);
 
 	setSelectedTile();
 }
@@ -70,17 +77,37 @@ void ABG_Tile::drawDebugPointer(FColor color)
 	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 200), DebugText, nullptr, color, 5.0f, true);
 }
 
-void ABG_Tile::toggleOutlineEffect()
+void ABG_Tile::removeOutlineEffect()
 {
 	if (isPlayingEffect && tileEdgeMesh)
 	{
-		tileEdgeMesh->SetVisibility(false);
-	}
-	else if (tileEdgeMesh)
-	{
-		tileEdgeMesh->SetVisibility(true);
+		//tileEdgeMesh->SetVisibility(false);
+		isPlayingEffect = false;
+		decalComponent->SetVisibility(false);
 	}
 }
+
+void ABG_Tile::addOutlineEffect(FColor color)
+{
+	if (tileEdgeMesh)
+	{
+		//tileEdgeMesh->SetVisibility(true);
+		isPlayingEffect = true;
+
+		if (HexDecalMID)
+		{
+			HexDecalMID->SetVectorParameterValue(
+				TEXT("DecalTint"), // Must match your material parameter name
+				color);
+		}
+
+		decalComponent->SetVisibility(true);
+	}
+}
+
+
+
+
 
 
 

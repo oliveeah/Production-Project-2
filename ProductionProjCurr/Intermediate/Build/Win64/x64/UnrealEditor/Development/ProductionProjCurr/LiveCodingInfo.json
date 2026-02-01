@@ -5,7 +5,6 @@
 			"BG_AC_MouseOverlapReciever.gen.cpp.obj",
 			"BG_CaptureActor.gen.cpp.obj",
 			"BG_PlayerPawn.gen.cpp.obj",
-			"BG_Tile.gen.cpp.obj",
 			"BG_TileSpawner.gen.cpp.obj",
 			"BG_Token.gen.cpp.obj",
 			"DevMode_Widget.gen.cpp.obj",
@@ -26,6 +25,7 @@
 			"MyPlayerState.cpp.obj",
 			"Troop.cpp.obj",
 			"UPlayerProfile.cpp.obj",
+			"WorldEffectManager.cpp.obj",
 			"ProductionProjCurr.cpp.obj",
 			"BG_CaptureActor.cpp.obj",
 			"ProductionProjCurrGameMode.cpp.obj",
@@ -35,9 +35,9 @@
 			"ProductionProjCurrCharacter.cpp.obj",
 			"BG_TileSpawner.cpp.obj",
 			"BG_Token.cpp.obj",
+			"BG_Tile.gen.cpp.obj",
 			"ProductionProjCurr.init.gen.cpp.obj",
 			"TileManager.cpp.obj",
-			"WorldEffectManager.cpp.obj",
 			"BG_Tile.cpp.obj"
 		]
 	}

@@ -13,6 +13,15 @@ class ABG_TileSpawner;
 class ATroop;
 class AWorldEffectManager;
 
+UENUM(BlueprintType)
+enum class EOutlineType : uint8
+{
+	Standard,
+	Adjacency,
+	Attack
+
+};
+
 UCLASS()
 class PRODUCTIONPROJCURR_API ATileManager : public AActor
 {
@@ -36,7 +45,7 @@ public:
 	int32 GridWidth;
 	int32 GridHeight;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	ABG_Tile* SelectedTile;
 
 	FString& GetSelectedTileCoordinates();
@@ -60,6 +69,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
 	float troopSpawnHeight = 20.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
-	AWorldEffectManager* EffectManager;
+	FColor getOutlineColor(EOutlineType outlineType) const;
+
+	TArray<ABG_Tile*> TilesWithOutline;
+
 };

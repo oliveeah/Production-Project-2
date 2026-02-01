@@ -7,6 +7,7 @@
 #include "GameFramework/Actor.h"
 #include "playerData/InteractionInterface.h"
 #include "Components/DecalComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
 #include "BG_Tile.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
@@ -15,6 +16,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	Tile,
 	bool,
 	isOccupied);
+
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterface
@@ -46,6 +48,9 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* tileEdgeMesh;
 
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+		UDecalComponent* decalComponent;
+
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
 		FIntPoint gridCoordinates;
 
@@ -53,7 +58,7 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 
 		void drawDebugPointer(FColor color);
 
-		UPROPERTY()
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		bool isOccupied = false;
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Info")
@@ -61,9 +66,15 @@ class PRODUCTIONPROJCURR_API ABG_Tile : public AActor, public IInteractionInterf
 
 		UPROPERTY()
 		TSubclassOf<class ATroop> occupyingTroopClass;
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 
 		bool isPlayingEffect = false;
 
+		void removeOutlineEffect();
+		void addOutlineEffect(FColor color);
 
-		void toggleOutlineEffect();
+		UPROPERTY()
+		UMaterialInstanceDynamic* HexDecalMID;
+
+
 };

@@ -62,22 +62,42 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 	// Turn off previous selection
 	if (SelectedTile)
 	{
-		SelectedTile->toggleOutlineEffect();
+		for (ABG_Tile* TileWithOutline : TilesWithOutline)
+		{
+			if (TileWithOutline)
+			{
+				TileWithOutline->removeOutlineEffect();
+			}
+		}
+		TilesWithOutline.Empty();
 	}
 
 	// Update selection
 	SelectedTile = Tile;
-
+	FColor outlineColor;
 	// Turn on new selection
-	SelectedTile->toggleOutlineEffect();
 
 	if (isOccupied)
-	{
-		// occupied logic
+	{	
+		// occupied logic for each neighbour
+		outlineColor = getOutlineColor(EOutlineType::Adjacency);
+
+		TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1);
+		for (int i =0; i < adjacentTiles.Num(); i++)
+		{
+			if (ABG_Tile* AdjTile = TileMap[adjacentTiles[i]])
+			{
+				AdjTile->addOutlineEffect(outlineColor);
+				TilesWithOutline.Add(AdjTile);
+			}
+		}
 	}
 	else
 	{
-		// empty logic
+		//standard logic
+		outlineColor = getOutlineColor(EOutlineType::Standard);
+		SelectedTile->addOutlineEffect(outlineColor);
+		TilesWithOutline.Add(SelectedTile);
 	}
 }
 
@@ -111,7 +131,6 @@ TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 
         if (HasTile(Neighbor)) 
 		{
 			Neighbors.Add(Neighbor);
-			TileMap[Neighbor]->drawDebugPointer(FColor::Blue);
 		}
 
 	}
@@ -145,6 +164,23 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	ATroop* Troop = World->SpawnActor<ATroop>(troopToSpawn,SpawnTransform);
 
 	Troop->SetGridPosition(Tile->getGridCoordinates());
+	Tile->isOccupied = true;
+}
+
+FColor ATileManager::getOutlineColor(EOutlineType outlineType) const
+{
+	switch (outlineType)
+	{
+		case EOutlineType::Standard:
+			return FColor::Black;
+		case EOutlineType::Adjacency:
+			return FColor::Blue;
+		case EOutlineType::Attack:
+			return FColor::Red;
+		default:
+			return FColor::White;
+		break;
+	}
 }
 
 
