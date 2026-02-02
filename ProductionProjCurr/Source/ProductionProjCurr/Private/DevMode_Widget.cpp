@@ -44,7 +44,10 @@ void UDevMode_Widget::NativeConstruct()
 	{
 		SpawnTroopAtSelectedTile_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::SpawnTroopAtSelectedTile_ButtonClicked);
 	}
-
+	if (SpawnBuildingAtSelectedTile_Button)
+	{
+		SpawnBuildingAtSelectedTile_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::SpawnBuildingAtSelectedTile_ButtonClicked);
+	}
 	// Find the first TileManager actor in the current world and assign it
 	for (TActorIterator<ATileManager> It(GetWorld()); It; ++It)
 	{
@@ -66,7 +69,8 @@ void UDevMode_Widget::initializeButtonLabels()
 		ShowAdjacentTiles_Button,
 		OwnTiles_Button,
 		SwapCurrentPlayer_Button,
-		SpawnTroopAtSelectedTile_Button
+		SpawnTroopAtSelectedTile_Button,
+		SpawnBuildingAtSelectedTile_Button
 	};
 
 	TArray<UTextBlock*> Labels = {
@@ -74,7 +78,8 @@ void UDevMode_Widget::initializeButtonLabels()
 		ShowAdjacentTiles_ButtonLabel,
 		OwnTiles_ButtonLabel,
 		SwapCurrentPlayer_ButtonLabel,
-		SpawnTroopAtSelectedTiled_ButtonLabel
+		SpawnTroopAtSelectedTiled_ButtonLabel,
+		SpawnBuildingAtSelectedTile_ButtonLabel
 	};
 
 	TArray<FString> LabelTexts = {
@@ -82,7 +87,8 @@ void UDevMode_Widget::initializeButtonLabels()
 		TEXT("Show Adjacent Tiles"),
 		TEXT("Own Tiles"),
 		TEXT("Swap Current Player"),
-		TEXT("Spawn Troop At Selected Tile")
+		TEXT("Spawn Troop At Selected Tile"),
+		TEXT("Spawn Building At Selected Tile")
 	};
 
 	for (int32 i = 0; i < Buttons.Num(); ++i)
