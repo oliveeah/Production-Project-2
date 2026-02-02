@@ -4,6 +4,7 @@
 #include "tileSpawningLogic/BG_TileSpawner.h"
 #include "tileSpawningLogic/BG_Tile.h"
 #include "Troop.h"
+#include "Building/Building.h"	
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
 
 // Sets default values
@@ -99,10 +100,17 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 							AdjTile->addOutlineEffect(color);
 							TilesWithOutline.Add(AdjTile);
 						}
-						else 
+						else if (!AdjTile->isOccupied && AdjTile->getCanSpawnTroopOnTile())
 						{
 							AdjTile->SetHighlightType(ETileHighlightState::Adjacency);
 							color = getOutlineColor(ETileHighlightState::Adjacency);
+							AdjTile->addOutlineEffect(color);
+							TilesWithOutline.Add(AdjTile);
+						}
+						else
+						{
+							AdjTile->SetHighlightType(ETileHighlightState::Blocked);
+							color = getOutlineColor(ETileHighlightState::Blocked);
 							AdjTile->addOutlineEffect(color);
 							TilesWithOutline.Add(AdjTile);
 						}
@@ -176,6 +184,11 @@ EPlayerIntent ATileManager::determinePlayerIntent(ABG_Tile* ClickedTile) const
 		default:
 			return EPlayerIntent::SelectTile;
 	}
+}
+
+void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, ABG_Tile* Tile)
+{
+	UE_LOG(LogTemp, Display, TEXT("place building at tile"));
 }
 
 
@@ -259,7 +272,8 @@ FLinearColor ATileManager::getOutlineColor(ETileHighlightState highlightState) c
 
 		case ETileHighlightState::Attack:
 			return FLinearColor(5, 0, 0, 1); // Red
-
+		case ETileHighlightState::Blocked:
+			return FLinearColor(5, 5, 5, 1); // White
 		default:
 			return FLinearColor(5, 5, 5, 1); // White
 	}

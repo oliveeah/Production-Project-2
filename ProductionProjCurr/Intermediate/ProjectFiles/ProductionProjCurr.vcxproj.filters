@@ -66,6 +66,12 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
+    <Filter Include="Source\ProductionProjCurr\Private\Building">
+      <UniqueIdentifier>{2469FFA3-3704-3E02-B7E8-CF8DF6E4B9E2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Building\Building.cpp">
+      <Filter>Source\ProductionProjCurr\Private\Building</Filter>
+    </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\playerData">
       <UniqueIdentifier>{D4B4FD6D-096B-3D52-9AE9-8AB0B397F8A6}</UniqueIdentifier>
     </Filter>
@@ -101,6 +107,12 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.h">
       <Filter>Source\ProductionProjCurr\Public\animations</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Public\Building">
+      <UniqueIdentifier>{262FF270-67D1-3510-BED0-EE98CE125F86}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Building\Building.h">
+      <Filter>Source\ProductionProjCurr\Public\Building</Filter>
     </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\gameMode">
       <UniqueIdentifier>{D8DE4CA4-6E41-3184-AC2A-24695D66E0D4}</UniqueIdentifier>

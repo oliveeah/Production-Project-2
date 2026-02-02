@@ -40,6 +40,14 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	UFUNCTION()
 	void SpawnTroopAtSelectedTile_ButtonClicked();
 
+	UFUNCTION()
+	void SpawnBuildingAtSelectedTile_ButtonClicked();
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	TObjectPtr<UButton> SpawnBuildingAtSelectedTile_Button;
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	TObjectPtr<UTextBlock> SpawnBuildingAtSelectedTile_ButtonLabel;
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> SpawnTroopAtSelectedTile_Button;
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
@@ -76,4 +84,7 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
 	TSubclassOf<class ATroop> TroopToSpawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	TSubclassOf<class ABuilding> BuildingToSpawn;
 };

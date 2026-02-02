@@ -45,15 +45,8 @@ public:
 	void SetTroopHealth(int NewHealth) { troopHealth = NewHealth; }
 	void SetTroopDamage(int NewDamage) { troopDamage = NewDamage; }
 
-	void DeleteTroop()
-	{
-		Destroy();
-		UE_LOG(LogTemp, Display, TEXT("delete troop called on troop"));
-	}
-
 	virtual bool CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const;
 	virtual void MoveToTile(class ABG_Tile* Tile);
-
 
 
 protected:

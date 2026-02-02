@@ -162,6 +162,22 @@ void UDevMode_Widget::SpawnTroopAtSelectedTile_ButtonClicked()
 	}
 }
 
+void UDevMode_Widget::SpawnBuildingAtSelectedTile_ButtonClicked()
+{
+	if (DevTileManager)
+	{
+		if (DevTileManager->SelectedTile)
+		{
+			DevTileManager->placeBuildingAtTile(BuildingToSpawn, DevTileManager->SelectedTile);
+			UE_LOG(LogTemp, Display, TEXT("Spawned building at selected tile"));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("No tile selected to spawn building on!"));
+		}
+	}
+}
+
 void UDevMode_Widget::generateButtonLabelText(UTextBlock* buttonLabel, const FString& labelText)
 {
 	if (buttonLabel)

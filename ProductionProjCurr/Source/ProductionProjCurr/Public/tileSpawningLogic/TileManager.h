@@ -12,6 +12,7 @@ class ABG_Tile;
 class ABG_TileSpawner;
 class ATroop;
 class AWorldEffectManager;
+class ABuilding;
 
 UENUM(BlueprintType)
 enum class EPlayerIntent : uint8
@@ -75,5 +76,7 @@ public:
 	TArray<ABG_Tile*> TilesWithOutline;
 
 	EPlayerIntent determinePlayerIntent(ABG_Tile* ClickedTile) const;
+
+	void placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, ABG_Tile* Tile);
 
 };

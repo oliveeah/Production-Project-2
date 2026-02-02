@@ -279,6 +279,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Building\Building.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -295,6 +298,7 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\animations\BG_CaptureActor.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Building\Building.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\gameMode\ProductionProjCurrGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
