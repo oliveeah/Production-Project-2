@@ -11,7 +11,6 @@
 			"InteractionInterface.gen.cpp.obj",
 			"MyPlayerState.gen.cpp.obj",
 			"OccupantInterface.gen.cpp.obj",
-			"ProductionProjCurr.init.gen.cpp.obj",
 			"ProductionProjCurrCharacter.gen.cpp.obj",
 			"ProductionProjCurrGameMode.gen.cpp.obj",
 			"ProductionProjCurrPlayerController.gen.cpp.obj",
@@ -19,9 +18,12 @@
 			"TileManager.gen.cpp.obj",
 			"Troop.gen.cpp.obj",
 			"UPlayerProfile.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"DevMode_Widget.cpp.obj",
 			"OccupantInterface.cpp.obj",
 			"InteractionInterface.cpp.obj",
 			"MyPlayerState.cpp.obj",
+			"TileManager.cpp.obj",
 			"UPlayerProfile.cpp.obj",
 			"ProductionProjCurr.cpp.obj",
 			"BG_CaptureActor.cpp.obj",
@@ -32,9 +34,7 @@
 			"ProductionProjCurrCharacter.cpp.obj",
 			"BG_Tile.cpp.obj",
 			"BG_TileSpawner.cpp.obj",
-			"PerModuleInline.gen.cpp.obj",
-			"DevMode_Widget.cpp.obj",
-			"TileManager.cpp.obj",
+			"ProductionProjCurr.init.gen.cpp.obj",
 			"Troop.cpp.obj"
 		]
 	}

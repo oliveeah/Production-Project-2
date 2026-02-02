@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Troop.generated.h"
 
-class UStaticMeshComponent;
+class USkeletalMeshComponent;
 class UCapsuleComponent;
 class ABG_Tile;
 
@@ -19,6 +19,16 @@ private:
 	FIntPoint GridPosition;
 	int		  troopDamage = 1;
 
+	bool	bIsMoving = false;
+	FVector MoveTarget;
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float	MoveInterpSpeed = 6.f;
+
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float	SnapDistance = 5.f;
+
+	ABG_Tile* TargetTile = nullptr;
+
 public:	
 	// Sets default values for this actor's properties
 	ATroop();
@@ -27,7 +37,7 @@ public:
 	USceneComponent* RootComp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
-	UStaticMeshComponent* TroopMesh;
+	USkeletalMeshComponent* TroopMesh;
 
 
 
@@ -43,7 +53,6 @@ public:
 
 	virtual bool CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const;
 	virtual void MoveToTile(class ABG_Tile* Tile);
-
 
 
 

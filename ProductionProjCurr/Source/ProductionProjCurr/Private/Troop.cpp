@@ -2,7 +2,7 @@
 
 
 #include "Troop.h"
-#include "Components/StaticMeshComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "tileSpawningLogic/BG_Tile.h"
 
@@ -14,7 +14,7 @@ ATroop::ATroop()
 
 	RootComp = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
 	RootComponent = RootComp;
-	TroopMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TroopMesh"));
+	TroopMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TroopMesh"));
 	TroopMesh->SetupAttachment(RootComp);
 
 }
@@ -35,13 +35,23 @@ void ATroop::MoveToTile(ABG_Tile* Tile)
 {
 	if (!Tile || !Tile->tileMesh)
 		return;
-
+	
+	TargetTile = Tile;
 	this->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	this->AttachToComponent(
-		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
-		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
-		"TroopSpawnSocket");
-	SetGridPosition(Tile->getGridCoordinates());
+
+	MoveTarget = Tile->tileMesh->GetSocketLocation("TroopSpawnSocket");
+
+	MoveTarget.Z = GetActorLocation().Z;
+
+	FVector ToTarget = MoveTarget - GetActorLocation();
+
+	if (!ToTarget.IsNearlyZero())
+	{
+		SetActorRotation(ToTarget.Rotation());
+	}
+
+	bIsMoving = true;
+	SetActorTickEnabled(true);
 }
 
 
@@ -61,5 +71,38 @@ void ATroop::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (bIsMoving)
+	{
+		FVector TargetLocation = MoveTarget;
+		FVector CurrentLocation = GetActorLocation();
+
+		FVector NewLocation = FMath::VInterpTo
+		(
+			CurrentLocation,
+			TargetLocation,
+			DeltaTime,
+			MoveInterpSpeed
+		);
+
+		SetActorLocation(NewLocation);
+
+		if (FVector::Dist(GetActorLocation(), MoveTarget) < SnapDistance)
+		{
+			if (!TargetTile)
+				return;
+
+			bIsMoving = false;
+
+				AttachToComponent(
+				TargetTile->tileMesh,
+				FAttachmentTransformRules::KeepWorldTransform,
+				"TroopSpawnSocket");
+
+			SetActorLocation(MoveTarget);
+			SetGridPosition(TargetTile->getGridCoordinates());
+			SetActorTickEnabled(false);
+			TargetTile = nullptr;
+		}
+	}
 }
 
