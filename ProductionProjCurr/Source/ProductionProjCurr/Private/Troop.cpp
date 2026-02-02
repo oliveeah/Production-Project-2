@@ -50,7 +50,7 @@ void ATroop::MoveToTile(ABG_Tile* Tile)
 		SetActorRotation(ToTarget.Rotation());
 	}
 
-	bIsMoving = true;
+	setIsMoving(true);
 	SetActorTickEnabled(true);
 }
 
@@ -91,8 +91,7 @@ void ATroop::Tick(float DeltaTime)
 			if (!TargetTile)
 				return;
 
-			bIsMoving = false;
-
+				setIsMoving(false);
 				AttachToComponent(
 				TargetTile->tileMesh,
 				FAttachmentTransformRules::KeepWorldTransform,

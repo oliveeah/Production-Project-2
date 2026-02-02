@@ -9,6 +9,12 @@
 class USkeletalMeshComponent;
 class ABG_Tile;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
+	FOnIsMovingChanged,
+	bool,
+	NewValue);
+
+
 UCLASS()
 class PRODUCTIONPROJCURR_API ATroop : public AActor
 {
@@ -18,7 +24,7 @@ private:
 	FIntPoint GridPosition;
 	int		  troopDamage = 1;
 
-	bool	bIsMoving = false;
+	
 	FVector MoveTarget;
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float	MoveInterpSpeed = 6.f;
@@ -27,10 +33,14 @@ private:
 	float	SnapDistance = 5.f;
 
 	ABG_Tile* TargetTile = nullptr;
+	UPROPERTY()
+	bool bIsMoving = false;
 
 public:	
 	// Sets default values for this actor's properties
 	ATroop();
+
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	USceneComponent* RootComp;
@@ -38,7 +48,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	USkeletalMeshComponent* TroopMesh;
 
-
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnIsMovingChanged OnIsMovingChanged;
 
 	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
 	void SetTroopHealth(int NewHealth) { troopHealth = NewHealth; }
@@ -47,6 +58,16 @@ public:
 	virtual bool CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const;
 	virtual void MoveToTile(class ABG_Tile* Tile);
 
+	UFUNCTION(BlueprintCallable)
+	void setIsMoving(bool NewIsMoving) 
+	{ 
+		if (bIsMoving != NewIsMoving)
+		{
+			bIsMoving = NewIsMoving; 
+			OnIsMovingChanged.Broadcast(bIsMoving);
+		}
+	}	
+	bool getIsMoving() const { return bIsMoving; }
 
 protected:
 	// Called when the game starts or when spawned
