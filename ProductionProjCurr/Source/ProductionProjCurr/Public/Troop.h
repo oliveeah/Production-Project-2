@@ -8,6 +8,7 @@
 
 class UStaticMeshComponent;
 class UCapsuleComponent;
+class ABG_Tile;
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATroop : public AActor
@@ -40,7 +41,7 @@ public:
 		UE_LOG(LogTemp, Display, TEXT("delete troop called on troop"));
 	}
 
-	virtual bool CanMoveTo(const FIntPoint& Target) const;
+	virtual bool CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const;
 	virtual void MoveToTile(class ABG_Tile* Tile);
 
 

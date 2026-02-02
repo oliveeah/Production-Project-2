@@ -114,7 +114,7 @@ void UDevMode_Widget::ShowAdjacentTiles_ButtonClicked()
 
 	if(DevTileManager)
 	{
-		TArray<FIntPoint> Neighbours = DevTileManager->GetAdjacentTiles(true, 0);
+		TArray<FIntPoint> Neighbours = DevTileManager->GetAdjacentTiles(true, 0, DevTileManager->SelectedTile);
 		for (int i = 0; i < Neighbours.Num(); i++)
 		{
 			UE_LOG(LogTemp, Display, TEXT("Neighbour Tile Coords: (%d, %d)"), Neighbours[i].X, Neighbours[i].Y);

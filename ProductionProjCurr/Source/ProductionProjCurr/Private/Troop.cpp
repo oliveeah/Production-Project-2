@@ -4,6 +4,7 @@
 #include "Troop.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "tileSpawningLogic/BG_Tile.h"
 
 // Sets default values
 ATroop::ATroop()
@@ -18,13 +19,29 @@ ATroop::ATroop()
 
 }
 
-bool ATroop::CanMoveTo(const FIntPoint& Target) const
+bool ATroop::CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const
 {
+	for (int i = 0; i < Neighbors.Num(); i++)
+	{
+		if (Neighbors[i] == Target)
+		{
+			return true;
+		}
+	}
 	return false;
 }
 
 void ATroop::MoveToTile(ABG_Tile* Tile)
 {
+	if (!Tile || !Tile->tileMesh)
+		return;
+
+	this->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	this->AttachToComponent(
+		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
+		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
+		"TroopSpawnSocket");
+	SetGridPosition(Tile->getGridCoordinates());
 }
 
 

@@ -86,7 +86,7 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 			if (isOccupied)//if troop is on tile
 			{
 				FLinearColor color = getOutlineColor(ETileHighlightState::Adjacency);
-				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1);
+				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, SelectedTile);
 
 				for (FIntPoint Coord : adjacentTiles)
 				{
@@ -112,8 +112,18 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 			ATroop* OccupyingTroop = previousTile->getOccupyingTroop();
 			if (OccupyingTroop)
 			{
-				OccupyingTroop->DeleteTroop();
-				previousTile->isOccupied = false;
+				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, previousTile);
+				bool canMove = OccupyingTroop->CanMoveTo(Tile->getGridCoordinates(), adjacentTiles);
+				if (canMove)
+				{
+					OccupyingTroop->MoveToTile(Tile);
+					Tile->SetOccupyingTroop(OccupyingTroop);
+					Tile->isOccupied = true;
+					previousTile->isOccupied = false;
+					
+				}
+				UE_LOG(LogTemp, Display, TEXT("canMove: %d"), canMove);
+
 			}
 			break;
 		}
@@ -158,14 +168,14 @@ EPlayerIntent ATileManager::determinePlayerIntent(ABG_Tile* ClickedTile) const
 }
 
 
-TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange)
+TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile)
 {
 	TArray<FIntPoint> Neighbors;
 
-	if (!SelectedTile)
+	if (!Tile)
 		return Neighbors;
 
-	const FIntPoint SelectedCoords = SelectedTile->getGridCoordinates();
+	const FIntPoint SelectedCoords = Tile->getGridCoordinates();
 
 	static const FIntPoint EvenRowDirs[6] = {
 		{ -1, 0 }, { 1, 0 },

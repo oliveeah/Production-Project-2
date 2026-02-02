@@ -56,7 +56,7 @@ public:
 	void OnTileClicked(ABG_Tile* Tile, bool isOccupied);
 
 	// Returns neighbors
-	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange);
+	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile);
 
 	bool HasTile(const FIntPoint& Coords) const;
 
