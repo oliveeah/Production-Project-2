@@ -7,7 +7,6 @@
 #include "Troop.generated.h"
 
 class USkeletalMeshComponent;
-class UCapsuleComponent;
 class ABG_Tile;
 
 UCLASS()

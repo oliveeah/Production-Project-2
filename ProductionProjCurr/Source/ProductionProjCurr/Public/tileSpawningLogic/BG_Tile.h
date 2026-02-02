@@ -12,6 +12,7 @@
 #include "BG_Tile.generated.h"
 
 class ATroop;
+class ABuilding;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	FOnTileSelected,
@@ -36,6 +37,14 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Tile Spawn")
 	bool bCanSpawnTroopOnTile = true;
+
+	UPROPERTY(EditAnywhere, Category = "Tile Spawn")
+	bool bBuildingCanBePlacedOnTile = true;
+
+	UPROPERTY(VisibleAnywhere)
+	ABuilding* occupyingBuildingClass;
+
+	bool bHasBuilding = false;
 
 	public:
 	// Sets default values for this actor's properties
@@ -79,6 +88,8 @@ private:
 		void	SetOccupyingTroop(ATroop* Troop) { occupyingTroopClass = Troop; }
 		ATroop* getOccupyingTroop() const { return occupyingTroopClass; }
 
+
+
 		void removeOutlineEffect();
 		void addOutlineEffect(const FLinearColor& color);
 
@@ -86,11 +97,15 @@ private:
 		UMaterialInstanceDynamic* HexDecalMID;
 
 		bool getIsPlayingEffect() const { return isPlayingEffect; }
-
 		void SetHighlightType(ETileHighlightState newType) { currentHighlightType = newType; }
-
 		ETileHighlightState& getHighlightType() { return currentHighlightType; }
 
 		bool getCanSpawnTroopOnTile() const { return bCanSpawnTroopOnTile; }
 
+		bool getBuildingCanBePlacedOnTile() const { return bBuildingCanBePlacedOnTile; }
+		ABuilding* getOccupyingBuilding() const { return occupyingBuildingClass; }
+		void SetOccupyingBuilding(ABuilding* Building) { occupyingBuildingClass = Building; }
+
+		bool getHasBuilding() const { return bHasBuilding; }
+		void setHasBuilding(bool hasBuilding) { bHasBuilding = hasBuilding; }
 };

@@ -11,7 +11,7 @@
 ATileManager::ATileManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 // Called when the game starts or when spawned
@@ -189,6 +189,26 @@ EPlayerIntent ATileManager::determinePlayerIntent(ABG_Tile* ClickedTile) const
 void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, ABG_Tile* Tile)
 {
 	UE_LOG(LogTemp, Display, TEXT("place building at tile"));
+	if (!Tile || !BuildingToPlace)
+		return;
+
+	UWorld* World = GetWorld();
+	if (!World)
+		return;
+
+	if (!Tile->getBuildingCanBePlacedOnTile())
+		return;	
+
+	FVector	   SpawnLocation = Tile->GetActorLocation();
+	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
+	ABuilding*	   Building = World->SpawnActor<ABuilding>(BuildingToPlace, SpawnTransform);
+	Building->AttachToComponent(
+		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
+		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
+		"BuildingSpawnSocket");
+	Tile->SetOccupyingBuilding(Building);
+	Building->SetGridPosition(Tile->getGridCoordinates());
+	Tile->setHasBuilding(true);
 }
 
 

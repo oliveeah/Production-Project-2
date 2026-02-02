@@ -6,6 +6,7 @@
 #include <Kismet/GameplayStatics.h>
 #include "Materials/MaterialInstance.h"
 #include "Troop.h"
+#include "Building/Building.h"
 #include "TileManager.h" // Only if you need to reference it here
 
 
