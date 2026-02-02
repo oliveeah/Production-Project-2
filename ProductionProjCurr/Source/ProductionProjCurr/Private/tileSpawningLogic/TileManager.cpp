@@ -85,17 +85,30 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 		case EPlayerIntent::SelectTile:
 			if (isOccupied)//if troop is on tile
 			{
-				FLinearColor color = getOutlineColor(ETileHighlightState::Adjacency);
+				FLinearColor color;
 				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, SelectedTile);
 
 				for (FIntPoint Coord : adjacentTiles)
 				{
 					if (ABG_Tile* AdjTile = TileMap[Coord])
 					{
-						AdjTile->SetHighlightType(ETileHighlightState::Adjacency);
-						AdjTile->addOutlineEffect(color);
-						TilesWithOutline.Add(AdjTile);
+						if (AdjTile->isOccupied)
+						{
+							AdjTile->SetHighlightType(ETileHighlightState::Attack);
+							color = getOutlineColor(ETileHighlightState::Attack);
+							AdjTile->addOutlineEffect(color);
+							TilesWithOutline.Add(AdjTile);
+						}
+						else 
+						{
+							AdjTile->SetHighlightType(ETileHighlightState::Adjacency);
+							color = getOutlineColor(ETileHighlightState::Adjacency);
+							AdjTile->addOutlineEffect(color);
+							TilesWithOutline.Add(AdjTile);
+						}
+
 					}
+	
 				}
 			}
 			else
@@ -109,22 +122,20 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 			break;
 		case EPlayerIntent::MoveTroop:
 		{
-			ATroop* OccupyingTroop = previousTile->getOccupyingTroop();
-			if (OccupyingTroop)
-			{
-				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, previousTile);
-				bool canMove = OccupyingTroop->CanMoveTo(Tile->getGridCoordinates(), adjacentTiles);
-				if (canMove)
+				ATroop* OccupyingTroop = previousTile->getOccupyingTroop();
+				if (OccupyingTroop)
 				{
-					OccupyingTroop->MoveToTile(Tile);
-					Tile->SetOccupyingTroop(OccupyingTroop);
-					Tile->isOccupied = true;
-					previousTile->isOccupied = false;
-					
+					TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, previousTile);
+					bool			  canMove = OccupyingTroop->CanMoveTo(Tile->getGridCoordinates(), adjacentTiles);
+					if (canMove)
+					{
+						OccupyingTroop->MoveToTile(Tile);
+						Tile->SetOccupyingTroop(OccupyingTroop);
+						Tile->isOccupied = true;
+						previousTile->isOccupied = false;
+					}
 				}
-				UE_LOG(LogTemp, Display, TEXT("canMove: %d"), canMove);
-
-			}
+			
 			break;
 		}
 		case EPlayerIntent::AttackTroop:

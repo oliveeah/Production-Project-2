@@ -34,6 +34,8 @@ private:
 
 	ETileHighlightState currentHighlightType = ETileHighlightState::None;
 
+	UPROPERTY(EditAnywhere, Category = "Tile Spawn")
+	bool bCanSpawnTroopOnTile = true;
 
 	public:
 	// Sets default values for this actor's properties
@@ -88,5 +90,7 @@ private:
 		void SetHighlightType(ETileHighlightState newType) { currentHighlightType = newType; }
 
 		ETileHighlightState& getHighlightType() { return currentHighlightType; }
+
+		bool getCanSpawnTroopOnTile() const { return bCanSpawnTroopOnTile; }
 
 };
