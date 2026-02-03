@@ -16,6 +16,7 @@ ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrGameMode();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_AProductionProjCurrGameMode_NoRegister();
 PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ATileManager_NoRegister();
+PRODUCTIONPROJCURR_API UClass* Z_Construct_UClass_ATurnManager_NoRegister();
 PRODUCTIONPROJCURR_API UFunction* Z_Construct_UDelegateFunction_ProductionProjCurr_OnToggleTileDebugCoordinates__DelegateSignature();
 UPackage* Z_Construct_UPackage__Script_ProductionProjCurr();
 // ********** End Cross Module References **********************************************************
@@ -175,11 +176,22 @@ struct Z_Construct_UClass_AProductionProjCurrGameMode_Statics
 		{ "Category", "Tile Debug" },
 		{ "ModuleRelativePath", "Public/gameMode/ProductionProjCurrGameMode.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_turnManager_MetaData[] = {
+		{ "Category", "TurnManager" },
+		{ "ModuleRelativePath", "Public/gameMode/ProductionProjCurrGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bGameActive_MetaData[] = {
+		{ "Category", "ProductionProjCurrGameMode" },
+		{ "ModuleRelativePath", "Public/gameMode/ProductionProjCurrGameMode.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TileManagerInstance_MetaData[] = {
 		{ "ModuleRelativePath", "Public/gameMode/ProductionProjCurrGameMode.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnToggleTileDebugCoordinates;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_turnManager;
+	static void NewProp_bGameActive_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bGameActive;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TileManagerInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -194,9 +206,17 @@ struct Z_Construct_UClass_AProductionProjCurrGameMode_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_OnToggleTileDebugCoordinates = { "OnToggleTileDebugCoordinates", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProductionProjCurrGameMode, OnToggleTileDebugCoordinates), Z_Construct_UDelegateFunction_ProductionProjCurr_OnToggleTileDebugCoordinates__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnToggleTileDebugCoordinates_MetaData), NewProp_OnToggleTileDebugCoordinates_MetaData) }; // 614555725
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_turnManager = { "turnManager", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProductionProjCurrGameMode, turnManager), Z_Construct_UClass_ATurnManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_turnManager_MetaData), NewProp_turnManager_MetaData) };
+void Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_bGameActive_SetBit(void* Obj)
+{
+	((AProductionProjCurrGameMode*)Obj)->bGameActive = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_bGameActive = { "bGameActive", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AProductionProjCurrGameMode), &Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_bGameActive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bGameActive_MetaData), NewProp_bGameActive_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_TileManagerInstance = { "TileManagerInstance", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProductionProjCurrGameMode, TileManagerInstance), Z_Construct_UClass_ATileManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TileManagerInstance_MetaData), NewProp_TileManagerInstance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AProductionProjCurrGameMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_OnToggleTileDebugCoordinates,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_turnManager,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_bGameActive,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProductionProjCurrGameMode_Statics::NewProp_TileManagerInstance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AProductionProjCurrGameMode_Statics::PropPointers) < 2048);
@@ -236,10 +256,10 @@ AProductionProjCurrGameMode::~AProductionProjCurrGameMode() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrGameMode, AProductionProjCurrGameMode::StaticClass, TEXT("AProductionProjCurrGameMode"), &Z_Registration_Info_UClass_AProductionProjCurrGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrGameMode), 611792865U) },
+		{ Z_Construct_UClass_AProductionProjCurrGameMode, AProductionProjCurrGameMode::StaticClass, TEXT("AProductionProjCurrGameMode"), &Z_Registration_Info_UClass_AProductionProjCurrGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrGameMode), 962836241U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_3210344483(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_4065559744(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Desktop_PP2_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_gameMode_ProductionProjCurrGameMode_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

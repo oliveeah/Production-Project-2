@@ -7,6 +7,7 @@
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "gameMode/ProductionProjCurrGameMode.h"
+#include "gameMode/TurnManager.h"
 #include "DevMode_Widget.generated.h"
 
 class ATileManager;
@@ -43,6 +44,10 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	UFUNCTION()
 	void SpawnBuildingAtSelectedTile_ButtonClicked();
 
+	UFUNCTION()
+	void EndGame_ButtonClicked();
+
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> SpawnBuildingAtSelectedTile_Button;
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
@@ -69,6 +74,11 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	TObjectPtr<UTextBlock> OwnTiles_ButtonLabel;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	TObjectPtr<UButton> EndGame_Button;
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	TObjectPtr<UTextBlock> EndGame_ButtonLabel;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> SwapCurrentPlayer_Button;
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
 	TObjectPtr<UTextBlock> SwapCurrentPlayer_ButtonLabel;
@@ -87,4 +97,7 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
 	TSubclassOf<class ABuilding> BuildingToSpawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
+	ATurnManager* turnManager;
 };

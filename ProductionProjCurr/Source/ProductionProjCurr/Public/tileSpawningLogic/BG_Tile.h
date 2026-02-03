@@ -9,6 +9,7 @@
 #include "Components/DecalComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "tileSpawningLogic/TileHighlightState.h"
+#include "gameMode/Enum_PlayerSide.h"
 #include "BG_Tile.generated.h"
 
 class ATroop;
@@ -108,4 +109,7 @@ private:
 
 		bool getHasBuilding() const { return bHasBuilding; }
 		void setHasBuilding(bool hasBuilding) { bHasBuilding = hasBuilding; }
+
+		UPROPERTY()
+		EActivePlayerSide owningPlayer;
 };

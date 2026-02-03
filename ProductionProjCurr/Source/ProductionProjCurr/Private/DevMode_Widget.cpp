@@ -48,6 +48,10 @@ void UDevMode_Widget::NativeConstruct()
 	{
 		SpawnBuildingAtSelectedTile_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::SpawnBuildingAtSelectedTile_ButtonClicked);
 	}
+	if (EndGame_Button)
+	{
+		EndGame_Button->OnClicked.AddDynamic(this, &UDevMode_Widget::EndGame_ButtonClicked);
+	}
 	// Find the first TileManager actor in the current world and assign it
 	for (TActorIterator<ATileManager> It(GetWorld()); It; ++It)
 	{
@@ -60,6 +64,18 @@ void UDevMode_Widget::NativeConstruct()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to find TileManager in the level!"));
 	}
+
+	for (TActorIterator<ATurnManager> It(GetWorld()); It; ++It)
+	{
+		turnManager = *It;
+		UE_LOG(LogTemp, Display, TEXT("TurnManager found and assigned!"));
+		break;
+	}
+
+	if (!turnManager)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed to find TurnManager in the level!"));
+	}
 }
 
 void UDevMode_Widget::initializeButtonLabels()
@@ -70,7 +86,8 @@ void UDevMode_Widget::initializeButtonLabels()
 		OwnTiles_Button,
 		SwapCurrentPlayer_Button,
 		SpawnTroopAtSelectedTile_Button,
-		SpawnBuildingAtSelectedTile_Button
+		SpawnBuildingAtSelectedTile_Button,
+		EndGame_Button
 	};
 
 	TArray<UTextBlock*> Labels = {
@@ -79,7 +96,8 @@ void UDevMode_Widget::initializeButtonLabels()
 		OwnTiles_ButtonLabel,
 		SwapCurrentPlayer_ButtonLabel,
 		SpawnTroopAtSelectedTiled_ButtonLabel,
-		SpawnBuildingAtSelectedTile_ButtonLabel
+		SpawnBuildingAtSelectedTile_ButtonLabel,
+		EndGame_ButtonLabel
 	};
 
 	TArray<FString> LabelTexts = {
@@ -88,7 +106,8 @@ void UDevMode_Widget::initializeButtonLabels()
 		TEXT("Own Tiles"),
 		TEXT("Swap Current Player"),
 		TEXT("Spawn Troop At Selected Tile"),
-		TEXT("Spawn Building At Selected Tile")
+		TEXT("Spawn Building At Selected Tile"),
+		TEXT("End Game")
 	};
 
 	for (int32 i = 0; i < Buttons.Num(); ++i)
@@ -150,6 +169,12 @@ void UDevMode_Widget::OwnTiles_ButtonClicked()
 void UDevMode_Widget::SwapCurrentPlayer_ButtonClicked()
 {
 	UE_LOG(LogTemp, Display, TEXT("swap current player button clicked"));
+	if (!turnManager)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("TurnManager not assigned in DevMode_Widget!"));
+		return;
+	}
+	turnManager->PassTurn();
 }
 
 void UDevMode_Widget::SpawnTroopAtSelectedTile_ButtonClicked()
@@ -181,6 +206,14 @@ void UDevMode_Widget::SpawnBuildingAtSelectedTile_ButtonClicked()
 		{
 			UE_LOG(LogTemp, Warning, TEXT("No tile selected to spawn building on!"));
 		}
+	}
+}
+
+void UDevMode_Widget::EndGame_ButtonClicked()
+{
+	if (AProductionProjCurrGameMode* GameMode = Cast<AProductionProjCurrGameMode>(UGameplayStatics::GetGameMode(this)))
+	{
+		GameMode->SetGameActive(false);
 	}
 }
 

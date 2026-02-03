@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "gameMode/Enum_PlayerSide.h"
+#include "TurnManager.h"
 #include "ProductionProjCurrGameMode.generated.h"
-
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnToggleTileDebugCoordinates);
 /**
@@ -35,9 +36,18 @@ public:
 		OnToggleTileDebugCoordinates.Broadcast();
 	}
 
-public:
 	UFUNCTION(BlueprintCallable)
 	ATileManager* GetTileManager() const { return TileManagerInstance; }
+
+	void TurnLoop();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
+	ATurnManager* turnManager;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bGameActive;
+
+	void SetGameActive(bool isActive) { bGameActive = isActive; }
 
 private:
 	UPROPERTY()

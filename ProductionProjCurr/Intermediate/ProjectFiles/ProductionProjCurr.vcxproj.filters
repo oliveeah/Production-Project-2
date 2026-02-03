@@ -72,6 +72,12 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Building\Building.cpp">
       <Filter>Source\ProductionProjCurr\Private\Building</Filter>
     </ClCompile>
+    <Filter Include="Source\ProductionProjCurr\Private\gameMode">
+      <UniqueIdentifier>{563C9B27-01D4-3A3D-8497-94FD4EEB1337}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\gameMode\TurnManager.cpp">
+      <Filter>Source\ProductionProjCurr\Private\gameMode</Filter>
+    </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\playerData">
       <UniqueIdentifier>{D4B4FD6D-096B-3D52-9AE9-8AB0B397F8A6}</UniqueIdentifier>
     </Filter>
@@ -121,6 +127,9 @@
       <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\ProductionProjCurrGameMode.h">
+      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\TurnManager.h">
       <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
     </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\input">
@@ -183,5 +192,11 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\TileManager.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EActivePlayer.h">
+      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\Enum_PlayerSide.h" />
   </ItemGroup>
 </Project>

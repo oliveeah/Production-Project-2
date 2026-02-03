@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "gameMode/Enum_PlayerSide.h"
 #include "Troop.generated.h"
+
 
 class USkeletalMeshComponent;
 class ABG_Tile;
@@ -35,6 +37,8 @@ private:
 	ABG_Tile* TargetTile = nullptr;
 	UPROPERTY()
 	bool bIsMoving = false;
+
+
 
 public:	
 	// Sets default values for this actor's properties
@@ -72,6 +76,9 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(BlueprintReadOnly)
+	EActivePlayerSide owningPlayer;
 
 public:	
 	// Called every frame
