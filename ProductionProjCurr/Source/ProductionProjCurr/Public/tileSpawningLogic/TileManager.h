@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "tileSpawningLogic/TileHighlightState.h"
+#include "gameMode/Enum_PlayerSide.h"
+#include "gameMode/TurnManager.h"
 #include "TileManager.generated.h"
 
 // Forward declarations to break circular includes
@@ -79,4 +81,9 @@ public:
 
 	void placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, ABG_Tile* Tile);
 
+	void setOccupantOwner(ABuilding* Building, EActivePlayerSide currentPlayer);
+	void setOccupantOwner(ATroop* Troop, EActivePlayerSide currentPlayer);
+	void setTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
+	ATurnManager* turnManager;
 };

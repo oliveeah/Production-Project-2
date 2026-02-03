@@ -123,6 +123,9 @@
     <Filter Include="Source\ProductionProjCurr\Public\gameMode">
       <UniqueIdentifier>{D8DE4CA4-6E41-3184-AC2A-24695D66E0D4}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\Enum_PlayerSide.h">
+      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\gameMode\ProductionProjCurrGameMode.cpp">
       <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
     </ClCompile>
@@ -192,11 +195,5 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\TileManager.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EActivePlayer.h">
-      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\Enum_PlayerSide.h" />
   </ItemGroup>
 </Project>

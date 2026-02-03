@@ -6,6 +6,7 @@
 #include "Troop.h"
 #include "Building/Building.h"	
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
+#include <gameMode/ProductionProjCurrGameMode.h>
 
 // Sets default values
 ATileManager::ATileManager()
@@ -140,6 +141,13 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 						OccupyingTroop->MoveToTile(Tile);
 						Tile->SetOccupyingTroop(OccupyingTroop);
 						Tile->isOccupied = true;
+
+						if (turnManager)//update owning player for both tiles (Prior and New)
+						{
+							setTileOwner(Tile, turnManager->GetActivePlayer());
+							setTileOwner(previousTile, EActivePlayerSide::None);
+						}
+
 						previousTile->isOccupied = false;
 					}
 				}
@@ -199,6 +207,7 @@ void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, A
 	if (!Tile->getBuildingCanBePlacedOnTile())
 		return;	
 
+
 	FVector	   SpawnLocation = Tile->GetActorLocation();
 	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
 	ABuilding*	   Building = World->SpawnActor<ABuilding>(BuildingToPlace, SpawnTransform);
@@ -209,7 +218,35 @@ void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, A
 	Tile->SetOccupyingBuilding(Building);
 	Building->SetGridPosition(Tile->getGridCoordinates());
 	Tile->setHasBuilding(true);
+	Building->SetOwningPlayer(turnManager->GetActivePlayer());
+	Tile->SetOwningPlayer(turnManager->GetActivePlayer());
+
 }
+
+void ATileManager::setOccupantOwner(ABuilding* Building, EActivePlayerSide currentPlayer)
+{
+	if (!Building)
+		return;
+
+	Building->SetOwningPlayer(currentPlayer);
+}
+
+void ATileManager::setOccupantOwner(ATroop* Troop, EActivePlayerSide currentPlayer)
+{
+	if (!Troop)
+		return;
+	Troop->SetOwningPlayer(currentPlayer);
+}
+
+void ATileManager::setTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer)
+{
+	if (!Tile)
+		return;
+
+	Tile->SetOwningPlayer(currentPlayer);
+}
+
+
 
 
 TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile)
@@ -278,6 +315,8 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	Tile->SetOccupyingTroop(Troop);
 	Troop->SetGridPosition(Tile->getGridCoordinates());
 	Tile->isOccupied = true;
+	Troop->SetOwningPlayer(turnManager->GetActivePlayer());
+	Tile->SetOwningPlayer(turnManager->GetActivePlayer());
 }
 
 FLinearColor ATileManager::getOutlineColor(ETileHighlightState highlightState) const

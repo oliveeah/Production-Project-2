@@ -110,6 +110,8 @@ private:
 		bool getHasBuilding() const { return bHasBuilding; }
 		void setHasBuilding(bool hasBuilding) { bHasBuilding = hasBuilding; }
 
-		UPROPERTY()
-		EActivePlayerSide owningPlayer;
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		EActivePlayerSide owningPlayer =  EActivePlayerSide::None;
+
+		void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
 };

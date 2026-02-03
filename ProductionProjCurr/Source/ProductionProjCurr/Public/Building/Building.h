@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "gameMode/Enum_PlayerSide.h"
 #include "Building.generated.h"
 
 class USkeletalMeshComponent;
@@ -35,4 +36,10 @@ public:
 	USkeletalMeshComponent* BuildingMesh;
 
 	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
+
+	
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	EActivePlayerSide owningPlayer;
+
+	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
 };
