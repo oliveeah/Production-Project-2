@@ -24,11 +24,11 @@ void AProductionProjCurrGameMode::BeginPlay()
 
 	bGameActive = true;
 
-	while (bGameActive)
-	{
+	//while (bGameActive)
+	//{
 		TurnLoop();
 
-	}
+	//}
 
 }
 
@@ -64,9 +64,9 @@ void AProductionProjCurrGameMode::TurnLoop()
 		UE_LOG(LogTemp, Display, TEXT("Player B's turn"));
 	}
 
-	while (activePlayer == turnManager->GetActivePlayer())
-	{
+//	while (activePlayer == turnManager->GetActivePlayer())
+//	{
 		// Wait for turn to end
-	}
+//	}
 
 }
