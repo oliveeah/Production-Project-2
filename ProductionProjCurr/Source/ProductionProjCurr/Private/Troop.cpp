@@ -62,8 +62,14 @@ void ATroop::MoveToTile(ABG_Tile* Tile)
 void ATroop::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Display, TEXT("Spawned troop here"));
-
+	
+	if (TroopMesh && TroopMesh->GetMaterial(0))
+	{
+		TroopMID = UMaterialInstanceDynamic::Create(
+			TroopMesh->GetMaterial(0),
+			this);
+	}
+	TroopMesh->SetMaterial(0, TroopMID);
 }
 
 // Called every frame
@@ -103,5 +109,10 @@ void ATroop::Tick(float DeltaTime)
 			TargetTile = nullptr;
 		}
 	}
+}
+
+void ATroop::SetTeamColor(const FLinearColor& NewColor)
+{
+	TroopMID->SetVectorParameterValue("TeamColor", NewColor);
 }
 

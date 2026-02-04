@@ -17,9 +17,6 @@ ABG_Tile::ABG_Tile()
 	tileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile mesh"));
 	SetRootComponent(tileMesh);
 
-	tileEdgeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile edge mesh"));
-	tileEdgeMesh->SetupAttachment(tileMesh);
-
 	tileMesh->SetBoundsScale(1000.0f);
 	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
@@ -81,7 +78,7 @@ void ABG_Tile::drawDebugPointer(FColor color)
 
 void ABG_Tile::removeOutlineEffect()
 {
-	if (isPlayingEffect && tileEdgeMesh)
+	if (isPlayingEffect)
 	{
 		//tileEdgeMesh->SetVisibility(false);
 		isPlayingEffect = false;
@@ -92,20 +89,18 @@ void ABG_Tile::removeOutlineEffect()
 
 void ABG_Tile::addOutlineEffect(const FLinearColor& color)
 {
-	if (tileEdgeMesh)
+	
+	//tileEdgeMesh->SetVisibility(true);
+	isPlayingEffect = true;
+
+	if (HexDecalMID)
 	{
-		//tileEdgeMesh->SetVisibility(true);
-		isPlayingEffect = true;
-
-		if (HexDecalMID)
-		{
-			HexDecalMID->SetVectorParameterValue(
-				TEXT("DecalTint"), // Must match your material parameter name
-				color);
-		}
-
-		decalComponent->SetVisibility(true);
+		HexDecalMID->SetVectorParameterValue(
+			TEXT("DecalTint"), // Must match your material parameter name
+			color);
 	}
+
+	decalComponent->SetVisibility(true);
 }
 
 

@@ -312,6 +312,22 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
 		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
 		"TroopSpawnSocket");
+
+	EActivePlayerSide currentPlayer = turnManager->GetActivePlayer();
+	switch (currentPlayer)
+	{
+		case EActivePlayerSide::PlayerA:
+			Troop->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
+			break;
+		case EActivePlayerSide::PlayerB:
+			Troop->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
+			break;
+		case EActivePlayerSide::None:
+			break;
+		default:
+			break;
+	}
+
 	Tile->SetOccupyingTroop(Troop);
 	Troop->SetGridPosition(Tile->getGridCoordinates());
 	Tile->isOccupied = true;

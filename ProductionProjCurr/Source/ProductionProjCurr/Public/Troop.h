@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "gameMode/Enum_PlayerSide.h"
+#include "Materials/MaterialInstanceDynamic.h"
 #include "Troop.generated.h"
 
 
@@ -87,4 +88,9 @@ public:
 	EActivePlayerSide owningPlayer;
 
 	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
+
+	void SetTeamColor(const FLinearColor& NewColor);
+
+	UPROPERTY()
+	UMaterialInstanceDynamic* TroopMID;
 };

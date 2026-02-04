@@ -68,9 +68,6 @@ private:
 		UStaticMeshComponent* tileMesh;
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
-		UStaticMeshComponent* tileEdgeMesh;
-
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UDecalComponent* decalComponent;
 
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Info")
