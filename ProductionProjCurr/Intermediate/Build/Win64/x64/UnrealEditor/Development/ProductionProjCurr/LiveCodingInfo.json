@@ -28,7 +28,6 @@
 			"OccupantInterface.cpp.obj",
 			"InteractionInterface.cpp.obj",
 			"MyPlayerState.cpp.obj",
-			"TileManager.cpp.obj",
 			"UPlayerProfile.cpp.obj",
 			"ProductionProjCurr.cpp.obj",
 			"BG_CaptureActor.cpp.obj",
@@ -40,6 +39,7 @@
 			"BG_Tile.cpp.obj",
 			"BG_TileSpawner.cpp.obj",
 			"ProductionProjCurr.init.gen.cpp.obj",
+			"TileManager.cpp.obj",
 			"Troop.cpp.obj"
 		]
 	}

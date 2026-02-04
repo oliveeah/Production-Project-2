@@ -58,6 +58,9 @@ public:
 	// Called to bind tile delegates
 	void OnTileClicked(ABG_Tile* Tile, bool isOccupied);
 
+	UFUNCTION()
+	void OnTroopDeath();
+
 	// Returns neighbors
 	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile);
 
@@ -86,4 +89,6 @@ public:
 	void setTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer);
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
 	ATurnManager* turnManager;
+
+	void removeOutlineFromAllTiles();
 };

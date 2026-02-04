@@ -22,6 +22,9 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
 	bool,
 	NewValue);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(
+	FOnTroopDeath);
+
 UCLASS()
 class PRODUCTIONPROJCURR_API ATroop : public AActor
 {
@@ -65,9 +68,24 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnIsAttackingChanged OnIsAttackingChanged;
 
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnTroopDeath OnTroopDeath;
+
 	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
-	void SetTroopHealth(int NewHealth) { troopHealth = NewHealth; }
+	void SetTroopHealth(int NewHealth) 
+	{ 
+		troopHealth = NewHealth;
+
+		if (troopHealth <= 0)
+		{
+			TroopDeath();
+			OnTroopDeath.Broadcast();
+		}
+	}
 	void SetTroopDamage(int NewDamage) { troopDamage = NewDamage; }
+
+	int GetTroopHealth() const { return troopHealth; }
+	int GetTroopDamage() const { return troopDamage; }
 
 	virtual bool CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const;
 	virtual void MoveToTile(class ABG_Tile* Tile);
@@ -98,8 +116,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -110,6 +126,8 @@ public:
 	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
 
 	void SetTroopTeamColor(const FLinearColor& NewColor);
+
+	void TroopDeath();
 
 	UPROPERTY()
 	UMaterialInstanceDynamic* TroopMID;

@@ -116,3 +116,8 @@ void ATroop::SetTroopTeamColor(const FLinearColor& NewColor)
 	TroopMID->SetVectorParameterValue("TeamColor", NewColor);
 }
 
+void ATroop::TroopDeath()
+{
+	this->Destroy();
+}
+
