@@ -1,0 +1,68 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "gameMode/Enum_PlayerSide.h"
+#include "Occupant_BaseClass.generated.h"
+
+class AMaterialInstanceDynamic;
+class USkeletalMeshComponent;
+class ABG_Tile;
+
+UCLASS()
+class PRODUCTIONPROJCURR_API AOccupant_BaseClass : public AActor
+{
+	GENERATED_BODY()
+	
+protected:	
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+	USceneComponent* RootComp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+	USkeletalMeshComponent* SkeletalMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Stats")
+	int32 Health = 3;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Grid")
+	FIntPoint GridPosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Team")
+	EActivePlayerSide OwningPlayer = EActivePlayerSide::None;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Team")
+	FLinearColor TeamColor;
+
+	UPROPERTY()
+	UMaterialInstanceDynamic* TeamMID;
+
+public:
+
+	/*Setters*/
+	void		 SetHealth(int NewHealth);
+	virtual void SetGridPosition(const FIntPoint& NewPos);
+	virtual void SetOwningPlayer(EActivePlayerSide NewPlayer);
+	virtual void SetTeamColor(const FLinearColor& NewColor);
+
+	/*Getters*/
+	virtual int				  GetHealth() const;
+	virtual FIntPoint		  GetGridPosition() const;
+	virtual EActivePlayerSide GetOwningPlayer() const;
+	virtual FLinearColor      GetTeamColor() const;
+
+	virtual bool IsBuilding() const { return false; }
+	virtual bool IsTroop() const { return false; }
+
+	AOccupant_BaseClass()
+	{
+		PrimaryActorTick.bCanEverTick = false;
+		RootComp = CreateDefaultSubobject<USceneComponent>(TEXT("RootComp"));
+		SetRootComponent(RootComp);
+		SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
+		SkeletalMesh->SetupAttachment(RootComp);
+	}
+
+};

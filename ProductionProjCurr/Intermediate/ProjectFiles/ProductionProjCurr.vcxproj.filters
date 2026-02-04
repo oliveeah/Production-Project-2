@@ -78,6 +78,12 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\gameMode\TurnManager.cpp">
       <Filter>Source\ProductionProjCurr\Private\gameMode</Filter>
     </ClCompile>
+    <Filter Include="Source\ProductionProjCurr\Private\Occupant">
+      <UniqueIdentifier>{6653A731-D686-39C7-B4FA-914F4E6AAD2B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Occupant\Occupant_BaseClass.cpp">
+      <Filter>Source\ProductionProjCurr\Private\Occupant</Filter>
+    </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\playerData">
       <UniqueIdentifier>{D4B4FD6D-096B-3D52-9AE9-8AB0B397F8A6}</UniqueIdentifier>
     </Filter>
@@ -149,6 +155,12 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\input\ProductionProjCurrPlayerController.h">
       <Filter>Source\ProductionProjCurr\Public\input</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProductionProjCurr\Public\Occupant">
+      <UniqueIdentifier>{611608D6-1042-3130-B1E3-67127D9F5E0F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Occupant\Occupant_BaseClass.h">
+      <Filter>Source\ProductionProjCurr\Public\Occupant</Filter>
     </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\playerData">
       <UniqueIdentifier>{0B174A4E-84CE-3C39-9FA4-FE096592392C}</UniqueIdentifier>

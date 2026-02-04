@@ -1859,3 +1859,90 @@ Detoured run took 1.5s
 [2026.02.04-11.43.17:468][556]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=2
 [2026.02.04-11.43.17:486][556]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
 [2026.02.04-11.43.17:522][557]LogPlayLevel: Display: Destroying online subsystem :Context_4
+[2026.02.04-11.43.44:480][727]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 332.283142
+[2026.02.04-11.43.45:481][730]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-11.43.45:481][730]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 332.947327, Update Interval: 317.404694
+[2026.02.04-11.48.23:523][564]LogText3D: Text3D Engine Subsystem is clearing unreferenced cached fonts and typefaces.
+[2026.02.04-11.49.06:195][692]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 653.997864
+[2026.02.04-11.49.07:195][695]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-11.49.07:195][696]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 654.664612, Update Interval: 314.914398
+[2026.02.04-11.53.54:456][597]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_6.utrace' already exists
+[2026.02.04-11.53.58:300][772]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.02.04-11.53.58:308][772]LogContentBrowser: Creating deferred item: NewFolder
+[2026.02.04-11.53.58:320][773]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.02.04-11.54.02:778][ 41]LogContentBrowser: Attempting asset rename: NewFolder -> occupant
+[2026.02.04-11.54.02:779][ 41]LogContentBrowser: End creating deferred item NewFolder
+[2026.02.04-11.54.12:511][581]LogEditorClassViewer: Warning: Class /Game/RefactoredStuff/Blueprints/NPC/BP_NPC_BaseClass.BP_NPC_BaseClass_C has parent /Script/ProductionProjCurr.NPC_BaseClass, but this parent is not found. The Class will not be shown in ClassViewer.
+[2026.02.04-11.54.12:630][581]LogSlate: Took 0.009580 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2026.02.04-11.54.25:809][355]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 973.613037
+[2026.02.04-11.54.26:008][367]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-11.54.26:008][368]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 973.795898, Update Interval: 306.075623
+[2026.02.04-11.54.41:978][652]LogAutomationController: Ignoring very large delta of 11.24 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2026.02.04-11.54.41:979][653]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_7.utrace' already exists
+[2026.02.04-11.54.44:105][731]Running C:/Program Files/Epic Games/UE_5.6/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/ProductionProjCurr.uproject" -game -rocket -progress
+[2026.02.04-11.54.44:215][731]Using bundled DotNet SDK version: 8.0.300 win-x64
+[2026.02.04-11.54.44:215][731]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/ProductionProjCurr.uproject" -game -rocket -progress
+[2026.02.04-11.54.44:818][731]Log file: C:\Users\linda\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.02.04-11.54.45:523][731]
+[2026.02.04-11.54.45:523][731]Generating VisualStudio project files:
+[2026.02.04-11.54.45:523][731]Discovering modules, targets and source code for project...
+[2026.02.04-11.54.45:523][731]Adding projects for all targets...
+[2026.02.04-11.54.47:335][731]Adding projects for all targets took 1.75s
+[2026.02.04-11.54.47:335][731]Adding projects for all game projects took 0.00s
+[2026.02.04-11.54.48:040][731]Adding projects for all modules took 0.68s
+[2026.02.04-11.54.48:946][731]Compiling Rules Assemblies
+[2026.02.04-11.54.48:947][731]Compiling Rules Assemblies 100%
+[2026.02.04-11.54.48:947][731]Creating Build Targets
+[2026.02.04-11.54.49:048][731]C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\ProductionProjCurr.Build.cs: warning: Referenced directory 'C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\Variant_Platforming' does not exist.
+[2026.02.04-11.54.49:048][731]C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\ProductionProjCurr.Build.cs: warning: Referenced directory 'C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\Variant_Combat' does not exist.
+[2026.02.04-11.54.49:048][731]C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\ProductionProjCurr.Build.cs: warning: Referenced directory 'C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\Variant_Combat\AI' does not exist.
+[2026.02.04-11.54.49:048][731]C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\ProductionProjCurr.Build.cs: warning: Referenced directory 'C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\Variant_SideScrolling' does not exist.
+[2026.02.04-11.54.49:048][731]C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\ProductionProjCurr.Build.cs: warning: Referenced directory 'C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\Variant_SideScrolling\Gameplay' does not exist.
+[2026.02.04-11.54.49:048][731]C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\ProductionProjCurr.Build.cs: warning: Referenced directory 'C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Source\ProductionProjCurr\Variant_SideScrolling\AI' does not exist.
+[2026.02.04-11.54.51:163][731]Creating Build Targets 100%
+[2026.02.04-11.54.51:163][731]Creating Build Targets took 2.25s
+[2026.02.04-11.54.51:163][731]Binding IntelliSense data...
+[2026.02.04-11.55.01:583][731]Binding IntelliSense data... 29%
+[2026.02.04-11.55.12:114][731]Binding IntelliSense data... 62%
+[2026.02.04-11.55.14:848][731]Binding IntelliSense data... 100%
+[2026.02.04-11.55.14:848][731]Binding IntelliSense data took 23.67s
+[2026.02.04-11.55.14:848][731]Writing project files...
+[2026.02.04-11.55.17:969][731]Writing project files... 100%
+[2026.02.04-11.55.17:969][731]Writing project files took 3.14s
+[2026.02.04-11.55.17:969][731]
+[2026.02.04-11.55.17:969][731]Generating QueryTargets data for editor...
+[2026.02.04-11.55.17:969][731]Compiling Rules Assemblies
+[2026.02.04-11.55.17:969][731]Compiling Rules Assemblies 100%
+[2026.02.04-11.55.17:969][731]Writing Query Target Info
+[2026.02.04-11.55.17:969][731]Writing Query Target Info 100%
+[2026.02.04-11.55.17:969][731]Generating QueryTargets data for editor took 0.03s
+[2026.02.04-11.55.17:969][731]
+[2026.02.04-11.55.17:969][731]Result: Succeeded
+[2026.02.04-11.55.17:969][731]Total execution time: 33.70 seconds
+[2026.02.04-11.55.18:521][731]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.02.04-11.55.18:667][731]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.02.04-11.55.18:755][731]LogAutomationController: Ignoring very large delta of 35.34 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2026.02.04-11.55.32:655][774]LogLiveCoding: Display: UbaCli v5.7.0-Uba_v1.0.0-43528563 (Rootdir: "C:\ProgramData\Epic\UbaCli", StoreCapacity: 0Gb)
+
+---- Starting trace: Debug2e1105b6-e5fe-4a23-be58-588abdc0931d ----
+Running C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64\link.exe @C:\Users\linda\AppData\Local\Temp\1D89.tmp
+   Creating library C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_2.lib and object C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Binaries\Win64\UnrealEditor-ProductionProjCurr.patch_2.exp
+Detoured run took 946ms
+[2026.02.04-11.55.33:009][774]LogClass: UPackage /Script/ProductionProjCurr Reload.
+[2026.02.04-11.55.33:017][774]LogClass: Could not find existing class Occupant_BaseClass in package /Script/ProductionProjCurr for reload, assuming new or modified class
+[2026.02.04-11.55.33:126][774]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.02.04-11.55.33:331][775]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 17 classes unchanged, 4 enums unchanged, 17 functions remapped
+[2026.02.04-11.55.33:331][775]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.02.04-11.55.34:451][806]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_8.utrace' already exists
+[2026.02.04-11.58.23:788][350]LogText3D: Text3D Engine Subsystem is clearing unreferenced cached fonts and typefaces.
+[2026.02.04-11.59.46:141][597]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1293.943970
+[2026.02.04-11.59.47:141][600]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-11.59.47:141][601]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1294.610840, Update Interval: 323.582886
+[2026.02.04-12.05.38:560][654]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1646.362183
+[2026.02.04-12.05.39:558][657]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-12.05.39:558][657]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1647.027100, Update Interval: 348.822906
+[2026.02.04-12.08.23:939][150]LogText3D: Text3D Engine Subsystem is clearing unreferenced cached fonts and typefaces.
+[2026.02.04-12.12.07:327][820]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2035.127686
+[2026.02.04-12.12.08:327][823]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-12.12.08:327][823]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2035.794678, Update Interval: 353.906067
+[2026.02.04-12.13.19:459][ 88]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_9.utrace' already exists
