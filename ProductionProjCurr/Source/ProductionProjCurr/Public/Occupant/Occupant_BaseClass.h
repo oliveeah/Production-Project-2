@@ -39,6 +39,8 @@ protected:
 	UPROPERTY()
 	UMaterialInstanceDynamic* TeamMID;
 
+	virtual void BeginPlay() override;
+
 public:
 
 	/*Setters*/

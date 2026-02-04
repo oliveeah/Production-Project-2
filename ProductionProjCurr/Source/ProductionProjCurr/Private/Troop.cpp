@@ -104,7 +104,7 @@ void ATroop::Tick(float DeltaTime)
 				"TroopSpawnSocket");
 
 			SetActorLocation(MoveTarget);
-			SetGridPosition(TargetTile->getGridCoordinates());
+			TSetGridPosition(TargetTile->getGridCoordinates());
 			SetActorTickEnabled(false);
 			TargetTile = nullptr;
 		}

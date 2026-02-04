@@ -1,27 +1,61 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "Occupant/Occupant_BaseClass.h"
+#include "CoreMinimal.h"
 
-// Sets default values
-AOccupant_BaseClass::AOccupant_BaseClass()
-{
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
-}
-
-// Called when the game starts or when spawned
 void AOccupant_BaseClass::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	if (SkeletalMesh)
+	{
+		TeamMID = SkeletalMesh->CreateAndSetMaterialInstanceDynamic(0);
+	}
 }
 
-// Called every frame
-void AOccupant_BaseClass::Tick(float DeltaTime)
+/* -------- SETTERS -------- */
+
+void AOccupant_BaseClass::SetHealth(int32 NewHealth)
 {
-	Super::Tick(DeltaTime);
-
+	Health = NewHealth;
 }
 
+void AOccupant_BaseClass::SetGridPosition(const FIntPoint& NewPos)
+{
+	GridPosition = NewPos;
+}
+
+void AOccupant_BaseClass::SetOwningPlayer(EActivePlayerSide NewPlayer)
+{
+	OwningPlayer = NewPlayer;
+}
+
+void AOccupant_BaseClass::SetTeamColor(const FLinearColor& NewColor)
+{
+	TeamColor = NewColor;
+
+	if (TeamMID)
+	{
+		TeamMID->SetVectorParameterValue(TEXT("TeamColor"), NewColor);
+	}
+}
+
+/* -------- GETTERS -------- */
+
+int32 AOccupant_BaseClass::GetHealth() const
+{
+	return Health;
+}
+
+FIntPoint AOccupant_BaseClass::GetGridPosition() const
+{
+	return GridPosition;
+}
+
+EActivePlayerSide AOccupant_BaseClass::GetOwningPlayer() const
+{
+	return OwningPlayer;
+}
+
+FLinearColor AOccupant_BaseClass::GetTeamColor() const
+{
+	return TeamColor;
+}

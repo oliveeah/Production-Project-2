@@ -16,7 +16,7 @@ class PRODUCTIONPROJCURR_API ABuilding : public AActor
 	GENERATED_BODY()
 private:
 	int		  buildingHealth = 3;
-	FIntPoint GridPosition;
+	FIntPoint BGridPosition;
 
 protected:
 	// Called when the game starts or when spawned
@@ -36,15 +36,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	USkeletalMeshComponent* BuildingMesh;
 
-	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
+	void BSetGridPosition(const FIntPoint& NewPos) { BGridPosition = NewPos; }
 
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	EActivePlayerSide owningPlayer;
+	EActivePlayerSide BowningPlayer;
 
-	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
+	void BSetOwningPlayer(EActivePlayerSide newOwner) { BowningPlayer = newOwner; }
 
-	void SetBuildingTeamColor(const FLinearColor& NewColor);
+	void BSetBuildingTeamColor(const FLinearColor& NewColor);
 
 	UPROPERTY()
 	UMaterialInstanceDynamic* BuildingMID;

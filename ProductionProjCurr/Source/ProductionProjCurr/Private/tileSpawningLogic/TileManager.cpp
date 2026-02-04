@@ -239,10 +239,10 @@ void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, A
 	switch (currentPlayer)
 	{
 		case EActivePlayerSide::PlayerA:
-			Building->SetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
+			Building->BSetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
 			break;
 		case EActivePlayerSide::PlayerB:
-			Building->SetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
+			Building->BSetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
 			break;
 		case EActivePlayerSide::None:
 			break;
@@ -251,9 +251,9 @@ void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, A
 	}
 
 	Tile->SetOccupyingBuilding(Building);
-	Building->SetGridPosition(Tile->getGridCoordinates());
+	Building->BSetGridPosition(Tile->getGridCoordinates());
 	Tile->setHasBuilding(true);
-	Building->SetOwningPlayer(turnManager->GetActivePlayer());
+	Building->BSetOwningPlayer(turnManager->GetActivePlayer());
 	Tile->SetOwningPlayer(turnManager->GetActivePlayer());
 
 }
@@ -263,14 +263,14 @@ void ATileManager::setOccupantOwner(ABuilding* Building, EActivePlayerSide curre
 	if (!Building)
 		return;
 
-	Building->SetOwningPlayer(currentPlayer);
+	Building->BSetOwningPlayer(currentPlayer);
 }
 
 void ATileManager::setOccupantOwner(ATroop* Troop, EActivePlayerSide currentPlayer)
 {
 	if (!Troop)
 		return;
-	Troop->SetOwningPlayer(currentPlayer);
+	Troop->TSetOwningPlayer(currentPlayer);
 }
 
 void ATileManager::setTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer)
@@ -377,9 +377,9 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	}
 
 	Tile->SetOccupyingTroop(Troop);
-	Troop->SetGridPosition(Tile->getGridCoordinates());
+	Troop->TSetGridPosition(Tile->getGridCoordinates());
 	Tile->isOccupied = true;
-	Troop->SetOwningPlayer(turnManager->GetActivePlayer());
+	Troop->TSetOwningPlayer(turnManager->GetActivePlayer());
 	Tile->SetOwningPlayer(turnManager->GetActivePlayer());
 }
 

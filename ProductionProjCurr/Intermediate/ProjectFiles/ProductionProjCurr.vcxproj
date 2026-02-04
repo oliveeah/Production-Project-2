@@ -288,6 +288,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Occupant\Occupant_BaseClass.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Occupant\Occupant_Troop_BaseClass.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\playerData\InteractionInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -320,6 +323,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\input\ProductionProjCurrPlayerController.h"/>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Occupant\Occupant_BaseClass.h"/>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Occupant\Occupant_Troop_BaseClass.h"/>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Public\playerData\BG_PlayerPawn.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

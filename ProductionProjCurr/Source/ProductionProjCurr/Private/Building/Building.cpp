@@ -38,7 +38,7 @@ void ABuilding::Tick(float DeltaTime)
 
 }
 
-void ABuilding::SetBuildingTeamColor(const FLinearColor& NewColor)
+void ABuilding::BSetBuildingTeamColor(const FLinearColor& NewColor)
 {
 	BuildingMID->SetVectorParameterValue("TeamColor", NewColor);
 }

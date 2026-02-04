@@ -31,7 +31,7 @@ class PRODUCTIONPROJCURR_API ATroop : public AActor
 	GENERATED_BODY()
 private:
 	int		  troopHealth = 3;
-	FIntPoint GridPosition;
+	FIntPoint TGridPosition;
 	int		  troopDamage = 1;
 
 	
@@ -71,7 +71,7 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnTroopDeath OnTroopDeath;
 
-	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
+	void TSetGridPosition(const FIntPoint& NewPos) { TGridPosition = NewPos; }
 	void SetTroopHealth(int NewHealth) 
 	{ 
 		troopHealth = NewHealth;
@@ -121,9 +121,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	EActivePlayerSide owningPlayer;
+	EActivePlayerSide TowningPlayer;
 
-	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
+	void TSetOwningPlayer(EActivePlayerSide newOwner) { TowningPlayer = newOwner; }
 
 	void SetTroopTeamColor(const FLinearColor& NewColor);
 
