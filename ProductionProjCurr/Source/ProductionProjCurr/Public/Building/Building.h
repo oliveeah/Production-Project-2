@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "gameMode/Enum_PlayerSide.h"
+#include "Materials/MaterialInstanceDynamic.h"
 #include "Building.generated.h"
 
 class USkeletalMeshComponent;
@@ -38,8 +39,13 @@ public:
 	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
 
 	
-		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	EActivePlayerSide owningPlayer;
 
 	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
+
+	void SetBuildingTeamColor(const FLinearColor& NewColor);
+
+	UPROPERTY()
+	UMaterialInstanceDynamic* BuildingMID;
 };

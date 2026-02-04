@@ -215,6 +215,22 @@ void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, A
 		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
 		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
 		"BuildingSpawnSocket");
+
+		EActivePlayerSide currentPlayer = turnManager->GetActivePlayer();
+	switch (currentPlayer)
+	{
+		case EActivePlayerSide::PlayerA:
+			Building->SetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
+			break;
+		case EActivePlayerSide::PlayerB:
+			Building->SetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
+			break;
+		case EActivePlayerSide::None:
+			break;
+		default:
+			break;
+	}
+
 	Tile->SetOccupyingBuilding(Building);
 	Building->SetGridPosition(Tile->getGridCoordinates());
 	Tile->setHasBuilding(true);
@@ -317,10 +333,10 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	switch (currentPlayer)
 	{
 		case EActivePlayerSide::PlayerA:
-			Troop->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
+			Troop->SetTroopTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
 			break;
 		case EActivePlayerSide::PlayerB:
-			Troop->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
+			Troop->SetTroopTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
 			break;
 		case EActivePlayerSide::None:
 			break;

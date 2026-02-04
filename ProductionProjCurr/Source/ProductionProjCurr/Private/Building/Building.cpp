@@ -21,7 +21,14 @@ ABuilding::ABuilding()
 void ABuilding::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	if (BuildingMesh && BuildingMesh->GetMaterial(0))
+	{
+		BuildingMID = UMaterialInstanceDynamic::Create(
+			BuildingMesh->GetMaterial(0),
+			this);
+	}
+	BuildingMesh->SetMaterial(0, BuildingMID);
 }
 
 // Called every frame
@@ -29,5 +36,10 @@ void ABuilding::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ABuilding::SetBuildingTeamColor(const FLinearColor& NewColor)
+{
+	BuildingMID->SetVectorParameterValue("TeamColor", NewColor);
 }
 

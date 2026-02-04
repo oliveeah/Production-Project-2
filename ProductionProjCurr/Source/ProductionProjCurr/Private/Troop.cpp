@@ -111,7 +111,7 @@ void ATroop::Tick(float DeltaTime)
 	}
 }
 
-void ATroop::SetTeamColor(const FLinearColor& NewColor)
+void ATroop::SetTroopTeamColor(const FLinearColor& NewColor)
 {
 	TroopMID->SetVectorParameterValue("TeamColor", NewColor);
 }

@@ -89,7 +89,7 @@ public:
 
 	void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
 
-	void SetTeamColor(const FLinearColor& NewColor);
+	void SetTroopTeamColor(const FLinearColor& NewColor);
 
 	UPROPERTY()
 	UMaterialInstanceDynamic* TroopMID;
