@@ -17,6 +17,10 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
 	bool,
 	NewValue);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
+	FOnIsAttackingChanged,
+	bool,
+	NewValue);
 
 UCLASS()
 class PRODUCTIONPROJCURR_API ATroop : public AActor
@@ -39,6 +43,8 @@ private:
 	UPROPERTY()
 	bool bIsMoving = false;
 
+	UPROPERTY()
+	bool bIsAttacking = false;
 
 
 public:	
@@ -55,6 +61,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnIsMovingChanged OnIsMovingChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnIsAttackingChanged OnIsAttackingChanged;
 
 	void SetGridPosition(const FIntPoint& NewPos) { GridPosition = NewPos; }
 	void SetTroopHealth(int NewHealth) { troopHealth = NewHealth; }
@@ -73,6 +82,17 @@ public:
 		}
 	}	
 	bool getIsMoving() const { return bIsMoving; }
+
+	UFUNCTION(BlueprintCallable)
+	void setIsAttacking(bool NewIsAttacking)
+	{
+		if (bIsAttacking != NewIsAttacking)
+		{
+			bIsAttacking = NewIsAttacking;
+			OnIsAttackingChanged.Broadcast(bIsAttacking);
+		}
+	}
+	bool getIsAttacking() const { return bIsAttacking; }
 
 protected:
 	// Called when the game starts or when spawned

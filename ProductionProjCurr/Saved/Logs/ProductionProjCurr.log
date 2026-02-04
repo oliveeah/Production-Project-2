@@ -1953,3 +1953,44 @@ Detoured run took 1.7s
 [2026.02.04-10.06.28:540][ 60]AssetCheck: /Game/MyStuff/Models/Tools/lowpoly-pickaxe-low-poly-blender-gameready/source/demir Validating asset
 [2026.02.04-10.06.28:577][ 60]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/SourceControl/UncontrolledChangelists.json
 [2026.02.04-10.06.28:761][ 70]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_9.utrace' already exists
+[2026.02.04-10.07.31:263][341]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_0.utrace' already exists
+[2026.02.04-10.07.58:573][924]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_10
+[2026.02.04-10.07.59:399][959]LogAssetEditorSubsystem: Opening Asset editor for AnimBlueprint /Game/boardGame/assets/chiliGuy/Chili_ABP.Chili_ABP
+[2026.02.04-10.07.59:401][959]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_11
+[2026.02.04-10.07.59:466][959]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_12
+[2026.02.04-10.07.59:487][959]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_12:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.02.04-10.07.59:881][959]LogStreaming: Display: FlushAsyncLoading(557): 1 QueuedPackages, 0 AsyncPackages
+[2026.02.04-10.08.00:252][959]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_13
+[2026.02.04-10.08.02:818][959]LogSlate: Took 0.011213 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2026.02.04-10.08.03:268][960]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_1.utrace' already exists
+[2026.02.04-10.08.03:437][966]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_14
+[2026.02.04-10.08.12:816][511]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find Color 'Graph.Node.Comment.TextColor'.'
+[2026.02.04-10.08.40:150][ 21]LogBlueprint: Warning: [AssetLog] C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Content\boardGame\assets\chiliGuy\Chili_ABP.uasset: [Compiler] attack to idle  will never be taken, please connect something to  Can Enter Transition
+[2026.02.04-10.08.40:284][ 21]LogUObjectHash: Compacting FUObjectHashTables data took   2.59ms
+[2026.02.04-10.08.40:770][ 43]LogTrace: Warning: Trace file 'C:/Users/linda/Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/EditorPerformance/Editor_Hitch_Rate_2.utrace' already exists
+[2026.02.04-10.08.46:004][332]LogStreaming: Display: FlushAsyncLoading(558): 1 QueuedPackages, 0 AsyncPackages
+[2026.02.04-10.08.46:009][332]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/boardGame/assets/chiliGuy/source/ARChili_Anim_Chili_3_Attack.ARChili_Anim_Chili_3_Attack (Required Memory Estimate: 0.32 MB)
+[2026.02.04-10.08.46:019][332]LogAnimationCompression: Display: Storing compressed animation data for /Game/boardGame/assets/chiliGuy/source/ARChili_Anim_Chili_3_Attack.ARChili_Anim_Chili_3_Attack, at AnimationSequence/5bbd8bea09e13b509959e4526a62ed6e6ba05ba0
+[2026.02.04-10.08.51:833][642]LogBlueprint: Warning: [AssetLog] C:\Users\linda\Documents\GitHub\Production-Project-2\ProductionProjCurr\Content\boardGame\assets\chiliGuy\Chili_ABP.uasset: [Compiler] attack to idle  will never be taken, please connect something to  Can Enter Transition
+[2026.02.04-10.08.51:909][642]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2026.02.04-10.08.52:508][666]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.02.04-10.08.52:617][666]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/boardGame/assets/chiliGuy/Chili_ABP] ([2] browsable assets)...
+[2026.02.04-10.08.52:628][666]OBJ SavePackage:     Rendered thumbnail for [AnimBlueprint /Game/boardGame/assets/chiliGuy/Chili_ABP.Chili_ABP]
+[2026.02.04-10.08.52:628][666]OBJ SavePackage: Finished generating thumbnails for package [/Game/boardGame/assets/chiliGuy/Chili_ABP]
+[2026.02.04-10.08.52:670][666]LogSavePackage: Moving output files for package: /Game/boardGame/assets/chiliGuy/Chili_ABP
+[2026.02.04-10.08.52:671][666]LogSavePackage: Moving '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/Chili_ABP0A7E268B4388EAFF953C6B8D894F6D17.tmp' to '../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Content/boardGame/assets/chiliGuy/Chili_ABP.uasset'
+[2026.02.04-10.08.52:690][666]LogFileHelpers: InternalPromptForCheckoutAndSave took 182.986 ms (total: 417.642 ms)
+[2026.02.04-10.08.52:800][666]LogContentValidation: Display: Starting to validate 1 assets
+[2026.02.04-10.08.52:800][666]LogContentValidation: Enabled validators:
+[2026.02.04-10.08.52:800][666]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.02.04-10.08.52:800][666]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.02.04-10.08.52:800][666]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.02.04-10.08.52:800][666]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.02.04-10.08.52:800][666]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.02.04-10.08.52:800][666]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.02.04-10.08.52:800][666]AssetCheck: /Game/boardGame/assets/chiliGuy/Chili_ABP Validating asset
+[2026.02.04-10.08.52:832][666]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/linda/Documents/GitHub/Production-Project-2/ProductionProjCurr/Saved/SourceControl/UncontrolledChangelists.json
+[2026.02.04-10.08.53:823][721]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 336.275208
+[2026.02.04-10.08.54:006][732]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.02.04-10.08.54:006][733]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 336.440948, Update Interval: 353.389679
+[2026.02.04-10.09.01:420][147]LogUObjectHash: Compacting FUObjectHashTables data took   1.87ms
