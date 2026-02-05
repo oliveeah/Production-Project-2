@@ -99,5 +99,8 @@ class PRODUCTIONPROJCURR_API AOccupant_Troop_BaseClass : public AOccupant_BaseCl
 
 		virtual void Tick(float DeltaTime) override;
 
+		AOccupant_Troop_BaseClass();
 
+	protected:
+		void BeginPlay() override;	
 };

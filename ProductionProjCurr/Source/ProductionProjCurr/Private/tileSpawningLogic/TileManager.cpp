@@ -296,8 +296,6 @@ void ATileManager::spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Til
 	/*Ptr Checks and Setting Member vals*/
 	if (!Occupant || !Tile)
 		return;
-	if (Tile->isOccupied)
-		return;
 	UWorld* World = GetWorld();
 	if (!World)
 		return;
@@ -306,10 +304,10 @@ void ATileManager::spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Til
 	if (!OccupantCDO)
 		return;
 
-	if (OccupantCDO->IsBuilding() && !Tile->getBuildingCanBePlacedOnTile())
+	if ((OccupantCDO->IsBuilding() && !Tile->getBuildingCanBePlacedOnTile()) || (OccupantCDO->IsBuilding() && Tile->getHasBuilding()))
 		return;
 
-	if (OccupantCDO->IsTroop() && !Tile->getCanSpawnTroopOnTile())
+	if ((OccupantCDO->IsTroop() && !Tile->getCanSpawnTroopOnTile()) || (OccupantCDO->IsTroop() && Tile->isOccupied))
 		return;
 
 	const FName SpawnSocketName = OccupantCDO->IsBuilding()
@@ -355,6 +353,7 @@ void ATileManager::spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Til
 	}
 	else if (AOccupant_Building_BaseClass* Building = Cast<AOccupant_Building_BaseClass>(SpawnedOccupant))
 	{
+		Building->SetOwningPlayer(CurrentPlayer);
 		Tile->SetOccupyingBuilding(Building);
 		Tile->setHasBuilding(true);
 	}
