@@ -16,6 +16,7 @@
 			"Occupant_BaseClass.gen.cpp.obj",
 			"Occupant_Building_BaseClass.gen.cpp.obj",
 			"Occupant_Troop_BaseClass.gen.cpp.obj",
+			"ProductionProjCurr.init.gen.cpp.obj",
 			"ProductionProjCurrCharacter.gen.cpp.obj",
 			"ProductionProjCurrGameMode.gen.cpp.obj",
 			"ProductionProjCurrPlayerController.gen.cpp.obj",
@@ -23,10 +24,14 @@
 			"TileManager.gen.cpp.obj",
 			"TurnManager.gen.cpp.obj",
 			"UPlayerProfile.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
 			"Building.cpp.obj",
 			"DevMode_Widget.cpp.obj",
 			"TurnManager.cpp.obj",
 			"OccupantInterface.cpp.obj",
+			"Occupant_BaseClass.cpp.obj",
+			"Occupant_Building_BaseClass.cpp.obj",
+			"Occupant_Troop_BaseClass.cpp.obj",
 			"InteractionInterface.cpp.obj",
 			"MyPlayerState.cpp.obj",
 			"Troop.cpp.obj",
@@ -35,17 +40,12 @@
 			"BG_CaptureActor.cpp.obj",
 			"ProductionProjCurrGameMode.cpp.obj",
 			"BG_AC_MouseOverlapReciever.cpp.obj",
-			"ProductionProjCurrPlayerController.cpp.obj",
 			"BG_PlayerPawn.cpp.obj",
 			"ProductionProjCurrCharacter.cpp.obj",
+			"BG_Tile.cpp.obj",
 			"BG_TileSpawner.cpp.obj",
-			"ProductionProjCurr.init.gen.cpp.obj",
-			"PerModuleInline.gen.cpp.obj",
-			"Occupant_BaseClass.cpp.obj",
-			"Occupant_Building_BaseClass.cpp.obj",
-			"Occupant_Troop_BaseClass.cpp.obj",
 			"TileManager.cpp.obj",
-			"BG_Tile.cpp.obj"
+			"ProductionProjCurrPlayerController.cpp.obj"
 		]
 	}
 }

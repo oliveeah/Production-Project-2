@@ -77,41 +77,41 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 	{
 		case EPlayerIntent::SelectTile:
 		{
-			if (SelectedTile && !SelectedTile->GetIsOccupied())
+			if (SelectedTile && !SelectedTile->GetIsOccupied()) // If the tile is empty, just highlight it as standard
 			{
 				ApplyHighlightState(ETileHighlightState::Standard, SelectedTile);
 			}
-			else if (SelectedTile && SelectedTile->GetIsOccupied())
+			else if (SelectedTile && SelectedTile->GetIsOccupied()) // If the tile is occupied ...
 			{
 				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, SelectedTile);
 
-				for (FIntPoint Coord : adjacentTiles)
+				for (FIntPoint Coord : adjacentTiles) // for each tile adjacent to the selected tile
 				{
 					if (ABG_Tile* AdjTile = TileMap[Coord])
 					{
-						if (AdjTile->GetIsOccupied())
+						if (AdjTile->GetIsOccupied()) // If the adjacent tile is occupied
 						{
 							AOccupant_Troop_BaseClass* OccupyingTroop = AdjTile->getOccupyingTroop();
-							if (!OccupyingTroop)
+							if (!OccupyingTroop)									 // If the occupant isn't a troop, we can't attack it, so just block the tile
 							{
 								ApplyHighlightState(ETileHighlightState::Blocked, AdjTile);
 								continue;
 							}
 
-							if (IsEnemyOccupant(OccupyingTroop->GetOwningPlayer()))
+							if (IsEnemyOccupant(OccupyingTroop->GetOwningPlayer())) // If the occupant is an enemy, they can attack it
 							{
 								ApplyHighlightState(ETileHighlightState::Attack, AdjTile);
 							}
-							else
+							else													// If the occupant is a friendly troop, we can't move there or attack it, so block the tile
 							{
 								ApplyHighlightState(ETileHighlightState::Blocked, AdjTile);
 							}
 						}
-						else if (AdjTile->getCanSpawnTroopOnTile())
+						else if (AdjTile->getCanSpawnTroopOnTile())					// If the adjacent tile isn't occupied and is a valid tile to spawn troops on, highlight it as an adjacency option
 						{
 							ApplyHighlightState(ETileHighlightState::Adjacency, AdjTile);
 						}
-						else
+						else														// else block the tile, since we can't move there or spawn on it
 						{
 							ApplyHighlightState(ETileHighlightState::Blocked, AdjTile);
 						}

@@ -62,7 +62,7 @@ void AProductionProjCurrPlayerController::SetupInputComponent()
 
 		if (clickAction)
 		{
-			EnhancedInputComponent->BindAction(clickAction, ETriggerEvent::Triggered, this, &AProductionProjCurrPlayerController::ClickCallback);
+			EnhancedInputComponent->BindAction(clickAction, ETriggerEvent::Started, this, &AProductionProjCurrPlayerController::ClickCallback);
 		}
 
 		if (scrollAction)
