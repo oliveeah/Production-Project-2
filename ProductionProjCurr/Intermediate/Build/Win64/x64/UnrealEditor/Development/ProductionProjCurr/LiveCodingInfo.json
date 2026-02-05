@@ -38,14 +38,14 @@
 			"ProductionProjCurrPlayerController.cpp.obj",
 			"BG_PlayerPawn.cpp.obj",
 			"ProductionProjCurrCharacter.cpp.obj",
-			"BG_Tile.cpp.obj",
 			"BG_TileSpawner.cpp.obj",
 			"ProductionProjCurr.init.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"Occupant_BaseClass.cpp.obj",
 			"Occupant_Building_BaseClass.cpp.obj",
 			"Occupant_Troop_BaseClass.cpp.obj",
-			"TileManager.cpp.obj"
+			"TileManager.cpp.obj",
+			"BG_Tile.cpp.obj"
 		]
 	}
 }

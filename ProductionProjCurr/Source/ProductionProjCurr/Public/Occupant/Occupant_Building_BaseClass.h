@@ -17,7 +17,6 @@ class PRODUCTIONPROJCURR_API AOccupant_Building_BaseClass : public AOccupant_Bas
 	private:
 
 	protected:
-		void BeginPlay() override;
 
 	public:
 		virtual bool IsBuilding() const override { return true; }

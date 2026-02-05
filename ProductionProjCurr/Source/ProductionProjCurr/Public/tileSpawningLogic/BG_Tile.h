@@ -113,4 +113,8 @@ private:
 
 		UFUNCTION()
 		void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
+
+		EActivePlayerSide GetOccupyingPlayer() const { return owningPlayer; }
+
+		bool GetIsOccupied() const { return isOccupied; }
 };

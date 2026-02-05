@@ -60,16 +60,6 @@ AOccupant_Troop_BaseClass::AOccupant_Troop_BaseClass()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-void AOccupant_Troop_BaseClass::BeginPlay()
-{
-	if (SkeletalMesh && SkeletalMesh->GetMaterial(0))
-	{
-		TeamMID = UMaterialInstanceDynamic::Create(
-			SkeletalMesh->GetMaterial(0),
-			this);
-	}
-	SkeletalMesh->SetMaterial(0, TeamMID);
-}
 
 bool AOccupant_Troop_BaseClass::CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const
 {

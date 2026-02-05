@@ -102,5 +102,4 @@ class PRODUCTIONPROJCURR_API AOccupant_Troop_BaseClass : public AOccupant_BaseCl
 		AOccupant_Troop_BaseClass();
 
 	protected:
-		void BeginPlay() override;	
 };

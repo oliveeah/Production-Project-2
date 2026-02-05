@@ -34,61 +34,58 @@ protected:
 	virtual void BeginPlay() override;
 
 public:		
-	// Sets default values for this actor's properties
 	ATileManager();
+
+	/*TileDefaults*/
 	TArray<TArray<ABG_Tile*>> TileGrid;
-
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-
 
 	int32 GridWidth;
 	int32 GridHeight;
 
+	UPROPERTY()
+	TMap<FIntPoint, ABG_Tile*> TileMap;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
+	float troopSpawnHeight = 20.0f;
+
+	/*References*/
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	ABG_Tile* SelectedTile;
 
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
+	ATurnManager* turnManager;
+
+	TArray<ABG_Tile*> TilesWithOutline;
+
+	/*Input Delegate*/
 	UFUNCTION()
-	// Called to bind tile delegates
 	void OnTileClicked(ABG_Tile* Tile, bool isOccupied);
 
 	UFUNCTION()
 	void OnTroopDeath();
 
-	// Returns neighbors
 
-	bool HasTile(const FIntPoint& Coords) const;
+	EPlayerIntent		determinePlayerIntent(ABG_Tile* ClickedTile) const;
+	void				removeOutlineFromAllTiles();
+	void				RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile);
+	bool				HasTile(const FIntPoint& Coords) const;
+	void				spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Tile* Tile);
+	bool				IsFriendlyFire(EActivePlayerSide attackingPlayerID, EActivePlayerSide targetPlayerID);
+	bool				IsEnemyOccupant(EActivePlayerSide troopToCheck);
+	void			    ApplyHighlightState(ETileHighlightState highlight, ABG_Tile* Tile);
 
-	UPROPERTY()
-	TMap<FIntPoint, ABG_Tile*> TileMap;
-
-	void RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile);
-
-	void spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Tile* Tile);
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
-	float troopSpawnHeight = 20.0f;
-
-
-	TArray<ABG_Tile*> TilesWithOutline;
-
-	EPlayerIntent determinePlayerIntent(ABG_Tile* ClickedTile) const;
-
-
-	void GetOccupantOwner(AOccupant_BaseClass* Occupant, EActivePlayerSide currentPlayer);
-	void GetTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer);
-	void SetGridWidth(int32 Width) { GridWidth = Width; }
-	void SetGridHeight(int32 Height) { GridHeight = Height; }
-
+	/*Getters*/
+	void			  GetOccupantOwner(AOccupant_BaseClass* Occupant, EActivePlayerSide currentPlayer);
+	void			  GetTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer);
 	FLinearColor      GetOutlineColor(ETileHighlightState highlightState) const;
 	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile);
 	FString&		  GetSelectedTileCoordinates();
 
+	/*Setters*/
+	void SetGridWidth(int32 Width) { GridWidth = Width; }
+	void SetGridHeight(int32 Height) { GridHeight = Height; }
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
-	ATurnManager* turnManager;
 
-	void removeOutlineFromAllTiles();
+		// Called every frame
+	virtual void Tick(float DeltaTime) override;
 };

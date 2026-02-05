@@ -60,130 +60,120 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 {
 	static ABG_Tile* previousTile = nullptr;
 
-	// determine if valid tile and apply selection logic
 	if (!Tile)
 		return;
 
-	//get intent
 	EPlayerIntent playerIntent = determinePlayerIntent(Tile);
 	previousTile = SelectedTile;
 
-	// Turn off previous selection
 	if (SelectedTile)
 	{
 		removeOutlineFromAllTiles();
 	}
-	// Update selection
+
 	SelectedTile = Tile;
 
 	switch (playerIntent)
 	{
 		case EPlayerIntent::SelectTile:
 		{
-			if (isOccupied)//if troop is on tile
+			if (SelectedTile && !SelectedTile->GetIsOccupied())
 			{
-				AOccupant_Troop_BaseClass* OccupyingTroop = previousTile->getOccupyingTroop();
-				if (OccupyingTroop && OccupyingTroop->GetHealth() > 0)
-				{
-					FLinearColor color;
-					TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, SelectedTile);
+				ApplyHighlightState(ETileHighlightState::Standard, SelectedTile);
+			}
+			else if (SelectedTile && SelectedTile->GetIsOccupied())
+			{
+				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, SelectedTile);
 
-					for (FIntPoint Coord : adjacentTiles)
+				for (FIntPoint Coord : adjacentTiles)
+				{
+					if (ABG_Tile* AdjTile = TileMap[Coord])
 					{
-						if (ABG_Tile* AdjTile = TileMap[Coord])
+						if (AdjTile->GetIsOccupied())
 						{
-							if (AdjTile->isOccupied)
+							AOccupant_Troop_BaseClass* OccupyingTroop = AdjTile->getOccupyingTroop();
+							if (!OccupyingTroop)
 							{
-								AdjTile->SetHighlightType(ETileHighlightState::Attack);
-								color = GetOutlineColor(ETileHighlightState::Attack);
-								AdjTile->addOutlineEffect(color);
-								TilesWithOutline.Add(AdjTile);
+								ApplyHighlightState(ETileHighlightState::Blocked, AdjTile);
+								continue;
 							}
-							else if (!AdjTile->isOccupied && AdjTile->getCanSpawnTroopOnTile())
+
+							if (IsEnemyOccupant(OccupyingTroop->GetOwningPlayer()))
 							{
-								AdjTile->SetHighlightType(ETileHighlightState::Adjacency);
-								color = GetOutlineColor(ETileHighlightState::Adjacency);
-								AdjTile->addOutlineEffect(color);
-								TilesWithOutline.Add(AdjTile);
+								ApplyHighlightState(ETileHighlightState::Attack, AdjTile);
 							}
 							else
 							{
-								AdjTile->SetHighlightType(ETileHighlightState::Blocked);
-								color = GetOutlineColor(ETileHighlightState::Blocked);
-								AdjTile->addOutlineEffect(color);
-								TilesWithOutline.Add(AdjTile);
+								ApplyHighlightState(ETileHighlightState::Blocked, AdjTile);
 							}
-
 						}
-	
+						else if (AdjTile->getCanSpawnTroopOnTile())
+						{
+							ApplyHighlightState(ETileHighlightState::Adjacency, AdjTile);
+						}
+						else
+						{
+							ApplyHighlightState(ETileHighlightState::Blocked, AdjTile);
+						}
 					}
 				}
 			}
-			
-			else
-			{
-				FLinearColor color = GetOutlineColor(ETileHighlightState::Standard);
-				Tile->SetHighlightType(ETileHighlightState::Standard);
 
-				Tile->addOutlineEffect(color);
-				TilesWithOutline.Add(Tile);
-			}
 			break;
 		}
 		case EPlayerIntent::MoveTroop:
 		{
-				AOccupant_Troop_BaseClass* OccupyingTroop = previousTile->getOccupyingTroop();
-				if (OccupyingTroop && OccupyingTroop->GetHealth() > 0)
+			if (!previousTile)
+				break;
+
+			AOccupant_Troop_BaseClass* OccupyingTroop = previousTile->getOccupyingTroop();
+			if (OccupyingTroop && OccupyingTroop->GetHealth() > 0)
+			{
+				TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, previousTile);
+				bool canMove = OccupyingTroop->CanMoveTo(Tile->getGridCoordinates(), adjacentTiles);
+				if (canMove)
 				{
-					TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, previousTile);
-					bool			  canMove = OccupyingTroop->CanMoveTo(Tile->getGridCoordinates(), adjacentTiles);
-					if (canMove)
+					OccupyingTroop->MoveToTile(Tile);
+					Tile->SetOccupyingTroop(OccupyingTroop);
+					Tile->isOccupied = true;
+
+					if (turnManager && Tile)
 					{
-						OccupyingTroop->MoveToTile(Tile);
-						Tile->SetOccupyingTroop(OccupyingTroop);
-						Tile->isOccupied = true;
-
-						if (turnManager && Tile)//update owning player for both tiles (Prior and New)
-						{
-							previousTile->SetOwningPlayer(EActivePlayerSide::None);
-							Tile->SetOwningPlayer(turnManager->GetActivePlayer());
-						}
-
-						previousTile->isOccupied = false;
+						previousTile->SetOwningPlayer(EActivePlayerSide::None);
+						Tile->SetOwningPlayer(turnManager->GetActivePlayer());
 					}
+
+					previousTile->isOccupied = false;
 				}
-			
+			}
+
 			break;
 		}
 		case EPlayerIntent::AttackTroop:
 		{
+			if (!previousTile)
+				break;
+
 			AOccupant_Troop_BaseClass* AttackingTroop = previousTile->getOccupyingTroop();
 			AOccupant_Troop_BaseClass* DefendingTroop = Tile->getOccupyingTroop();
+			if (!AttackingTroop || !DefendingTroop)
+				break;
+
+			bool ff = IsFriendlyFire(AttackingTroop->GetOwningPlayer(), DefendingTroop->GetOwningPlayer());
+			if (ff)
+				break;
+
 			AttackingTroop->SetIsAttacking(true);
 			DefendingTroop->SetHealth(0);
 			Tile->isOccupied = false;
-				
+
 			break;
 		}
 		case EPlayerIntent::ReselectTile:
-		{
-
-			break;
-		}
 		case EPlayerIntent::Cancel:
-		{
-			break;
-		}
 		default:
-		{
 			break;
-		}
 	}
-
-	// Check if tile is already highlighted // assume player trying to do action
-
-
-
 }
 
 void ATileManager::OnTroopDeath()
@@ -361,6 +351,67 @@ void ATileManager::spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Til
 	Tile->SetOwningPlayer(CurrentPlayer);
 }
 
+bool ATileManager::IsFriendlyFire(EActivePlayerSide attackingPlayerID, EActivePlayerSide targetPlayerID)
+{
+	if (attackingPlayerID == targetPlayerID)
+	{
+		return true; // Friendly fire
+	}
+	else
+	{
+		return false; // Not friendly fire
+	}
+}
+
+bool ATileManager::IsEnemyOccupant(EActivePlayerSide troopToCheck)
+{
+	if (troopToCheck != turnManager->GetActivePlayer() && troopToCheck != EActivePlayerSide::None)
+	{
+		return true; // Enemy occupant
+	}
+	else
+	{
+		return false; // Not an enemy occupant
+	}
+}
+
+void ATileManager::ApplyHighlightState(ETileHighlightState highlight, ABG_Tile* Tile)
+{
+	switch (highlight)
+	{
+		case ETileHighlightState::None:
+			break;
+		case ETileHighlightState::Standard:
+
+			FLinearColor color = GetOutlineColor(ETileHighlightState::Standard);
+			Tile->SetHighlightType(ETileHighlightState::Standard);
+			Tile->addOutlineEffect(color);
+			TilesWithOutline.Add(Tile);
+
+			break;
+		case ETileHighlightState::Adjacency:
+			Tile->SetHighlightType(ETileHighlightState::Adjacency);
+			color = GetOutlineColor(ETileHighlightState::Adjacency);
+			Tile->addOutlineEffect(color);
+			TilesWithOutline.Add(Tile);
+			break;
+		case ETileHighlightState::Attack:
+			Tile->SetHighlightType(ETileHighlightState::Attack);
+			color = GetOutlineColor(ETileHighlightState::Attack);
+			Tile->addOutlineEffect(color);
+			TilesWithOutline.Add(Tile);
+			break;
+		case ETileHighlightState::Blocked:
+			Tile->SetHighlightType(ETileHighlightState::Blocked);
+			color = GetOutlineColor(ETileHighlightState::Blocked);
+			Tile->addOutlineEffect(color);
+			TilesWithOutline.Add(Tile);
+			break;
+		default:
+			break;
+	}
+}
+
 FLinearColor ATileManager::GetOutlineColor(ETileHighlightState highlightState) const
 {
 	switch (highlightState)
@@ -379,6 +430,20 @@ FLinearColor ATileManager::GetOutlineColor(ETileHighlightState highlightState) c
 			return FLinearColor(5, 5, 5, 1); // White
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
