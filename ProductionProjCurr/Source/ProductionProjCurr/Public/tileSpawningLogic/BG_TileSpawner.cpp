@@ -71,7 +71,16 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 		{
 			// Offset every other row
 			const float xOffset = (rows % 2 == 0) ? 0.0f : (hexWidth * 0.5f);
-			const FVector spawnLocation = tileSpawnerLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
+			float Nx = cols + (rows % 2) * 0.5f;
+			float Ny = rows * 0.8660254f;
+
+			float		HeightNoise = Noise.GetNoise(Nx, Ny); // reuse same coords
+			float		Height = HeightNoise * 40.f;		  // tweak this in editor
+
+			FVector		spawnLocation = tileSpawnerLocation + FVector(
+				cols * hexWidth + xOffset,
+				rows * hexHeight, Height);
+
 			const FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
 			// Determine biome type based on noise
