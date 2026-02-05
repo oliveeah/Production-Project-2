@@ -44,7 +44,7 @@ protected:
 public:
 
 	/*Setters*/
-	void		 SetHealth(int NewHealth);
+	virtual void SetHealth(int32 NewHealth);
 	virtual void SetGridPosition(const FIntPoint& NewPos);
 	virtual void SetOwningPlayer(EActivePlayerSide NewPlayer);
 	virtual void SetTeamColor(const FLinearColor& NewColor);

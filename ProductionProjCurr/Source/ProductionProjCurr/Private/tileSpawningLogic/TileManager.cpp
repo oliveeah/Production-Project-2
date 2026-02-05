@@ -3,8 +3,9 @@
 #include "tileSpawningLogic/TileManager.h"  
 #include "tileSpawningLogic/BG_TileSpawner.h"
 #include "tileSpawningLogic/BG_Tile.h"
-#include "Troop.h"
-#include "Building/Building.h"	
+#include "Occupant/Occupant_BaseClass.h"
+#include "Occupant/Occupant_Troop_BaseClass.h"
+#include "Occupant/Occupant_Building_BaseClass.h"
 #include "Kismet/GameplayStatics.h" // For GetActorOfClass
 #include <gameMode/ProductionProjCurrGameMode.h>
 
@@ -43,7 +44,7 @@ void ATileManager::Tick(float DeltaTime)
 
 FString& ATileManager::GetSelectedTileCoordinates()
 {
-		static FString coords = TEXT("N/A");
+	static FString coords = TEXT("N/A");
 		if (SelectedTile)
 		{
 			coords = FString::Printf(TEXT("(%d, %d)"), (int)SelectedTile->getGridCoordinates().X, (int)SelectedTile->getGridCoordinates().Y);
@@ -52,7 +53,7 @@ FString& ATileManager::GetSelectedTileCoordinates()
 		{
 			coords = TEXT("N/A");
 		}
-		return coords;
+	return coords;
 }
 
 void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
@@ -81,8 +82,8 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 		{
 			if (isOccupied)//if troop is on tile
 			{
-				ATroop* OccupyingTroop = previousTile->getOccupyingTroop();
-				if (OccupyingTroop && OccupyingTroop->GetTroopHealth() > 0)
+				AOccupant_Troop_BaseClass* OccupyingTroop = previousTile->getOccupyingTroop();
+				if (OccupyingTroop && OccupyingTroop->GetHealth() > 0)
 				{
 					FLinearColor color;
 					TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, SelectedTile);
@@ -94,21 +95,21 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 							if (AdjTile->isOccupied)
 							{
 								AdjTile->SetHighlightType(ETileHighlightState::Attack);
-								color = getOutlineColor(ETileHighlightState::Attack);
+								color = GetOutlineColor(ETileHighlightState::Attack);
 								AdjTile->addOutlineEffect(color);
 								TilesWithOutline.Add(AdjTile);
 							}
 							else if (!AdjTile->isOccupied && AdjTile->getCanSpawnTroopOnTile())
 							{
 								AdjTile->SetHighlightType(ETileHighlightState::Adjacency);
-								color = getOutlineColor(ETileHighlightState::Adjacency);
+								color = GetOutlineColor(ETileHighlightState::Adjacency);
 								AdjTile->addOutlineEffect(color);
 								TilesWithOutline.Add(AdjTile);
 							}
 							else
 							{
 								AdjTile->SetHighlightType(ETileHighlightState::Blocked);
-								color = getOutlineColor(ETileHighlightState::Blocked);
+								color = GetOutlineColor(ETileHighlightState::Blocked);
 								AdjTile->addOutlineEffect(color);
 								TilesWithOutline.Add(AdjTile);
 							}
@@ -121,7 +122,7 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 			
 			else
 			{
-				FLinearColor color = getOutlineColor(ETileHighlightState::Standard);
+				FLinearColor color = GetOutlineColor(ETileHighlightState::Standard);
 				Tile->SetHighlightType(ETileHighlightState::Standard);
 
 				Tile->addOutlineEffect(color);
@@ -131,8 +132,8 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 		}
 		case EPlayerIntent::MoveTroop:
 		{
-				ATroop* OccupyingTroop = previousTile->getOccupyingTroop();
-				if (OccupyingTroop && OccupyingTroop->GetTroopHealth() > 0)
+				AOccupant_Troop_BaseClass* OccupyingTroop = previousTile->getOccupyingTroop();
+				if (OccupyingTroop && OccupyingTroop->GetHealth() > 0)
 				{
 					TArray<FIntPoint> adjacentTiles = GetAdjacentTiles(true, 1, previousTile);
 					bool			  canMove = OccupyingTroop->CanMoveTo(Tile->getGridCoordinates(), adjacentTiles);
@@ -142,10 +143,10 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 						Tile->SetOccupyingTroop(OccupyingTroop);
 						Tile->isOccupied = true;
 
-						if (turnManager)//update owning player for both tiles (Prior and New)
+						if (turnManager && Tile)//update owning player for both tiles (Prior and New)
 						{
-							setTileOwner(Tile, turnManager->GetActivePlayer());
-							setTileOwner(previousTile, EActivePlayerSide::None);
+							previousTile->SetOwningPlayer(EActivePlayerSide::None);
+							Tile->SetOwningPlayer(turnManager->GetActivePlayer());
 						}
 
 						previousTile->isOccupied = false;
@@ -156,10 +157,10 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 		}
 		case EPlayerIntent::AttackTroop:
 		{
-			ATroop* AttackingTroop = previousTile->getOccupyingTroop();
-			ATroop* DefendingTroop = Tile->getOccupyingTroop();
-			AttackingTroop->setIsAttacking(true);
-			DefendingTroop->SetTroopHealth(0);
+			AOccupant_Troop_BaseClass* AttackingTroop = previousTile->getOccupyingTroop();
+			AOccupant_Troop_BaseClass* DefendingTroop = Tile->getOccupyingTroop();
+			AttackingTroop->SetIsAttacking(true);
+			DefendingTroop->SetHealth(0);
 			Tile->isOccupied = false;
 				
 			break;
@@ -213,67 +214,15 @@ EPlayerIntent ATileManager::determinePlayerIntent(ABG_Tile* ClickedTile) const
 	}
 }
 
-void ATileManager::placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, ABG_Tile* Tile)
+void ATileManager::GetOccupantOwner(AOccupant_BaseClass* Occupant, EActivePlayerSide currentPlayer)
 {
-	UE_LOG(LogTemp, Display, TEXT("place building at tile"));
-	if (!Tile || !BuildingToPlace)
-		return;
-
-	UWorld* World = GetWorld();
-	if (!World)
-		return;
-
-	if (!Tile->getBuildingCanBePlacedOnTile())
-		return;	
-
-
-	FVector	   SpawnLocation = Tile->GetActorLocation();
-	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
-	ABuilding*	   Building = World->SpawnActor<ABuilding>(BuildingToPlace, SpawnTransform);
-	Building->AttachToComponent(
-		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
-		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
-		"BuildingSpawnSocket");
-
-		EActivePlayerSide currentPlayer = turnManager->GetActivePlayer();
-	switch (currentPlayer)
+	if (Occupant)
 	{
-		case EActivePlayerSide::PlayerA:
-			Building->BSetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
-			break;
-		case EActivePlayerSide::PlayerB:
-			Building->BSetBuildingTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
-			break;
-		case EActivePlayerSide::None:
-			break;
-		default:
-			break;
+		Occupant->SetOwningPlayer(currentPlayer);
 	}
-
-	Tile->SetOccupyingBuilding(Building);
-	Building->BSetGridPosition(Tile->getGridCoordinates());
-	Tile->setHasBuilding(true);
-	Building->BSetOwningPlayer(turnManager->GetActivePlayer());
-	Tile->SetOwningPlayer(turnManager->GetActivePlayer());
-
 }
 
-void ATileManager::setOccupantOwner(ABuilding* Building, EActivePlayerSide currentPlayer)
-{
-	if (!Building)
-		return;
-
-	Building->BSetOwningPlayer(currentPlayer);
-}
-
-void ATileManager::setOccupantOwner(ATroop* Troop, EActivePlayerSide currentPlayer)
-{
-	if (!Troop)
-		return;
-	Troop->TSetOwningPlayer(currentPlayer);
-}
-
-void ATileManager::setTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer)
+void ATileManager::GetTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer)
 {
 	if (!Tile)
 		return;
@@ -342,9 +291,10 @@ void ATileManager::RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile)
 	TileMap.Add(Coords, Tile);
 }
 
-void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
+void ATileManager::spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Tile* Tile)
 {
-	if (!troopToSpawn || !Tile)
+	/*Ptr Checks and Setting Member vals*/
+	if (!Occupant || !Tile)
 		return;
 	if (Tile->isOccupied)
 		return;
@@ -352,38 +302,67 @@ void ATileManager::spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile)
 	if (!World)
 		return;
 
-	FVector SpawnLocation = Tile->GetActorLocation();
-	FTransform SpawnTransform = FTransform(FRotator::ZeroRotator, SpawnLocation);
-	ATroop* Troop = World->SpawnActor<ATroop>(troopToSpawn,SpawnTransform);
-	Troop->OnTroopDeath.AddDynamic(this, &ATileManager::OnTroopDeath);
-	Troop->AttachToComponent(
-		Tile->tileMesh, // attach to the tile’s mesh (not the Actor)
-		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
-		"TroopSpawnSocket");
+	AOccupant_BaseClass* OccupantCDO = Occupant->GetDefaultObject<AOccupant_BaseClass>();
+	if (!OccupantCDO)
+		return;
 
-	EActivePlayerSide currentPlayer = turnManager->GetActivePlayer();
-	switch (currentPlayer)
+	if (OccupantCDO->IsBuilding() && !Tile->getBuildingCanBePlacedOnTile())
+		return;
+
+	if (OccupantCDO->IsTroop() && !Tile->getCanSpawnTroopOnTile())
+		return;
+
+	const FName SpawnSocketName = OccupantCDO->IsBuilding()
+		? TEXT("BuildingSpawnSocket")
+		: TEXT("TroopSpawnSocket");
+
+	/*Spawn and attach*/
+	FVector	   SpawnLocation = Tile->GetActorLocation();
+	FTransform SpawnTransform(FRotator::ZeroRotator, SpawnLocation);
+
+	AOccupant_BaseClass* SpawnedOccupant = World->SpawnActor<AOccupant_BaseClass>(Occupant, SpawnTransform);
+	if (!SpawnedOccupant)
+		return;
+
+	SpawnedOccupant->AttachToComponent(
+		Tile->tileMesh,
+		FAttachmentTransformRules::SnapToTargetNotIncludingScale,
+		SpawnSocketName);
+
+	EActivePlayerSide CurrentPlayer = turnManager->GetActivePlayer();
+
+	switch (CurrentPlayer)
 	{
 		case EActivePlayerSide::PlayerA:
-			Troop->SetTroopTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
+			SpawnedOccupant->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
 			break;
 		case EActivePlayerSide::PlayerB:
-			Troop->SetTroopTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
+			SpawnedOccupant->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
 			break;
 		case EActivePlayerSide::None:
-			break;
 		default:
 			break;
 	}
 
-	Tile->SetOccupyingTroop(Troop);
-	Troop->TSetGridPosition(Tile->getGridCoordinates());
-	Tile->isOccupied = true;
-	Troop->TSetOwningPlayer(turnManager->GetActivePlayer());
-	Tile->SetOwningPlayer(turnManager->GetActivePlayer());
+	SpawnedOccupant->SetGridPosition(Tile->getGridCoordinates());
+	SpawnedOccupant->SetOwningPlayer(CurrentPlayer);
+
+	if (AOccupant_Troop_BaseClass* Troop = Cast<AOccupant_Troop_BaseClass>(SpawnedOccupant))
+	{
+		Troop->OnTroopDeath.AddDynamic(this, &ATileManager::OnTroopDeath);
+		Tile->SetOccupyingTroop(Troop);
+		Tile->isOccupied = true;
+	}
+	else if (AOccupant_Building_BaseClass* Building = Cast<AOccupant_Building_BaseClass>(SpawnedOccupant))
+	{
+		Tile->SetOccupyingBuilding(Building);
+		Tile->setHasBuilding(true);
+	}
+
+	Tile->SetOwningPlayer(CurrentPlayer);
 }
 
-FLinearColor ATileManager::getOutlineColor(ETileHighlightState highlightState) const
+FLinearColor ATileManager::GetOutlineColor(ETileHighlightState highlightState) const
 {
 	switch (highlightState)
 	{

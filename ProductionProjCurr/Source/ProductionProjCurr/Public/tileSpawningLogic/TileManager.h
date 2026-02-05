@@ -12,9 +12,7 @@
 // Forward declarations to break circular includes
 class ABG_Tile;
 class ABG_TileSpawner;
-class ATroop;
-class AWorldEffectManager;
-class ABuilding;
+class AOccupant_BaseClass;
 
 UENUM(BlueprintType)
 enum class EPlayerIntent : uint8
@@ -43,8 +41,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SetGridWidth(int32 Width) { GridWidth = Width; }
-	void SetGridHeight(int32 Height) { GridHeight = Height; }
+
 
 	int32 GridWidth;
 	int32 GridHeight;
@@ -52,7 +49,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	ABG_Tile* SelectedTile;
 
-	FString& GetSelectedTileCoordinates();
 	
 	UFUNCTION()
 	// Called to bind tile delegates
@@ -62,7 +58,6 @@ public:
 	void OnTroopDeath();
 
 	// Returns neighbors
-	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile);
 
 	bool HasTile(const FIntPoint& Coords) const;
 
@@ -71,22 +66,27 @@ public:
 
 	void RegisterTile(const FIntPoint& Coords, ABG_Tile* Tile);
 
-	void spawnTroop(TSubclassOf<ATroop> troopToSpawn, ABG_Tile* Tile);
+	void spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Tile* Tile);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Troop | Spawning")
 	float troopSpawnHeight = 20.0f;
 
-	FLinearColor getOutlineColor(ETileHighlightState highlightState) const;
 
 	TArray<ABG_Tile*> TilesWithOutline;
 
 	EPlayerIntent determinePlayerIntent(ABG_Tile* ClickedTile) const;
 
-	void placeBuildingAtTile(TSubclassOf<ABuilding> BuildingToPlace, ABG_Tile* Tile);
 
-	void setOccupantOwner(ABuilding* Building, EActivePlayerSide currentPlayer);
-	void setOccupantOwner(ATroop* Troop, EActivePlayerSide currentPlayer);
-	void setTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer);
+	void GetOccupantOwner(AOccupant_BaseClass* Occupant, EActivePlayerSide currentPlayer);
+	void GetTileOwner(ABG_Tile* Tile, EActivePlayerSide currentPlayer);
+	void SetGridWidth(int32 Width) { GridWidth = Width; }
+	void SetGridHeight(int32 Height) { GridHeight = Height; }
+
+	FLinearColor      GetOutlineColor(ETileHighlightState highlightState) const;
+	TArray<FIntPoint> GetAdjacentTiles(bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile);
+	FString&		  GetSelectedTileCoordinates();
+
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
 	ATurnManager* turnManager;
 

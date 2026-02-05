@@ -5,10 +5,13 @@ void AOccupant_BaseClass::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (SkeletalMesh)
+	if (SkeletalMesh && SkeletalMesh->GetMaterial(0))
 	{
-		TeamMID = SkeletalMesh->CreateAndSetMaterialInstanceDynamic(0);
+		TeamMID = UMaterialInstanceDynamic::Create(
+			SkeletalMesh->GetMaterial(0),
+			this);
 	}
+	SkeletalMesh->SetMaterial(0, TeamMID);
 }
 
 /* -------- SETTERS -------- */

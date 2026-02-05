@@ -60,18 +60,12 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\OccupantInterface.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Troop.cpp">
-      <Filter>Source\ProductionProjCurr\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\UPlayerProfile.cpp">
       <Filter>Source\ProductionProjCurr\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\Building">
       <UniqueIdentifier>{2469FFA3-3704-3E02-B7E8-CF8DF6E4B9E2}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Building\Building.cpp">
-      <Filter>Source\ProductionProjCurr\Private\Building</Filter>
-    </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\gameMode">
       <UniqueIdentifier>{563C9B27-01D4-3A3D-8497-94FD4EEB1337}</UniqueIdentifier>
     </Filter>
@@ -82,6 +76,9 @@
       <UniqueIdentifier>{6653A731-D686-39C7-B4FA-914F4E6AAD2B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Occupant\Occupant_BaseClass.cpp">
+      <Filter>Source\ProductionProjCurr\Private\Occupant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Occupant\Occupant_Building_BaseClass.cpp">
       <Filter>Source\ProductionProjCurr\Private\Occupant</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\Occupant\Occupant_Troop_BaseClass.cpp">
@@ -111,9 +108,6 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\OccupantInterface.h">
       <Filter>Source\ProductionProjCurr\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Troop.h">
-      <Filter>Source\ProductionProjCurr\Public</Filter>
-    </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\animations">
       <UniqueIdentifier>{20D59EF5-F078-3D92-908B-702F7B5E5CC0}</UniqueIdentifier>
     </Filter>
@@ -126,9 +120,6 @@
     <Filter Include="Source\ProductionProjCurr\Public\Building">
       <UniqueIdentifier>{262FF270-67D1-3510-BED0-EE98CE125F86}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Building\Building.h">
-      <Filter>Source\ProductionProjCurr\Public\Building</Filter>
-    </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\gameMode">
       <UniqueIdentifier>{D8DE4CA4-6E41-3184-AC2A-24695D66E0D4}</UniqueIdentifier>
     </Filter>
@@ -163,6 +154,9 @@
       <UniqueIdentifier>{611608D6-1042-3130-B1E3-67127D9F5E0F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Occupant\Occupant_BaseClass.h">
+      <Filter>Source\ProductionProjCurr\Public\Occupant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Occupant\Occupant_Building_BaseClass.h">
       <Filter>Source\ProductionProjCurr\Public\Occupant</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\Occupant\Occupant_Troop_BaseClass.h">

@@ -11,6 +11,9 @@
 #include "DevMode_Widget.generated.h"
 
 class ATileManager;
+class AOccupant_Troop_BaseClass;
+class AOccupant_Building_BaseClass;
+class AOccupant_BaseClass;
 /**
  * 
  */
@@ -93,10 +96,10 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	ATileManager* DevTileManager;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
-	TSubclassOf<class ATroop> TroopToSpawn;
+	TSubclassOf<AOccupant_Troop_BaseClass> TroopToSpawn;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
-	TSubclassOf<class ABuilding> BuildingToSpawn;
+	TSubclassOf<AOccupant_Building_BaseClass> BuildingToSpawn;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
 	ATurnManager* turnManager;

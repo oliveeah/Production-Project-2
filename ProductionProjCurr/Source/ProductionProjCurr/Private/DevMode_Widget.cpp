@@ -4,6 +4,9 @@
 #include "DevMode_Widget.h"
 #include <Kismet/GameplayStatics.h>
 #include "tileSpawningLogic/TileManager.h"
+#include "Occupant/Occupant_BaseClass.h"
+#include "Occupant/Occupant_Troop_BaseClass.h"
+#include "Occupant/Occupant_Building_BaseClass.h"
 #include "Engine/World.h"           // For GetWorld()
 #include "EngineUtils.h"            // For TActorIterator
 #include <vector>
@@ -199,7 +202,7 @@ void UDevMode_Widget::SpawnBuildingAtSelectedTile_ButtonClicked()
 	{
 		if (DevTileManager->SelectedTile)
 		{
-			DevTileManager->placeBuildingAtTile(BuildingToSpawn, DevTileManager->SelectedTile);
+			DevTileManager->spawnTroop(BuildingToSpawn, DevTileManager->SelectedTile);
 			UE_LOG(LogTemp, Display, TEXT("Spawned building at selected tile"));
 		}
 		else

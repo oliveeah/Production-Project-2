@@ -12,8 +12,9 @@
 #include "gameMode/Enum_PlayerSide.h"
 #include "BG_Tile.generated.h"
 
-class ATroop;
-class ABuilding;
+class AOccupant_BaseClass;
+class AOccupant_Troop_BaseClass;
+class AOccupant_Building_BaseClass;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(
 	FOnTileSelected,
@@ -31,7 +32,7 @@ private:
 	bool isPlayingEffect = false;
 
 	UPROPERTY(VisibleAnywhere)
-	ATroop* occupyingTroopClass;
+	AOccupant_Troop_BaseClass* occupyingTroopClass;
 	UPROPERTY(VisibleAnywhere)
 
 	ETileHighlightState currentHighlightType = ETileHighlightState::None;
@@ -43,7 +44,7 @@ private:
 	bool bBuildingCanBePlacedOnTile = true;
 
 	UPROPERTY(VisibleAnywhere)
-	ABuilding* occupyingBuildingClass;
+	AOccupant_Building_BaseClass* occupyingBuildingClass;
 
 	bool bHasBuilding = false;
 
@@ -83,8 +84,8 @@ private:
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tile Info")
 		bool isSpawnableTile = true;
 
-		void	SetOccupyingTroop(ATroop* Troop) { occupyingTroopClass = Troop; }
-		ATroop* getOccupyingTroop() const { return occupyingTroopClass; }
+		void	SetOccupyingTroop(AOccupant_Troop_BaseClass* Troop) { occupyingTroopClass = Troop; }
+		AOccupant_Troop_BaseClass* getOccupyingTroop() const { return occupyingTroopClass; }
 
 
 
@@ -101,8 +102,8 @@ private:
 		bool getCanSpawnTroopOnTile() const { return bCanSpawnTroopOnTile; }
 
 		bool getBuildingCanBePlacedOnTile() const { return bBuildingCanBePlacedOnTile; }
-		ABuilding* getOccupyingBuilding() const { return occupyingBuildingClass; }
-		void SetOccupyingBuilding(ABuilding* Building) { occupyingBuildingClass = Building; }
+		AOccupant_Building_BaseClass* getOccupyingBuilding() const { return occupyingBuildingClass; }
+		void SetOccupyingBuilding(AOccupant_Building_BaseClass* Building) { occupyingBuildingClass = Building; }
 
 		bool getHasBuilding() const { return bHasBuilding; }
 		void setHasBuilding(bool hasBuilding) { bHasBuilding = hasBuilding; }
@@ -110,5 +111,6 @@ private:
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		EActivePlayerSide owningPlayer =  EActivePlayerSide::None;
 
+		UFUNCTION()
 		void SetOwningPlayer(EActivePlayerSide newOwner) { owningPlayer = newOwner; }
 };
