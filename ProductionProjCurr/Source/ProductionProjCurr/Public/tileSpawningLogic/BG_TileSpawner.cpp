@@ -89,6 +89,35 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 			// Get tile class for biome
 			TSubclassOf<ABG_Tile> ChosenTileClass = GetTileClassForBiome(biomeType);
 
+			switch (biomeType)
+			{
+				case EBiomeType::Grassland:
+					ChosenTileClass = PickVariantFromNoise(MeadowTiles, Noise, cols, rows);
+					break;
+
+				case EBiomeType::Forest:
+					ChosenTileClass = PickVariantFromNoise(ForestTiles, Noise, cols, rows);
+					break;
+
+				case EBiomeType::Stone:
+					ChosenTileClass = PickVariantFromNoise(StoneTiles, Noise, cols, rows);
+					break;
+
+				case EBiomeType::Hill:
+					ChosenTileClass = PickVariantFromNoise(RockHillTiles, Noise, cols, rows);
+					break;
+
+				default:
+					// Fallback to your original method for others
+					ChosenTileClass = GetTileClassForBiome(biomeType);
+					break;
+			}
+
+			// Safety fallback
+			if (!ChosenTileClass)
+			{
+				ChosenTileClass = GetTileClassForBiome(biomeType);
+			}
 			// Spawn the tile
 			ABG_Tile* NewTile = spawnTile(ChosenTileClass, instanceTransform);
 
@@ -120,13 +149,13 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::GetTileClassForBiome(EBiomeType Biome) co
 		case EBiomeType::Sandy:
 			return SandyTile;
 		case EBiomeType::Grassland:
-			return MeadowTile;
+			return MeadowTiles.Num() > 0 ? MeadowTiles[0] : TileClass;
 		case EBiomeType::Forest:
-			return ForestTile;
+			return ForestTiles.Num() > 0 ? ForestTiles[0] : TileClass;
 		case EBiomeType::Stone:
-			return StoneTile;
+			return StoneTiles.Num() > 0 ? StoneTiles[0] : TileClass;
 		case EBiomeType::Hill:
-			return RockHillTile;
+			return RockHillTiles.Num() > 0 ? RockHillTiles[0] : TileClass;
 		case EBiomeType::Mountain:
 			return MountainTile;
 		default:
@@ -167,3 +196,16 @@ ABG_Tile* ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, con
 	return NewTile;
 }
 
+TSubclassOf<ABG_Tile> ABG_TileSpawner::PickVariantFromNoise(
+	const TArray<TSubclassOf<ABG_Tile>>& Variants,
+	FastNoiseLite&						 Noise,
+	int32								 Col,
+	int32								 Row)
+{
+	if (Variants.Num() == 0)
+		return nullptr;
+
+	float VariantNoise = Noise.GetNoise(Col * 0.5f, Row * 0.5f);
+	int32 Index = FMath::Abs((int32)(VariantNoise * 1000)) % Variants.Num();
+	return Variants[Index];
+}
