@@ -70,16 +70,16 @@ protected:
 	TSubclassOf<ABG_Tile> SandyTile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> MeadowTile;
+	TArray<TSubclassOf<ABG_Tile>> MeadowTiles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> ForestTile;
+	TArray<TSubclassOf<ABG_Tile>> ForestTiles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> StoneTile;
+	TArray<TSubclassOf<ABG_Tile>> StoneTiles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
-	TSubclassOf<ABG_Tile> RockHillTile;
+	TArray<TSubclassOf<ABG_Tile>> RockHillTiles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hex | Biomes")
 	TSubclassOf<ABG_Tile> MountainTile;
@@ -98,5 +98,9 @@ protected:
 	TSubclassOf<ABG_Tile> GetTileClassForBiome(EBiomeType Biome) const;
 	EBiomeType generateBiomeTypeBasedOnNoise(int32 rows, int32 cols, FastNoiseLite _Noise);
 	ABG_Tile* spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, const FTransform& _instanceTransform);
-
+	TSubclassOf<ABG_Tile> PickVariantFromNoise(
+		const TArray<TSubclassOf<ABG_Tile>>& Variants,
+		FastNoiseLite&						 Noise,
+		int32								 Col,
+		int32								 Row);
 };
