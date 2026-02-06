@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Occupant/Occupant_BaseClass.h"
+#include "Components/StaticMeshComponent.h"
 #include "Occupant_Building_BaseClass.generated.h"
 
 /**
@@ -21,4 +22,10 @@ class PRODUCTIONPROJCURR_API AOccupant_Building_BaseClass : public AOccupant_Bas
 	public:
 		virtual bool IsBuilding() const override { return true; }
 		
+		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+		UStaticMeshComponent* StaticMesh;
+
+		void BeginPlay() override;
+
+		AOccupant_Building_BaseClass();
 };

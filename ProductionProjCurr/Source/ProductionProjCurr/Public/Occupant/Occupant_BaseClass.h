@@ -8,7 +8,6 @@
 #include "Occupant_BaseClass.generated.h"
 
 class AMaterialInstanceDynamic;
-class USkeletalMeshComponent;
 class ABG_Tile;
 
 UCLASS()
@@ -21,8 +20,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	USceneComponent* RootComp;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
-	USkeletalMeshComponent* SkeletalMesh;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Stats")
 	int32 Health = 3;
@@ -63,8 +61,7 @@ public:
 		PrimaryActorTick.bCanEverTick = false;
 		RootComp = CreateDefaultSubobject<USceneComponent>(TEXT("RootComp"));
 		SetRootComponent(RootComp);
-		SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
-		SkeletalMesh->SetupAttachment(RootComp);
+
 	}
 
 };

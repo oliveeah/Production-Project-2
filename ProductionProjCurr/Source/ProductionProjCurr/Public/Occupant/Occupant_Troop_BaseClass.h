@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Occupant/Occupant_BaseClass.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Occupant_Troop_BaseClass.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
@@ -52,6 +53,8 @@ class PRODUCTIONPROJCURR_API AOccupant_Troop_BaseClass : public AOccupant_BaseCl
 		UPROPERTY(BlueprintAssignable, Category = "Events")
 		FOnTroopDeath OnTroopDeath;
 
+		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+		USkeletalMeshComponent* SkeletalMesh;
 
 		/*Setters*/ 
 		UFUNCTION(BlueprintCallable)
@@ -100,6 +103,8 @@ class PRODUCTIONPROJCURR_API AOccupant_Troop_BaseClass : public AOccupant_BaseCl
 		virtual void Tick(float DeltaTime) override;
 
 		AOccupant_Troop_BaseClass();
+
+		void BeginPlay() override;
 
 	protected:
 };
