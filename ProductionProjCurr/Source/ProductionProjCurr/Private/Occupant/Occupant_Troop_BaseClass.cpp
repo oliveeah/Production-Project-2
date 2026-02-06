@@ -98,8 +98,6 @@ void AOccupant_Troop_BaseClass::MoveToTile(ABG_Tile* Tile)
 
 	MoveTarget = Tile->tileMesh->GetSocketLocation("TroopSpawnSocket");
 
-	MoveTarget.Z = GetActorLocation().Z;
-
 	FVector ToTarget = MoveTarget - GetActorLocation();
 
 	if (!ToTarget.IsNearlyZero())
