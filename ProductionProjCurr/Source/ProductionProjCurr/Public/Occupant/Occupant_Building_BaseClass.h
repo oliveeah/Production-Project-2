@@ -7,6 +7,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "Occupant_Building_BaseClass.generated.h"
 
+class UStaticMesh;
+
 /**
  * 
  */
@@ -25,7 +27,14 @@ class PRODUCTIONPROJCURR_API AOccupant_Building_BaseClass : public AOccupant_Bas
 		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 		UStaticMeshComponent* StaticMesh;
 
+		UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Team")
+		UStaticMesh* PlayerAStaticMesh;
+
+		UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Team")
+		UStaticMesh* PlayerBStaticMesh;
+
 		void BeginPlay() override;
+		void SetOwningPlayer(EActivePlayerSide NewPlayer) override;
 
 		AOccupant_Building_BaseClass();
 };

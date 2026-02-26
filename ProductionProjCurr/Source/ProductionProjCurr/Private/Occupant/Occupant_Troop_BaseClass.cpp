@@ -19,6 +19,33 @@ void AOccupant_Troop_BaseClass::SetDamage(int NewDamage)
 	Damage = NewDamage;
 }
 
+void AOccupant_Troop_BaseClass::SetOwningPlayer(EActivePlayerSide NewPlayer)
+{
+	Super::SetOwningPlayer(NewPlayer);
+
+	if (!SkeletalMesh)
+		return;
+
+	switch (NewPlayer)
+	{
+		case EActivePlayerSide::PlayerA:
+			if (PlayerASkeletalMesh)
+			{
+				SkeletalMesh->SetSkeletalMesh(PlayerASkeletalMesh);
+			}
+			break;
+		case EActivePlayerSide::PlayerB:
+			if (PlayerBSkeletalMesh)
+			{
+				SkeletalMesh->SetSkeletalMesh(PlayerBSkeletalMesh);
+			}
+			break;
+		case EActivePlayerSide::None:
+		default:
+			break;
+	}
+}
+
 void AOccupant_Troop_BaseClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -66,15 +93,7 @@ AOccupant_Troop_BaseClass::AOccupant_Troop_BaseClass()
 void AOccupant_Troop_BaseClass::BeginPlay()
 {
 	Super::BeginPlay();
-	if (SkeletalMesh && SkeletalMesh->GetMaterial(0))
-	{
-		TeamMID = UMaterialInstanceDynamic::Create(
-			SkeletalMesh->GetMaterial(0),
-			this);
-	}
-	SkeletalMesh->SetMaterial(0, TeamMID);
 }
-
 
 bool AOccupant_Troop_BaseClass::CanMoveTo(const FIntPoint& Target, TArray<FIntPoint> Neighbors) const
 {

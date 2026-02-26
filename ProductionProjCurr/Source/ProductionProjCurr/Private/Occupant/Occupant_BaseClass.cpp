@@ -5,6 +5,12 @@ void AOccupant_BaseClass::BeginPlay()
 {
 	Super::BeginPlay();
 
+	SetOwningPlayer(OwningPlayer);
+
+	if (OwningPlayer == EActivePlayerSide::None)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s has OwningPlayer = None"), *GetName());
+	}
 }
 
 /* -------- SETTERS -------- */

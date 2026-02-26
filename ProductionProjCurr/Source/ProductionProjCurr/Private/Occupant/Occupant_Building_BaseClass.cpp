@@ -6,13 +6,33 @@
 void AOccupant_Building_BaseClass::BeginPlay()
 {
 	Super::BeginPlay();
-	if (StaticMesh && StaticMesh->GetMaterial(0))
+}
+
+void AOccupant_Building_BaseClass::SetOwningPlayer(EActivePlayerSide NewPlayer)
+{
+	Super::SetOwningPlayer(NewPlayer);
+
+	if (!StaticMesh)
+		return;
+
+	switch (NewPlayer)
 	{
-		TeamMID = UMaterialInstanceDynamic::Create(
-			StaticMesh->GetMaterial(0),
-			this);
+		case EActivePlayerSide::PlayerA:
+			if (PlayerAStaticMesh)
+			{
+				StaticMesh->SetStaticMesh(PlayerAStaticMesh);
+			}
+			break;
+		case EActivePlayerSide::PlayerB:
+			if (PlayerBStaticMesh)
+			{
+				StaticMesh->SetStaticMesh(PlayerBStaticMesh);
+			}
+			break;
+		case EActivePlayerSide::None:
+		default:
+			break;
 	}
-	StaticMesh->SetMaterial(0, TeamMID);
 }
 
 AOccupant_Building_BaseClass::AOccupant_Building_BaseClass()

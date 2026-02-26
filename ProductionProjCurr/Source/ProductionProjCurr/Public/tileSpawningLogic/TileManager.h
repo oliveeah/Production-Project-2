@@ -64,6 +64,9 @@ public:
 	UFUNCTION()
 	void OnTroopDeath();
 
+	UFUNCTION()
+	void HandleTurnChanged(EActivePlayerSide NewActivePlayer);
+
 
 	EPlayerIntent		determinePlayerIntent(ABG_Tile* ClickedTile) const;
 	void				removeOutlineFromAllTiles();

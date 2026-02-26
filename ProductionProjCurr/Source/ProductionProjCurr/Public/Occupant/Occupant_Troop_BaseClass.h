@@ -7,6 +7,8 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Occupant_Troop_BaseClass.generated.h"
 
+class USkeletalMesh;
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
 	FOnIsMovingChanged,
 	bool,
@@ -56,6 +58,12 @@ class PRODUCTIONPROJCURR_API AOccupant_Troop_BaseClass : public AOccupant_BaseCl
 		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 		USkeletalMeshComponent* SkeletalMesh;
 
+		UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Team")
+		USkeletalMesh* PlayerASkeletalMesh;
+
+		UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Team")
+		USkeletalMesh* PlayerBSkeletalMesh;
+
 		/*Setters*/ 
 		UFUNCTION(BlueprintCallable)
 		void SetIsMoving(bool NewIsMoving)
@@ -79,7 +87,7 @@ class PRODUCTIONPROJCURR_API AOccupant_Troop_BaseClass : public AOccupant_BaseCl
 
 		void SetHealth(int32 NewHealth) override;
 		void SetDamage(int NewDamage);
-
+		void SetOwningPlayer(EActivePlayerSide NewPlayer) override;
 
 		/*Getters*/ 
 		bool getIsMoving() const { return bIsMoving; }

@@ -32,7 +32,14 @@ void ATileManager::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("TileSpawner not found!"));
 	}
 
-
+	if (turnManager)
+	{
+		turnManager->OnTurnChanged.AddDynamic(this, &ATileManager::HandleTurnChanged);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("TurnManager not assigned in TileManager!"));
+	}
 }
 
 // Called every frame
@@ -40,7 +47,6 @@ void ATileManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-
 
 FString& ATileManager::GetSelectedTileCoordinates()
 {
@@ -77,6 +83,19 @@ void ATileManager::OnTileClicked(ABG_Tile* Tile, bool isOccupied)
 	{
 		case EPlayerIntent::SelectTile:
 		{
+			if (SelectedTile && SelectedTile->GetIsOccupied())
+			{
+				if (turnManager)
+				{
+					AOccupant_Troop_BaseClass* OccupyingTroop = SelectedTile->getOccupyingTroop();
+					if (OccupyingTroop && OccupyingTroop->GetOwningPlayer() != turnManager->GetActivePlayer())
+					{
+						SelectedTile = nullptr;
+						return;
+					}
+				}
+			}
+
 			if (SelectedTile && !SelectedTile->GetIsOccupied()) // If the tile is empty, just highlight it as standard
 			{
 				ApplyHighlightState(ETileHighlightState::Standard, SelectedTile);
@@ -181,6 +200,12 @@ void ATileManager::OnTroopDeath()
 	removeOutlineFromAllTiles();
 }
 
+void ATileManager::HandleTurnChanged(EActivePlayerSide NewActivePlayer)
+{
+	removeOutlineFromAllTiles();
+	SelectedTile = nullptr;
+}
+
 EPlayerIntent ATileManager::determinePlayerIntent(ABG_Tile* ClickedTile) const
 {
 	if (!ClickedTile)
@@ -231,9 +256,6 @@ void ATileManager::removeOutlineFromAllTiles()
 	}
 	TilesWithOutline.Empty();
 }
-
-
-
 
 TArray<FIntPoint> ATileManager::GetAdjacentTiles( bool bIncludeDiagonals, int32 adjRange, ABG_Tile* Tile)
 {
@@ -318,19 +340,6 @@ void ATileManager::spawnTroop(TSubclassOf<AOccupant_BaseClass> Occupant, ABG_Til
 		SpawnSocketName);
 
 	EActivePlayerSide CurrentPlayer = turnManager->GetActivePlayer();
-
-	switch (CurrentPlayer)
-	{
-		case EActivePlayerSide::PlayerA:
-			SpawnedOccupant->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Red));
-			break;
-		case EActivePlayerSide::PlayerB:
-			SpawnedOccupant->SetTeamColor(FLinearColor::FromSRGBColor(FColor::Blue));
-			break;
-		case EActivePlayerSide::None:
-		default:
-			break;
-	}
 
 	SpawnedOccupant->SetGridPosition(Tile->getGridCoordinates());
 	SpawnedOccupant->SetOwningPlayer(CurrentPlayer);
