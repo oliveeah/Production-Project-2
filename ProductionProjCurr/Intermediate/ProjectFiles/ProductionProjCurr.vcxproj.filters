@@ -78,6 +78,9 @@
     <ClCompile Include="..\..\Source\ProductionProjCurr\Private\gameMode\TurnManager.cpp">
       <Filter>Source\ProductionProjCurr\Private\gameMode</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Private\gameMode\UIManager.cpp">
+      <Filter>Source\ProductionProjCurr\Private\gameMode</Filter>
+    </ClCompile>
     <Filter Include="Source\ProductionProjCurr\Private\Occupant">
       <UniqueIdentifier>{6653A731-D686-39C7-B4FA-914F4E6AAD2B}</UniqueIdentifier>
     </Filter>
@@ -145,6 +148,9 @@
       <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\TurnManager.h">
+      <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProductionProjCurr\Public\gameMode\UIManager.h">
       <Filter>Source\ProductionProjCurr\Public\gameMode</Filter>
     </ClInclude>
     <Filter Include="Source\ProductionProjCurr\Public\input">
@@ -219,5 +225,8 @@
     <ClInclude Include="..\..\Source\ProductionProjCurr\Public\tileSpawningLogic\TileManager.h">
       <Filter>Source\ProductionProjCurr\Public\tileSpawningLogic</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\ProductionProjCurr\Public\gameMode\UIManager.cpp" />
   </ItemGroup>
 </Project>

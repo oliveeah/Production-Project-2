@@ -7,6 +7,10 @@
 #include "gameMode/Enum_PlayerSide.h"
 #include "TurnManager.generated.h"
 
+class UUIManager;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTurnChanged, EActivePlayerSide, activePlayer/*NewActivePlayer*/);
+
 UCLASS()
 class PRODUCTIONPROJCURR_API ATurnManager : public AActor
 {
@@ -14,13 +18,16 @@ class PRODUCTIONPROJCURR_API ATurnManager : public AActor
 private:	
 	UPROPERTY()
 	EActivePlayerSide activePlayer = EActivePlayerSide::PlayerA;
+	
+public:
+	UPROPERTY(BlueprintAssignable, Category = "TurnManager")
+	FOnTurnChanged OnTurnChanged;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
-
 	// Sets default values for this actor's properties
 	ATurnManager();
 
@@ -29,4 +36,6 @@ public:
 
 	EActivePlayerSide GetActivePlayer() const { return activePlayer; }
 
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	//UUIManager* UIManager;
 };

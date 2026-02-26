@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "gameMode/TurnManager.h"
-
+#include "gameMode/UIManager.h"
 // Sets default values
 ATurnManager::ATurnManager()
 {
@@ -23,6 +23,7 @@ void ATurnManager::PassTurn()
 		UE_LOG(LogTemp, Display, TEXT("Player A is active"));
 
 	}
+	OnTurnChanged.Broadcast(activePlayer);
 }
 
 // Called when the game starts or when spawned

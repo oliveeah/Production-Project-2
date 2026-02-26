@@ -71,13 +71,7 @@ struct Z_Construct_UClass_AProductionProjCurrPlayerController_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_moveAction_MetaData[] = {
 		{ "Category", "Input|Actions" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// ========== INPUT ACTIONS (MOVED FROM PAWN) ==========\n" },
-#endif
 		{ "ModuleRelativePath", "Public/input/ProductionProjCurrPlayerController.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "========== INPUT ACTIONS (MOVED FROM PAWN) ==========" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_lookAction_MetaData[] = {
 		{ "Category", "Input|Actions" },
@@ -189,10 +183,10 @@ AProductionProjCurrPlayerController::~AProductionProjCurrPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionProjCurrPlayerController, AProductionProjCurrPlayerController::StaticClass, TEXT("AProductionProjCurrPlayerController"), &Z_Registration_Info_UClass_AProductionProjCurrPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrPlayerController), 643771792U) },
+		{ Z_Construct_UClass_AProductionProjCurrPlayerController, AProductionProjCurrPlayerController::StaticClass, TEXT("AProductionProjCurrPlayerController"), &Z_Registration_Info_UClass_AProductionProjCurrPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionProjCurrPlayerController), 2920701345U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_2704018413(TEXT("/Script/ProductionProjCurr"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_1777606217(TEXT("/Script/ProductionProjCurr"),
 	Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_linda_Documents_GitHub_Production_Project_2_ProductionProjCurr_Source_ProductionProjCurr_Public_input_ProductionProjCurrPlayerController_h__Script_ProductionProjCurr_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
