@@ -1,9 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BG_TileSpawner.h"
+#include "BG_Tile.h"
+#include "TileManager.h"
 #include "Kismet/GameplayStatics.h"
-#include "Kismet/KismetMathLibrary.h"
-#include "Engine/World.h" 
+
 
 // Sets default values
 ABG_TileSpawner::ABG_TileSpawner()
@@ -44,6 +45,7 @@ void ABG_TileSpawner::clearGrid()
 	TileGrid.Empty();
 }
 
+
 void ABG_TileSpawner::spawnGrid(const float& randomNum)
 {
 	if (!GetWorld()) return;
@@ -54,10 +56,13 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 	
 	FastNoiseLite Noise;
 	Noise.SetSeed(randomNum);
-	Noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
+	Noise.SetNoiseType(FastNoiseLite::NoiseType_ValueCubic);
 	Noise.SetFrequency(noiseFrequency);
 
+
 	TileGrid.SetNum(numberOfRows);
+	TileManager->SetGridWidth(numberOfColumns);
+	TileManager->SetGridHeight(numberOfRows);
 
 	for (int32 rows = 0; rows < numberOfRows; rows++)
 	{
@@ -66,7 +71,16 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 		{
 			// Offset every other row
 			const float xOffset = (rows % 2 == 0) ? 0.0f : (hexWidth * 0.5f);
-			const FVector spawnLocation = tileSpawnerLocation + FVector(cols * hexWidth + xOffset, rows * hexHeight, 0);
+			float Nx = cols + (rows % 2) * 0.5f;
+			float Ny = rows * 0.8660254f;
+
+			float		HeightNoise = Noise.GetNoise(Nx, Ny); // reuse same coords
+			float		Height = HeightNoise * 100.f;		  // tweak this in editor
+
+			FVector		spawnLocation = tileSpawnerLocation + FVector(
+				cols * hexWidth + xOffset,
+				rows * hexHeight, Height);
+
 			const FTransform instanceTransform(FRotator::ZeroRotator, spawnLocation);
 
 			// Determine biome type based on noise
@@ -75,13 +89,51 @@ void ABG_TileSpawner::spawnGrid(const float& randomNum)
 			// Get tile class for biome
 			TSubclassOf<ABG_Tile> ChosenTileClass = GetTileClassForBiome(biomeType);
 
+			switch (biomeType)
+			{
+				case EBiomeType::Grassland:
+					ChosenTileClass = PickVariantFromNoise(MeadowTiles, Noise, cols, rows);
+					break;
+
+				case EBiomeType::Forest:
+					ChosenTileClass = PickVariantFromNoise(ForestTiles, Noise, cols, rows);
+					break;
+
+				case EBiomeType::Stone:
+					ChosenTileClass = PickVariantFromNoise(StoneTiles, Noise, cols, rows);
+					break;
+
+				case EBiomeType::Hill:
+					ChosenTileClass = PickVariantFromNoise(RockHillTiles, Noise, cols, rows);
+					break;
+
+				default:
+					// Fallback to your original method for others
+					ChosenTileClass = GetTileClassForBiome(biomeType);
+					break;
+			}
+
+			// Safety fallback
+			if (!ChosenTileClass)
+			{
+				ChosenTileClass = GetTileClassForBiome(biomeType);
+			}
 			// Spawn the tile
 			ABG_Tile* NewTile = spawnTile(ChosenTileClass, instanceTransform);
 
 			if (NewTile)
 			{
 				TileGrid[rows][cols] = NewTile; 
-				NewTile->gridCoordinates = FVector2D(rows, cols);
+				NewTile->gridCoordinates = FIntPoint(cols, rows);
+				if (TileManager)
+				{
+					NewTile->OnTileSelectedDelegate.AddDynamic(TileManager, &ATileManager::OnTileClicked);
+					TileManager->RegisterTile(FIntPoint(cols, rows), NewTile); 
+				}
+				else
+				{
+					UE_LOG(LogTemp, Warning, TEXT("TileManager not set in TileSpawner! Cannot bind delegate."));
+				}
 			}
 		}
 	}
@@ -97,13 +149,13 @@ TSubclassOf<ABG_Tile> ABG_TileSpawner::GetTileClassForBiome(EBiomeType Biome) co
 		case EBiomeType::Sandy:
 			return SandyTile;
 		case EBiomeType::Grassland:
-			return MeadowTile;
+			return MeadowTiles.Num() > 0 ? MeadowTiles[0] : TileClass;
 		case EBiomeType::Forest:
-			return ForestTile;
+			return ForestTiles.Num() > 0 ? ForestTiles[0] : TileClass;
 		case EBiomeType::Stone:
-			return StoneTile;
+			return StoneTiles.Num() > 0 ? StoneTiles[0] : TileClass;
 		case EBiomeType::Hill:
-			return RockHillTile;
+			return RockHillTiles.Num() > 0 ? RockHillTiles[0] : TileClass;
 		case EBiomeType::Mountain:
 			return MountainTile;
 		default:
@@ -120,12 +172,12 @@ EBiomeType ABG_TileSpawner::generateBiomeTypeBasedOnNoise(int32 rows, int32 cols
 
 	// UE_LOG(LogTemp, Display, TEXT("noise %f"), Value);
 
-	if (Value < 0.35f) return EBiomeType::Water;
-	if (Value < 0.4f) return EBiomeType::Sandy;
-	if (Value < 0.65f) return EBiomeType::Grassland;
-	if (Value < 0.75f) return EBiomeType::Forest;
-	if (Value < 0.8f) return EBiomeType::Stone;
-	if (Value < 0.85f) return EBiomeType::Hill;
+	if (Value < 0.33f) return EBiomeType::Water;
+	if (Value < 0.38f) return EBiomeType::Sandy; // thinner beach
+	if (Value < 0.6f) return EBiomeType::Grassland;
+	if (Value < 0.65f) return EBiomeType::Forest;
+	if (Value < 0.75f) return EBiomeType::Stone;
+	if (Value < 0.8f) return EBiomeType::Hill;
 	return EBiomeType::Mountain;
 }
 
@@ -144,3 +196,16 @@ ABG_Tile* ABG_TileSpawner::spawnTile(TSubclassOf<ABG_Tile> _ChosenTileClass, con
 	return NewTile;
 }
 
+TSubclassOf<ABG_Tile> ABG_TileSpawner::PickVariantFromNoise(
+	const TArray<TSubclassOf<ABG_Tile>>& Variants,
+	FastNoiseLite&						 Noise,
+	int32								 Col,
+	int32								 Row)
+{
+	if (Variants.Num() == 0)
+		return nullptr;
+
+	float VariantNoise = Noise.GetNoise(Col * 0.5f, Row * 0.5f);
+	int32 Index = FMath::Abs((int32)(VariantNoise * 1000)) % Variants.Num();
+	return Variants[Index];
+}

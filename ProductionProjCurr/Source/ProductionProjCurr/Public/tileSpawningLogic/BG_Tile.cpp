@@ -4,6 +4,9 @@
 #include "BG_Tile.h"
 #include <gameMode/ProductionProjCurrGameMode.h>
 #include <Kismet/GameplayStatics.h>
+#include "Materials/MaterialInstance.h"
+#include "TileManager.h" // Only if you need to reference it here
+
 
 ABG_Tile::ABG_Tile()
 {
@@ -12,13 +15,13 @@ ABG_Tile::ABG_Tile()
 	tileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile mesh"));
 	SetRootComponent(tileMesh);
 
-	tileEdgeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("tile edge mesh"));
-	tileEdgeMesh->SetupAttachment(tileMesh);
-
 	tileMesh->SetBoundsScale(1000.0f);
 	tileMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	tileMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
 	tileMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+	decalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("decal component"));
+	decalComponent->SetupAttachment(tileMesh);
 
 	Tags.Add(FName("Tile"));
 }
@@ -31,22 +34,77 @@ void ABG_Tile::BeginPlay()
 	{
 		GameMode->OnToggleTileDebugCoordinates.AddDynamic(this, &ABG_Tile::OnDebugToggled);
 	}
+
+	if (decalComponent && decalComponent->GetMaterial(0))
+	{
+		HexDecalMID = UMaterialInstanceDynamic::Create(
+			decalComponent->GetMaterial(0), this);
+
+		decalComponent->SetMaterial(0, HexDecalMID);
+	}
 }
 
 void ABG_Tile::OnDebugToggled()
 {
 
-    FString DebugText = FString::Printf(TEXT("(%d, %d)"), (int)gridCoordinates.X, (int)gridCoordinates.Y);
-    DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 100), DebugText, nullptr, FColor::Green, 5.0f, true);
+FString DebugText = FString::Printf(
+		TEXT("(%d, %d)"),
+		gridCoordinates.X,
+		gridCoordinates.Y);
+
+	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 100), DebugText, nullptr, FColor::Green, 5.0f, true);
 
 }
 
 void ABG_Tile::ReactToPlayerInteraction_Implementation()
 {
-	FString name = this->GetName();
+//	drawDebugPointer(FColor::Yellow);
 
-	UE_LOG(LogTemp, Warning, TEXT("tile.cpp reactToPlayerInteractioncalled, tile name: %s"), *name);
+	setSelectedTile();
 }
+
+void ABG_Tile::setSelectedTile()
+{
+	OnTileSelectedDelegate.Broadcast(this, isOccupied);
+}
+
+void ABG_Tile::drawDebugPointer(FColor color)
+{
+	FString DebugText = FString::Printf(TEXT("^^^"));
+	DrawDebugString(GetWorld(), GetActorLocation() + FVector(0, 0, 200), DebugText, nullptr, color, 5.0f, true);
+}
+
+void ABG_Tile::removeOutlineEffect()
+{
+	if (isPlayingEffect)
+	{
+		//tileEdgeMesh->SetVisibility(false);
+		isPlayingEffect = false;
+		decalComponent->SetVisibility(false);
+		currentHighlightType = ETileHighlightState::None;
+	}
+}
+
+void ABG_Tile::addOutlineEffect(const FLinearColor& color)
+{
+	
+	//tileEdgeMesh->SetVisibility(true);
+	isPlayingEffect = true;
+
+	if (HexDecalMID)
+	{
+		HexDecalMID->SetVectorParameterValue(
+			TEXT("DecalTint"), // Must match your material parameter name
+			color);
+	}
+
+	decalComponent->SetVisibility(true);
+}
+
+
+
+
+
 
 
 

@@ -62,7 +62,7 @@ void AProductionProjCurrPlayerController::SetupInputComponent()
 
 		if (clickAction)
 		{
-			EnhancedInputComponent->BindAction(clickAction, ETriggerEvent::Triggered, this, &AProductionProjCurrPlayerController::ClickCallback);
+			EnhancedInputComponent->BindAction(clickAction, ETriggerEvent::Started, this, &AProductionProjCurrPlayerController::ClickCallback);
 		}
 
 		if (scrollAction)
@@ -72,7 +72,7 @@ void AProductionProjCurrPlayerController::SetupInputComponent()
 
 		if (openDevMenu)
 		{
-			EnhancedInputComponent->BindAction(openDevMenu, ETriggerEvent::Triggered, this, &AProductionProjCurrPlayerController::OpenDevMenuCallback);
+			EnhancedInputComponent->BindAction(openDevMenu, ETriggerEvent::Started, this, &AProductionProjCurrPlayerController::OpenDevMenuCallback);
 		}
 	}
 	else
@@ -158,8 +158,9 @@ void AProductionProjCurrPlayerController::ScrollCallback(const FInputActionValue
 		return;
 	}
 
-	const float ScrollValue = Value.Get<float>();
-	_ControlledPawn->AdjustCameraZoom(ScrollValue);
+	const float ZoomDir = Value.Get<float>();
+	float desiredOrtoWidth = _ControlledPawn->Camera->OrthoWidth + ZoomDir * _ControlledPawn->ZoomSpeed;
+	_ControlledPawn->AdjustCameraZoom(desiredOrtoWidth);
 }
 
 void AProductionProjCurrPlayerController::OpenDevMenuCallback(const FInputActionValue& Value)

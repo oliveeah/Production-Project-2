@@ -2,8 +2,9 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "CoreMinimal.h" 
+#include "UObject/ConstructorHelpers.h"
+
 #include "UPlayerProfile.generated.h"
 
 /**
@@ -14,4 +15,6 @@ class PRODUCTIONPROJCURR_API UUPlayerProfile : public UObject
 {
 	GENERATED_BODY()
 	
+
+
 };

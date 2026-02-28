@@ -31,7 +31,6 @@ protected:
 	virtual void SetupInputComponent() override;
 	virtual void OnPossess(APawn* InPawn) override;
 
-	// ========== INPUT ACTIONS (MOVED FROM PAWN) ==========
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input|Actions")
 	UInputAction* moveAction;
 

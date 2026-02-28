@@ -7,8 +7,13 @@
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "gameMode/ProductionProjCurrGameMode.h"
+#include "gameMode/TurnManager.h"
 #include "DevMode_Widget.generated.h"
 
+class ATileManager;
+class AOccupant_Troop_BaseClass;
+class AOccupant_Building_BaseClass;
+class AOccupant_BaseClass;
 /**
  * 
  */
@@ -36,6 +41,26 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	UFUNCTION()
 	void SwapCurrentPlayer_ButtonClicked();
 
+	UFUNCTION()
+	void SpawnTroopAtSelectedTile_ButtonClicked();
+
+	UFUNCTION()
+	void SpawnBuildingAtSelectedTile_ButtonClicked();
+
+	UFUNCTION()
+	void EndGame_ButtonClicked();
+
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	TObjectPtr<UButton> SpawnBuildingAtSelectedTile_Button;
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	TObjectPtr<UTextBlock> SpawnBuildingAtSelectedTile_ButtonLabel;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	TObjectPtr<UButton> SpawnTroopAtSelectedTile_Button;
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	TObjectPtr<UTextBlock> SpawnTroopAtSelectedTiled_ButtonLabel;
+
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> ShowTileCoord_Button;
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
@@ -52,6 +77,11 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 	TObjectPtr<UTextBlock> OwnTiles_ButtonLabel;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	TObjectPtr<UButton> EndGame_Button;
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	TObjectPtr<UTextBlock> EndGame_ButtonLabel;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> SwapCurrentPlayer_Button;
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
 	TObjectPtr<UTextBlock> SwapCurrentPlayer_ButtonLabel;
@@ -61,4 +91,16 @@ class PRODUCTIONPROJCURR_API UDevMode_Widget : public UUserWidget
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
 	TObjectPtr<UTextBlock> SelectedTile;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "TileManager")
+	ATileManager* DevTileManager;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	TSubclassOf<AOccupant_Troop_BaseClass> TroopToSpawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TileManager")
+	TSubclassOf<AOccupant_Building_BaseClass> BuildingToSpawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TurnManager")
+	ATurnManager* turnManager;
 };

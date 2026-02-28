@@ -11,7 +11,7 @@
 ABG_PlayerPawn::ABG_PlayerPawn()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	// Root component
 	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
@@ -92,10 +92,8 @@ void ABG_PlayerPawn::ToggleDevMenu()
 	}
 }
 
-void ABG_PlayerPawn::AdjustCameraZoom(float scrollAmount)
+void ABG_PlayerPawn::AdjustCameraZoom(float desiredOrthoWidth)
 {
-	float newArmLength = springArm->TargetArmLength + scrollAmount;
-	newArmLength = FMath::Clamp(newArmLength, 300.f, 1500.f);
-	springArm->TargetArmLength = newArmLength;
+	Camera->OrthoWidth = desiredOrthoWidth;
 }
 
